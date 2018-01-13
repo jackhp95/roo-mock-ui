@@ -31,6 +31,11 @@
             font-family: 'Nunito Sans', sans-serif;
             margin: 0;
         }
+        /* Details & Summary  */
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
         /* Calendar Picker */
 
         input[type=date]::-webkit-inner-spin-button {
@@ -76,6 +81,7 @@
         /* Addon Tachyons */
 
         .sticky {
+            position: -webkit-sticky;
             position: sticky;
         }
 
@@ -215,839 +221,891 @@
     </nav>
     <div class="flex-shrink-1 flex-grow-1 overflow-auto">
         <main>
-            <div class="flex flex-column justify-stretch shadow-hover z-999">
-                <header class="flex-auto flex flex-column flex-row-l flex-wrap items-center justify-center">
-                    <div class="ph4 flex-auto self-stretch vh-25 h-auto-l cover bg-center shadow-hover flex" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;">
-                        <div class="ph7-l pv6-l"></div>
+            <div class="flex flex-column justify-stretch z-999">
+                <header class="flex-auto flex flex-column flex-row-l items-center justify-center">
+                    <div class="flex-auto self-stretch pt6 vh-25-m h-auto-l cover bg-center shadow-hover flex items-end justify-end pa2" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;">
+                        <img class="h3-ns h2 ma2-ns ma1 grow-large shadow-hover shadow-3 ba b--white bw1 br1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8_o-6K5LAFRJV0MZKcfCbenTi9P95LJlI1YvX_BXgk_ONVK-QmQ"
+                            alt="">
+                        <img class="h3-ns h2 ma2-ns ma1 grow-large shadow-hover shadow-3 ba b--white bw1 br1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeGT-m1tuP2cGHevcNnn3_1SE7qopPs2e7yG-YmgpOCtpxflXTSw"
+                            alt="">
+                        <img class="h3-ns h2 ma2-ns ma1 grow-large shadow-hover shadow-3 ba b--white bw1 br1" src="https://www.garageliving.com/img/products/garage-slatwall-10.jpg"
+                            alt="">
                     </div>
-                    <section class="mv4 mh5-l mh4 measure-l measure-wide flex flex-column justify-center">
-                        <a class="mv2 no-underline gold f2 lh-solid self-start grow" href="#reviews">&#9733;&#9733;&#9733;&#9733;&#9733;</a>
-                        <div class="mv2 f1 fw9 lh-solid">Joanne's Garage</div>
-                        <div class="mv2 lh-copy">Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iste temporibus in ab
-                            sequi omnis provident ullam expedita cumque! Quis quisquam quam magni officia, debitis temporibus
-                            fuga exercitationem ut assumenda.
+                    <section class="ma3 ma5-l mb0 mb0-m mb0-l measure-l measure-wide flex flex-none flex-column justify-center">
+                        <a class="ma2-ns ma1 no-underline gold f2-l f3 lh-solid self-start grow" href="#reviews">
+                            &#9733;&#9733;&#9733;&#9733;&#9733;
+                        </a>
+                        <div class="ma2-ns ma1 f1-l f2 fw9 lh-solid">
+                            Joanne's Garage
                         </div>
-                        <div class="flex justify-around pv3 lh-title">
-                            <div class="flex flex-column items-center hover-purple grow-large">
+                        <div class="ma2-ns ma1 lh-copy">
+                            Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iste temporibus in ab sequi omnis provident ullam
+                            expedita cumque! Quis quisquam quam magni officia, debitis temporibus fuga exercitationem ut
+                            assumenda.
+                        </div>
+                        <div class="flex justify-around ma2 lh-title">
+                            <div class="ma2 flex flex-column items-center hover-purple grow-large">
                                 <div class="f2 fw8">$2</div>
                                 <div>Daily</div>
                             </div>
-                            <div class="flex flex-column items-center hover-purple grow-large">
+                            <div class="ma2 flex flex-column items-center hover-purple grow-large">
                                 <div class="f2 fw8">$56</div>
                                 <div>Monthly</div>
                             </div>
                         </div>
-                        <div class="flex flex-column items-stretch">
-                            <div class="mv3 pt5 pt6-ns pb6 relative">
-                                <div class="pl6-ns pb5-ns pt2-ns"></div>
-                                <div class="absolute absolute--fill overflow-auto br2">
-                                    <div class="sticky top-0 z-0 flex items-end f4 fw7">
-                                        <div class="flex self-center h2 w2 cover" style="background:url('https://icongr.am/clarity/calendar.svg')"></div>
-                                        <div class="ph2">Availability</div>
+                        <details class="ma2-ns ma1 ba b--black-40 br3 overflow-hidden">
+                            <summary class="outline-0">
+                                <div class="flex items-justify justify-between f5 overflow-visible">
+                                    <div class="ph2 pv2 flex items-center hover-bg-gold">
+                                        <div class="pa3 pl2 pt2 cover" style="background:url('https://icongr.am/clarity/calendar.svg')"></div>
                                     </div>
-                                    <div class="sticky top-0 pt2 tr ph3 white br2 z-999">2017</div>
-                                    <div class="sticky z-1 top-0 flex flex-column">
-                                        <div class="sticky top-0 pv2 ph3 bg-black white br2 br--top">January</div>
-                                        <div class="sticky flex-auto flex b--black-20 bb bl br bg-white">
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
-                                        </div>
+                                    <div class="flex-auto flex items-center justify-center hover-bg-purple hover-white">
+                                        Start
+                                        <span class="dn di-ns ml2">Date</span>
                                     </div>
-                                    <div class="br4 br--bottom overflow-hidden mb4 bb bl br b--black-20">
-                                        <div class="flex b--black-20 bb">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                        </div>
-                                        <div class="flex b--black-20 bb">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                        </div>
-                                        <div class="flex b--black-20 bb">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                        </div>
-                                        <div class="flex b--black-20">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                        </div>
+                                    <div class="ph2 flex items-center">
+                                        <div class="pa3 pl2 pt2 cover cw" style="background:url('https://icongr.am/clarity/arrow.svg')"></div>
                                     </div>
-                                    <div class="sticky z-1 top-0 flex flex-column">
-                                        <div class="sticky top-0 pv2 ph3 bg-black white br2 br--top">February</div>
-                                        <div class="sticky flex-auto flex b--black-20 bb bl br bg-white">
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
-                                        </div>
+                                    <div class="flex-auto flex items-center justify-center hover-bg-purple hover-white">
+                                        End
+                                        <span class="dn di-ns ml2">Date</span>
                                     </div>
-                                    <div class="br4 br--bottom overflow-hidden mb4 bb bl br b--black-20">
-                                        <div class="flex b--black-20 bb">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                        </div>
-                                        <div class="flex b--black-20 bb">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                        </div>
-                                        <div class="flex b--black-20 bb">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                        </div>
-                                        <div class="flex b--black-20">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                        </div>
+                                    <div class="ph2 flex items-center">
+                                        <div class="pa3 pl2 pt2 cover" style="background:url('https://icongr.am/clarity/check.svg?color=19a974')"></div>
                                     </div>
-                                    <div class="sticky z-1 top-0 flex flex-column">
-                                        <div class="sticky top-0 pv2 ph3 bg-black white br2 br--top">March</div>
-                                        <div class="sticky flex-auto flex b--black-20 bb bl br bg-white">
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
+                                </div>
+                            </summary>
+                            <div class="flex flex-column items-stretch">
+                                <div class="pt5 pt6-ns pb6 relative">
+                                    <div class="pl6-ns pb5-ns"></div>
+                                    <div class="absolute absolute--fill overflow-auto">
+                                        <div class="sticky z-1 top-0 flex flex-column">
+                                            <div class="sticky top-0 pv2 ph3 bg-black white flex bt b--white-20 justify-between">
+                                                <span>January</span>
+                                                <span>2017</span>
+                                            </div>
+                                            <div class="sticky flex-auto flex b--black-20 bb br bg-white">
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="br4 br--bottom overflow-hidden mb4 bb bl br b--black-20">
-                                        <div class="flex b--black-20 bb">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                        <div class="br b--black-20">
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
                                         </div>
-                                        <div class="flex b--black-20 bb">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                        <div class="sticky z-1 top-0 flex flex-column">
+                                            <div class="sticky top-0 pv2 ph3 bg-black white flex bt b--white-20 justify-between">
+                                                <span>February</span>
+                                                <span>2017</span>
+                                                </span>
+                                            </div>
+                                            <div class="sticky flex-auto flex b--black-20 bb br bg-white">
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
+                                            </div>
                                         </div>
-                                        <div class="flex b--black-20 bb">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                        <div class="br b--black-20">
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
                                         </div>
-                                        <div class="flex b--black-20">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                        <div class="sticky z-1 top-0 flex flex-column">
+                                            <div class="sticky top-0 pv2 ph3 bg-black white flex bt b--white-20 justify-between">
+                                                <span>March</span>
+                                                <span>2017</span>
+                                                </span>
+                                            </div>
+                                            <div class="sticky flex-auto flex b--black-20 bb br bg-white">
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="sticky z-1 top-0 flex flex-column">
-                                        <div class="sticky top-0 pv2 ph3 bg-black white br2 br--top">April</div>
-                                        <div class="sticky flex-auto flex b--black-20 bb bl br bg-white">
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
+                                        <div class="br b--black-20">
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="br4 br--bottom overflow-hidden mb4 bb bl br b--black-20">
-                                        <div class="flex b--black-20 bb">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                        <div class="sticky z-1 top-0 flex flex-column">
+                                            <div class="sticky top-0 pv2 ph3 bg-black white flex bt b--white-20 bt b--white justify-between">
+                                                <span>April</span>
+                                                <span>2017</span>
+                                                </span>
+                                            </div>
+                                            <div class="sticky flex-auto flex b--black-20 bb br bg-white">
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
+                                            </div>
                                         </div>
-                                        <div class="flex b--black-20 bb">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                        <div class="br b--black-20">
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
                                         </div>
-                                        <div class="flex b--black-20 bb">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                        <div class="sticky z-1 top-0 flex flex-column">
+                                            <div class="sticky top-0 pv2 ph3 bg-black white flex bt b--white-20 justify-between">
+                                                <span>May</span>
+                                                <span>2017</span>
+                                                </span>
+                                            </div>
+                                            <div class="sticky flex-auto flex b--black-20 bb br bg-white">
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
+                                            </div>
                                         </div>
-                                        <div class="flex b--black-20">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                        </div>
-                                    </div>
-                                    <div class="sticky z-1 top-0 flex flex-column">
-                                        <div class="sticky top-0 pv2 ph3 bg-black white br2 br--top">May</div>
-                                        <div class="sticky flex-auto flex b--black-20 bb bl br bg-white">
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
-                                            <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
-                                        </div>
-                                    </div>
-                                    <div class="br4 br--bottom overflow-hidden mb4 bb bl br b--black-20">
-                                        <div class="flex b--black-20 bb">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                        </div>
-                                        <div class="flex b--black-20 bb">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                        </div>
-                                        <div class="flex b--black-20 bb">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                        </div>
-                                        <div class="flex b--black-20">
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                            <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                        <div class="br b--black-20">
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex ba br-pill items-center justify-between f5 overflow-visible">
-                                <div class="flex-auto ph4 pv2 tc mr3 br-pill hover-bg-black hover-white">
-                                    Start
-                                    <span class="dn di-ns"> Date</span>
+                        </details>
+                        <div class="flex items-start flex-wrap">
+                            <details class="ma2-ns ma1 flex-auto ba b--black-40 br3 overflow-hidden">
+                                <summary class="outline-0">
+                                    <div class="flex items-justify justify-between f5 overflow-visible">
+                                        <div class="ph2 pv2 flex items-center hover-bg-gold">
+                                            <div class="pa3 pl2 pt2 cover" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
+                                        </div>
+                                        <div class="flex-auto flex items-center ph3 justify-center hover-bg-purple hover-white">
+                                            400
+                                            <sup> sqft</sup>
+                                        </div>
+                                    </div>
+                                </summary>
+                                <div class="bt b--black-20 pa4-l pa3 cover bg-center lh-copy">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui necessitatibus voluptatem dolorem corrupti laboriosam corporis,
+                                    recusandae molestiae nulla eaque repellat consequatur cumque dolorum tempora nobis eveniet
+                                    maxime, eos, eius minima!
                                 </div>
-                                <div class="h2 w2 cover cw" style="background:url('https://icongr.am/clarity/arrow.svg')"></div>
-                                <div class="flex-auto ph4 pv2 tc ml3 br-pill hover-bg-black hover-white">
-                                    End
-                                    <span class="dn di-ns"> Date</span>
+                            </details>
+                            <details class="ma2-ns ma1 flex-auto ba b--black-40 br3 overflow-hidden">
+                                <summary class="outline-0">
+                                    <div class="flex items-justify justify-between f5 overflow-visible">
+                                        <div class="ph2 pv2 flex items-center hover-bg-gold">
+                                            <div class="pa3 pl2 pt2 cover" style="background:url('https://icongr.am/clarity/map-marker.svg')"></div>
+                                        </div>
+                                        <div class="flex-auto flex items-center ph3 justify-center hover-bg-purple hover-white">
+                                            2.6 miles away
+                                        </div>
+                                    </div>
+                                </summary>
+                                <div class="bt b--black-20 pa4 transparent cover bg-center" style="background: url('https://image.maps.api.here.com/mia/1.6/mapview?c=4.710988,-74.072092&z=14&app_id=FMU5MYRk7pBATBhsh58K&app_code=Si_9RHHat0kLt_ENEvRlpw&w=350&h=200&f=0');">
+                                    <span class="o-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias asperiores incidunt
+                                        ab adipisci, enim facilis nisi labore illo ipsam voluptate, fugiat minima a expedita
+                                        atque, corporis excepturi! Saepe, atque dolorem?</span>
                                 </div>
-                            </div>
-                            <div class="mv3 flex flex-column">
-                                <div class="flex items-end f4 fw7 bb b--black-10 pb2">
-                                    <div class="flex self-center h2 w2 cover" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
-                                    <div class="ph2">Space</div>
-                                </div>
-                                <div class="flex pv2 lh-copy">
-                                    20ft x 20ft
-                                </div>
-                            </div>
-                            <div class="flex items-center bg-purple white f4 fw6 br-pill ph3 pv2">
-                                <div class="h1 w1 cover" style="background:url('https://icongr.am/clarity/map-marker.svg?color=ffffff')"></div>
-                                <div class="ph2">Distance</div>
-                            </div>
-                            <div class="lh-copy mt4-l mt3 f3 fw7 tc ph4 pv2 br-pill bg-black white hover-bg-purple self-center">
-                                Call Dibs!
-                            </div>
+                            </details>
+                        </div>
+                        <div class="lh-copy ma3 f3 fw7 ph4 pv2 br-pill bg-black white hover-bg-purple self-center">
+                            Call Dibs!
+                        </div>
                     </section>
                 </header>
-                <section class="relative pb3">
-                    <div class="ph5-l ph4 f2-l f3 fw3">Features</div>
-                    <div class="pv5-l pv4 flex justify-around f7">
-                        <div class="flex items-center hide-child">
-                            <div class="flex flex-column items-center justify-baseline grow-large">
+                <section class="flex flex-row-l flex-column items-center-l items-stretch ma2-ns ma1 relative">
+                    <div class="ma5-l ma3 f2-l f3 fw3">Features</div>
+                    <div class="ma5-l ma3 flex-auto flex justify-between f7">
+                        <details class="w-25">
+                            <summary class="flex flex-column items-center justify-baseline outline-0 grow-large">
                                 <div class="w3-ns w2 h3-ns h2 cover" style="background-image: url('https://icongr.am/clarity/thermometer.svg');">
                                 </div>
                                 <div class="pa2 f7 tc">Climate Controlled</div>
+                            </summary>
+                            <div class="f7 absolute z-999 top-0 left-0 bottom-0-l ml6 ml5-l measure-narrow-l w-60 bl bw0-l b--purple pl3 pl0-l mr3 mr0-l lh-title flex items-center bg-white">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam temporibus modi dolor quia in harum quod soluta tenetur,
                             </div>
-                            <div class="absolute flex justify-end top-0 right-0 w-60 measure pr5-l pr4-m pr3 child">
-                                <div class="black-50 pl3 pv1 bl b--purple">
-                                    Climate Controlled: ipsum dolor sit amet consectetur, adipisicing elit.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-center hide-child">
-                            <div class="flex flex-column items-center justify-baseline grow-large">
+                        </details>
+                        <details class="w-25">
+                            <summary class="flex flex-column items-center justify-baseline outline-0 grow-large">
                                 <div class="w3-ns w2 h3-ns h2 cover" style="background-image: url('https://icongr.am/clarity/truck.svg');">
                                 </div>
                                 <div class="pa2 f7 tc">Moving Provided</div>
+                            </summary>
+                            <div class="f7 absolute z-999 top-0 left-0 bottom-0-l ml6 ml5-l measure-narrow-l w-60 bl bw0-l b--purple pl3 pl0-l mr3 mr0-l lh-title flex items-center bg-white">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere cupiditate asperiores nobis accusantium, quam velit reprehenderit
                             </div>
-                            <div class="absolute flex justify-end top-0 right-0 w-60 measure pr5-l pr4-m pr3 child">
-                                <div class="black-50 pl3 pv1 bl b--purple">
-                                    Moving Provided: ipsum dolor sit amet consectetur, adipisicing elit.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-center hide-child">
-                            <div class="flex flex-column items-center justify-baseline grow-large">
+                        </details>
+                        <details class="w-25">
+                            <summary class="flex flex-column items-center justify-baseline outline-0 grow-large">
                                 <div class="w3-ns w2 h3-ns h2 cover" style="background-image: url('https://icongr.am/clarity/shield.svg');">
                                 </div>
                                 <div class="pa2 f7 tc">Security System</div>
+                            </summary>
+                            <div class="f7 absolute z-999 top-0 left-0 bottom-0-l ml6 ml5-l measure-narrow-l w-60 bl bw0-l b--purple pl3 pl0-l mr3 mr0-l lh-title flex items-center bg-white">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi obcaecati consequatur pariatur vel, fugiat expedita? Dolor
                             </div>
-                            <div class="absolute flex justify-end top-0 right-0 w-60 measure pr5-l pr4-m pr3 child">
-                                <div class="black-50 pl3 pv1 bl b--purple">
-                                    Security System: ipsum dolor sit amet consectetur, adipisicing elit.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-center hide-child">
-                            <div class="flex flex-column items-center justify-baseline grow-large">
+                        </details>
+                        <details class="w-25">
+                            <summary class="flex flex-column items-center justify-baseline outline-0 grow-large">
                                 <div class="w3-ns w2 h3-ns h2 cover" style="background-image: url('https://icongr.am/clarity/eye-show.svg');">
                                 </div>
                                 <div class="pa2 f7 tc">Security Camera</div>
+                            </summary>
+                            <div class="f7 absolute z-999 top-0 left-0 bottom-0-l ml6 ml5-l measure-narrow-l w-60 bl bw0-l b--purple pl3 pl0-l mr3 mr0-l lh-title flex items-center bg-white">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit recusandae corrupti illum quos reiciendis ad expedita,
+                                a obcaecati.
                             </div>
-                            <div class="absolute flex justify-end top-0 right-0 w-60 measure pr5-l pr4-m pr3 child">
-                                <div class="black-50 pl3 pv1 bl b--purple">
-                                    Security Camera: ipsum dolor sit amet consectetur, adipisicing elit.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="absolute hover-bg-white top-0 right-0 w-60 measure pb5-l pb3-m pb2 pt4 pr5-l pr4-m pr3">
-                        </div>
+                        </details>
                     </div>
                 </section>
-                </div>
-                <div class="flex flex-row-l flex-column-reverse items-stretch justify-stretch shadow-hover">
-                    <section id="reviews" class="flex-auto flex flex-column self-center-m pv3 ph5-l ph4 measure-wide">
-                        <div class="pv4 flex items-center">
-                            <div class="flex flex-column grow justify-center lh-title">
-                                <div class="f2-l f3 fw3">Reviews</div>
-                                <div class="f4 i o-50">16 Total</div>
+            </div>
+            <div class="flex flex-row-l flex-column-reverse items-stretch justify-stretch">
+                <section id="reviews" class="flex-auto flex flex-column self-center-m pv3 ph5-l ph4 measure-wide">
+                    <div class="pv4 flex items-center">
+                        <div class="flex flex-column grow justify-center lh-title">
+                            <div class="f2-l f3 fw3">Reviews</div>
+                            <div class="f4 i o-50">16 Total</div>
+                        </div>
+                        <div class="ph4 o-70 flex-auto self-center black-40 tr f7 fw8">
+                            <div class="o-90 grow flex items-stretch justify-stretch">
+                                <div style="flex:0;"></div>
+                                <div style="flex:16;" class="bg-gold mv1"></div>
+                                <span class="w2">5 &#9733;</span>
                             </div>
-                            <div class="ph4 o-70 flex-auto self-center black-40 tr f7 fw8">
-                                <div class="o-90 grow flex items-stretch justify-stretch">
-                                    <div style="flex:0;"></div>
-                                    <div style="flex:16;" class="bg-gold mv1"></div>
-                                    <span class="w2">5 &#9733;</span>
-                                </div>
-                                <div class="o-80 grow flex items-stretch justify-stretch">
-                                    <div style="flex:8;"></div>
-                                    <div style="flex:8;" class="bg-gold mv1"></div>
-                                    <span class="w2">4 &#9733;</span>
-                                </div>
-                                <div class="o-70 grow flex items-stretch justify-stretch">
-                                    <div style="flex:12;"></div>
-                                    <div style="flex:4;" class="bg-gold mv1"></div>
-                                    <span class="w2">3 &#9733;</span>
-                                </div>
-                                <div class="o-60 grow flex items-stretch justify-stretch">
-                                    <div style="flex:14;"></div>
-                                    <div style="flex:2;" class="bg-gold mv1"></div>
-                                    <span class="w2">2 &#9733;</span>
-                                </div>
-                                <div class="o-50 grow flex items-stretch justify-stretch">
-                                    <div style="flex:15;"></div>
-                                    <div style="flex:1;" class="bg-gold mv1"></div>
-                                    <span class="w2">1 &#9733;</span>
-                                </div>
+                            <div class="o-80 grow flex items-stretch justify-stretch">
+                                <div style="flex:8;"></div>
+                                <div style="flex:8;" class="bg-gold mv1"></div>
+                                <span class="w2">4 &#9733;</span>
                             </div>
-                            <div class="fw8 f3 flex flex-column justify-center items-center lh-solid">
-                                <span class="f1 gold grow-large">&#9733;</span>
-                                <span>4.8</span>
+                            <div class="o-70 grow flex items-stretch justify-stretch">
+                                <div style="flex:12;"></div>
+                                <div style="flex:4;" class="bg-gold mv1"></div>
+                                <span class="w2">3 &#9733;</span>
+                            </div>
+                            <div class="o-60 grow flex items-stretch justify-stretch">
+                                <div style="flex:14;"></div>
+                                <div style="flex:2;" class="bg-gold mv1"></div>
+                                <span class="w2">2 &#9733;</span>
+                            </div>
+                            <div class="o-50 grow flex items-stretch justify-stretch">
+                                <div style="flex:15;"></div>
+                                <div style="flex:1;" class="bg-gold mv1"></div>
+                                <span class="w2">1 &#9733;</span>
                             </div>
                         </div>
-                        <div class="pv4 bt b--black-10">
-                            <div class="lh-copy">
-                                <div class="f3 gold lh-solid">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                                <div class="f4 fw3 hover-purple">Joanne is awesome!</div>
-                                <div class="f7 i o-50">By Robin Darnell</div>
-                                <div class="f6 pv2">
-                                    Joanne helped me move my stuff from my appartment to her garage. The space was dry and clean. She also helped me move into
-                                    my new place after I was done storing my stuff. It was a top notch experience.
-                                </div>
+                        <div class="fw8 f3 flex flex-column justify-center items-center lh-solid">
+                            <span class="f1 gold grow-large">&#9733;</span>
+                            <span>4.8</span>
+                        </div>
+                    </div>
+                    <div class="pv4 bt b--black-10">
+                        <div class="lh-copy">
+                            <div class="f3 gold lh-solid">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <div class="f4 fw3 hover-purple">Joanne is awesome!</div>
+                            <div class="f7 i o-50">By Robin Darnell</div>
+                            <div class="f6 pv2">
+                                Joanne helped me move my stuff from my appartment to her garage. The space was dry and clean. She also helped me move into
+                                my new place after I was done storing my stuff. It was a top notch experience.
                             </div>
                         </div>
-                        <div class="pv4 bt b--black-10">
-                            <div class="lh-copy">
-                                <div class="f3 gold lh-solid">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                                <div class="f4 fw3 hover-purple">Best Host Ever!</div>
-                                <div class="f7 i o-50">By Dwight Hubbery</div>
-                                <div class="f6 pv2">
-                                    Joanne is the Bomb!
-                                </div>
+                    </div>
+                    <div class="pv4 bt b--black-10">
+                        <div class="lh-copy">
+                            <div class="f3 gold lh-solid">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <div class="f4 fw3 hover-purple">Best Host Ever!</div>
+                            <div class="f7 i o-50">By Dwight Hubbery</div>
+                            <div class="f6 pv2">
+                                Joanne is the Bomb!
                             </div>
                         </div>
-                        <div class="self-center lh-copy fw7 ph4 pv3 f4 grow self-start purple hover-black hover-bg-gold br-pill mv3">
-                            More Reviews
-                        </div>
-                    </section>
-                    <section class="flex-auto flex flex-column items-end justify-between cover black lh-solid
+                    </div>
+                    <div class="self-center lh-copy fw7 ph4 pv3 f4 grow self-start purple hover-black hover-bg-gold br-pill mv3">
+                        More Reviews
+                    </div>
+                </section>
+                <section class="flex-auto flex flex-column items-end justify-between cover black lh-solid
                     bg-center" style="background-image:url(
                     'https://images.unsplash.com/photo-1462598433584-d7ffa5a70489')">
-                        <div class="bg-black-90 hover-bg-purple white mb6 ph5-l ph4-m ph3 pv3 lh-solid tr">
-                            <div class="fw9 f-subheadline-l f1 pt3">Joanne</div>
-                            <div class="f4-l">Mother, Teacher, and Photographer</div>
-                        </div>
-                        <div class="lh-copy fw7 ph4 pv3 f4 bg-black white hover-bg-purple br-pill ma4 grow">
-                            Contact Joanne
-                        </div>
-                    </section>
-                </div>
-                <section class="pt5-l pt4 shadow-hover">
-                    <div class="f2-l f3 fw3 ph5-l ph4">Other Nearby Hosts</div>
-                    <div class="pt3 pb4 pl5-l pl4 overflow-auto">
-                        <table class="collapse">
-                            <tr class="f4">
-                                <td class="pr3 grow">
-                                    <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
-                    'https://images.unsplash.com/photo-1503430935654-c3847b9289eb')">
-                                    </div>
-                                    <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
-                                        <div>
-                                            <div>
-                                                Dave
-                                            </div>
-                                            <div class="pt1 f7 o-50 auto-flex dn dib-l">
-                                                Husband, Firefighter, and Landscaper
-                                            </div>
-                                        </div>
-                                        <div class="flex-none pl3-l">
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/star.svg')"></div>
-                                                <div>
-                                                    4.6 avg
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/map-marker.svg')"></div>
-                                                <div>
-                                                    2.4 mi
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/group.svg')"></div>
-                                                <div>
-                                                    6 mutual
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="pr3 grow">
-                                    <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
-                    'https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c')">
-                                    </div>
-                                    <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
-                                        <div>
-                                            <div>
-                                                Karen
-                                            </div>
-                                            <div class="pt1 f7 o-50 auto-flex dn dib-l">
-                                                Husband, Firefighter, and Landscaper
-                                            </div>
-                                        </div>
-                                        <div class="flex-none pl3-l">
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/star.svg')"></div>
-                                                <div>
-                                                    4.6 avg
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/map-marker.svg')"></div>
-                                                <div>
-                                                    2.4 mi
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/group.svg')"></div>
-                                                <div>
-                                                    6 mutual
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="pr3 grow">
-                                    <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
-                    'https://images.unsplash.com/photo-1482235225574-c37692835cf3')">
-                                    </div>
-                                    <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
-                                        <div>
-                                            <div>
-                                                Elliot
-                                            </div>
-                                            <div class="pt1 f7 o-50 auto-flex dn dib-l">
-                                                Husband, Firefighter, and Landscaper
-                                            </div>
-                                        </div>
-                                        <div class="flex-none pl3-l">
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/star.svg')"></div>
-                                                <div>
-                                                    4.6 avg
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/map-marker.svg')"></div>
-                                                <div>
-                                                    2.4 mi
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/group.svg')"></div>
-                                                <div>
-                                                    6 mutual
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="pr3 grow">
-                                    <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
-                    'https://images.unsplash.com/photo-1513337915236-364fe3ee1f53')">
-                                    </div>
-                                    <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
-                                        <div>
-                                            <div>
-                                                Dale
-                                            </div>
-                                            <div class="pt1 f7 o-50 auto-flex dn dib-l">
-                                                Husband, Firefighter, and Landscaper
-                                            </div>
-                                        </div>
-                                        <div class="flex-none pl3-l">
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/star.svg')"></div>
-                                                <div>
-                                                    4.6 avg
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/map-marker.svg')"></div>
-                                                <div>
-                                                    2.4 mi
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/group.svg')"></div>
-                                                <div>
-                                                    6 mutual
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="pr3 grow">
-                                    <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
-                    'https://images.unsplash.com/photo-1513745405825-efaf9a49315f')">
-                                    </div>
-                                    <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
-                                        <div>
-                                            <div>
-                                                Alison
-                                            </div>
-                                            <div class="pt1 f7 o-50 auto-flex dn dib-l">
-                                                Husband, Firefighter, and Landscaper
-                                            </div>
-                                        </div>
-                                        <div class="flex-none pl3-l">
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/star.svg')"></div>
-                                                <div>
-                                                    4.6 avg
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/map-marker.svg')"></div>
-                                                <div>
-                                                    2.4 mi
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/group.svg')"></div>
-                                                <div>
-                                                    6 mutual
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="pr3 grow">
-                                    <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
-                    'https://images.unsplash.com/photo-1503430935654-c3847b9289eb')">
-                                    </div>
-                                    <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
-                                        <div>
-                                            <div>
-                                                Dave
-                                            </div>
-                                            <div class="pt1 f7 o-50 auto-flex dn dib-l">
-                                                Husband, Firefighter, and Landscaper
-                                            </div>
-                                        </div>
-                                        <div class="flex-none pl3-l">
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/star.svg')"></div>
-                                                <div>
-                                                    4.6 avg
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/map-marker.svg')"></div>
-                                                <div>
-                                                    2.4 mi
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/group.svg')"></div>
-                                                <div>
-                                                    6 mutual
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="pr3 grow">
-                                    <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
-                    'https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c')">
-                                    </div>
-                                    <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
-                                        <div>
-                                            <div>
-                                                Karen
-                                            </div>
-                                            <div class="pt1 f7 o-50 auto-flex dn dib-l">
-                                                Husband, Firefighter, and Landscaper
-                                            </div>
-                                        </div>
-                                        <div class="flex-none pl3-l">
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/star.svg')"></div>
-                                                <div>
-                                                    4.6 avg
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/map-marker.svg')"></div>
-                                                <div>
-                                                    2.4 mi
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/group.svg')"></div>
-                                                <div>
-                                                    6 mutual
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="pr3 grow">
-                                    <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
-                    'https://images.unsplash.com/photo-1482235225574-c37692835cf3')">
-                                    </div>
-                                    <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
-                                        <div>
-                                            <div>
-                                                Elliot
-                                            </div>
-                                            <div class="pt1 f7 o-50 auto-flex dn dib-l">
-                                                Husband, Firefighter, and Landscaper
-                                            </div>
-                                        </div>
-                                        <div class="flex-none pl3-l">
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/star.svg')"></div>
-                                                <div>
-                                                    4.6 avg
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/map-marker.svg')"></div>
-                                                <div>
-                                                    2.4 mi
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/group.svg')"></div>
-                                                <div>
-                                                    6 mutual
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="pr3 grow">
-                                    <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
-                    'https://images.unsplash.com/photo-1513337915236-364fe3ee1f53')">
-                                    </div>
-                                    <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
-                                        <div>
-                                            <div>
-                                                Dale
-                                            </div>
-                                            <div class="pt1 f7 o-50 auto-flex dn dib-l">
-                                                Husband, Firefighter, and Landscaper
-                                            </div>
-                                        </div>
-                                        <div class="flex-none pl3-l">
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/star.svg')"></div>
-                                                <div>
-                                                    4.6 avg
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/map-marker.svg')"></div>
-                                                <div>
-                                                    2.4 mi
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/group.svg')"></div>
-                                                <div>
-                                                    6 mutual
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="pr3 grow">
-                                    <div class="h5-l w5-l h4 w4 flex items-end br2 br--top cover br2 bg-center" style="background-image:url(
-                    'https://images.unsplash.com/photo-1513745405825-efaf9a49315f')">
-                                    </div>
-                                    <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
-                                        <div>
-                                            <div>
-                                                Alison
-                                            </div>
-                                            <div class="pt1 f7 o-50 auto-flex dn dib-l">
-                                                Husband, Firefighter, and Landscaper
-                                            </div>
-                                        </div>
-                                        <div class="flex-none pl3-l">
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/star.svg')"></div>
-                                                <div>
-                                                    4.6 avg
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/map-marker.svg')"></div>
-                                                <div>
-                                                    2.4 mi
-                                                </div>
-                                            </div>
-                                            <div class="pt1 o-50 f6 flex flex-row-reverse-l">
-                                                <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
-                    'https://icongr.am/clarity/group.svg')"></div>
-                                                <div>
-                                                    6 mutual
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
+                    <div class="bg-black-90 hover-bg-purple white mb6 ph5-l ph4-m ph3 pv3 lh-solid tr">
+                        <div class="fw9 f-subheadline-l f1 pt3">Joanne</div>
+                        <div class="f4-l">Mother, Teacher, and Photographer</div>
+                    </div>
+                    <div class="lh-copy fw7 ph4 pv3 f4 bg-black white hover-bg-purple br-pill ma4 grow">
+                        Contact Joanne
                     </div>
                 </section>
+            </div>
+            <section class="pt5-l pt4">
+                <div class="f2-l f3 fw3 ph5-l ph4">Other Nearby Hosts</div>
+                <div class="pt3 pb4 pl5-l pl4 overflow-auto">
+                    <table class="collapse">
+                        <tr class="f4">
+                            <td class="pr3 grow">
+                                <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
+                    'https://images.unsplash.com/photo-1503430935654-c3847b9289eb')">
+                                </div>
+                                <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
+                                    <div>
+                                        <div>
+                                            Dave
+                                        </div>
+                                        <div class="pt1 f7 o-50 auto-flex dn dib-l">
+                                            Husband, Firefighter, and Landscaper
+                                        </div>
+                                    </div>
+                                    <div class="flex-none pl3-l">
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/star.svg')"></div>
+                                            <div>
+                                                4.6 avg
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/map-marker.svg')"></div>
+                                            <div>
+                                                2.4 mi
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/group.svg')"></div>
+                                            <div>
+                                                6 mutual
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="pr3 grow">
+                                <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
+                    'https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c')">
+                                </div>
+                                <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
+                                    <div>
+                                        <div>
+                                            Karen
+                                        </div>
+                                        <div class="pt1 f7 o-50 auto-flex dn dib-l">
+                                            Husband, Firefighter, and Landscaper
+                                        </div>
+                                    </div>
+                                    <div class="flex-none pl3-l">
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/star.svg')"></div>
+                                            <div>
+                                                4.6 avg
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/map-marker.svg')"></div>
+                                            <div>
+                                                2.4 mi
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/group.svg')"></div>
+                                            <div>
+                                                6 mutual
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="pr3 grow">
+                                <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
+                    'https://images.unsplash.com/photo-1482235225574-c37692835cf3')">
+                                </div>
+                                <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
+                                    <div>
+                                        <div>
+                                            Elliot
+                                        </div>
+                                        <div class="pt1 f7 o-50 auto-flex dn dib-l">
+                                            Husband, Firefighter, and Landscaper
+                                        </div>
+                                    </div>
+                                    <div class="flex-none pl3-l">
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/star.svg')"></div>
+                                            <div>
+                                                4.6 avg
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/map-marker.svg')"></div>
+                                            <div>
+                                                2.4 mi
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/group.svg')"></div>
+                                            <div>
+                                                6 mutual
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="pr3 grow">
+                                <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
+                    'https://images.unsplash.com/photo-1513337915236-364fe3ee1f53')">
+                                </div>
+                                <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
+                                    <div>
+                                        <div>
+                                            Dale
+                                        </div>
+                                        <div class="pt1 f7 o-50 auto-flex dn dib-l">
+                                            Husband, Firefighter, and Landscaper
+                                        </div>
+                                    </div>
+                                    <div class="flex-none pl3-l">
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/star.svg')"></div>
+                                            <div>
+                                                4.6 avg
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/map-marker.svg')"></div>
+                                            <div>
+                                                2.4 mi
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/group.svg')"></div>
+                                            <div>
+                                                6 mutual
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="pr3 grow">
+                                <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
+                    'https://images.unsplash.com/photo-1513745405825-efaf9a49315f')">
+                                </div>
+                                <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
+                                    <div>
+                                        <div>
+                                            Alison
+                                        </div>
+                                        <div class="pt1 f7 o-50 auto-flex dn dib-l">
+                                            Husband, Firefighter, and Landscaper
+                                        </div>
+                                    </div>
+                                    <div class="flex-none pl3-l">
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/star.svg')"></div>
+                                            <div>
+                                                4.6 avg
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/map-marker.svg')"></div>
+                                            <div>
+                                                2.4 mi
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/group.svg')"></div>
+                                            <div>
+                                                6 mutual
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="pr3 grow">
+                                <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
+                    'https://images.unsplash.com/photo-1503430935654-c3847b9289eb')">
+                                </div>
+                                <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
+                                    <div>
+                                        <div>
+                                            Dave
+                                        </div>
+                                        <div class="pt1 f7 o-50 auto-flex dn dib-l">
+                                            Husband, Firefighter, and Landscaper
+                                        </div>
+                                    </div>
+                                    <div class="flex-none pl3-l">
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/star.svg')"></div>
+                                            <div>
+                                                4.6 avg
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/map-marker.svg')"></div>
+                                            <div>
+                                                2.4 mi
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/group.svg')"></div>
+                                            <div>
+                                                6 mutual
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="pr3 grow">
+                                <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
+                    'https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c')">
+                                </div>
+                                <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
+                                    <div>
+                                        <div>
+                                            Karen
+                                        </div>
+                                        <div class="pt1 f7 o-50 auto-flex dn dib-l">
+                                            Husband, Firefighter, and Landscaper
+                                        </div>
+                                    </div>
+                                    <div class="flex-none pl3-l">
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/star.svg')"></div>
+                                            <div>
+                                                4.6 avg
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/map-marker.svg')"></div>
+                                            <div>
+                                                2.4 mi
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/group.svg')"></div>
+                                            <div>
+                                                6 mutual
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="pr3 grow">
+                                <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
+                    'https://images.unsplash.com/photo-1482235225574-c37692835cf3')">
+                                </div>
+                                <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
+                                    <div>
+                                        <div>
+                                            Elliot
+                                        </div>
+                                        <div class="pt1 f7 o-50 auto-flex dn dib-l">
+                                            Husband, Firefighter, and Landscaper
+                                        </div>
+                                    </div>
+                                    <div class="flex-none pl3-l">
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/star.svg')"></div>
+                                            <div>
+                                                4.6 avg
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/map-marker.svg')"></div>
+                                            <div>
+                                                2.4 mi
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/group.svg')"></div>
+                                            <div>
+                                                6 mutual
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="pr3 grow">
+                                <div class="h5-l w5-l h4 w4 flex items-end cover br2 bg-center" style="background-image:url(
+                    'https://images.unsplash.com/photo-1513337915236-364fe3ee1f53')">
+                                </div>
+                                <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
+                                    <div>
+                                        <div>
+                                            Dale
+                                        </div>
+                                        <div class="pt1 f7 o-50 auto-flex dn dib-l">
+                                            Husband, Firefighter, and Landscaper
+                                        </div>
+                                    </div>
+                                    <div class="flex-none pl3-l">
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/star.svg')"></div>
+                                            <div>
+                                                4.6 avg
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/map-marker.svg')"></div>
+                                            <div>
+                                                2.4 mi
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/group.svg')"></div>
+                                            <div>
+                                                6 mutual
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="pr3 grow">
+                                <div class="h5-l w5-l h4 w4 flex items-end br2 br--top cover br2 bg-center" style="background-image:url(
+                    'https://images.unsplash.com/photo-1513745405825-efaf9a49315f')">
+                                </div>
+                                <div class="pv2 ph1 flex flex-column flex-row-l items-baseline justify-between">
+                                    <div>
+                                        <div>
+                                            Alison
+                                        </div>
+                                        <div class="pt1 f7 o-50 auto-flex dn dib-l">
+                                            Husband, Firefighter, and Landscaper
+                                        </div>
+                                    </div>
+                                    <div class="flex-none pl3-l">
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/star.svg')"></div>
+                                            <div>
+                                                4.6 avg
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/map-marker.svg')"></div>
+                                            <div>
+                                                2.4 mi
+                                            </div>
+                                        </div>
+                                        <div class="pt1 o-50 f6 flex flex-row-reverse-l">
+                                            <div class="h1 w1 mr1 ml1-l mr0-l cover" style="background:url(
+                    'https://icongr.am/clarity/group.svg')"></div>
+                                            <div>
+                                                6 mutual
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
         </main>
         <footer class="flex flex-wrap items-center justify-between pa3 o-50 black-50 glow">
             <div class="flex flex-column flex-row-l">
@@ -1076,7 +1134,7 @@
                 Copyright © Roo 2018
             </div>
         </footer>
-        </div>
+    </div>
 </body>
 
 </html>
