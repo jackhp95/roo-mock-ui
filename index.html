@@ -38,6 +38,11 @@
         }
         /* Calendar Picker */
 
+        input[type=date] {
+            overflow: hidden;
+            position: relative;
+        }
+
         input[type=date]::-webkit-inner-spin-button {
             -webkit-appearance: none;
             display: none;
@@ -46,35 +51,28 @@
         }
 
         input[type=date]::-webkit-datetime-edit {
-            height: auto;
-            width: auto;
             margin: 0;
             padding: 0;
-            position: relative;
+            overflow: hidden;
         }
 
         input[type=date]::-webkit-clear-button {
+            -webkit-appearance: none;
             display: none;
+            margin: 0;
+            padding: 0;
         }
 
         input[type=date]::-webkit-datetime-edit-fields-wrapper {
-            height: auto;
-            width: auto;
             margin: 0;
             padding: 0;
         }
 
         input[type=date]::-webkit-calendar-picker-indicator {
             position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            opacity: 0;
             width: 100%;
             height: 100%;
-            font-size: 1rem;
-            color: transparent;
-            background-color: transparent;
             margin: 0;
             padding: 0;
         }
@@ -255,10 +253,28 @@
                                 <div>Monthly</div>
                             </div>
                         </div>
-                        <div class="ma3">
-                            <details class="ma2 ba b--black-40 br1 overflow-hidden">
-                                <summary class="outline-0">
-                                    <div class="flex items-justify justify-between f5 overflow-visible">
+                        <div class="ma3 relative">
+                            <!-- Mobile/Tablet -->
+                            <div class="ma2 flex flex-column ba b--black-40 br1 dn-l">
+                                <div class="items-justify justify-between f5 overflow-visible dn-l flex">
+                                    <div class="ph2 pv2 flex items-center hover-bg-gold">
+                                        <div class="pa3 pl2 pt2 cover" style="background:url('https://icongr.am/clarity/calendar.svg')"></div>
+                                    </div>
+                                    <input type="date" name="" id="" class="outline-0 w1 bw0 tc flex-auto flex items-center justify-center hover-bg-purple hover-white">
+                                    <div class="ph2 flex items-center">
+                                        <div class="pa3 pl2 pt2 cover cw" style="background:url('https://icongr.am/clarity/arrow.svg')"></div>
+                                    </div>
+                                    <input type="date" name="" id="" class="outline-0 w1 bw0 tc flex-auto flex items-center justify-center hover-bg-purple hover-white">
+                                    <div class="ph2 flex items-center">
+                                        <div class="pa3 pl2 pt2 cover" style="background:url('https://icongr.am/clarity/check.svg?color=19a974')"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Desktop -->
+                            <details class="ma2">
+                                <summary class="outline-0 ba b--black-40 br1 dn flex-l">
+                                    <div class="flex-auto flex items-justify justify-between f5 overflow-visible">
                                         <div class="ph2 pv2 flex items-center hover-bg-gold">
                                             <div class="pa3 pl2 pt2 cover" style="background:url('https://icongr.am/clarity/calendar.svg')"></div>
                                         </div>
@@ -278,278 +294,271 @@
                                         </div>
                                     </div>
                                 </summary>
-                                <div class="flex flex-column items-stretch">
-                                    <div class="pt5 pt6-ns pb6 relative">
-                                        <div class="pl6-ns pb5-ns"></div>
-                                        <div class="absolute absolute--fill overflow-auto">
-                                            <div class="sticky z-1 top-0 flex flex-column">
-                                                <div class="sticky top-0 pv2 ph3 bg-black white flex bt b--white-20 justify-between">
-                                                    <span>January</span>
-                                                    <span>2017</span>
-                                                </div>
-                                                <div class="sticky flex-auto flex b--black-20 bb br bg-white">
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
-                                                </div>
+                                <div class="h5 mh2 mv3 absolute shadow-2 top-2 left-0 right-0 overflow-auto z-999 ba b--black-40 br1">
+                                    <div class="bg-white">
+                                        <div class="sticky z-1 top-0 flex flex-column">
+                                            <div class="sticky top-0 pv2 ph3 bg-black white flex bt b--white-20 justify-between">
+                                                <span>January</span>
+                                                <span>2017</span>
                                             </div>
-                                            <div class="br b--black-20">
-                                                <div class="flex b--black-20 bb">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
-                                                <div class="flex b--black-20 bb">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
-                                                <div class="flex b--black-20 bb">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
-                                                <div class="flex b--black-20">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
+                                            <div class="sticky flex-auto flex b--black-20 bb br bg-white">
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
                                             </div>
-                                            <div class="sticky z-1 top-0 flex flex-column">
-                                                <div class="sticky top-0 pv2 ph3 bg-black white flex bt b--white-20 justify-between">
-                                                    <span>February</span>
-                                                    <span>2017</span>
-                                                    </span>
-                                                </div>
-                                                <div class="sticky flex-auto flex b--black-20 bb br bg-white">
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
-                                                </div>
+                                        </div>
+                                        <div class="br b--black-20">
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
                                             </div>
-                                            <div class="br b--black-20">
-                                                <div class="flex b--black-20 bb">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
-                                                <div class="flex b--black-20 bb">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
-                                                <div class="flex b--black-20 bb">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
-                                                <div class="flex b--black-20">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
                                             </div>
-                                            <div class="sticky z-1 top-0 flex flex-column">
-                                                <div class="sticky top-0 pv2 ph3 bg-black white flex bt b--white-20 justify-between">
-                                                    <span>March</span>
-                                                    <span>2017</span>
-                                                    </span>
-                                                </div>
-                                                <div class="sticky flex-auto flex b--black-20 bb br bg-white">
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
-                                                </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
                                             </div>
-                                            <div class="br b--black-20">
-                                                <div class="flex b--black-20 bb">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
-                                                <div class="flex b--black-20 bb">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
-                                                <div class="flex b--black-20 bb">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
-                                                <div class="flex b--black-20">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
+                                            <div class="flex b--black-20">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
                                             </div>
-                                            <div class="sticky z-1 top-0 flex flex-column">
-                                                <div class="sticky top-0 pv2 ph3 bg-black white flex bt b--white-20 bt b--white justify-between">
-                                                    <span>April</span>
-                                                    <span>2017</span>
-                                                    </span>
-                                                </div>
-                                                <div class="sticky flex-auto flex b--black-20 bb br bg-white">
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
-                                                </div>
+                                        </div>
+                                        <div class="sticky z-1 top-0 flex flex-column">
+                                            <div class="sticky top-0 pv2 ph3 bg-black white flex bt b--white-20 justify-between">
+                                                <span>February</span>
+                                                <span>2017</span>
                                             </div>
-                                            <div class="br b--black-20">
-                                                <div class="flex b--black-20 bb">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
-                                                <div class="flex b--black-20 bb">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
-                                                <div class="flex b--black-20 bb">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
-                                                <div class="flex b--black-20">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
+                                            <div class="sticky flex-auto flex b--black-20 bb br bg-white">
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
                                             </div>
-                                            <div class="sticky z-1 top-0 flex flex-column">
-                                                <div class="sticky top-0 pv2 ph3 bg-black white flex bt b--white-20 justify-between">
-                                                    <span>May</span>
-                                                    <span>2017</span>
-                                                    </span>
-                                                </div>
-                                                <div class="sticky flex-auto flex b--black-20 bb br bg-white">
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
-                                                    <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
-                                                </div>
+                                        </div>
+                                        <div class="br b--black-20">
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
                                             </div>
-                                            <div class="br b--black-20">
-                                                <div class="flex b--black-20 bb">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
-                                                <div class="flex b--black-20 bb">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
-                                                <div class="flex b--black-20 bb">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
-                                                <div class="flex b--black-20">
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
-                                                    <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
-                                                </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                        </div>
+                                        <div class="sticky z-1 top-0 flex flex-column">
+                                            <div class="sticky top-0 pv2 ph3 bg-black white flex bt b--white-20 justify-between">
+                                                <span>March</span>
+                                                <span>2017</span>
+                                            </div>
+                                            <div class="sticky flex-auto flex b--black-20 bb br bg-white">
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
+                                            </div>
+                                        </div>
+                                        <div class="br b--black-20">
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                        </div>
+                                        <div class="sticky z-1 top-0 flex flex-column">
+                                            <div class="sticky top-0 pv2 ph3 bg-black white flex bt b--white-20 bt b--white justify-between">
+                                                <span>April</span>
+                                                <span>2017</span>
+                                            </div>
+                                            <div class="sticky flex-auto flex b--black-20 bb br bg-white">
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
+                                            </div>
+                                        </div>
+                                        <div class="br b--black-20">
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                        </div>
+                                        <div class="sticky z-1 top-0 flex flex-column">
+                                            <div class="sticky top-0 pv2 ph3 bg-black white flex bt b--white-20 justify-between">
+                                                <span>May</span>
+                                                <span>2017</span>
+                                            </div>
+                                            <div class="sticky flex-auto flex b--black-20 bb br bg-white">
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">S</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">M</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">W</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">T</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1 br">F</div>
+                                                <div class="b--black-20 flex w3 justify-center flex-auto pa1">S</div>
+                                            </div>
+                                        </div>
+                                        <div class="br b--black-20">
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20 bb">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
+                                            </div>
+                                            <div class="flex b--black-20">
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2 br">##</div>
+                                                <div class="b--black-20 flex w3 h3-ns h2 flex-auto pa2">##</div>
                                             </div>
                                         </div>
                                     </div>
@@ -608,7 +617,7 @@
                                 <div class="pa2 f7 tc">Climate Controlled</div>
                             </summary>
                             <div class="f7 absolute z-999 top-0 left-0 bottom-0-l ml6 ml0-l measure-narrow-l w-60 bl bw0-l b--purple pl3 pl0-l mr3 mr0-l lh-title flex items-center bg-white">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam temporibus modi dolor quia in harum quod soluta tenetur,
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam temporibus modi dolor.
                             </div>
                         </details>
                         <details class="w-25">
@@ -618,7 +627,7 @@
                                 <div class="pa2 f7 tc">Moving Provided</div>
                             </summary>
                             <div class="f7 absolute z-999 top-0 left-0 bottom-0-l ml6 ml0-l measure-narrow-l w-60 bl bw0-l b--purple pl3 pl0-l mr3 mr0-l lh-title flex items-center bg-white">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere cupiditate asperiores nobis accusantium, quam velit reprehenderit
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere cupiditate asperiores.
                             </div>
                         </details>
                         <details class="w-25">
@@ -628,7 +637,7 @@
                                 <div class="pa2 f7 tc">Security System</div>
                             </summary>
                             <div class="f7 absolute z-999 top-0 left-0 bottom-0-l ml6 ml0-l measure-narrow-l w-60 bl bw0-l b--purple pl3 pl0-l mr3 mr0-l lh-title flex items-center bg-white">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi obcaecati consequatur pariatur vel, fugiat expedita? Dolor
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi obcaecati consequatur.
                             </div>
                         </details>
                         <details class="w-25">
@@ -638,8 +647,7 @@
                                 <div class="pa2 f7 tc">Security Camera</div>
                             </summary>
                             <div class="f7 absolute z-999 top-0 left-0 bottom-0-l ml6 ml0-l measure-narrow-l w-60 bl bw0-l b--purple pl3 pl0-l mr3 mr0-l lh-title flex items-center bg-white">
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit recusandae corrupti illum quos reiciendis ad expedita,
-                                a obcaecati.
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit recusandae corrupti.
                             </div>
                         </details>
                     </div>
