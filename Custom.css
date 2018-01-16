@@ -80,27 +80,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
     position: sticky;
 }
 
-.fade-hover {
-    opacity: 0
-}
-
-.fade-hover,
-.fade-hover:focus,
-.fade-hover:hover {
-    transition: opacity .15s ease-in
-}
-
-.fade-hover:focus,
-.fade-hover:hover {
-    opacity: 1
-}
-
-.fade-hover:active {
-    opacity: .8;
-    transition: opacity .15s ease-out
-}
-
-
 /* Colors */
 
 .teal {
