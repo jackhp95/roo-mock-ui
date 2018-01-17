@@ -13,7 +13,7 @@
 </head>
 
 <body class="f6 fw5 flex flex-column-l flex-row-m flex-column-reverse items-stretch vh-100">
-    <nav class="f5-ns fw6-ns f7 fw7 flex-none pv3-m ph4-l pa0 shadow-hover z-999 flex flex-column-l bg-white">
+    <nav class="f5-ns fw6-ns f7 fw7 flex-none pv3-m ph4-l pa0 shadow-hover z-9999 flex flex-column-l bg-white">
         <ul class="flex flex-column-m no-underline list ma0 pa0 overflow-visible-ns overflow-hidden w-100 w-auto-ns">
             <li class="dn flex-auto-l flex-ns items-center ph4 pv3-m">
                 <a href="index.html" class="fw9 f3 f2-m grow-large hover-purple dib black no-underline">Roo</a>
@@ -63,16 +63,77 @@
     <div class="flex-auto overflow-auto">
         <main>
             <!-- FAB  -->
-            <details class="outline-0 z-max">
-                <summary class="outline-0 fixed bottom-1 right-0 pb2 mb4 z-max">
-                    <div class="flex-none outline-0 br-pill pa3 ma3 bg-purple shadow-2 shadoow-hover grow-large">
-                        <div class="h2 w2 contain bg-center" style="background:url('https://icongr.am/clarity/add.svg?color=ffffff')"></div>
+            <details class="outline-0">
+                <summary class="outline-0">
+                    <!-- Mobile -->
+                    <div class="dn-ns fixed bottom-1 right-0 pb2 mb4 z-max">
+                        <div class="flex-none br-pill pa3 ma3 bg-purple shadow-2 shadow-hover grow-large">
+                            <div class="h2 w2 contain bg-center" style="background:url('https://icongr.am/clarity/search.svg?color=ffffff')"></div>
+                        </div>
+                    </div>
+                    <!-- Tablet -->
+                    <div class="dn dib-m fixed bottom-0 left-0 ma4 z-max">
+                        <div class="flex-none br-pill pa3 ma5 bg-purple shadow-2 shadow-hover grow-large">
+                            <div class="h2 w2 contain bg-center" style="background:url('https://icongr.am/clarity/search.svg?color=ffffff')"></div>
+                        </div>
+                    </div>
+                    <!-- Not Small -->
+                    <div class="dn flex-l fixed top-0 left-0 right-0 z-max mt5 pt4 h1 justify-center">
+                        <div class="bg-white hover-bg-gold z-max ba b--black-20 h2 ph4 br-pill flex items-center shadow-4 shadow-hover">
+                            filter
+                        </div>
                     </div>
                 </summary>
-                <div class="bg-white pb2 mb4 fixed bottom-1 left-0 right-0 z-5">
-                    <div class="mr5 pa4 lh-copy bg-green flex justify-between">
-                        <div class="bg-black white br1 pv2 ph3">Button 1</div>
-                        <div class="bg-black white br1 pv2 ph3">Button 1</div>
+                <div class="bg-black-90 pb2 mb4 ml6-m pl4-m pb0-ns mb0-ns fixed bottom-1 bottom-0-ns left-0 right-0 z-5 shadow-4">
+                    <div class="z-max mr5 mr0-ns mb2 mb0-ns pa2 lh-copy flex flex-row-ns flex-column flex-auto justify-between flex-wrap f5">
+                        <div class="white flex-auto flex items-justify justify-between ma2 br1 ba b--white-40">
+                            <div class="flex-auto flex items-center justify-center hover-bg-purple hover-white">
+                                <span class="dn-ns di ma2">From</span>
+                                <span class="dn di-ns ma2">Start Date</span>
+                            </div>
+                            <div class="pa2 flex items-center">
+                                <div class="pa3 pl2 pt2 cover cw" style="background:url('https://icongr.am/clarity/arrow.svg?color=ffffff')"></div>
+                            </div>
+                            <div class="flex-auto flex items-center justify-center hover-bg-purple hover-white">
+                                <span class="dn-ns di ma2">To</span>
+                                <span class="dn di-ns ma2">End Date</span>
+                            </div>
+                        </div>
+                        <div class="ma2 white br1 flex-auto flex items-center justify-around br1 ph3-ns ba-ns b--white-40">
+                            <div class="pr3 pv2 w3">Range</div>
+                            <input type="range" name="" id="" class="flex-auto self-stretch">
+                        </div>
+                        <div class="ma2 white br1 flex-auto flex items-center justify-around br1 ph3-ns ba-ns b--white-40">
+                            <div class="pr3 pv2 w3">Size</div>
+                            <input type="range" name="" id="" class="flex-auto self-stretch">
+                        </div>
+                        <div class="ma2 white br1 flex-auto flex items-center justify-around br1 ph3-ns ba-ns b--white-40">
+                            <div class="pr3 pv2 w3">Price</div>
+                            <input type="range" name="" id="" class="flex-auto self-stretch">
+                        </div>
+                        <div class="ma2 white br1 flex-auto flex items-center justify-around br1 ph3-ns ba-ns b--white-40">
+                            <div class="pr3 pv2 w3">Tags</div>
+                            <div class="flex flex-auto justify-around">
+                                <div class="pa3-l pa2 br1 grow hover-bg-purple">
+                                    <div class="pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/check.svg?color=ffffff');"></div>
+                                </div>
+                                <div class="pa3-l pa2 br1 grow hover-bg-purple">
+                                    <div class="pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/shield.svg?color=ffffff');"></div>
+                                </div>
+                                <div class="pa3-l pa2 br1 grow hover-bg-purple">
+                                    <div class="pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/users.svg?color=ffffff');"></div>
+                                </div>
+                                <div class="pa3-l pa2 br1 grow hover-bg-purple">
+                                    <div class="pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/tags.svg?color=ffffff');"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ma2 white br1 flex-auto flex items-center justify-around br1 ph3-ns ba-ns b--white-40">
+                            <div class="pr3 pv2 w3">Rating</div>
+                            <div class="flex-auto tc tracked-mega f2 lh-solid hover-gold">
+                                &#9733;&#9733;&#9733;&#9733;&#9733;
+                            </div>
+                        </div>
                     </div>
                 </div>
             </details>
@@ -83,11 +144,11 @@
                         <div class="flex-auto cover grow br1 pv6 pv0-l self-stretch shadow-hover" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;"></div>
                     </div>
                     <div class="w1 br1 br--left flex-l dn items-stretch justify-end overflow-visible">
-                        <div class="z-999 pr4 bg-white mv4"></div>
+                        <div class="z-1 pr4 bg-white mv4"></div>
                     </div>
                     <div class="bg-white flex-none-m mv4-l ma3-m mb5 mb0-ns flex flex-column justify-between br1 br--right-l pr4-l shadow-hover">
                         <div class="h1 flex items-end justify-center grow ph3">
-                            <div class="z-999 h2 flex bg-white shadow-4 br1">
+                            <div class="z-1 h2 flex bg-white shadow-4 br1">
                                 <div class="h2 br1 hover-bg-gold pa2 flex items-center justify-center">
                                     <div class="h1 mh1 w1 cover" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
                                     <div class="ph1 nowrap">400
@@ -151,11 +212,11 @@
                         <div class="flex-auto cover grow br1 pv6 pv0-l self-stretch shadow-hover" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;"></div>
                     </div>
                     <div class="w1 br1 br--left flex-l dn items-stretch justify-end overflow-visible">
-                        <div class="z-999 pr4 bg-white mv4"></div>
+                        <div class="z-1 pr4 bg-white mv4"></div>
                     </div>
                     <div class="bg-white flex-none-m mv4-l ma3-m mb5 mb0-ns flex flex-column justify-between br1 br--right-l pr4-l shadow-hover">
                         <div class="h1 flex items-end justify-center grow ph3">
-                            <div class="z-999 h2 flex bg-white shadow-4 br1">
+                            <div class="z-1 h2 flex bg-white shadow-4 br1">
                                 <div class="h2 br1 hover-bg-gold pa2 flex items-center justify-center">
                                     <div class="h1 mh1 w1 cover" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
                                     <div class="ph1 nowrap">400
@@ -219,11 +280,11 @@
                         <div class="flex-auto cover grow br1 pv6 pv0-l self-stretch shadow-hover" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;"></div>
                     </div>
                     <div class="w1 br1 br--left flex-l dn items-stretch justify-end overflow-visible">
-                        <div class="z-999 pr4 bg-white mv4"></div>
+                        <div class="z-1 pr4 bg-white mv4"></div>
                     </div>
                     <div class="bg-white flex-none-m mv4-l ma3-m mb5 mb0-ns flex flex-column justify-between br1 br--right-l pr4-l shadow-hover">
                         <div class="h1 flex items-end justify-center grow ph3">
-                            <div class="z-999 h2 flex bg-white shadow-4 br1">
+                            <div class="z-1 h2 flex bg-white shadow-4 br1">
                                 <div class="h2 br1 hover-bg-gold pa2 flex items-center justify-center">
                                     <div class="h1 mh1 w1 cover" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
                                     <div class="ph1 nowrap">400
@@ -281,7 +342,7 @@
                     <div class="w-60-l w-100 ph6-l relative-l grow shadow-hover flex-auto aspect-ratio--2x1-l aspect-ratio--16x9 cover" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;"></div>
                     <div class="bg-white measure-wide-m mv4-l flex flex-column justify-between br1 shadow-hover">
                         <div class="h1 flex items-end justify-center grow ph3">
-                            <div class="z-999 h2 flex bg-white shadow-4 br1">
+                            <div class="z-1 h2 flex bg-white shadow-4 br1">
                                 <div class="h2 br1 hover-bg-gold pa2 flex items-center justify-center">
                                     <div class="h1 mh1 w1 cover" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
                                     <div class="ph1 nowrap">400
@@ -339,7 +400,7 @@
                     <div class="w-60-l w-100 ph6-l relative-l flex-auto aspect-ratio--2x1-l aspect-ratio--16x9 cover" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;"></div>
                     <div class="measure-wide-m mv4-l flex flex-column justify-between br1">
                         <div class="h1 flex items-end justify-center ph3">
-                            <div class="z-999 h2 flex ba b--black-40 br1">
+                            <div class="z-1 h2 flex bg-white ba b--black-40 br1">
                                 <div class="h2 br1 hover-bg-gold pa2 flex items-center justify-center">
                                     <div class="h1 mh1 w1 cover" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
                                     <div class="ph1 nowrap">400
@@ -397,7 +458,7 @@
                     <div class="w-60-l w-100 ph6-l relative-l grow shadow-hover flex-auto aspect-ratio--2x1-l aspect-ratio--16x9 cover" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;"></div>
                     <div class="bg-white measure-wide-m mv4-l flex flex-column justify-between br1 shadow-hover">
                         <div class="h1 flex items-end justify-center grow ph3">
-                            <div class="z-999 h2 flex bg-white shadow-4 br1">
+                            <div class="z-1 h2 flex bg-white shadow-4 br1">
                                 <div class="h2 br1 hover-bg-gold pa2 flex items-center justify-center">
                                     <div class="h1 mh1 w1 cover" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
                                     <div class="ph1 nowrap">400
@@ -455,7 +516,7 @@
                     <div class="w-60-l w-100 ph6-l relative-l grow shadow-hover flex-auto aspect-ratio--2x1-l aspect-ratio--16x9 cover" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;"></div>
                     <div class="bg-white measure-wide-m mv4-l flex flex-column justify-between br1 shadow-hover">
                         <div class="h1 flex items-end justify-center grow ph3">
-                            <div class="z-999 h2 flex bg-white shadow-4 br1">
+                            <div class="z-1 h2 flex bg-white shadow-4 br1">
                                 <div class="h2 br1 hover-bg-gold pa2 flex items-center justify-center">
                                     <div class="h1 mh1 w1 cover" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
                                     <div class="ph1 nowrap">400
@@ -513,7 +574,7 @@
                     <div class="w-60-l w-100 ph6-l relative-l grow shadow-hover flex-auto aspect-ratio--2x1-l aspect-ratio--16x9 cover" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;"></div>
                     <div class="bg-white measure-wide-m mv4-l flex flex-column justify-between br1 shadow-hover">
                         <div class="h1 flex items-end justify-center grow ph3">
-                            <div class="z-999 h2 flex bg-white shadow-4 br1">
+                            <div class="z-1 h2 flex bg-white shadow-4 br1">
                                 <div class="h2 br1 hover-bg-gold pa2 flex items-center justify-center">
                                     <div class="h1 mh1 w1 cover" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
                                     <div class="ph1 nowrap">400
@@ -571,7 +632,7 @@
                     <div class="w-60-l w-100 ph6-l relative-l grow shadow-hover flex-auto aspect-ratio--2x1-l aspect-ratio--16x9 cover" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;"></div>
                     <div class="bg-white measure-wide-m mv4-l flex flex-column justify-between br1 shadow-hover">
                         <div class="h1 flex items-end justify-center grow ph3">
-                            <div class="z-999 h2 flex bg-white shadow-4 br1">
+                            <div class="z-1 h2 flex bg-white shadow-4 br1">
                                 <div class="h2 br1 hover-bg-gold pa2 flex items-center justify-center">
                                     <div class="h1 mh1 w1 cover" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
                                     <div class="ph1 nowrap">400
@@ -629,7 +690,7 @@
                     <div class="w-60-l w-100 ph6-l relative-l grow shadow-hover flex-auto aspect-ratio--2x1-l aspect-ratio--16x9 cover" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;"></div>
                     <div class="bg-white measure-wide-m mv4-l flex flex-column justify-between br1 shadow-hover">
                         <div class="h1 flex items-end justify-center grow ph3">
-                            <div class="z-999 h2 flex bg-white shadow-4 br1">
+                            <div class="z-1 h2 flex bg-white shadow-4 br1">
                                 <div class="h2 br1 hover-bg-gold pa2 flex items-center justify-center">
                                     <div class="h1 mh1 w1 cover" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
                                     <div class="ph1 nowrap">400
@@ -683,65 +744,7 @@
                     <div class="w-60-l w-100 ph6-l relative-l grow shadow-hover flex-auto aspect-ratio--2x1-l aspect-ratio--16x9 cover" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;"></div>
                     <div class="bg-white measure-wide-m mv4-l flex flex-column justify-between br1 shadow-hover">
                         <div class="h1 flex items-end justify-center grow ph3">
-                            <div class="z-999 h2 flex bg-white shadow-4 br1">
-                                <div class="h2 br1 hover-bg-gold pa2 flex items-center justify-center">
-                                    <div class="h1 mh1 w1 cover" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
-                                    <div class="ph1 nowrap">400
-                                        <sup>sqft</sup>
-                                    </div>
-                                </div>
-                                <div class="h2 br1 hover-bg-gold pa2 flex items-center justify-center">
-                                    <div class="h1 mh1 w1 cover" style="background:url('https://icongr.am/clarity/map-marker.svg')"></div>
-                                    <div class="ph1 nowrap">2.6
-                                        <sup>mi</sup>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pa3 pt4-l">
-                            <div class="pa1 gold f3 lh-solid">
-                                &#9733;&#9733;&#9733;&#9733;&#9733;
-                            </div>
-                            <div class="pa1 f2 fw9 lh-solid">
-                                Joanne's Garage
-                            </div>
-                            <div class="pa1 lh-copy">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt rem ullam ipsa. Sapiente, labore voluptates, eos, assumenda
-                                perferendis!
-                            </div>
-                            <div class="pt3 flex justify-around">
-                                <div class="pa3-l pa2 br-pill grow hover-bg-gold">
-                                    <div class="pa2-m pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/check.svg');"></div>
-                                </div>
-                                <div class="pa3-l pa2 br-pill grow hover-bg-gold">
-                                    <div class="pa2-m pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/shield.svg');"></div>
-                                </div>
-                                <div class="pa3-l pa2 br-pill grow hover-bg-gold">
-                                    <div class="pa2-m pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/users.svg');"></div>
-                                </div>
-                                <div class="pa3-l pa2 br-pill grow hover-bg-gold">
-                                    <div class="pa2-m pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/tags.svg');"></div>
-                                </div>
-                                <div class="pa3-l pa2 br-pill grow hover-bg-gold">
-                                    <div class="pa2-m pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/truck.svg');"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="h1 flex justify-end justify-center-m ph2">
-                            <div class="h2 nowrap bg-black hover-bg-purple br1 pv2 ph3 mh2 white grow shadow-hover">
-                                $3 per day
-                            </div>
-                            <div class="h2 nowrap bg-black hover-bg-purple br1 pv2 ph3 mh2 white grow shadow-hover">
-                                $90 per month
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-column flex-row-l items-center relative pa4-l pa2-m mb5 mb0-l bt bb bn-ns b--black-40 mw7">
-                    <div class="w-60-l w-100 ph6-l relative-l grow shadow-hover flex-auto aspect-ratio--2x1-l aspect-ratio--16x9 cover" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;"></div>
-                    <div class="bg-white measure-wide-m mv4-l flex flex-column justify-between br1 shadow-hover">
-                        <div class="h1 flex items-end justify-center grow ph3">
-                            <div class="z-999 h2 flex bg-white shadow-4 br1">
+                            <div class="z-1 h2 flex bg-white shadow-4 br1">
                                 <div class="h2 br1 hover-bg-gold pa2 flex items-center justify-center">
                                     <div class="h1 mh1 w1 cover" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
                                     <div class="ph1 nowrap">400
@@ -799,7 +802,7 @@
                     <div class="w-60-l w-100 ph6-l relative-l grow shadow-hover flex-auto aspect-ratio--2x1-l aspect-ratio--16x9 cover" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;"></div>
                     <div class="bg-white measure-wide-m mv4-l flex flex-column justify-between br1 shadow-hover">
                         <div class="h1 flex items-end justify-center grow ph3">
-                            <div class="z-999 h2 flex bg-white shadow-4 br1">
+                            <div class="z-1 h2 flex bg-white shadow-4 br1">
                                 <div class="h2 br1 hover-bg-gold pa2 flex items-center justify-center">
                                     <div class="h1 mh1 w1 cover" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
                                     <div class="ph1 nowrap">400
@@ -857,7 +860,65 @@
                     <div class="w-60-l w-100 ph6-l relative-l grow shadow-hover flex-auto aspect-ratio--2x1-l aspect-ratio--16x9 cover" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;"></div>
                     <div class="bg-white measure-wide-m mv4-l flex flex-column justify-between br1 shadow-hover">
                         <div class="h1 flex items-end justify-center grow ph3">
-                            <div class="z-999 h2 flex bg-white shadow-4 br1">
+                            <div class="z-1 h2 flex bg-white shadow-4 br1">
+                                <div class="h2 br1 hover-bg-gold pa2 flex items-center justify-center">
+                                    <div class="h1 mh1 w1 cover" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
+                                    <div class="ph1 nowrap">400
+                                        <sup>sqft</sup>
+                                    </div>
+                                </div>
+                                <div class="h2 br1 hover-bg-gold pa2 flex items-center justify-center">
+                                    <div class="h1 mh1 w1 cover" style="background:url('https://icongr.am/clarity/map-marker.svg')"></div>
+                                    <div class="ph1 nowrap">2.6
+                                        <sup>mi</sup>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pa3 pt4-l">
+                            <div class="pa1 gold f3 lh-solid">
+                                &#9733;&#9733;&#9733;&#9733;&#9733;
+                            </div>
+                            <div class="pa1 f2 fw9 lh-solid">
+                                Joanne's Garage
+                            </div>
+                            <div class="pa1 lh-copy">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt rem ullam ipsa. Sapiente, labore voluptates, eos, assumenda
+                                perferendis!
+                            </div>
+                            <div class="pt3 flex justify-around">
+                                <div class="pa3-l pa2 br-pill grow hover-bg-gold">
+                                    <div class="pa2-m pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/check.svg');"></div>
+                                </div>
+                                <div class="pa3-l pa2 br-pill grow hover-bg-gold">
+                                    <div class="pa2-m pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/shield.svg');"></div>
+                                </div>
+                                <div class="pa3-l pa2 br-pill grow hover-bg-gold">
+                                    <div class="pa2-m pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/users.svg');"></div>
+                                </div>
+                                <div class="pa3-l pa2 br-pill grow hover-bg-gold">
+                                    <div class="pa2-m pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/tags.svg');"></div>
+                                </div>
+                                <div class="pa3-l pa2 br-pill grow hover-bg-gold">
+                                    <div class="pa2-m pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/truck.svg');"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h1 flex justify-end justify-center-m ph2">
+                            <div class="h2 nowrap bg-black hover-bg-purple br1 pv2 ph3 mh2 white grow shadow-hover">
+                                $3 per day
+                            </div>
+                            <div class="h2 nowrap bg-black hover-bg-purple br1 pv2 ph3 mh2 white grow shadow-hover">
+                                $90 per month
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-column flex-row-l items-center relative pa4-l pa2-m mb5 mb0-l bt bb bn-ns b--black-40 mw7">
+                    <div class="w-60-l w-100 ph6-l relative-l grow shadow-hover flex-auto aspect-ratio--2x1-l aspect-ratio--16x9 cover" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;"></div>
+                    <div class="bg-white measure-wide-m mv4-l flex flex-column justify-between br1 shadow-hover">
+                        <div class="h1 flex items-end justify-center grow ph3">
+                            <div class="z-1 h2 flex bg-white shadow-4 br1">
                                 <div class="h2 br1 hover-bg-gold pa2 flex items-center justify-center">
                                     <div class="h1 mh1 w1 cover" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
                                     <div class="ph1 nowrap">400
