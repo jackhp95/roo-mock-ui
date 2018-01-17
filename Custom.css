@@ -80,6 +80,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
     position: sticky;
 }
 
+.aspect-ratio--2x1 {
+    padding-bottom: 50%;
+}
+
+
 /* Colors */
 
 .teal {
@@ -108,6 +113,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
     .bg-teal {
         background-color: #aaffff
     }
+    .aspect-ratio--2x1-ns {
+        padding-bottom: 50%;
+    }
 }
 
 
@@ -128,6 +136,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
     .bg-teal {
         background-color: #aaffff
     }
+    .aspect-ratio--2x1-m {
+        padding-bottom: 50%;
+    }
 }
 
 
@@ -147,6 +158,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
     }
     .bg-teal {
         background-color: #aaffff
+    }
+    .aspect-ratio--2x1-l {
+        padding-bottom: 50%;
     }
 }
 
