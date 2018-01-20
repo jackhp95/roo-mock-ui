@@ -1,175 +1,160 @@
-* {
-    box-sizing: border-box;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-kerning: auto;
-}
-
-html {
-    font-family: sans-serif;
-    -webkit-text-size-adjust: 100%;
-    -webkit-overflow-scrolling: touch !important;
-    overflow: auto !important;
-    height: 100% !important;
-}
-
-body {
-    /* has to be scroll, not auto */
-    font-family: 'Nunito Sans', sans-serif;
-    margin: 0;
-}
-
-
-/* Details & Summary  */
-
-summary::-webkit-details-marker {
-    display: none;
-}
-
-
-/* Calendar Picker */
-
-input[type=date] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    overflow: hidden;
-    position: relative;
-}
-
-input[type=date]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    display: none;
-    margin: 0;
-    padding: 0;
-}
-
-input[type=date]::-webkit-datetime-edit {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-input[type=date]::-webkit-clear-button {
-    -webkit-appearance: none;
-    display: none;
-    margin: 0;
-    padding: 0;
-}
-
-input[type=date]::-webkit-datetime-edit-fields-wrapper {
-    margin: 0;
-    padding: 0;
-}
-
-input[type=date]::-webkit-calendar-picker-indicator {
-    position: absolute;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-
-/* Addon Tachyons */
-
-.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-}
-
-.aspect-ratio--2x1 {
-    padding-bottom: 50%;
-}
-
-
-/* Colors */
-
-.teal {
-    color: #aaffff
-}
-
-.bg-teal {
-    background-color: #aaffff
-}
-
-
-/* ns Not Small */
-
-@media screen and (min-width:30em) {
-    .hover-bg-black-ns:focus,
-    .hover-bg-black-ns:hover {
-        background-color: #000
+    * {
+        box-sizing: border-box;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-kerning: auto;
     }
-    .hover-white-ns:focus,
-    .hover-white-ns:hover {
-        color: #fff
+
+    html {
+        font-family: sans-serif;
+        -webkit-text-size-adjust: 100%;
+        -webkit-overflow-scrolling: touch !important;
+        overflow: auto !important;
+        height: 100% !important;
     }
+
+    body {
+        /* has to be scroll, not auto */
+        font-family: 'Nunito Sans', sans-serif;
+        margin: 0;
+    }
+    /* Details & Summary  */
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+    /* Calendar Picker */
+
+    input[type=date] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        overflow: hidden;
+        position: relative;
+    }
+
+    input[type=date]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    input[type=date]::-webkit-datetime-edit {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    input[type=date]::-webkit-clear-button {
+        -webkit-appearance: none;
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    input[type=date]::-webkit-datetime-edit-fields-wrapper {
+        margin: 0;
+        padding: 0;
+    }
+
+    input[type=date]::-webkit-calendar-picker-indicator {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    /* Addon Tachyons */
+
+    .sticky {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+
+    .aspect-ratio--2x1 {
+        padding-bottom: 50%;
+    }
+
+    /* Colors */
+
     .teal {
         color: #aaffff
     }
+
     .bg-teal {
         background-color: #aaffff
     }
-    .aspect-ratio--2x1-ns {
-        padding-bottom: 50%;
-    }
-}
+    /* ns Not Small */
 
+    @media screen and (min-width:30em) {
+        .hover-bg-black-ns:focus,
+        .hover-bg-black-ns:hover {
+            background-color: #000
+        }
+        .hover-white-ns:focus,
+        .hover-white-ns:hover {
+            color: #fff
+        }
+        .teal {
+            color: #aaffff
+        }
+        .bg-teal {
+            background-color: #aaffff
+        }
+        .aspect-ratio--2x1-ns {
+            padding-bottom: 50%;
+        }
+    }
+    /* m Medium */
 
-/* m Medium */
+    @media screen and (min-width:30em) and (max-width:60em) {
+        .hover-bg-black-m:focus,
+        .hover-bg-black-m:hover {
+            background-color: #000
+        }
+        .hover-white-m:focus,
+        .hover-white-m:hover {
+            color: #fff
+        }
+        .teal {
+            color: #aaffff
+        }
+        .bg-teal {
+            background-color: #aaffff
+        }
+        .aspect-ratio--2x1-m {
+            padding-bottom: 50%;
+        }
+    }
+    /* l Large */
 
-@media screen and (min-width:30em) and (max-width:60em) {
-    .hover-bg-black-m:focus,
-    .hover-bg-black-m:hover {
-        background-color: #000
+    @media screen and (min-width:60em) {
+        .hover-bg-black-l:focus,
+        .hover-bg-black-l:hover {
+            background-color: #000
+        }
+        .hover-white-l:focus,
+        .hover-white-l:hover {
+            color: #fff
+        }
+        .teal {
+            color: #aaffff
+        }
+        .bg-teal {
+            background-color: #aaffff
+        }
+        .aspect-ratio--2x1-l {
+            padding-bottom: 50%;
+        }
     }
-    .hover-white-m:focus,
-    .hover-white-m:hover {
-        color: #fff
-    }
-    .teal {
-        color: #aaffff
-    }
-    .bg-teal {
-        background-color: #aaffff
-    }
-    .aspect-ratio--2x1-m {
-        padding-bottom: 50%;
-    }
-}
 
-
-/* l Large */
-
-@media screen and (min-width:60em) {
-    .hover-bg-black-l:focus,
-    .hover-bg-black-l:hover {
-        background-color: #000
+    .ccw {
+        transform: rotate(-90deg);
     }
-    .hover-white-l:focus,
-    .hover-white-l:hover {
-        color: #fff
-    }
-    .teal {
-        color: #aaffff
-    }
-    .bg-teal {
-        background-color: #aaffff
-    }
-    .aspect-ratio--2x1-l {
-        padding-bottom: 50%;
-    }
-}
 
-.ccw {
-    transform: rotate(-90deg);
-}
-
-.cw {
-    transform: rotate(90deg);
-}
-
-</style>
+    .cw {
+        transform: rotate(90deg);
+    }
