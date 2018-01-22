@@ -74,10 +74,16 @@
         position: sticky;
     }
 
-    .aspect-ratio--2x1 {
-        padding-bottom: 50%;
+    .ccw {
+        transform: rotate(-90deg);
     }
 
+    .cw {
+        transform: rotate(90deg);
+    }
+    .bg-transparent {
+        background: transparent;
+    }
     /* Colors */
 
     .teal {
@@ -90,71 +96,44 @@
     /* ns Not Small */
 
     @media screen and (min-width:30em) {
-        .hover-bg-black-ns:focus,
-        .hover-bg-black-ns:hover {
-            background-color: #000
-        }
-        .hover-white-ns:focus,
-        .hover-white-ns:hover {
-            color: #fff
-        }
         .teal {
             color: #aaffff
         }
         .bg-teal {
             background-color: #aaffff
         }
-        .aspect-ratio--2x1-ns {
-            padding-bottom: 50%;
+        .bg-transparent-ns {
+            background: transparent;
+        }
+
+        /* THIS PROPERTY IS REPEATED FROM TACHYONS FOR OVERWRITING THE CASCADE FROM STICKY */
+        .static-ns {
+            position: static;
         }
     }
     /* m Medium */
 
     @media screen and (min-width:30em) and (max-width:60em) {
-        .hover-bg-black-m:focus,
-        .hover-bg-black-m:hover {
-            background-color: #000
-        }
-        .hover-white-m:focus,
-        .hover-white-m:hover {
-            color: #fff
-        }
-        .teal {
+        .teal-m {
             color: #aaffff
         }
-        .bg-teal {
+        .bg-teal-m {
             background-color: #aaffff
         }
-        .aspect-ratio--2x1-m {
-            padding-bottom: 50%;
+        .bg-transparent-m {
+            background: transparent;
         }
     }
     /* l Large */
 
     @media screen and (min-width:60em) {
-        .hover-bg-black-l:focus,
-        .hover-bg-black-l:hover {
-            background-color: #000
-        }
-        .hover-white-l:focus,
-        .hover-white-l:hover {
-            color: #fff
-        }
-        .teal {
+        .teal-l {
             color: #aaffff
         }
-        .bg-teal {
+        .bg-teal-l {
             background-color: #aaffff
         }
-        .aspect-ratio--2x1-l {
-            padding-bottom: 50%;
+        .bg-transparent-l {
+            background: transparent;
         }
-    }
-
-    .ccw {
-        transform: rotate(-90deg);
-    }
-
-    .cw {
-        transform: rotate(90deg);
     }
