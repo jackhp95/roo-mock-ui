@@ -14,7 +14,7 @@
         height: 100% !important;
     }
 
-    body {
+    body, input {
         /* has to be scroll, not auto */
         font-family: 'Nunito Sans', sans-serif;
         margin: 0;
