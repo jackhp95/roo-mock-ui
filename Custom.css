@@ -14,7 +14,8 @@
         height: 100% !important;
     }
 
-    body, input {
+    body,
+    input {
         /* has to be scroll, not auto */
         font-family: 'Nunito Sans', sans-serif;
         margin: 0;
@@ -69,9 +70,20 @@
     }
     /* Addon Tachyons */
 
+    .lg-black-fade-up {
+        background: linear-gradient(transparent, black);
+    }
+
     .sticky {
         position: -webkit-sticky;
         position: sticky;
+    }
+
+    .parallax {
+        background-attachment: fixed !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 
     .ccw {
@@ -81,6 +93,7 @@
     .cw {
         transform: rotate(90deg);
     }
+
     .bg-transparent {
         background: transparent;
     }
@@ -105,7 +118,6 @@
         .bg-transparent-ns {
             background: transparent;
         }
-
         /* THIS PROPERTY IS REPEATED FROM TACHYONS FOR OVERWRITING THE CASCADE FROM STICKY */
         .static-ns {
             position: static;
