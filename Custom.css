@@ -85,15 +85,7 @@
         background-size: cover;
         background-position: center;
     }
-
-    .ccw {
-        transform: rotate(-90deg);
-    }
-
-    .cw {
-        transform: rotate(90deg);
-    }
-
+    
     .bg-transparent {
         background: transparent;
     }
