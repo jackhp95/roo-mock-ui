@@ -72,6 +72,9 @@
     .lg-black-fade-up {
         background: linear-gradient(transparent, black);
     }
+    .lgh-black-0-white {
+        background: linear-gradient(90deg, black, transparent 20%, transparent 80%, white);
+    }
 
     .sticky {
         position: -webkit-sticky;
