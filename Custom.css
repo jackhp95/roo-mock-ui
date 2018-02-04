@@ -19,11 +19,13 @@
         font-family: 'Nunito Sans', sans-serif;
         margin: 0;
     }
+
     /* Details & Summary  */
 
     summary::-webkit-details-marker {
         display: none;
     }
+
     /* Calendar Picker */
 
     input[type=date] {
@@ -67,11 +69,13 @@
         margin: 0;
         padding: 0;
     }
+
     /* Addon Tachyons */
 
     .lg-black-fade-up {
         background: linear-gradient(transparent, black);
     }
+
     .lgh-black-0-white {
         background: linear-gradient(90deg, black, transparent 20%, transparent 80%, white);
     }
@@ -91,6 +95,7 @@
     .bg-transparent {
         background: transparent;
     }
+
     /* Colors */
 
     .teal {
@@ -100,6 +105,7 @@
     .bg-teal {
         background-color: #aaffff
     }
+
     /* ns Not Small */
 
     @media screen and (min-width:30em) {
@@ -117,6 +123,7 @@
             position: static;
         }
     }
+
     /* m Medium */
 
     @media screen and (min-width:30em) and (max-width:60em) {
@@ -130,6 +137,7 @@
             background: transparent;
         }
     }
+
     /* l Large */
 
     @media screen and (min-width:60em) {
@@ -141,5 +149,142 @@
         }
         .bg-transparent-l {
             background: transparent;
+        }
+    }
+
+    /* Colors */
+
+    .arctic {
+        color: #b2dbd5
+    }
+
+    .b--arctic {
+        border-color: #b2dbd5
+    }
+
+    .bg-arctic {
+        background-color: #b2dbd5
+    }
+
+    .teal {
+        color: #2b616d
+    }
+
+    .b--teal {
+        border-color: #2b616d
+    }
+
+    .bg-teal {
+        background-color: #2b616d
+    }
+
+    .cloud {
+        color: #ffffff
+    }
+
+    .b--cloud {
+        border-color: #ffffff
+    }
+
+    .bg-cloud {
+        background-color: #ffffff
+    }
+
+    .brick {
+        color: #fa8d62
+    }
+
+    .b--brick {
+        border-color: #fa8d62
+    }
+
+    .bg-brick {
+        background-color: #fa8d62
+    }
+
+    /* ns Not Small */
+
+    @media screen and (min-width:30em) {
+        .arctic-ns {
+            color: #b2dbd5
+        }
+        .bg-arctic-ns {
+            background-color: #b2dbd5
+        }
+        .teal-ns {
+            color: #2b616d
+        }
+        .bg-teal-ns {
+            background-color: #2b616d
+        }
+        .cloud-ns {
+            color: #ffffff
+        }
+        .bg-cloud-ns {
+            background-color: #ffffff
+        }
+        .brick-ns {
+            color: #fa8d62
+        }
+        .bg-brick-ns {
+            background-color: #fa8d62
+        }
+    }
+
+    /* m Medium */
+
+    @media screen and (min-width:30em) and (max-width:60em) {
+        .arctic-m {
+            color: #b2dbd5
+        }
+        .bg-arctic-m {
+            background-color: #b2dbd5
+        }
+        .teal-m {
+            color: #2b616d
+        }
+        .bg-teal-m {
+            background-color: #2b616d
+        }
+        .cloud-m {
+            color: #ffffff
+        }
+        .bg-cloud-m {
+            background-color: #ffffff
+        }
+        .brick-m {
+            color: #fa8d62
+        }
+        .bg-brick-m {
+            background-color: #fa8d62
+        }
+    }
+
+    /* l Large */
+
+    @media screen and (min-width:60em) {
+        .arctic-l {
+            color: #b2dbd5
+        }
+        .bg-arctic-l {
+            background-color: #b2dbd5
+        }
+        .teal-l {
+            color: #2b616d
+        }
+        .bg-teal-l {
+            background-color: #2b616d
+        }
+        .cloud-l {
+            color: #ffffff
+        }
+        .bg-cloud-l {
+            background-color: #ffffff
+        }
+        .brick-l {
+            color: #fa8d62
+        }
+        .bg-brick-l {
+            background-color: #fa8d62
         }
     }
