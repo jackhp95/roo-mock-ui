@@ -68,7 +68,7 @@
             --host-l: 38%;
             --roo-l: 16%;
             --rent-l: 62%;
-            --act-l: 38%;
+            --act-l: 67%;
 
             --h-scale: 3;
             --s-scale: 3;
@@ -954,7 +954,16 @@
 </head>
 
 <body>
-    <div class="flex">
+    <div class="flex flex-row-reverse">
+        <div class="w2 flex flex-column-reverse">
+            <div class="pv3 dib bg-act-d3 flex-auto"></div>
+            <div class="pv3 dib bg-act-d2 flex-auto"></div>
+            <div class="pv3 dib bg-act-d1 flex-auto"></div>
+            <div class="pv4 bg-act flex-auto"></div>
+            <div class="pv3 dib bg-act-l1 flex-auto"></div>
+            <div class="pv3 dib bg-act-l2 flex-auto"></div>
+            <div class="pv3 dib bg-act-l3 flex-auto"></div>
+        </div>
         <div class="flex-auto flex flex-column-reverse">
             <div class="pv3 dib bg-roo-d3 flex-auto"></div>
             <div class="pv3 dib bg-roo-d2 flex-auto"></div>
@@ -982,27 +991,18 @@
             <div class="pv3 dib bg-rent-l2 flex-auto"></div>
             <div class="pv3 dib bg-rent-l3 flex-auto"></div>
         </div>
-        <div class="w2 flex flex-column-reverse">
-            <div class="pv3 dib bg-act-d3 flex-auto"></div>
-            <div class="pv3 dib bg-act-d2 flex-auto"></div>
-            <div class="pv3 dib bg-act-d1 flex-auto"></div>
-            <div class="pv4 bg-act flex-auto"></div>
-            <div class="pv3 dib bg-act-l1 flex-auto"></div>
-            <div class="pv3 dib bg-act-l2 flex-auto"></div>
-            <div class="pv3 dib bg-act-l3 flex-auto"></div>
-        </div>
     </div>
-    <div class="w-20 h2 dib sticky top-0"></div>
-    <div class="l3 ph3 z-max w-10 dib grow sticky top-0 pv2 bg-white black ba tc fw9 ttu br1">l3</div>
-    <div class="l2 ph3 z-max w-10 dib grow sticky top-0 pv2 bg-white black ba tc fw9 ttu br1">l2</div>
-    <div class="l1 ph3 z-max w-10 dib grow sticky top-0 pv2 bg-white black ba tc fw9 ttu br1">l1</div>
-    <div class="d1 ph3 z-max w-10 dib grow sticky top-0 pv2 bg-white black ba tc fw9 ttu br1">d1</div>
-    <div class="d2 ph3 z-max w-10 dib grow sticky top-0 pv2 bg-white black ba tc fw9 ttu br1">d2</div>
-    <div class="d3 ph3 z-max w-10 dib grow sticky top-0 pv2 bg-white black ba tc fw9 ttu br1">d3</div>
+    <div class="h2 dib sticky top-0"></div>
+    <div class="l3 z-max dib grow sticky top-0 pa2 bg-white black ba tc fw9 ttu br1">l3</div>
+    <div class="l2 z-max dib grow sticky top-0 pa2 bg-white black ba tc fw9 ttu br1">l2</div>
+    <div class="l1 z-max dib grow sticky top-0 pa2 bg-white black ba tc fw9 ttu br1">l1</div>
+    <div class="d1 z-max dib grow sticky top-0 pa2 bg-white black ba tc fw9 ttu br1">d1</div>
+    <div class="d2 z-max dib grow sticky top-0 pa2 bg-white black ba tc fw9 ttu br1">d2</div>
+    <div class="d3 z-max dib grow sticky top-0 pa2 bg-white black ba tc fw9 ttu br1">d3</div>
     <div class="flex flex-column items-center">
         <div class="z-1 vh-75 self-stretch flex">
-            <div class="flex-auto self-stretch flex cover fadeIn animated" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;">
-                <div class="vh-75 w-100 bg-black-60 flex justify-center items-center pb6 pb5-ns">
+            <div class="flex-auto self-stretch flex cover fadeIn animated relative" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;">
+                <div class="vh-75 w-100 bg-black-60 flex justify-center items-center pb5-ns pb4">
                     <div class="z-5 absolute fw9 tracked-tight lh-solid" style="font-size:15vmin;padding-bottom:1.5vmin;">
                         roo
                     </div>
@@ -1014,9 +1014,48 @@
                     <div class="z-0 br-pill absolute ba bw1 b--host animatedSlow infinite rubberBand" style="width:29vmin;height:29vmin;"></div>
                     <div class="z-0 br-pill absolute ba bw1 b--rent animatedSlow infinite wobble" style="width:29vmin;height:29vmin;"></div>
                 </div>
+                <div class="absolute bottom-0 left-0 right-0 mb4-ns mb3 flex flex-column justify-center lh-solid z-3">
+                    <div class="flex justify-center pa3 f3-l f4-m f5">Launching in Columbia, MO</div>
+                    <div class="flex justify-center">
+                        <div class="mh1 flex flex-column">
+                            <div class="bg-white roo pa2 br1 grow shadow-4 f2-l f3-m f4 fw9 pa3-ns pa2">12</div>
+                            <div class="mt2 f7 fw5 tc">days</div>
+                        </div>
+                        <div class="mh1 flex flex-column">
+                            <div class="bg-white roo pa2 br1 grow shadow-4 f2-l f3-m f4 fw9 pa3-ns pa2">23</div>
+                            <div class="mt2 f7 fw5 tc">hours</div>
+                        </div>
+                        <div class="mh1 flex flex-column">
+                            <div class="bg-white roo pa2 br1 grow shadow-4 f2-l f3-m f4 fw9 pa3-ns pa2">15</div>
+                            <div class="mt2 f7 fw5 tc">mins</div>
+                        </div>
+                        <div class="mh1 flex flex-column">
+                            <div class="bg-white roo pa2 br1 grow shadow-4 f2-l f3-m f4 fw9 pa3-ns pa2">46</div>
+                            <div class="mt2 f7 fw5 tc">secs</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="z-1 sticky top-0 self-stretch flex justify-between items-center">
+        <div class="z-0 bg-roo self-stretch flex flex-wrap justify-around items-center">
+            <div class="f1-l f2-m f3 fw9 pa5-l pa4-m pa3 flex-none flex">
+                <div class="pa2">Make</div>
+                <div class="pl1-m pl0 pa2">
+                    <div style="top:33vh;" class="sticky nt7 z-5 bg-roo">Money</div>
+                    <div style="top:67vh;" class="sticky nt7 z-4 bg-roo">Friends</div>
+                    <div style="top:100vh" class="sticky nt7 z-3 bg-roo">Space</div>
+                </div>
+            </div>
+            <div class="pa5-l pa4-m pa3">
+                <div class="pv2 ph4 o-80">Get notified when we launch!</div>
+                <form class="z-999 f7 f6-m f5-l flex-none flex items-end flex-row br-pill f4 overflow-hidden self-center shadow-4">
+                    <input class="input-reset ph4-ns pa3 outline-0 bn flex-auto" placeholder="Your email or cell" type="text">
+                    <button class="button-reset ph4-ns pa3 outline-0 bn w-auto bg-act white hover-bg-purple bg-animate pointer fw7" type="text">Sign Up!</button>
+                </form>
+                <div class="pv2 f7 ph3 o-40 glow tr">We will not send you any spam, pinky promise.</div>
+            </div>
+        </div>
+        <!-- <div class="z-1 sticky top-0 self-stretch flex justify-between items-center">
             <div class="flex bg-host br1 f6 f4-ns fw9 ttu tracked">
                 <div class="bg-host">
                     <div class="pa2 ma2 pa3-ns ma3-ns contain" style="background:url('https://icongr.am/clarity/house.svg?color=ffffff')"></div>
@@ -1035,17 +1074,18 @@
                     <div class="pa2 ma2 pa3-ns ma3-ns contain" style="background:url('https://icongr.am/clarity/bundle.svg?color=ffffff')"></div>
                 </div>
             </div>
-        </div>
-        <div class="z-3 h2 h3-m h4-l flex justify-center items-end overflow-visible measure mh4 mh5-m mb5-l mb4-m mb3 bounceInUp animated">
-            <div class="bg-roo br1 shadow-4 ma3 mh4-ns lh-copy f4-l f5-m f6 flex flex-column">
-                <div class="ma3 ma4-ns">
-                    Roo wants to provide a better solution to storage by connecting those with unused space to those in need of storage.
+        </div> -->
+        <!-- <div class="z-3 h2 h3-m h4-l flex justify-center items-end overflow-visible measure mh4 mh5-m mb5-l mb4-m mb3 bounceInUp animated">
+            <div class="ma3 mh4-ns lh-copy f4-l f5-m f6 flex flex-column">
+                <div class="bg-roo br1 shadow-4 pa3 pa4-ns">
+                    <div class="pv3">On the Horizon...</div>
+                    <div class="pv3">Launching in Columbia, MO</div>
                 </div>
                 <div class="bg-host dib nb3 mr4 ph4 pv3 br1 self-end grow hover-bg-purple shadow-hover shadow-4 fw7">
                     Sign Up
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="mv5 fw9 flex flex-column items-center justify-center f-subheadline-l f1-m f2 lh-solid roo">
             why use roo?
             <div class="w-70 bb bw1 b--roo o-40 pa2"></div>
@@ -1096,13 +1136,54 @@
                 </dd>
             </dl>
         </div>
-        <div class="mv5 fw9 self-center flex flex-column items-center justify-center f-subheadline-l f1-m f2 lh-solid roo">
-            the roo process
-            <div class="w-70 bb bw1 b--roo pa2 o-40"></div>
+        <div class="self-stretch mv3 mv4-ns self-center flex flex-column items-center justify-center lh-solid roo">
+            <div class="mv3 mv4-l fw9 f-subheadline-l f1-m f2">the roo process</div>
+            <div class="mv3 mv4-l self-stretch flex justify-between items-center ph5-l ph4-m ph3 roo tc f7 f6-m f5-l fw3 relative">
+                <div class="absolute absolute--fill flex items-center">
+                    <div style="height:2px;background-attachment:fixed;background-size:100vv 100vh;background-image:linear-gradient(135deg, var(--roo-l3) 50%, white 50%);"
+                        class="mh6-l mh5-m mh4 flex-auto w-80 static mb2-m mb3-l"></div>
+                </div>
+                <div class="relative">
+                    <div class="bg-host z-3 ba bw3-l bw2-m bw1 b--white pa3-l pa2-m pa1 ma3-l ma2-m ma1 br-pill">
+                        <div style="background:url('https://icongr.am/clarity/view-list.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3-m pl3-m pa3-l"></div>
+                    </div>
+                    <div class="dn di-ns">List</div>
+                </div>
+                <div class="relative">
+                    <div class="bg-rent z-3 ba bw3-l bw2-m bw1 b--white pa3-l pa2-m pa1 ma3-l ma2-m ma1 br-pill">
+                        <div style="background:url('https://icongr.am/clarity/tag.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3-m pl3-m pa3-l"></div>
+                    </div>
+                    <div class="dn di-ns">Reserve</div>
+                </div>
+                <div class="relative">
+                    <div class="bg-host z-3 ba bw3-l bw2-m bw1 b--white pa3-l pa2-m pa1 ma3-l ma2-m ma1 br-pill">
+                        <div style="background:url('https://icongr.am/clarity/check.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3-m pl3-m pa3-l"></div>
+                    </div>
+                    <div class="dn di-ns">Confirm</div>
+                </div>
+                <div class="relative">
+                    <div class="bg-rent z-3 ba bw3-l bw2-m bw1 b--white pa3-l pa2-m pa1 ma3-l ma2-m ma1 br-pill">
+                        <div style="background:url('https://icongr.am/clarity/sign-in.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3-m pl3-m pa3-l"></div>
+                    </div>
+                    <div class="dn di-ns">Drop-off</div>
+                </div>
+                <div class="relative">
+                    <div class="bg-host z-3 ba bw3-l bw2-m bw1 b--white pa3-l pa2-m pa1 ma3-l ma2-m ma1 br-pill">
+                        <div style="background:url('https://icongr.am/clarity/clock.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3-m pl3-m pa3-l"></div>
+                    </div>
+                    <div class="dn di-ns">Store</div>
+                </div>
+                <div class="relative">
+                    <div class="bg-rent z-3 ba bw3-l bw2-m bw1 b--white pa3-l pa2-m pa1 ma3-l ma2-m ma1 br-pill">
+                        <div style="background:url('https://icongr.am/clarity/sign-out.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3-m pl3-m pa3-l"></div>
+                    </div>
+                    <div class="dn di-ns">Pick-up</div>
+                </div>
+            </div>
         </div>
         <div class="flex self-stretch mb6-l mb5-m mb4">
-            <div class="z-0 flex-auto flex flex-column self-stretch bg-white">
-                <div class="flex-auto flex flex-row-ns overflow-hidden flex-column-reverse br1 mv3 nr5-ns nr4">
+            <div class="z-0 flex-auto flex flex-column self-stretch bg-white overflow-hidden">
+                <div class="flex-auto flex flex-row-ns overflow-hidden flex-column-reverse br1 mv3 nr5-ns">
                     <div class="bg-host measure pa4-l pa3-m pa2 br1 shadow-4">
                         <div class="f2 fw9 ma4">
                             List
@@ -1115,7 +1196,7 @@
                     </div>
                     <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://images.unsplash.com/photo-1485646979142-d4abb57a876f') center;"></div>
                 </div>
-                <div class="flex-auto flex flex-row-ns overflow-hidden flex-column br1 mv3 nl5-ns nl4">
+                <div class="flex-auto flex flex-row-ns overflow-hidden flex-column br1 mv3 nl5-ns">
                     <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://images.unsplash.com/photo-1515405000439-3da66fd2bc89') center;"></div>
                     <div class="bg-rent measure pa4-l pa3-m pa2 br1 shadow-4">
                         <div class="f2 fw9 ma4">
@@ -1128,7 +1209,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex-auto flex flex-row-ns overflow-hidden flex-column-reverse br1 mv3 nr5-ns nr4">
+                <div class="flex-auto flex flex-row-ns overflow-hidden flex-column-reverse br1 mv3 nr5-ns">
                     <div class="bg-host measure pa4-l pa3-m pa2 br1 shadow-4">
                         <div class="f2 fw9 ma4">
                             Confirm
@@ -1141,7 +1222,7 @@
                     </div>
                     <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://images.unsplash.com/photo-1511330823821-0f576490e149') center;"></div>
                 </div>
-                <div class="flex-auto flex flex-row-ns overflow-hidden flex-column br1 mv3 nl5-ns nl4">
+                <div class="flex-auto flex flex-row-ns overflow-hidden flex-column br1 mv3 nl5-ns">
                     <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://images.unsplash.com/photo-1485646979142-d4abb57a876f') center;"></div>
                     <div class="bg-rent measure pa4-l pa3-m pa2 br1 shadow-4">
                         <div class="f2 fw9 ma4">
@@ -1154,7 +1235,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex-auto flex flex-row-ns overflow-hidden flex-column-reverse br1 mv3 nr5-ns nr4">
+                <div class="flex-auto flex flex-row-ns overflow-hidden flex-column-reverse br1 mv3 nr5-ns">
                     <div class="bg-host measure pa4-l pa3-m pa2 br1 shadow-4">
                         <div class="f2 fw9 ma4">
                             Get Paid
@@ -1167,7 +1248,7 @@
                     </div>
                     <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://images.unsplash.com/photo-1515405000439-3da66fd2bc89') center;"></div>
                 </div>
-                <div class="flex-auto flex flex-row-ns overflow-hidden flex-column br1 mv3 nl5-ns nl4">
+                <div class="flex-auto flex flex-row-ns overflow-hidden flex-column br1 mv3 nl5-ns">
                     <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://images.unsplash.com/photo-1511330823821-0f576490e149') center;"></div>
                     <div class="bg-rent measure pa4-l pa3-m pa2 br1 shadow-4">
                         <div class="f2 fw9 ma4">
