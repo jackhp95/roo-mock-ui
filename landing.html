@@ -55,22 +55,20 @@
         /* Colors */
 
         :root {
-            --host-h: 190;
-            --roo-h: 220;
-            /*225*/
-            --rent-h: 40;
-            /*45*/
-            --act-h: 10;
+            --host-h: 25;
+            --roo-h: 215;
+            --rent-h: 45;
+            --act-h: 35;
 
-            --host-s: 62%;
-            --roo-s: 62%;
-            --rent-s: 100%;
-            --act-s: 85%;
+            --host-s: 90%;
+            --roo-s: 15%;
+            --rent-s: 90%;
+            --act-s: 30%;
 
-            --host-l: 38%;
-            --roo-l: 16%;
-            --rent-l: 62%;
-            --act-l: 62%;
+            --host-l: 60%;
+            --roo-l: 50%;
+            --rent-l: 60%;
+            --act-l: 75%;
 
             --h-scale: 3;
             --s-scale: 3;
@@ -1002,62 +1000,54 @@
     <div class="d2 z-max dib grow sticky top-0 pa2 bg-white black ba tc fw9 ttu br1">d2</div>
     <div class="d3 z-max dib grow sticky top-0 pa2 bg-white black ba tc fw9 ttu br1">d3</div>
     <div class="flex flex-column items-center">
-        <div class="z-1 self-stretch flex roo">
-            <div class="flex-auto self-stretch flex cover relative" style="background:url('handshake.jpg') center;">
-                <div class="pv5 w-100 bg-white-80 flex flex-column justify-around items-center">
-                    <div class="mv4 flex items-center justify-center" style="width:25vmin;height:25vmin;">
-                        <div class="z-5 absolute fw1 tracked-tight lh-solid" style="letter-spacing:-1.5vmin;font-size:15vmin;padding-bottom:1.5vmin;">
-                            r<span style="letter-spacing:-2.15vmin;">o</span>o
+        <div class="z-1 self-stretch flex flex-column roo cover vh-75" style="background:url('https://images.unsplash.com/photo-1484061263732-b8b0a5ae7db6') center no-repeat;">
+            <div class="flex-auto w-100 self-stretch flex cover relative" style="background: linear-gradient(to right,var(--act), transparent)">
+                <div class="w-60 flex justify-between items-center">
+                    <div class="self-end flex flex-column items-start pa4">
+                        <div class="flex justify-center f1-l f2-m f3 fw7">Coming Soon</div>
+                        <div class="ma2 flex justify-center f3-l f4-m f5 fw5">Launching in Columbia, MO</div>
+                        <div class="mv2 flex justify-center">
+                            <div class="mh1 flex flex-column">
+                                <div class="white bg-roo pa2 pa3-ns br1 grow shadow-4 f2-l f3-m f4 fw9">12</div>
+                                <div class="mt2 f7 fw9 tc">days</div>
+                            </div>
+                            <div class="mh1 flex flex-column">
+                                <div class="white bg-roo pa2 pa3-ns br1 grow shadow-4 f2-l f3-m f4 fw9">23</div>
+                                <div class="mt2 f7 fw9 tc">hours</div>
+                            </div>
+                            <div class="mh1 flex flex-column">
+                                <div class="white bg-roo pa2 pa3-ns br1 grow shadow-4 f2-l f3-m f4 fw9">15</div>
+                                <div class="mt2 f7 fw9 tc">mins</div>
+                            </div>
+                            <div class="mh1 flex flex-column">
+                                <div class="white bg-roo pa2 pa3-ns br1 grow shadow-4 f2-l f3-m f4 fw9">46</div>
+                                <div class="mt2 f7 fw9 tc">secs</div>
+                            </div>
                         </div>
-                        <div class="z-4 br-pill absolute overflow-hidden bg-roo animatedSlow pulse infinite" style="width:25vmin;height:25vmin;">
-                        </div>
-                        <div class="z-4 br-pill absolute overflow-hidden bounceIn animated" style="width:24vmin;height:24vmin;background:url('handshake.jpg') center;">
-                            <div class="br-pill absolute absolute--fill bg-white"></div>
+                    </div>
+                    <div class="absolute absolute--fill flex items-center justify-center">
+                        <div class="z-4 br-pill absolute overflow-hidden bg-white animatedSlow pulse infinite contain" style="width:25vmin;height:25vmin;">
+                            <div class="contain absolute absolute--fill" style="background:url('roo-roo.png')"></div>
                         </div>
                         <div class="z-0 br-pill absolute ba bw1 b--host animatedSlow infinite rubberBand" style="width:24vmin;height:24vmin;"></div>
                         <div class="z-0 br-pill absolute ba bw1 b--rent animatedSlow infinite wobble" style="width:24vmin;height:24vmin;"></div>
                     </div>
-                    <div class="mv3 flex justify-center f1-l f2-m f3">Coming Soon</div>
-                    <div class="mv2 flex justify-center f3-l f4-m f5">Launching in Columbia, MO</div>
-                    <div class="flex justify-center">
-                        <div class="mh1 flex flex-column">
-                            <div class="white bg-roo pa2 br1 grow shadow-4 f2-l f3-m f4 fw9 pa3-ns pa2">12</div>
-                            <div class="mt2 f7 fw5 tc">days</div>
-                        </div>
-                        <div class="mh1 flex flex-column">
-                            <div class="white bg-roo pa2 br1 grow shadow-4 f2-l f3-m f4 fw9 pa3-ns pa2">23</div>
-                            <div class="mt2 f7 fw5 tc">hours</div>
-                        </div>
-                        <div class="mh1 flex flex-column">
-                            <div class="white bg-roo pa2 br1 grow shadow-4 f2-l f3-m f4 fw9 pa3-ns pa2">15</div>
-                            <div class="mt2 f7 fw5 tc">mins</div>
-                        </div>
-                        <div class="mh1 flex flex-column">
-                            <div class="white bg-roo pa2 br1 grow shadow-4 f2-l f3-m f4 fw9 pa3-ns pa2">46</div>
-                            <div class="mt2 f7 fw5 tc">secs</div>
-                        </div>
-                    </div>
+                </div>
+            </div>
+            <div class="z-3 bg-roo white flex-none self-stretch flex flex-wrap justify-start items-start relative ph2 ph3-m ph4-l">
+                <div class="absolute bottom-0 right-0 w-50 vh-75 contain" style="background:url('http://hoddesdonselfstorage.co.uk/wp-content/themes/hoddesdon_self_storage/build/img/home-quote-splash.png') bottom no-repeat;">
+                </div>
+                <div class="flex items-stretch justify-around flex-column flex-none pa2 pa3-m pa4-l">
+                    <div class="pv2 ph4 o-80">Get notified when we launch!</div>
+                    <form class="z-999 f7 f6-m f5-l flex-none flex items-end flex-row br-pill f4 overflow-hidden self-center shadow-4">
+                        <input class="input-reset ph4-ns pa3 outline-0 bn flex-auto" placeholder="Your email or cell" type="text">
+                        <button class="button-reset ph4-ns pa3 outline-0 bn w-auto bg-act white hover-bg-purple bg-animate pointer fw7" type="text">Sign Up!</button>
+                    </form>
+                    <div class="pv2 f7 ph3 o-40 glow tr">We will not send you any spam, pinky promise.</div>
                 </div>
             </div>
         </div>
-        <div class="z-0 bg-roo self-stretch flex flex-wrap justify-around items-center">
-            <div class="f1-l f2-m f3 fw9 pa5-l pa4-m pa3 flex-none flex">
-                <div class="pa2">Make</div>
-                <div class="pl1-m pl0 pa2">
-                    <div style="top:25vh;" class="sticky nt7 z-5 bg-roo">Money</div>
-                    <div style="top:50vh;" class="sticky nt7 z-4 bg-roo">Friends</div>
-                    <div style="top:100vh" class="sticky nt7 z-3 bg-roo">Space</div>
-                </div>
-            </div>
-            <div class="pa5-l pa4-m pa3">
-                <div class="pv2 ph4 o-80">Get notified when we launch!</div>
-                <form class="z-999 f7 f6-m f5-l flex-none flex items-end flex-row br-pill f4 overflow-hidden self-center shadow-4">
-                    <input class="input-reset ph4-ns pa3 outline-0 bn flex-auto" placeholder="Your email or cell" type="text">
-                    <button class="button-reset ph4-ns pa3 outline-0 bn w-auto bg-act white hover-bg-purple bg-animate pointer fw7" type="text">Sign Up!</button>
-                </form>
-                <div class="pv2 f7 ph3 o-40 glow tr">We will not send you any spam, pinky promise.</div>
-            </div>
-        </div>
+
         <!-- <div class="z-1 sticky top-0 self-stretch flex justify-between items-center">
             <div class="flex bg-host br1 f6 f4-ns fw9 ttu tracked">
                 <div class="bg-host">
@@ -1109,13 +1099,13 @@
                     Utilize Unused Space
                 </dt>
                 <dd class="ml0 mt2 mb4">
-                    Spare bedroom, garage, etc.
+                    Garage, spare bedroom, basement, etc.
                 </dd>
                 <dt class="f2-l f3-m f4 fw7 mt4">
                     Premium Support
                 </dt>
                 <dd class="ml0 mt2 mb4">
-                    We're here to help you with whatever you may need
+                    Our Resolution Center is available 24/7 to address any and all needs
                 </dd>
             </dl>
             <dl class="z-3 self-end pa4-ns pa3 ma0 flex-auto flex flex-column measure-narrow bg-rent">
@@ -1129,7 +1119,7 @@
                     Flexible
                 </dt>
                 <dd class="ml0 mt2 mb4">
-                    Find numerous storage options when needed
+                    Find numerous storage options when and where you need it
                 </dd>
                 <dt class="f2-l f3-m f4 fw7 mt4">
                     Premium Protection
@@ -1192,9 +1182,8 @@
                             List
                         </div>
                         <div class="lh-copy ma4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repellendus, architecto voluptatem pariatur eum officiis
-                            dignissimos optio facilis tempora! Illo quam deleniti rerum velit, inventore obcaecati eius itaque
-                            maxime aut!
+                            Sign up for free, and create a Host profile to market your extra space. Include the details that make it special and use
+                            our pricing tool if you need a competitive suggestion for rates.
                         </div>
                     </div>
                     <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://images.unsplash.com/photo-1485646979142-d4abb57a876f') center;"></div>
@@ -1206,9 +1195,7 @@
                             Reserve
                         </div>
                         <div class="lh-copy ma4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repellendus, architecto voluptatem pariatur eum officiis
-                            dignissimos optio facilis tempora! Illo quam deleniti rerum velit, inventore obcaecati eius itaque
-                            maxime aut!
+                            Renters search the location, features, or qualities they need in a space, and select the one that meets their needs and budget.
                         </div>
                     </div>
                 </div>
@@ -1218,9 +1205,7 @@
                             Confirm
                         </div>
                         <div class="lh-copy ma4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repellendus, architecto voluptatem pariatur eum officiis
-                            dignissimos optio facilis tempora! Illo quam deleniti rerum velit, inventore obcaecati eius itaque
-                            maxime aut!
+                            Hosts confirm the reservation request, and the Renter is immediately notified.
                         </div>
                     </div>
                     <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://images.unsplash.com/photo-1511330823821-0f576490e149') center;"></div>
@@ -1232,9 +1217,7 @@
                             Drop-Off
                         </div>
                         <div class="lh-copy ma4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repellendus, architecto voluptatem pariatur eum officiis
-                            dignissimos optio facilis tempora! Illo quam deleniti rerum velit, inventore obcaecati eius itaque
-                            maxime aut!
+                            Hosts and Renters agree on a time for drop-off, and the Renter simply shows up and transfers his or her items.
                         </div>
                     </div>
                 </div>
@@ -1244,9 +1227,7 @@
                             Get Paid
                         </div>
                         <div class="lh-copy ma4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repellendus, architecto voluptatem pariatur eum officiis
-                            dignissimos optio facilis tempora! Illo quam deleniti rerum velit, inventore obcaecati eius itaque
-                            maxime aut!
+                            Hooray! If you are a Host - kick back, relax, and enjoy the easiest form of income you’ve ever received.
                         </div>
                     </div>
                     <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://images.unsplash.com/photo-1515405000439-3da66fd2bc89') center;"></div>
@@ -1258,9 +1239,8 @@
                             Pick-up
                         </div>
                         <div class="lh-copy ma4">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repellendus, architecto voluptatem pariatur eum officiis
-                            dignissimos optio facilis tempora! Illo quam deleniti rerum velit, inventore obcaecati eius itaque
-                            maxime aut!
+                            At the end of the rental period, the Host and Renter agree on a convenient time for the Renter to pick-up his or her belongings.
+                            Renters leave with their items and huge savings, while the Host enjoys some extra cash.
                         </div>
                     </div>
                 </div>
