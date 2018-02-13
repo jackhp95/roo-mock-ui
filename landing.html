@@ -55,24 +55,24 @@
         /* Colors */
 
         :root {
-            --host-h: 210;
-            --roo-h: 230;
-            --rent-h: 30;
-            --act-h: 50;
+            --host-h: 218;
+            --roo-h: 223;
+            --rent-h: 28;
+            --act-h: 43;
 
-            --host-s: 75%;
+            --host-s: 90%;
             --roo-s: 90%;
-            --rent-s: 33%;
-            --act-s: 10%;
+            --rent-s: 90%;
+            --act-s: 90%;
 
-            --host-l: 25%;
+            --host-l: 50%;
             --roo-l: 10%;
-            --rent-l: 67%;
-            --act-l: 90%;
+            --rent-l:  50%;
+            --act-l: 50%;
 
             --h-scale: 3;
-            --s-scale: 10;
-            --l-scale: 3;
+            --s-scale: -5;
+            --l-scale: 7;
 
             --l3: 3%;
             --l2: 2%;
@@ -81,40 +81,40 @@
             --d2: -2%;
             --d3: -3%;
 
-            --roo-l3: hsl( calc( var(--roo-h) + calc( var(--h-scale) * 3)), calc( var(--roo-s) + calc( -1 * var(--s-scale) * var(--l3))), calc( var(--roo-l) + calc( var(--l-scale) * var(--l3))));
-            --roo-l2: hsl( calc( var(--roo-h) + calc( var(--h-scale) * 2)), calc( var(--roo-s) + calc( -1 * var(--s-scale) * var(--l2))), calc( var(--roo-l) + calc( var(--l-scale) * var(--l2))));
-            --roo-l1: hsl( calc( var(--roo-h) + calc( var(--h-scale) * 1)), calc( var(--roo-s) + calc( -1 * var(--s-scale) * var(--l1))), calc( var(--roo-l) + calc( var(--l-scale) * var(--l1))));
+            --roo-l3: hsl( calc( var(--roo-h) + calc( var(--h-scale) * -3)), calc( var(--roo-s) + calc( var(--s-scale) * var(--l3))), calc( var(--roo-l) + calc( var(--l-scale) * var(--l3))));
+            --roo-l2: hsl( calc( var(--roo-h) + calc( var(--h-scale) * -2)), calc( var(--roo-s) + calc( var(--s-scale) * var(--l2))), calc( var(--roo-l) + calc( var(--l-scale) * var(--l2))));
+            --roo-l1: hsl( calc( var(--roo-h) + calc( var(--h-scale) * -1)), calc( var(--roo-s) + calc( var(--s-scale) * var(--l1))), calc( var(--roo-l) + calc( var(--l-scale) * var(--l1))));
             --roo: hsl( var(--roo-h), var(--roo-s), var(--roo-l));
-            --roo-d1: hsl( calc( var(--roo-h) + calc( var(--h-scale) * -1)), calc( var(--roo-s) + calc( -1 * var(--s-scale) * var(--d1))), calc( var(--roo-l) + calc( var(--l-scale) * var(--d1))));
-            --roo-d2: hsl( calc( var(--roo-h) + calc( var(--h-scale) * -2)), calc( var(--roo-s) + calc( -1 * var(--s-scale) * var(--d2))), calc( var(--roo-l) + calc( var(--l-scale) * var(--d2))));
-            --roo-d3: hsl( calc( var(--roo-h) + calc( var(--h-scale) * -3)), calc( var(--roo-s) + calc( -1 * var(--s-scale) * var(--d3))), calc( var(--roo-l) + calc( var(--l-scale) * var(--d3))));
+            --roo-d1: hsl( calc( var(--roo-h) + calc( var(--h-scale) * 1)), calc( var(--roo-s) + calc( var(--s-scale) * var(--d1))), calc( var(--roo-l) + calc( var(--l-scale) * var(--d1))));
+            --roo-d2: hsl( calc( var(--roo-h) + calc( var(--h-scale) * 2)), calc( var(--roo-s) + calc( var(--s-scale) * var(--d2))), calc( var(--roo-l) + calc( var(--l-scale) * var(--d2))));
+            --roo-d3: hsl( calc( var(--roo-h) + calc( var(--h-scale) * 3)), calc( var(--roo-s) + calc( var(--s-scale) * var(--d3))), calc( var(--roo-l) + calc( var(--l-scale) * var(--d3))));
             /* 
                 Hue Shifts closer to red, green, blue when getting darker
                 https://medium.com/@erikdkennedy/color-in-ui-design-a-practical-framework-e18cacd97f9e 
             */
-            --host-l3: hsl( calc( var(--host-h) + calc( var(--h-scale) * 3)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--l3))), calc( var(--host-l) + calc( var(--l-scale) * var(--l3))));
-            --host-l2: hsl( calc( var(--host-h) + calc( var(--h-scale) * 2)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--l2))), calc( var(--host-l) + calc( var(--l-scale) * var(--l2))));
-            --host-l1: hsl( calc( var(--host-h) + calc( var(--h-scale) * 1)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--l1))), calc( var(--host-l) + calc( var(--l-scale) * var(--l1))));
+            --host-l3: hsl( calc( var(--host-h) + calc( var(--h-scale) * -3)), calc( var(--host-s) + calc( var(--s-scale) * var(--l3))), calc( var(--host-l) + calc( var(--l-scale) * var(--l3))));
+            --host-l2: hsl( calc( var(--host-h) + calc( var(--h-scale) * -2)), calc( var(--host-s) + calc( var(--s-scale) * var(--l2))), calc( var(--host-l) + calc( var(--l-scale) * var(--l2))));
+            --host-l1: hsl( calc( var(--host-h) + calc( var(--h-scale) * -1)), calc( var(--host-s) + calc( var(--s-scale) * var(--l1))), calc( var(--host-l) + calc( var(--l-scale) * var(--l1))));
             --host: hsl( var(--host-h), var(--host-s), var(--host-l));
-            --host-d1: hsl( calc( var(--host-h) + calc( var(--h-scale) * -1)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--d1))), calc( var(--host-l) + calc( var(--l-scale) * var(--d1))));
-            --host-d2: hsl( calc( var(--host-h) + calc( var(--h-scale) * -2)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--d2))), calc( var(--host-l) + calc( var(--l-scale) * var(--d2))));
-            --host-d3: hsl( calc( var(--host-h) + calc( var(--h-scale) * -3)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--d3))), calc( var(--host-l) + calc( var(--l-scale) * var(--d3))));
+            --host-d1: hsl( calc( var(--host-h) + calc( var(--h-scale) * 1)), calc( var(--host-s) + calc( var(--s-scale) * var(--d1))), calc( var(--host-l) + calc( var(--l-scale) * var(--d1))));
+            --host-d2: hsl( calc( var(--host-h) + calc( var(--h-scale) * 2)), calc( var(--host-s) + calc( var(--s-scale) * var(--d2))), calc( var(--host-l) + calc( var(--l-scale) * var(--d2))));
+            --host-d3: hsl( calc( var(--host-h) + calc( var(--h-scale) * 3)), calc( var(--host-s) + calc( var(--s-scale) * var(--d3))), calc( var(--host-l) + calc( var(--l-scale) * var(--d3))));
 
-            --rent-l3: hsl( calc( var(--rent-h) + calc( var(--h-scale) * 3)), calc( var(--rent-s) + calc( -1 * var(--s-scale) * var(--l3))), calc( var(--rent-l) + calc( var(--l-scale) * var(--l3))));
-            --rent-l2: hsl( calc( var(--rent-h) + calc( var(--h-scale) * 2)), calc( var(--rent-s) + calc( -1 * var(--s-scale) * var(--l2))), calc( var(--rent-l) + calc( var(--l-scale) * var(--l2))));
-            --rent-l1: hsl( calc( var(--rent-h) + calc( var(--h-scale) * 1)), calc( var(--rent-s) + calc( -1 * var(--s-scale) * var(--l1))), calc( var(--rent-l) + calc( var(--l-scale) * var(--l1))));
+            --rent-l3: hsl( calc( var(--rent-h) + calc( var(--h-scale) * -3)), calc( var(--rent-s) + calc( var(--s-scale) * var(--l3))), calc( var(--rent-l) + calc( var(--l-scale) * var(--l3))));
+            --rent-l2: hsl( calc( var(--rent-h) + calc( var(--h-scale) * -2)), calc( var(--rent-s) + calc( var(--s-scale) * var(--l2))), calc( var(--rent-l) + calc( var(--l-scale) * var(--l2))));
+            --rent-l1: hsl( calc( var(--rent-h) + calc( var(--h-scale) * -1)), calc( var(--rent-s) + calc( var(--s-scale) * var(--l1))), calc( var(--rent-l) + calc( var(--l-scale) * var(--l1))));
             --rent: hsl( var(--rent-h), var(--rent-s), var(--rent-l));
-            --rent-d1: hsl( calc( var(--rent-h) + calc( var(--h-scale) * -1)), calc( var(--rent-s) + calc( -1 * var(--s-scale) * var(--d1))), calc( var(--rent-l) + calc( var(--l-scale) * var(--d1))));
-            --rent-d2: hsl( calc( var(--rent-h) + calc( var(--h-scale) * -2)), calc( var(--rent-s) + calc( -1 * var(--s-scale) * var(--d2))), calc( var(--rent-l) + calc( var(--l-scale) * var(--d2))));
-            --rent-d3: hsl( calc( var(--rent-h) + calc( var(--h-scale) * -3)), calc( var(--rent-s) + calc( -1 * var(--s-scale) * var(--d3))), calc( var(--rent-l) + calc( var(--l-scale) * var(--d3))));
+            --rent-d1: hsl( calc( var(--rent-h) + calc( var(--h-scale) * 1)), calc( var(--rent-s) + calc( var(--s-scale) * var(--d1))), calc( var(--rent-l) + calc( var(--l-scale) * var(--d1))));
+            --rent-d2: hsl( calc( var(--rent-h) + calc( var(--h-scale) * 2)), calc( var(--rent-s) + calc( var(--s-scale) * var(--d2))), calc( var(--rent-l) + calc( var(--l-scale) * var(--d2))));
+            --rent-d3: hsl( calc( var(--rent-h) + calc( var(--h-scale) * 3)), calc( var(--rent-s) + calc( var(--s-scale) * var(--d3))), calc( var(--rent-l) + calc( var(--l-scale) * var(--d3))));
 
-            --act-l3: hsl( calc( var(--act-h) + calc( var(--h-scale) * 3)), calc( var(--act-s) + calc( -1 * var(--s-scale) * var(--l3))), calc( var(--act-l) + calc( var(--l-scale) * var(--l3))));
-            --act-l2: hsl( calc( var(--act-h) + calc( var(--h-scale) * 2)), calc( var(--act-s) + calc( -1 * var(--s-scale) * var(--l2))), calc( var(--act-l) + calc( var(--l-scale) * var(--l2))));
-            --act-l1: hsl( calc( var(--act-h) + calc( var(--h-scale) * 1)), calc( var(--act-s) + calc( -1 * var(--s-scale) * var(--l1))), calc( var(--act-l) + calc( var(--l-scale) * var(--l1))));
+            --act-l3: hsl( calc( var(--act-h) + calc( var(--h-scale) * -3)), calc( var(--act-s) + calc( var(--s-scale) * var(--l3))), calc( var(--act-l) + calc( var(--l-scale) * var(--l3))));
+            --act-l2: hsl( calc( var(--act-h) + calc( var(--h-scale) * -2)), calc( var(--act-s) + calc( var(--s-scale) * var(--l2))), calc( var(--act-l) + calc( var(--l-scale) * var(--l2))));
+            --act-l1: hsl( calc( var(--act-h) + calc( var(--h-scale) * -1)), calc( var(--act-s) + calc( var(--s-scale) * var(--l1))), calc( var(--act-l) + calc( var(--l-scale) * var(--l1))));
             --act: hsl( var(--act-h), var(--act-s), var(--act-l));
-            --act-d1: hsl( calc( var(--act-h) + calc( var(--h-scale) * -1)), calc( var(--act-s) + calc( -1 * var(--s-scale) * var(--d1))), calc( var(--act-l) + calc( var(--l-scale) * var(--d1))));
-            --act-d2: hsl( calc( var(--act-h) + calc( var(--h-scale) * -2)), calc( var(--act-s) + calc( -1 * var(--s-scale) * var(--d2))), calc( var(--act-l) + calc( var(--l-scale) * var(--d2))));
-            --act-d3: hsl( calc( var(--act-h) + calc( var(--h-scale) * -3)), calc( var(--act-s) + calc( -1 * var(--s-scale) * var(--d3))), calc( var(--act-l) + calc( var(--l-scale) * var(--d3))));
+            --act-d1: hsl( calc( var(--act-h) + calc( var(--h-scale) * 1)), calc( var(--act-s) + calc( var(--s-scale) * var(--d1))), calc( var(--act-l) + calc( var(--l-scale) * var(--d1))));
+            --act-d2: hsl( calc( var(--act-h) + calc( var(--h-scale) * 2)), calc( var(--act-s) + calc( var(--s-scale) * var(--d2))), calc( var(--act-l) + calc( var(--l-scale) * var(--d2))));
+            --act-d3: hsl( calc( var(--act-h) + calc( var(--h-scale) * 3)), calc( var(--act-s) + calc( var(--s-scale) * var(--d3))), calc( var(--act-l) + calc( var(--l-scale) * var(--d3))));
         }
 
         .host-l1 {
@@ -1034,14 +1034,14 @@
                     </div>
                 </div>
             </div>
-            <div class="z-3 bg-act roo flex-none self-stretch flex flex-wrap justify-start items-start relative ph2 ph3-m ph4-l">
+            <div class="z-3 bg-roo white flex-none self-stretch flex flex-wrap justify-start items-start relative ph2 ph3-m ph4-l">
                 <div class="absolute bottom-0 right-0 w-50 vh-75 contain" style="background:url('http://hoddesdonselfstorage.co.uk/wp-content/themes/hoddesdon_self_storage/build/img/home-quote-splash.png') bottom no-repeat;">
                 </div>
                 <div class="flex items-stretch justify-around flex-column flex-none pa2 pa3-m pa4-l">
                     <div class="pv2 ph4">Get notified when we launch!</div>
                     <form class="z-999 f7 f6-m f5-l flex-none flex items-end flex-row br-pill f4 overflow-hidden self-center shadow-4">
                         <input class="input-reset ph4-ns pa3 outline-0 bn flex-auto" placeholder="Your email or cell" type="text">
-                        <button class="button-reset ph4-ns pa3 outline-0 bn w-auto bg-roo white hover-bg-purple bg-animate pointer fw7" type="text">Sign Up!</button>
+                        <button class="button-reset ph4-ns pa3 outline-0 bn w-auto bg-act roo hover-bg-gold bg-animate pointer fw7" type="text">Sign Up!</button>
                     </form>
                     <div class="pv2 f7 ph3 o-60 glow tr">We will not send you any spam, pinky promise.</div>
                 </div>
@@ -1074,7 +1074,7 @@
                     <div class="pv3">On the Horizon...</div>
                     <div class="pv3">Launching in Columbia, MO</div>
                 </div>
-                <div class="bg-host dib nb3 mr4 ph4 pv3 br1 self-end grow hover-bg-purple shadow-hover shadow-4 fw7">
+                <div class="bg-host dib nb3 mr4 ph4 pv3 br1 self-end grow hover-bg-gold shadow-hover shadow-4 fw7">
                     Sign Up
                 </div>
             </div>
@@ -1085,8 +1085,8 @@
         </div>
         <div class="z-0 bg-white self-stretch flex-auto flex flex-column items-stretch flex-row-l justify-between-l relative mb6-l mb5-m mb4">
             <div class="absolute absolute--fill flex-ns flex-wrap-l justify-center-l mv5-m dn mh7-l ph5-l mv3-l">
-                <div class="flex-auto cover ba bw4 ma3-m mr5-l nl3-l mv3-l ph6-l mt7-m br1 b--host grow shadow-hover shadow-4" style="background:url('https://source.unsplash.com/weekly?home') 70% 70%;"></div>
-                <div class="flex-auto cover ba bw4 ma3-m ml5-l nr3-l mv3-l ph6-l mb7-m br1 b--rent grow shadow-hover shadow-4" style="background:url('https://source.unsplash.com/weekly?car') 30% 30%;"></div>
+                <div class="flex-auto cover ba bw4 ma3-m mr5-l nl3-l mv3-l ph6-l mt7-m br1 b--host-l3 grow shadow-hover shadow-4" style="background:url('https://source.unsplash.com/weekly?home') 70% 70%;"></div>
+                <div class="flex-auto cover ba bw4 ma3-m ml5-l nr3-l mv3-l ph6-l mb7-m br1 b--rent-l3 grow shadow-hover shadow-4" style="background:url('https://source.unsplash.com/weekly?car') 30% 30%;"></div>
             </div>
             <dl class="z-3 self-start pa4-ns pa3 ma0 flex-auto flex flex-column measure-narrow bg-host">
                 <dt class="f2-l f3-m f4 fw7 mt4">
@@ -1256,31 +1256,31 @@
             <div class="ma3-l ma2-m ma1 f3-l f4-m f5 lh-copy">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
             <form class="mv3 f7 f6-m f5-l flex items-end flex-row br-pill f4 overflow-hidden self-center shadow-4">
                 <input class="input-reset ph4-ns pa3 outline-0 bn w-auto" placeholder="Your email or cell" type="text">
-                <button class="button-reset ph4-ns pa3 outline-0 bn w-auto bg-roo white hover-bg-purple bg-animate pointer fw7" type="text">Sign Up!</button>
+                <button class="button-reset ph4-ns pa3 outline-0 bn w-auto bg-roo white hover-bg-gold bg-animate pointer fw7" type="text">Sign Up!</button>
             </form>
         </section>
         <footer class="pa5-l pa4-m pa3 self-stretch">
             <div class="w-50-l">
                 <div class="w-third mb4 fl lh-copy">
                     <span class="db mt2 mb3 black-50">Company</span>
-                    <a href="" class="db mb1 f7 fw7 link black-70 hover-purple">About</a>
-                    <a href="" class="db mb1 f7 fw7 link black-70 hover-purple">Press</a>
-                    <a href="" class="db mb1 f7 fw7 link black-70 hover-purple">Careers</a>
-                    <a href="" class="db mb1 f7 fw7 link black-70 hover-purple">Blog</a>
+                    <a href="" class="db mb1 f7 fw7 link black-70 hover-gold">About</a>
+                    <a href="" class="db mb1 f7 fw7 link black-70 hover-gold">Press</a>
+                    <a href="" class="db mb1 f7 fw7 link black-70 hover-gold">Careers</a>
+                    <a href="" class="db mb1 f7 fw7 link black-70 hover-gold">Blog</a>
                 </div>
                 <div class="w-third mb4 fl lh-copy">
                     <span class="db mt2 mb3 black-50">Legal</span>
-                    <a href="" class="db mb1 f7 fw7 link black-70 hover-purple">Terms</a>
-                    <a href="" class="db mb1 f7 fw7 link black-70 hover-purple">Privacy</a>
-                    <a href="" class="db mb1 f7 fw7 link black-70 hover-purple">Language</a>
-                    <a href="" class="db mb1 f7 fw7 link black-70 hover-purple">Copyright</a>
+                    <a href="" class="db mb1 f7 fw7 link black-70 hover-gold">Terms</a>
+                    <a href="" class="db mb1 f7 fw7 link black-70 hover-gold">Privacy</a>
+                    <a href="" class="db mb1 f7 fw7 link black-70 hover-gold">Language</a>
+                    <a href="" class="db mb1 f7 fw7 link black-70 hover-gold">Copyright</a>
                 </div>
                 <div class="w-third mb4 fl lh-copy">
                     <span class="db mt2 mb3 black-50">Social</span>
-                    <a href="" class="db mb1 f7 fw7 link black-70 hover-purple">Facebook</a>
-                    <a href="" class="db mb1 f7 fw7 link black-70 hover-purple">Twitter</a>
-                    <a href="" class="db mb1 f7 fw7 link black-70 hover-purple">Instagram</a>
-                    <a href="" class="db mb1 f7 fw7 link black-70 hover-purple">Youtube</a>
+                    <a href="" class="db mb1 f7 fw7 link black-70 hover-gold">Facebook</a>
+                    <a href="" class="db mb1 f7 fw7 link black-70 hover-gold">Twitter</a>
+                    <a href="" class="db mb1 f7 fw7 link black-70 hover-gold">Instagram</a>
+                    <a href="" class="db mb1 f7 fw7 link black-70 hover-gold">Youtube</a>
                 </div>
             </div>
             <div class="w-50-l w-100 mb5-l mb4 fl lh-copy">
