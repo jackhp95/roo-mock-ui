@@ -55,20 +55,20 @@
         /* Colors */
 
         :root {
-            --host-h: 25;
-            --roo-h: 215;
-            --rent-h: 45;
-            --act-h: 35;
+            --host-h: 210;
+            --roo-h: 230;
+            --rent-h: 30;
+            --act-h: 50;
 
-            --host-s: 90%;
-            --roo-s: 15%;
-            --rent-s: 90%;
-            --act-s: 30%;
+            --host-s: 75%;
+            --roo-s: 90%;
+            --rent-s: 33%;
+            --act-s: 10%;
 
-            --host-l: 60%;
-            --roo-l: 50%;
-            --rent-l: 60%;
-            --act-l: 75%;
+            --host-l: 25%;
+            --roo-l: 10%;
+            --rent-l: 67%;
+            --act-l: 90%;
 
             --h-scale: 3;
             --s-scale: 3;
@@ -92,13 +92,13 @@
                 Hue Shifts closer to red, green, blue when getting darker
                 https://medium.com/@erikdkennedy/color-in-ui-design-a-practical-framework-e18cacd97f9e 
             */
-            --host-l3: hsl( calc( var(--host-h) + calc( var(--h-scale) * -3)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--l3))), calc( var(--host-l) + calc( var(--l-scale) * var(--l3))));
-            --host-l2: hsl( calc( var(--host-h) + calc( var(--h-scale) * -2)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--l2))), calc( var(--host-l) + calc( var(--l-scale) * var(--l2))));
-            --host-l1: hsl( calc( var(--host-h) + calc( var(--h-scale) * -1)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--l1))), calc( var(--host-l) + calc( var(--l-scale) * var(--l1))));
+            --host-l3: hsl( calc( var(--host-h) + calc( var(--h-scale) * 3)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--l3))), calc( var(--host-l) + calc( var(--l-scale) * var(--l3))));
+            --host-l2: hsl( calc( var(--host-h) + calc( var(--h-scale) * 2)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--l2))), calc( var(--host-l) + calc( var(--l-scale) * var(--l2))));
+            --host-l1: hsl( calc( var(--host-h) + calc( var(--h-scale) * 1)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--l1))), calc( var(--host-l) + calc( var(--l-scale) * var(--l1))));
             --host: hsl( var(--host-h), var(--host-s), var(--host-l));
-            --host-d1: hsl( calc( var(--host-h) + calc( var(--h-scale) * 1)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--d1))), calc( var(--host-l) + calc( var(--l-scale) * var(--d1))));
-            --host-d2: hsl( calc( var(--host-h) + calc( var(--h-scale) * 2)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--d2))), calc( var(--host-l) + calc( var(--l-scale) * var(--d2))));
-            --host-d3: hsl( calc( var(--host-h) + calc( var(--h-scale) * 3)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--d3))), calc( var(--host-l) + calc( var(--l-scale) * var(--d3))));
+            --host-d1: hsl( calc( var(--host-h) + calc( var(--h-scale) * -1)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--d1))), calc( var(--host-l) + calc( var(--l-scale) * var(--d1))));
+            --host-d2: hsl( calc( var(--host-h) + calc( var(--h-scale) * -2)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--d2))), calc( var(--host-l) + calc( var(--l-scale) * var(--d2))));
+            --host-d3: hsl( calc( var(--host-h) + calc( var(--h-scale) * -3)), calc( var(--host-s) + calc( -1 * var(--s-scale) * var(--d3))), calc( var(--host-l) + calc( var(--l-scale) * var(--d3))));
 
             --rent-l3: hsl( calc( var(--rent-h) + calc( var(--h-scale) * 3)), calc( var(--rent-s) + calc( -1 * var(--s-scale) * var(--l3))), calc( var(--rent-l) + calc( var(--l-scale) * var(--l3))));
             --rent-l2: hsl( calc( var(--rent-h) + calc( var(--h-scale) * 2)), calc( var(--rent-s) + calc( -1 * var(--s-scale) * var(--l2))), calc( var(--rent-l) + calc( var(--l-scale) * var(--l2))));
@@ -1000,8 +1000,8 @@
     <div class="d2 z-max dib grow sticky top-0 pa2 bg-white black ba tc fw9 ttu br1">d2</div>
     <div class="d3 z-max dib grow sticky top-0 pa2 bg-white black ba tc fw9 ttu br1">d3</div>
     <div class="flex flex-column items-center">
-        <div class="z-1 self-stretch flex flex-column roo cover vh-75" style="background:url('https://images.unsplash.com/photo-1484061263732-b8b0a5ae7db6') center no-repeat;">
-            <div class="flex-auto w-100 self-stretch flex cover relative" style="background: linear-gradient(to right,var(--act), transparent)">
+        <div class="z-1 self-stretch flex flex-column white cover vh-75" style="background:url('https://source.unsplash.com/weekly?room') center no-repeat;">
+            <div class="flex-auto w-100 self-stretch flex cover relative" style="background: linear-gradient(to right,var(--host), transparent)">
                 <div class="w-60 flex justify-between items-center">
                     <div class="self-end flex flex-column items-start pa4">
                         <div class="flex justify-center f1-l f2-m f3 fw7">Coming Soon</div>
@@ -1034,16 +1034,16 @@
                     </div>
                 </div>
             </div>
-            <div class="z-3 bg-roo white flex-none self-stretch flex flex-wrap justify-start items-start relative ph2 ph3-m ph4-l">
+            <div class="z-3 bg-act roo flex-none self-stretch flex flex-wrap justify-start items-start relative ph2 ph3-m ph4-l">
                 <div class="absolute bottom-0 right-0 w-50 vh-75 contain" style="background:url('http://hoddesdonselfstorage.co.uk/wp-content/themes/hoddesdon_self_storage/build/img/home-quote-splash.png') bottom no-repeat;">
                 </div>
                 <div class="flex items-stretch justify-around flex-column flex-none pa2 pa3-m pa4-l">
-                    <div class="pv2 ph4 o-80">Get notified when we launch!</div>
+                    <div class="pv2 ph4">Get notified when we launch!</div>
                     <form class="z-999 f7 f6-m f5-l flex-none flex items-end flex-row br-pill f4 overflow-hidden self-center shadow-4">
                         <input class="input-reset ph4-ns pa3 outline-0 bn flex-auto" placeholder="Your email or cell" type="text">
-                        <button class="button-reset ph4-ns pa3 outline-0 bn w-auto bg-act white hover-bg-purple bg-animate pointer fw7" type="text">Sign Up!</button>
+                        <button class="button-reset ph4-ns pa3 outline-0 bn w-auto bg-roo white hover-bg-purple bg-animate pointer fw7" type="text">Sign Up!</button>
                     </form>
-                    <div class="pv2 f7 ph3 o-40 glow tr">We will not send you any spam, pinky promise.</div>
+                    <div class="pv2 f7 ph3 o-60 glow tr">We will not send you any spam, pinky promise.</div>
                 </div>
             </div>
         </div>
@@ -1085,8 +1085,8 @@
         </div>
         <div class="z-0 bg-white self-stretch flex-auto flex flex-column items-stretch flex-row-l justify-between-l relative mb6-l mb5-m mb4">
             <div class="absolute absolute--fill flex-ns flex-wrap-l justify-center-l mv5-m dn mh7-l ph5-l mv3-l">
-                <div class="flex-auto cover ba bw4 ma3-m mr5-l nl3-l mv3-l ph6-l mt7-m br1 b--host grow shadow-hover shadow-4" style="background:url('https://images.unsplash.com/photo-1485808427643-e8950659e306') 70% 70%;"></div>
-                <div class="flex-auto cover ba bw4 ma3-m ml5-l nr3-l mv3-l ph6-l mb7-m br1 b--rent grow shadow-hover shadow-4" style="background:url('https://images.unsplash.com/photo-1506393421480-da3c2f08a6f6') 30% 30%;"></div>
+                <div class="flex-auto cover ba bw4 ma3-m mr5-l nl3-l mv3-l ph6-l mt7-m br1 b--host grow shadow-hover shadow-4" style="background:url('https://source.unsplash.com/weekly?home') 70% 70%;"></div>
+                <div class="flex-auto cover ba bw4 ma3-m ml5-l nr3-l mv3-l ph6-l mb7-m br1 b--rent grow shadow-hover shadow-4" style="background:url('https://source.unsplash.com/weekly?car') 30% 30%;"></div>
             </div>
             <dl class="z-3 self-start pa4-ns pa3 ma0 flex-auto flex flex-column measure-narrow bg-host">
                 <dt class="f2-l f3-m f4 fw7 mt4">
@@ -1186,10 +1186,10 @@
                             our pricing tool if you need a competitive suggestion for rates.
                         </div>
                     </div>
-                    <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://images.unsplash.com/photo-1485646979142-d4abb57a876f') center;"></div>
+                    <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://source.unsplash.com/weekly?place') center;"></div>
                 </div>
                 <div class="flex-auto flex flex-row-ns overflow-hidden flex-column br1 mv3 nl5-ns">
-                    <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://images.unsplash.com/photo-1515405000439-3da66fd2bc89') center;"></div>
+                    <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://source.unsplash.com/weekly?appartment') center;"></div>
                     <div class="bg-rent measure pa4-l pa3-m pa2 br1 shadow-4">
                         <div class="f2 fw9 ma4">
                             Reserve
@@ -1208,10 +1208,10 @@
                             Hosts confirm the reservation request, and the Renter is immediately notified.
                         </div>
                     </div>
-                    <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://images.unsplash.com/photo-1511330823821-0f576490e149') center;"></div>
+                    <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://source.unsplash.com/weekly?happy') center;"></div>
                 </div>
                 <div class="flex-auto flex flex-row-ns overflow-hidden flex-column br1 mv3 nl5-ns">
-                    <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://images.unsplash.com/photo-1485646979142-d4abb57a876f') center;"></div>
+                    <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://source.unsplash.com/weekly?working') center;"></div>
                     <div class="bg-rent measure pa4-l pa3-m pa2 br1 shadow-4">
                         <div class="f2 fw9 ma4">
                             Drop-Off
@@ -1230,10 +1230,10 @@
                             Hooray! If you are a Host - kick back, relax, and enjoy the easiest form of income you’ve ever received.
                         </div>
                     </div>
-                    <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://images.unsplash.com/photo-1515405000439-3da66fd2bc89') center;"></div>
+                    <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://source.unsplash.com/weekly?cat') center;"></div>
                 </div>
                 <div class="flex-auto flex flex-row-ns overflow-hidden flex-column br1 mv3 nl5-ns">
-                    <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://images.unsplash.com/photo-1511330823821-0f576490e149') center;"></div>
+                    <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow" style="background:url('https://source.unsplash.com/weekly?dog') center;"></div>
                     <div class="bg-rent measure pa4-l pa3-m pa2 br1 shadow-4">
                         <div class="f2 fw9 ma4">
                             Pick-up
