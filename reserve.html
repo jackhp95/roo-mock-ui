@@ -11,18 +11,84 @@
     <link rel="stylesheet" href="Custom.css" />
 </head>
 
+<!-- User experience:
+
+Renter
+
+Clicks reserve from listing
+Takes you to my reservations page
+    1. Summary of space 
+        a. Date of use, price, specs, etc.
+    2. Payment
+    3. Contract
+    4. Waiting of confirmation 
+        a. Renter can cancel at anytime prior to host confirmation
+    5. Drop off date
+        a. Cancellation
+            i. Renter can cancel anytime prior to 7 days of drop-off
+            ii. Within 1-7 days, charged 25% of first months stay
+            iii. Within 24 hours, Charged 50% of first months stay
+    6. Pick up date
+        a. Renter can request early pick up
+            i. Must give host 24 hour notice
+            ii. Renter will be charge remaining month’s stay
+                1. A month is considered one date to the same date the next month (i.e. 1 month = July 13th to August 13th)
+        b. Renter can request an extension
+            i. Host can either accept or deny extension
+            ii. After requesting extension, they need to be able to Change the date of pick-up. Minimum of 7 days (unless hosts allows for shorter extensions)
+    7. Review
+        a. Rating and review of space
+
+Host 
+
+Clicks and confirms all the inputted information is correct and the host has entered the necessary information for background check API (Still deciding on background checks). Maybe this could be apart of the timeline as well. 
+
+    1. Confirm Listing information
+        a. Information of space from roo vetting check
+    2. Waiting on approval of Background check
+    3. Waiting on approval
+        a. Space can be approved or denied by roo
+    4. Waiting on reservation
+        a. Host can Remove from listings at anytime
+        b. Host can delete space at anytime
+            i. DOUBLE CHECK that the host wants to delete the space
+
+Contact information is available at the time of confirmation for both parties
+    5. Waiting on Drop-off
+        a. Host can cancel anytime (following applies on a yearly basis)
+            i. Will be marked/flagged
+            ii. 1st cancellation 
+                1. Greater than 1 week, no charge
+                    a. First cancellation is waived
+                2. 1 day – 7 days, charged 25% of first month’s rent or $25, whichever is less
+                3. within 24 hours, charged 50% of first month’s rent or $50, whichever is less
+            iii. 2nd cancellation
+                1. Host under review (temporary deactivation)
+                2. Greater than 1 week 25% of first month’s rent or $25, whichever is less
+                3. 1 day – 7 days, charged 50% of first month’s rent or $50, whichever is less
+                4. within 24 hours, charged 75% of first month’s rent or $75, whichever is less
+            iv. 3rd cancellation
+                1. Deactivated until reapproved
+    6. Waiting on pick-up
+        a. Host most approve extension if requested by renter 
+    7. Review 
+        a. Rating and review of renter
+        b. Host can let us know that the items were never picked up 
+ -->
+
+
 <body onload="window.location.hash = 'nav'" class="f6 fw5 flex flex-column-l flex-row-m flex-column-reverse items-stretch vh-100">
     <nav id="nav" class="f5-ns fw6-ns f7 fw7 flex-none pv3-m ph4-l pa0 shadow-hover z-9999 flex flex-column-l bg-white">
         <ul class="flex flex-column-m no-underline list ma0 pa0 overflow-visible-ns overflow-hidden w-100 w-auto-ns">
             <li class="dn flex-auto-l flex-ns items-center ph4 pv3-m">
-                <a href="index.html" class="fw9 f3 f2-m grow-large hover-purple dib black no-underline">Roo</a>
+                <a href="index.html" class="fw9 f3 f2-m grow-large hover-navy dib black no-underline">Roo</a>
             </li>
             <li class="flex dn-ns hide-child o-80 glow w-20 w-auto-ns">
                 <a href="index.html" class="flex flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2">
                         <span class="mb1 pl3 pt3 pr2 pb2 cover o-60 rotate-270" style="background:url('https://icongr.am/clarity/caret.svg')"></span>
                         Back</span>
-                    <div class="b--purple ba child"></div>
+                    <div class="b--navy ba child"></div>
                 </a>
             </li>
             <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
@@ -30,7 +96,7 @@
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
                         <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/view-list.svg')"></span>
                         Reserved</span>
-                    <div class="b--purple ba child"></div>
+                    <div class="b--navy ba child"></div>
                 </a>
             </li>
             <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
@@ -38,7 +104,7 @@
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
                         <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/house.svg')"></span>
                         Hosting</span>
-                    <div class="b--purple ba child"></div>
+                    <div class="b--navy ba child"></div>
                 </a>
             </li>
             <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
@@ -46,7 +112,7 @@
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
                         <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/history.svg')"></span>
                         History</span>
-                    <div class="b--purple ba child"></div>
+                    <div class="b--navy ba child"></div>
                 </a>
             </li>
             <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
@@ -54,1367 +120,95 @@
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
                         <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/bell.svg')"></span>
                         Alerts</span>
-                    <div class="b--purple ba child"></div>
+                    <div class="b--navy ba child"></div>
                 </a>
             </li>
         </ul>
     </nav>
-    <div class="flex-auto overflow-auto">
-        <main>
-            <!-- FAB -->
-            <details class="outline-0">
-                <summary class="outline-0">
-                    <!-- Mobile -->
-                    <span class="dn-ns fixed bottom-1 right-0 pb2 mb4 z-max">
-                        <span class="flex-none db br-pill pa3 ma3 bg-purple shadow-2 shadow-hover grow-large">
-                            <span class="h2 db w2 contain bg-center" style="background:url('https://icongr.am/clarity/edit.svg?color=ffffff')"></span>
-                        </span>
-                    </span>
-                    <!-- Tablet -->
-                    <span class="dn dib-m fixed bottom-0 left-0 ma4 z-max">
-                        <span class="flex-none db br-pill pa3 ma5 bg-purple shadow-2 shadow-hover grow-large">
-                            <span class="h2 db w2 contain bg-center" style="background:url('https://icongr.am/clarity/edit.svg?color=ffffff')"></span>
-                        </span>
-                    </span>
-                    <!-- Not Small -->
-                    <span class="dn flex-l fixed top-0 left-0 right-0 z-max mt5 pt4 h1 justify-center">
-                        <span class="bg-white hover-bg-gold z-max ba b--black-20 h2 ph3 br-pill flex items-center shadow-4 shadow-hover">
-                            <div class="cover h1 w1 mh1 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/edit.svg')"></div>
-                            <span class="mh1">Save Changes</span>
-                        </span>
-                    </span>
-                </summary>
-                <div class="bg-black-90 pb2 mb4 ml6-m pl4-m pb0-ns mb0-ns fixed bottom-1 bottom-0-ns left-0 right-0 z-5 shadow-4">
-                    <div class="z-max mr5 mr0-ns mb2 mb0-ns pa2 lh-copy flex flex-row-ns flex-column flex-auto justify-between flex-wrap f5">
-                        <div class="white flex-auto flex items-justify justify-between ma2 br1 ba b--white-20">
-                            <div class="flex-auto flex items-center justify-center hover-bg-purple hover-white">
-                                <span class="dn-ns di ma2">From</span>
-                                <span class="dn di-ns ma2">Start Date</span>
-                            </div>
-                            <div class="pa2 flex items-center">
-                                <div class="pa3 pl2 pt2 cover rotate-90" style="background:url('https://icongr.am/clarity/arrow.svg?color=ffffff')"></div>
-                            </div>
-                            <div class="flex-auto flex items-center justify-center hover-bg-purple hover-white">
-                                <span class="dn-ns di ma2">To</span>
-                                <span class="dn di-ns ma2">End Date</span>
-                            </div>
-                        </div>
-                        <div class="ma2 white br1 flex-auto flex items-center justify-around br1 ph3-ns ba-ns b--white-20">
-                            <div class="pr3 pv2 w3">Range</div>
-                            <input type="range" name="Range" id="Range" class="flex-auto self-stretch">
-                        </div>
-                        <div class="ma2 white br1 flex-auto flex items-center justify-around br1 ph3-ns ba-ns b--white-20">
-                            <div class="pr3 pv2 w3">Size</div>
-                            <input type="range" name="Size" id="Size" class="flex-auto self-stretch">
-                        </div>
-                        <div class="ma2 white br1 flex-auto flex items-center justify-around br1 ph3-ns ba-ns b--white-20">
-                            <div class="pr3 pv2 w3">Price</div>
-                            <input type="range" name="Price" id="Price" class="flex-auto self-stretch">
-                        </div>
-                        <div class="ma2 white br1 flex-auto flex items-center justify-around br1 ph3-ns ba-ns b--white-20">
-                            <div class="pr3 pv2 w3">Tags</div>
-                            <div class="flex flex-auto justify-around">
-                                <div class="pa3-l pa2 br1 grow hover-bg-purple">
-                                    <div class="pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/check.svg?color=ffffff');"></div>
-                                </div>
-                                <div class="pa3-l pa2 br1 grow hover-bg-purple">
-                                    <div class="pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/shield.svg?color=ffffff');"></div>
-                                </div>
-                                <div class="pa3-l pa2 br1 grow hover-bg-purple">
-                                    <div class="pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/users.svg?color=ffffff');"></div>
-                                </div>
-                                <div class="pa3-l pa2 br1 grow hover-bg-purple">
-                                    <div class="pl3 pt3 pr2 pb2 bg-center contain" style="background-image: url('https://icongr.am/clarity/tags.svg?color=ffffff');"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ma2 white br1 flex-auto flex items-center justify-around br1 ph3-ns ba-ns b--white-20">
-                            <div class="pr3 pv2 w3">Rating</div>
-                            <div class="flex-auto tc tracked-mega f2-ns f3 lh-solid hover-gold">
-                                &#9733;&#9733;&#9733;&#9733;&#9733;
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </details>
-
-            <!-- PAGE CONTENT GOES HERE -->
-            <div class="flex flex-column items-stretch">
-                <header class="flex flex-column flex-row-l relative">
-                    <div class="pa6 flex-auto bg-center cover bg-gold hide-child relative">
-                        <div class="child absolute absolute--fill bg-gold pa4 f4-l f5 lh-title flex items-end">
-                            Change Cover Photo
-                        </div>
-                    </div>
-                    <div class="flex-none flex flex-column">
-                        <div class="flex-auto flex flex-column-l flex-wrap lh-solid justify-center pv4-l pv4">
-                            <div class="flex flex-column lh-solid justify-center items-end mt4-l mh5-l mh4 mt3">
-                                <span class="f-headline-l f1 fw7">Chancelor</span>
-                                <span class="f3-l f5 fw6 tracked ttu">Bennett</span>
-                            </div>
-                            <div class="flex justify-between items-stretch">
-                                <div class="flex-auto absolute top-0 left-0 right-0 mh6 ml0-l static-l mt5 w1-l flex flex-column self-start items-center justify-between">
-                                    <div class="z-2 pa6-l pa5 br-pill grow ba bw3-l bw2-m bw1 b--white bg-center cover relative overflow-hidden hide-child" style="background:url('http://thesource.com/wp-content/uploads/2017/12/Chance-The-Rapper-Gifts-Students-With-300-Pairs-of-Unreleased-Jordans.jpg') center;">
-                                        <div class="child absolute absolute--fill bg-purple flex items-center tc pa4 f4-l f5 white lh-title">
-                                            Change Profile Photo
-                                        </div>
-                                    </div>
-                                    <div class="z-2 flex shadow-4 br1 ma4 f5 bg-white">
-                                        <div class="hover-bg-gold br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/group.svg')"></div>
-                                        </div>
-                                        <div class="hover-bg-gold br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/lock.svg')"></div>
-                                        </div>
-                                        <div class="hover-bg-gold br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/shield.svg')"></div>
-                                        </div>
-                                        <div class="hover-bg-gold br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/check.svg')"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex-auto flex flex-column justify-between mh5-l mv4-l mh4 mv3">
-                                    <div>
-                                        <div class="w3 bb h1 b--purple"></div>
-                                        <div class="mh3 mv3 fw1 f4 lh-title i measure-narrow">Edit Settings</div>
-                                        <div class="w2 bt h1 b--purple"></div>
-                                        <div class="mh3 mb3 ph1 bb b--black-20 fw5 f5 lh-copy measure-narrow">
-                                            <div class="f7 purple fw7">descriptors</div>
-                                            <input type="text" class="outline-0 bw0" value="Father, Rapper, Poet"></input>
-                                        </div>
-                                        <div class="mh3 mb3 ph1 bb b--black-20 fw5 f5 lh-copy measure-narrow">
-                                            <div class="f7 purple fw7">email</div>
-                                            <input type="text" class="outline-0 bw0" value="Chano@yahoo.com"></input>
-                                        </div>
-                                        <div class="mh3 mb3 ph1 bb b--black-20 fw5 f5 lh-copy measure-narrow">
-                                            <div class="f7 purple fw7">password</div>
-                                            <input type="password" class="outline-0 bw0" value="Fake Password"></input>
-                                        </div>
-                                        <div class="mh3 mb3 ph1 fw5 f5 lh-copy measure-narrow">
-                                            <div class="f7 purple fw7">authentication</div>
-                                            <div class="flex items-center justify-between mv1">
-                                                <div class="br1 grow">
-                                                    <div class="o-20 glow cover pa2 ma2" style="background:url(
-                          'https://icongr.am/clarity/email.svg')"></div>
-                                                </div>
-                                                <div class="hover-bg-gold br1 grow">
-                                                    <div class=" cover pa2 ma2" style="background:url(
-                          'https://icongr.am/simple/facebook.svg')"></div>
-                                                </div>
-                                                <div class="br1 grow">
-                                                    <div class="o-20 glow cover pa2 ma2" style="background:url(
-                          'https://icongr.am/simple/twitter.svg')"></div>
-                                                </div>
-                                                <div class="hover-bg-gold br1 grow">
-                                                    <div class=" cover pa2 ma2" style="background:url(
-                          'https://icongr.am/simple/instagram.svg')"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center justify-between shadow-hover br1 f5 hover-bg-purple hover-white purple">
-                                        <span class="mh3 fw7">Earn more Badges!</span>
-                                        <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/plus-circle.svg?color=ffffff')"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-                <details class="relative top--2 left-0 right-0 mv2-l mv3-m mv4 outline-0 flex">
-                    <summary class="absolute w-100 outline-0 z-4 flex items-stretch lh-solid f7">
-                        <div class="flex items-center overflow-auto">
-                            <table class="collapse white b--black">
-                                <tr class="v-btm-l">
-                                    <td class="pa0">
-                                        <div class="bg-black pv3 ph2 shadow-4">
-                                            <div class="ba b--white-40 br1 pa2 hover-bg-green nowrap">
-                                                <div class="ph3 pv2 bl b--light-green bw2">
-                                                    Lorem ipsum dolor, sit amet consectetur
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pa0">
-                                        <div class="bg-black pv3 ph2 shadow-4">
-                                            <div class="ba b--white-40 br1 pa2 hover-bg-green nowrap">
-                                                <div class="ph3 pv2 bl b--light-green bw2">
-                                                    Lorem ipsum dolor, sit amet consectetur
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pa0">
-                                        <div class="bg-black pv3 ph2 shadow-4">
-                                            <div class="ba b--white-40 br1 pa2 hover-bg-green nowrap">
-                                                <div class="ph3 pv2 bl b--light-green bw2">
-                                                    Lorem ipsum dolor, sit amet consectetur
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pa0">
-                                        <div class="bg-black pv3 ph2 shadow-4">
-                                            <div class="ba b--white-40 br1 pa2 hover-bg-green nowrap">
-                                                <div class="ph3 pv2 bl b--light-green bw2">
-                                                    Lorem ipsum dolor, sit amet consectetur
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pa0">
-                                        <div class="bg-black pv3 ph2 shadow-4">
-                                            <div class="ba b--white-40 br1 pa2 hover-bg-green nowrap">
-                                                <div class="ph3 pv2 bl b--light-green bw2">
-                                                    Lorem ipsum dolor, sit amet consectetur
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pa0">
-                                        <div class="bg-black pv3 ph2 shadow-4">
-                                            <div class="ba b--white-40 br1 pa2 hover-bg-green nowrap">
-                                                <div class="ph3 pv2 bl b--light-green bw2">
-                                                    Lorem ipsum dolor, sit amet consectetur
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="bg-black shadow-2 hover-bg-purple sticky right-0">
-                                        <div class="cover h2 w2 ma4 flex-shrink-0" style="background:url('https://icongr.am/clarity/bell.svg?color=ffffff')"></div>
-                                    </td>
-                                    <td class="pa2"></td>
-                                    <td class="bg-black shadow-2 hover-bg-gold sticky left-0">
-                                        <div class="cover h2 w2 ma4 flex-shrink-0" style="background:url('https://icongr.am/clarity/history.svg?color=ffffff')"></div>
-                                    </td>
-                                    <td class="pa0">
-                                        <div class="bg-black pv3 ph2 shadow-4">
-                                            <div class="ba b--white-40 br1 pa2 hover-bg-green nowrap">
-                                                <div class="ph3 pv2 bl b--light-green bw2">
-                                                    Lorem ipsum dolor, sit amet consectetur
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pa0">
-                                        <div class="bg-black pv3 ph2 shadow-4">
-                                            <div class="ba b--white-40 br1 pa2 hover-bg-green nowrap">
-                                                <div class="ph3 pv2 bl b--light-green bw2">
-                                                    Lorem ipsum dolor, sit amet consectetur
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pa0">
-                                        <div class="bg-black pv3 ph2 shadow-4">
-                                            <div class="ba b--white-40 br1 pa2 hover-bg-green nowrap">
-                                                <div class="ph3 pv2 bl b--light-green bw2">
-                                                    Lorem ipsum dolor, sit amet consectetur
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pa0">
-                                        <div class="bg-black pv3 ph2 shadow-4">
-                                            <div class="ba b--white-40 br1 pa2 hover-bg-green nowrap">
-                                                <div class="ph3 pv2 bl b--light-green bw2">
-                                                    Lorem ipsum dolor, sit amet consectetur
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pa0">
-                                        <div class="bg-black pv3 ph2 shadow-4">
-                                            <div class="ba b--white-40 br1 pa2 hover-bg-green nowrap">
-                                                <div class="ph3 pv2 bl b--light-green bw2">
-                                                    Lorem ipsum dolor, sit amet consectetur
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pa0">
-                                        <div class="bg-black pv3 ph2 shadow-4">
-                                            <div class="ba b--white-40 br1 pa2 hover-bg-green nowrap">
-                                                <div class="ph3 pv2 bl b--light-green bw2">
-                                                    Lorem ipsum dolor, sit amet consectetur
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </summary>
-                    <div class="fixed z-max absolute--fill bg-black-80 flex flex-column items-center justify-end justify-center-ns">
-                        <div class="ph3 pv2 ma3 br-pill o-40 glow bg-black white">click anywhere in the dimmed area to exit</div>
-                        <div class="measure-wide w-100 vh-75 flex flex-column items-stretch br1 overflow-hidden bg-white shadow-4 ba b--black-20">
-                            <nav class="flex-none flex f7">
-                                <div class="flex-auto flex bb bw2 b--yellow hover-bg-washed-yellow pa1 pt2 items-center justify-center">
-                                    <div class="contain bg-center pa2 pb1 pl1 ma1 bg-center" style="background:url('https://icongr.am/clarity/star.svg')">
-                                    </div>
-                                    <div class="ph1 pv2">
-                                        Reviews
-                                    </div>
-                                </div>
-                                <div class="flex-auto flex bb bw2 b--light-green bg-washed-green pa1 pt2 items-center justify-center">
-                                    <div class="contain bg-center pa2 pb1 pl1 ma1 bg-center" style="background:url('https://icongr.am/clarity/dollar.svg')">
-                                    </div>
-                                    <div class="ph1 pv2">
-                                        Payments
-                                    </div>
-                                </div>
-                                <div class="flex-auto flex bb bw2 b--light-red hover-bg-washed-red pa1 pt2 items-center justify-center">
-                                    <div class="contain bg-center pa2 pb1 pl1 ma1 bg-center" style="background:url('https://icongr.am/clarity/alert.svg')">
-                                    </div>
-                                    <div class="ph1 pv2">
-                                        Urgent
-                                    </div>
-                                </div>
-                                <div class="flex-auto flex bb bw2 b--light-blue hover-bg-lightest-blue pa1 pt2 items-center justify-center">
-                                    <div class="contain bg-center pa2 pb1 pl1 ma1 bg-center" style="background:url('https://icongr.am/clarity/bolt.svg')">
-                                    </div>
-                                    <div class="ph1 pv2">
-                                        Actions
-                                    </div>
-                                </div>
-                            </nav>
-                            <div class="br1 flex flex-column overflow-auto relative bg-white">
-                                <header class="sticky top-0 bg-white bb b--black-40">
-                                    <div class="flex items-center pa2 pt3">
-                                        <div class="contain pa3 pt2 pl2 ma2 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/bell.svg')">
-                                        </div>
-                                        <div class="f4 fw7 mh2 flex-auto">
-                                            Notifications
-                                        </div>
-                                        <div class="contain pa3 pt1 pl1 ma2 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/check.svg')"></div>
-                                        <div class="contain pa3 pt1 pl1 ma2 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/remove.svg')"></div>
-                                    </div>
-                                </header>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                                <header class="sticky top-0 bg-white bb b--black-40">
-                                    <div class="flex items-center pa2 pt3">
-                                        <div class="contain pa3 pt2 pl2 ma2 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/history.svg')">
-                                        </div>
-                                        <div class="f4 fw7 mh2 flex-auto">
-                                            History
-                                        </div>
-                                        <div class="contain pa3 pt1 pl1 ma2 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/check.svg')"></div>
-                                        <div class="contain pa3 pt1 pl1 ma2 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/remove.svg')">
-                                        </div>
-                                    </div>
-                                </header>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                                <details class="outline-0 bb b--black-20 hover-bg-black-10 pa2">
-                                    <summary class="outline-0 bl b--green bw2 flex flex-column items-stretch pv2 ph3">
-                                        <div class="flex">
-                                            <div class="ma1 f5 fw6">
-                                                You recieved payment from Joseph
-                                            </div>
-                                        </div>
-                                        <div class="nowrap flex justify-between black-60 f7">
-                                            <div class="ma1">
-                                                2 weeks ago • 3/14/17 • 3:35pm
-                                            </div>
-                                        </div>
-                                    </summary>
-                                    <div class="pa2  lh-copy mh3 f6 bt b--black-10">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quaerat, architecto labore sit alias magnam eligendi minima.
-                                        Nemo quisquam quia vitae adipisci repellat. Corrupti nesciunt ducimus quisquam tempora
-                                        aliquid itaque?
-                                    </div>
-                                </details>
-                            </div>
+    <div class="flex-auto overflow-auto flex flex-column">
+        <main class="flex-auto flex flex-column items-stretch relative bg-navy w-100">
+            <section class="ma4-l ma3-m ma2 bg-white shadow-4 br1 overflow-auto measure-narrow">
+                <details open class="pv2 bb b--black-20">
+                    <summary class="bl bw2 b--blue outline-0 mh2 pv2 ph3 f5 fw7">Summary of Space</summary>
+                    <div class="bl bw2 b--white mh2 ph2 flex flex-column">
+                        <div class="lh-copy ma2">
+                            Date of use, price, specs, etc.
                         </div>
                     </div>
                 </details>
-                <section class="flex flex-column justify-center items-center bg-black-05 pa4-l relative">
-                    <div class="ma4-ns f2-l f3 fw8 pb3 pt5 ph3 ph0-ns bb b--purple static-ns sticky w-100 w-auto-ns top--2 z-3 bg-white bg-transparent-ns">
-                        My Reservations
+                <details class="pv2 bb b--black-20">
+                    <summary class="bl bw2 b--blue outline-0 mh2 pv2 ph3 f5 fw7">Payment</summary>
+                </details>
+                <details class="pv2 bb b--black-20">
+                    <summary class="bl bw2 b--blue outline-0 mh2 pv2 ph3 f5 fw7">Contract</summary>
+                </details>
+                <details class="pv2 bb b--black-20">
+                    <summary class="bl bw2 b--orange outline-0 mh2 pv2 ph3 f5 fw7">Waiting of Confirmation</summary>
+                    <div class="bl bw2 b--white mh2 ph2 flex flex-column">
+                        <div class="lh-copy ma2">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptate minima culpa corrupti! Maxime quae tenetur tempore quo necessitatibus deserunt saepe ducimus quos reiciendis, expedita ullam voluptates et laudantium omnis.
+                        </div>
+                        <div class="self-end f7 fw7 ph3 pv2 bg-orange white br-pill ma2">Cancel Reservation</div>
                     </div>
-                    <div class="flex flex-wrap-reverse self-stretch ma3-l">
-                        <div class="flex-auto flex flex-column items-stretch mv3 mh3-ns bg-white br1 mw9">
-                            <div class="flex h3 pa2 z-1">
-                                <div class="ma2 flex-none pa4 br-pill grow ba bw1 b--white cover grow-large shadow-4 z-2" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
-                                <div class="ma2 flex-auto flex flex-column justify-center">
-                                    <div class="f5-l gold">★★★★★</div>
-                                    <div class="f4-l f5 fw7">Cassandra's Garage</div>
-                                </div>
-                            </div>
-                            <div class="z-0 flex flex-column items-center vh-25-ns aspect-ratio aspect-ratio--16x9 pb0-ns overflow-hidden">
-                                <div class="aspect-ratio--object cover grow" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');">
-                                </div>
-                            </div>
-                            <div class="flex justify-around z-1 relative">
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/tag.svg?color=19a974')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--green bw2 bt br1">
-                                        <div class="f4 pv2">Reserved</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-                                </div>
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/check.svg?color=19a974')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--green bw2 bt br1">
-                                        <div class="f4 pv2">Approved</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                                <div class="bg-gold flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/sign-in.svg')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--gold bw2 bt br1">
-                                        <div class="f4 pv2">Drop-off</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/clock.svg')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--black bw2 bt br1">
-                                        <div class="f4 pv2">Store</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/sign-out.svg')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--black bw2 bt br1">
-                                        <div class="f4 pv2">Pick-up</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex-auto flex flex-column items-stretch mv3 mh3-ns bg-white br1 mw9">
-                            <div class="flex h3 pa2 z-1">
-                                <div class="ma2 flex-none pa4 br-pill grow ba bw1 b--white cover grow-large shadow-4 z-2" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
-                                <div class="ma2 flex-auto flex flex-column justify-center">
-                                    <div class="f5-l gold">★★★★★</div>
-                                    <div class="f4-l f5 fw7">Cassandra's Garage</div>
-                                </div>
-                            </div>
-                            <div class="z-0 flex flex-column items-center vh-25-ns aspect-ratio aspect-ratio--16x9 pb0-ns overflow-hidden">
-                                <div class="aspect-ratio--object cover grow" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');">
-                                </div>
-                            </div>
-                            <div class="flex justify-around z-1 relative">
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/tag.svg?color=19a974')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--green bw2 bt br1">
-                                        <div class="f4 pv2">Reserved</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-                                </div>
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/check.svg?color=19a974')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--green bw2 bt br1">
-                                        <div class="f4 pv2">Approved</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                                <div class="bg-gold flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/sign-in.svg')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--gold bw2 bt br1">
-                                        <div class="f4 pv2">Drop-off</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/clock.svg')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--black bw2 bt br1">
-                                        <div class="f4 pv2">Store</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/sign-out.svg')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--black bw2 bt br1">
-                                        <div class="f4 pv2">Pick-up</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex-auto flex flex-column items-stretch mv3 mh3-ns bg-white br1 mw9">
-                            <div class="flex h3 pa2 z-1">
-                                <div class="ma2 flex-none pa4 br-pill grow ba bw1 b--white cover grow-large shadow-4 z-2" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
-                                <div class="ma2 flex-auto flex flex-column justify-center">
-                                    <div class="f5-l gold">★★★★★</div>
-                                    <div class="f4-l f5 fw7">Cassandra's Garage</div>
-                                </div>
-                            </div>
-                            <div class="z-0 flex flex-column items-center vh-25-ns aspect-ratio aspect-ratio--16x9 pb0-ns overflow-hidden">
-                                <div class="aspect-ratio--object cover grow" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');">
-                                </div>
-                            </div>
-                            <div class="flex justify-around z-1 relative">
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/tag.svg?color=19a974')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--green bw2 bt br1">
-                                        <div class="f4 pv2">Reserved</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-                                </div>
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/check.svg?color=19a974')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--green bw2 bt br1">
-                                        <div class="f4 pv2">Approved</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                                <div class="bg-gold flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/sign-in.svg')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--gold bw2 bt br1">
-                                        <div class="f4 pv2">Drop-off</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/clock.svg')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--black bw2 bt br1">
-                                        <div class="f4 pv2">Store</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/sign-out.svg')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--black bw2 bt br1">
-                                        <div class="f4 pv2">Pick-up</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex-auto flex flex-column items-stretch mv3 mh3-ns bg-white br1 mw9">
-                            <div class="flex h3 pa2 z-1">
-                                <div class="ma2 flex-none pa4 br-pill grow ba bw1 b--white cover grow-large shadow-4 z-2" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
-                                <div class="ma2 flex-auto flex flex-column justify-center">
-                                    <div class="f5-l gold">★★★★★</div>
-                                    <div class="f4-l f5 fw7">Cassandra's Garage</div>
-                                </div>
-                            </div>
-                            <div class="z-0 flex flex-column items-center vh-25-ns aspect-ratio aspect-ratio--16x9 pb0-ns overflow-hidden">
-                                <div class="aspect-ratio--object cover grow" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');">
-                                </div>
-                            </div>
-                            <div class="flex justify-around z-1 relative">
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/tag.svg?color=19a974')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--green bw2 bt br1">
-                                        <div class="f4 pv2">Reserved</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-                                </div>
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/check.svg?color=19a974')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--green bw2 bt br1">
-                                        <div class="f4 pv2">Approved</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                                <div class="bg-gold flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/sign-in.svg')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--gold bw2 bt br1">
-                                        <div class="f4 pv2">Drop-off</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/clock.svg')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--black bw2 bt br1">
-                                        <div class="f4 pv2">Store</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/sign-out.svg')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--black bw2 bt br1">
-                                        <div class="f4 pv2">Pick-up</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex-auto flex flex-column items-stretch mv3 mh3-ns bg-white br1 mw9">
-                            <div class="flex h3 pa2 z-1">
-                                <div class="ma2 flex-none pa4 br-pill grow ba bw1 b--white cover grow-large shadow-4 z-2" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
-                                <div class="ma2 flex-auto flex flex-column justify-center">
-                                    <div class="f5-l gold">★★★★★</div>
-                                    <div class="f4-l f5 fw7">Cassandra's Garage</div>
-                                </div>
-                            </div>
-                            <div class="z-0 flex flex-column items-center vh-25-ns aspect-ratio aspect-ratio--16x9 pb0-ns overflow-hidden">
-                                <div class="aspect-ratio--object cover grow" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');">
-                                </div>
-                            </div>
-                            <div class="flex justify-around z-1 relative">
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/tag.svg?color=19a974')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--green bw2 bt br1">
-                                        <div class="f4 pv2">Reserved</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-                                </div>
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/check.svg?color=19a974')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--green bw2 bt br1">
-                                        <div class="f4 pv2">Approved</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                                <div class="bg-gold flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/sign-in.svg')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--gold bw2 bt br1">
-                                        <div class="f4 pv2">Drop-off</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/clock.svg')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--black bw2 bt br1">
-                                        <div class="f4 pv2">Store</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
-                                <div class="hover-bg-black-10 flex justify-center flex-auto br1 hide-child">
-                                    <div class="cover flex-none pa3 pt2 pl2 ma3" style="background:url('https://icongr.am/clarity/sign-out.svg')"></div>
-                                    <div class="child absolute bottom-0 left-0 mb5 bg-white ma3 pa3 b--black bw2 bt br1">
-                                        <div class="f4 pv2">Pick-up</div>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                        officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                        rerum?
-                                    </div>
-
-                                </div>
+                </details>
+                <details class="pv2 bb b--black-20">
+                    <summary class="bl bw2 b--yellow outline-0 mh2 pv2 ph3 f5 fw7">Drop off date</summary>
+                    <div class="bl bw2 b--white mh2 ph2 flex flex-column">
+                            <div class="lh-copy ma2">
+                    <div> a. Cancellation</div>
+                    <div>
+                        <div> i. Renter can cancel anytime prior to 7 days of drop-off</div>
+                        <div> ii. Within 1-7 days, charged 25% of first months stay</div>
+                        <div> iii. Within 24 hours, Charged 50% of first months stay</div>
+                    </div>
+                </details>
+                <details class="pv2 bb b--black-20">
+                    <summary class="bl bw2 b--yellow outline-0 mh2 pv2 ph3 f5 fw7">Pick up date</summary>
+                    <div class="bl bw2 b--white mh2 ph2 flex flex-column">
+                            <div class="lh-copy ma2">
+                    <div>
+                        <div> a. Renter can request early pick up</div>
+                        <div>
+                            <div> i. Must give host 24 hour notice</div>
+                            <div> ii. Renter will be charge remaining month’s stay</div>
+                            <div> 1. A month is considered one date to the same date the next month (i.e. 1 month = July 13th to
+                                August 13th)
                             </div>
                         </div>
                     </div>
-                </section>
-                <section class="flex flex-column justify-center items-center bg-black-05 pa4-l relative">
-                    <div class="ma4-ns f2-l f3 fw8 pb3 pt5 ph3 ph0-ns bb b--purple static-ns sticky w-100 w-auto-ns top--2 z-3 bg-white bg-transparent-ns">
-                        My Listings
+                    <div>
+                        <div> b. Renter can request an extension</div>
+                        <div>
+                            <div> i. Host can either accept or deny extension</div>
+                            <div> ii. After requesting extension, they need to be able to Change the date of pick-up. Minimum of
+                                7 days (unless hosts allows for shorter extensions)</div>
+                        </div>
                     </div>
-                    <div class="flex flex-wrap-reverse self-stretch ma3-ns">
-                        <article class="flex flex-auto flex-row-reverse-l flex-column items-stretch ma4-l mv3">
-                            <div class="pr7 pl4 grow z-0 vh-25 h-auto-l flex-auto bg-center cover br1 nl4-l" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');">
-                            </div>
-                            <div class="flex flex-column z-1 bg-white mv4-l br1 overflow-visible shadow-4">
-                                <div class="flex">
-                                    <div class="pa3 grow br1 bg-black self-start">
-                                        <div class="pa2 contain" style="background:url('https://icongr.am/clarity/check.svg?color=ffffff');"></div>
-                                    </div>
-                                    <div class="flex-auto br1 flex">
-                                        <div class="flex-auto pa2 flex items-center justify-center br1 hover-bg-gold">
-                                            <div class="cover pa2 ma2" style="background:url('https://icongr.am/clarity/event.svg')"></div>
-                                            <div class="dn pr2 flex-auto flex-l justify-center items-center">
-                                                Calendar
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto pa2 flex items-center justify-center br1 hover-bg-gold bl b--black-20">
-                                            <div class="cover pa2 ma2" style="background:url('https://icongr.am/clarity/dollar.svg')"></div>
-                                            <div class="dn pr2 flex-auto flex-l justify-center items-center">
-                                                Price
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto pa2 flex items-center justify-center br1 hover-bg-gold bl b--black-20">
-                                            <div class="cover pa2 ma2" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
-                                            <div class="dn pr2 flex-auto flex-l justify-center items-center">400
-                                                <sup> sqft</sup>
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto pa2 flex items-center justify-center br1 hover-bg-gold bl b--black-20">
-                                            <div class="cover pa2 ma2" style="background:url('https://icongr.am/clarity/map-marker.svg')"></div>
-                                            <div class="dn pr2 flex-auto flex-l justify-center items-center">
-                                                2.6 mi
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex lh-solid items-center justify-between-l justify-around flex-row-reverse flex-row-l pv3 ph0-l pa2 pl0 bt bb b--black-40">
-                                    <div class="flex-auto mh4-l mh3-m ma2 flex flex-column justify-around measure">
-                                        <div class="f4-ns f5 ma2 mh3-l">
-                                            Vacant
-                                        </div>
-                                        <div class="fw7 f2-ns f3 ma2 mh3-l">
-                                            Basement
-                                        </div>
-                                        <div class="ma2 mh3-l lh-copy">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                            officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                            rerum?
-                                        </div>
-                                    </div>
-                                    <div class="z-2 nr3-l ma3-l ml0 flex flex-column shadow-4 grow br1 f5 bg-white">
-                                        <div class="bg-gold hover-bg-white grow-large shadow-hover br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/plus-circle.svg')"></div>
-                                        </div>
-                                        <div class="hover-bg-gold br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/group.svg')"></div>
-                                        </div>
-                                        <div class="hover-bg-gold br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/lock.svg')"></div>
-                                        </div>
-                                        <div class="hover-bg-gold br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/shield.svg')"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex">
-                                    <div class="flex-auto flex items-center justify-between pa2 f5 br1 hover-bg-purple hover-white purple">
-                                        <div class="cover h1 w1 ma2 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/tag.svg?color=ffffff')"></div>
-                                        <span class="mh2 tc fw7 flex-auto">View Listing</span>
-                                        <div class="cover h1 w1 ma2 grow flex-shrink-0"></div>
-                                    </div>
-                                    <div class="flex-auto flex items-center justify-between pa2 f5 br1 hover-bg-purple hover-white purple bl b--black-20">
-                                        <div class="cover h1 w1 ma2 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/edit.svg?color=ffffff')"></div>
-                                        <span class="mh2 tc fw7 flex-auto">Share Listing</span>
-                                        <div class="cover h1 w1 ma2 grow flex-shrink-0"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="flex flex-auto flex-row-reverse-l flex-column items-stretch ma4-l mv3">
-                            <div class="pr7 pl4 grow z-0 vh-25 h-auto-l flex-auto bg-center cover br1 nl4-l" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');">
-                            </div>
-                            <div class="flex flex-column z-1 bg-white mv4-l br1 overflow-visible shadow-4">
-                                <div class="flex">
-                                    <div class="pa3 grow br1 bg-gold self-start">
-                                        <div class="pa2 contain" style="background:url('https://icongr.am/clarity/sign-out.svg');"></div>
-                                    </div>
-                                    <div class="flex-auto br1 flex">
-                                        <div class="flex-auto pa2 flex items-center justify-center br1 hover-bg-gold">
-                                            <div class="cover pa2 ma2" style="background:url('https://icongr.am/clarity/event.svg')"></div>
-                                            <div class="dn pr2 flex-auto flex-l justify-center items-center">
-                                                Calendar
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto pa2 flex items-center justify-center br1 hover-bg-gold bl b--black-20">
-                                            <div class="cover pa2 ma2" style="background:url('https://icongr.am/clarity/dollar.svg')"></div>
-                                            <div class="dn pr2 flex-auto flex-l justify-center items-center">
-                                                Price
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto pa2 flex items-center justify-center br1 hover-bg-gold bl b--black-20">
-                                            <div class="cover pa2 ma2" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
-                                            <div class="dn pr2 flex-auto flex-l justify-center items-center">400
-                                                <sup> sqft</sup>
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto pa2 flex items-center justify-center br1 hover-bg-gold bl b--black-20">
-                                            <div class="cover pa2 ma2" style="background:url('https://icongr.am/clarity/map-marker.svg')"></div>
-                                            <div class="dn pr2 flex-auto flex-l justify-center items-center">
-                                                2.6 mi
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex lh-solid items-center justify-between-l justify-around flex-row-reverse flex-row-l pv3 ph0-l pa2 pl0 bt bb b--black-40">
-                                    <div class="flex-auto mh4-l mh3-m ma2 flex flex-column justify-around measure">
-                                        <div class="f4-ns f5 ma2 mh3-l">
-                                            Pick-up
-                                        </div>
-                                        <div class="fw7 f2-ns f3 ma2 mh3-l">
-                                            Basement
-                                        </div>
-                                        <div class="ma2 mh3-l lh-copy">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                            officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                            rerum?
-                                        </div>
-                                    </div>
-                                    <div class="z-2 nr3-l ma3-l ml0 flex flex-column shadow-4 grow br1 f5 bg-white">
-                                        <div class="bg-gold hover-bg-white grow-large shadow-hover br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/plus-circle.svg')"></div>
-                                        </div>
-                                        <div class="hover-bg-gold br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/group.svg')"></div>
-                                        </div>
-                                        <div class="hover-bg-gold br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/lock.svg')"></div>
-                                        </div>
-                                        <div class="hover-bg-gold br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/shield.svg')"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex">
-                                    <div class="flex-auto flex items-center justify-between pa2 f5 br1 hover-bg-purple hover-white purple">
-                                        <div class="cover h1 w1 ma2 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/tag.svg?color=ffffff')"></div>
-                                        <span class="mh2 tc fw7 flex-auto">View Listing</span>
-                                        <div class="cover h1 w1 ma2 grow flex-shrink-0"></div>
-                                    </div>
-                                    <div class="flex-auto flex items-center justify-between pa2 f5 br1 hover-bg-purple hover-white purple bl b--black-20">
-                                        <div class="cover h1 w1 ma2 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/talk-bubbles.svg?color=ffffff')"></div>
-                                        <span class="mh2 tc fw7 flex-auto">Contact Renter</span>
-                                        <div class="cover h1 w1 ma2 grow flex-shrink-0"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="flex flex-auto flex-row-reverse-l flex-column items-stretch ma4-l mv3">
-                            <div class="pr7 pl4 grow z-0 vh-25 h-auto-l flex-auto bg-center cover br1 nl4-l" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');">
-                            </div>
-                            <div class="flex flex-column z-1 bg-white mv4-l br1 overflow-visible shadow-4">
-                                <div class="flex">
-                                    <div class="pa3 grow br1 bg-green self-start">
-                                        <div class="pa2 contain" style="background:url('https://icongr.am/clarity/clock.svg?color=ffffff');"></div>
-                                    </div>
-                                    <div class="flex-auto br1 flex">
-                                        <div class="flex-auto pa2 flex items-center justify-center br1 hover-bg-gold">
-                                            <div class="cover pa2 ma2" style="background:url('https://icongr.am/clarity/event.svg')"></div>
-                                            <div class="dn pr2 flex-auto flex-l justify-center items-center">
-                                                Calendar
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto pa2 flex items-center justify-center br1 hover-bg-gold bl b--black-20">
-                                            <div class="cover pa2 ma2" style="background:url('https://icongr.am/clarity/dollar.svg')"></div>
-                                            <div class="dn pr2 flex-auto flex-l justify-center items-center">
-                                                Price
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto pa2 flex items-center justify-center br1 hover-bg-gold bl b--black-20">
-                                            <div class="cover pa2 ma2" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
-                                            <div class="dn pr2 flex-auto flex-l justify-center items-center">400
-                                                <sup> sqft</sup>
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto pa2 flex items-center justify-center br1 hover-bg-gold bl b--black-20">
-                                            <div class="cover pa2 ma2" style="background:url('https://icongr.am/clarity/map-marker.svg')"></div>
-                                            <div class="dn pr2 flex-auto flex-l justify-center items-center">
-                                                2.6 mi
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex lh-solid items-center justify-between-l justify-around flex-row-reverse flex-row-l pv3 ph0-l pa2 pl0 bt bb b--black-40">
-                                    <div class="flex-auto mh4-l mh3-m ma2 flex flex-column justify-around measure">
-                                        <div class="f4-ns f5 ma2 mh3-l">
-                                            Earning
-                                        </div>
-                                        <div class="fw7 f2-ns f3 ma2 mh3-l">
-                                            Basement
-                                        </div>
-                                        <div class="ma2 mh3-l lh-copy">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                            officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                            rerum?
-                                        </div>
-                                    </div>
-                                    <div class="z-2 nr3-l ma3-l ml0 flex flex-column shadow-4 grow br1 f5 bg-white">
-                                        <div class="bg-gold hover-bg-white grow-large shadow-hover br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/plus-circle.svg')"></div>
-                                        </div>
-                                        <div class="hover-bg-gold br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/group.svg')"></div>
-                                        </div>
-                                        <div class="hover-bg-gold br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/lock.svg')"></div>
-                                        </div>
-                                        <div class="hover-bg-gold br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/shield.svg')"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex">
-                                    <div class="flex-auto flex items-center justify-between pa2 f5 br1 hover-bg-purple hover-white purple">
-                                        <div class="cover h1 w1 ma2 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/tag.svg?color=ffffff')"></div>
-                                        <span class="mh2 tc fw7 flex-auto">View Listing</span>
-                                        <div class="cover h1 w1 ma2 grow flex-shrink-0"></div>
-                                    </div>
-                                    <div class="flex-auto flex items-center justify-between pa2 f5 br1 hover-bg-purple hover-white purple bl b--black-20">
-                                        <div class="cover h1 w1 ma2 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/talk-bubbles.svg?color=ffffff')"></div>
-                                        <span class="mh2 tc fw7 flex-auto">Contact Renter</span>
-                                        <div class="cover h1 w1 ma2 grow flex-shrink-0"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="flex flex-auto flex-row-reverse-l flex-column items-stretch ma4-l mv3">
-                            <div class="pr7 pl4 grow z-0 vh-25 h-auto-l flex-auto bg-center cover br1 nl4-l" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');">
-                            </div>
-                            <div class="flex flex-column z-1 bg-white mv4-l br1 overflow-visible shadow-4">
-                                <div class="flex">
-                                    <div class="pa3 grow br1 bg-red self-start">
-                                        <div class="pa2 contain" style="background:url('https://icongr.am/clarity/close.svg?color=ffffff');"></div>
-                                    </div>
-                                    <div class="flex-auto br1 flex">
-                                        <div class="flex-auto pa2 flex items-center justify-center br1 hover-bg-gold">
-                                            <div class="cover pa2 ma2" style="background:url('https://icongr.am/clarity/event.svg')"></div>
-                                            <div class="dn pr2 flex-auto flex-l justify-center items-center">
-                                                Calendar
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto pa2 flex items-center justify-center br1 hover-bg-gold bl b--black-20">
-                                            <div class="cover pa2 ma2" style="background:url('https://icongr.am/clarity/dollar.svg')"></div>
-                                            <div class="dn pr2 flex-auto flex-l justify-center items-center">
-                                                Price
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto pa2 flex items-center justify-center br1 hover-bg-gold bl b--black-20">
-                                            <div class="cover pa2 ma2" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
-                                            <div class="dn pr2 flex-auto flex-l justify-center items-center">400
-                                                <sup> sqft</sup>
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto pa2 flex items-center justify-center br1 hover-bg-gold bl b--black-20">
-                                            <div class="cover pa2 ma2" style="background:url('https://icongr.am/clarity/map-marker.svg')"></div>
-                                            <div class="dn pr2 flex-auto flex-l justify-center items-center">
-                                                2.6 mi
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex lh-solid items-center justify-between-l justify-around flex-row-reverse flex-row-l pv3 ph0-l pa2 pl0 bt bb b--black-40">
-                                    <div class="flex-auto mh4-l mh3-m ma2 flex flex-column justify-around measure">
-                                        <div class="f4-ns f5 ma2 mh3-l">
-                                            Unavailable
-                                        </div>
-                                        <div class="fw7 f2-ns f3 ma2 mh3-l">
-                                            Basement
-                                        </div>
-                                        <div class="ma2 mh3-l lh-copy">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, cum pariatur nam et quibusdam quisquam magnam dignissimos
-                                            officiis nobis error eligendi nemo voluptatum quis. Fugiat omnis ad sed voluptates
-                                            rerum?
-                                        </div>
-                                    </div>
-                                    <div class="z-2 nr3-l ma3-l ml0 flex flex-column shadow-4 grow br1 f5 bg-white">
-                                        <div class="bg-gold hover-bg-white grow-large shadow-hover br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/plus-circle.svg')"></div>
-                                        </div>
-                                        <div class="hover-bg-gold br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/group.svg')"></div>
-                                        </div>
-                                        <div class="hover-bg-gold br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/lock.svg')"></div>
-                                        </div>
-                                        <div class="hover-bg-gold br1">
-                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/shield.svg')"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex">
-                                    <div class="flex-auto flex items-center justify-between pa2 f5 br1 hover-bg-purple hover-white purple">
-                                        <div class="cover h1 w1 ma2 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/tag.svg?color=ffffff')"></div>
-                                        <span class="mh2 tc fw7 flex-auto">View Listing</span>
-                                        <div class="cover h1 w1 ma2 grow flex-shrink-0"></div>
-                                    </div>
-                                    <div class="flex-auto flex items-center justify-between pa2 f5 br1 hover-bg-purple hover-white purple bl b--black-20">
-                                        <div class="cover h1 w1 ma2 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/edit.svg?color=ffffff')"></div>
-                                        <span class="mh2 tc fw7 flex-auto">Share Listing</span>
-                                        <div class="cover h1 w1 ma2 grow flex-shrink-0"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-            </div>
+                </details>
+                <details class="pv2 bb b--black-20">
+                    <summary class="bl bw2 b--yellow outline-0 mh2 pv2 ph3 f5 fw7">Review</summary>
+                    <div> a. Rating and review of space</div>
+                </details>
+            </section>
         </main>
-        <footer class="flex flex-wrap items-center justify-between ma3 ma4-l o-50 black-50 glow">
+        <footer class="flex-none flex flex-wrap items-center justify-between ma3 ma4-l o-50 black-50 glow">
             <div class="flex flex-column flex-row-l">
-                <div class="flex items-center grow ma2 hover-purple">
+                <div class="flex items-center grow ma2 hover-navy">
                     <div class="o-50 cover h1 w1 ma2 grow flex-shrink-0" style="background:url(
           'https://icongr.am/clarity/email.svg')"></div>
                     <div class="flex-shrink-1">hello@roo.com</div>
                 </div>
-                <div class="flex items-center grow ma2 hover-purple">
+                <div class="flex items-center grow ma2 hover-navy">
                     <div class="o-50 cover h1 w1 ma2 grow flex-shrink-0" style="background:url(
           'https://icongr.am/simple/facebook.svg')"></div>
                     <div class="flex-shrink-1">fb.com/roo</div>
                 </div>
-                <div class="flex items-center grow ma2 hover-purple">
+                <div class="flex items-center grow ma2 hover-navy">
                     <div class="o-50 cover h1 w1 ma2 grow flex-shrink-0" style="background:url(
           'https://icongr.am/simple/twitter.svg')"></div>
                     <div class="flex-shrink-1">@roo</div>
                 </div>
-                <div class="flex items-center grow ma2 hover-purple">
+                <div class="flex items-center grow ma2 hover-navy">
                     <div class="o-50 cover h1 w1 ma2 grow flex-shrink-0" style="background:url(
           'https://icongr.am/simple/instagram.svg')"></div>
                     <div class="flex-shrink-1">@roo</div>
