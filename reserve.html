@@ -17,63 +17,63 @@ Renter
 
 Clicks reserve from listing
 Takes you to my reservations page
-    1. Summary of space 
-        a. Date of use, price, specs, etc.
-    2. Payment
-    3. Contract
-    4. Waiting of confirmation 
-        a. Renter can cancel at anytime prior to host confirmation
-    5. Drop off date
-        a. Cancellation
-            i. Renter can cancel anytime prior to 7 days of drop-off
-            ii. Within 1-7 days, charged 25% of first months stay
-            iii. Within 24 hours, Charged 50% of first months stay
-    6. Pick up date
-        a. Renter can request early pick up
-            i. Must give host 24 hour notice
-            ii. Renter will be charge remaining month’s stay
-                1. A month is considered one date to the same date the next month (i.e. 1 month = July 13th to August 13th)
-        b. Renter can request an extension
-            i. Host can either accept or deny extension
-            ii. After requesting extension, they need to be able to Change the date of pick-up. Minimum of 7 days (unless hosts allows for shorter extensions)
-    7. Review
-        a. Rating and review of space
+ 1. Summary of space 
+ a. Date of use, price, specs, etc.
+ 2. Payment
+ 3. Contract
+ 4. Waiting of confirmation 
+ a. Renter can cancel at anytime prior to host confirmation
+ 5. Drop off date
+ a. Cancellation
+ i. Renter can cancel anytime prior to 7 days of drop-off
+ ii. Within 1-7 days, charged 25% of first months stay
+ iii. Within 24 hours, Charged 50% of first months stay
+ 6. Pick up date
+ a. Renter can request early pick up
+ i. Must give host 24 hour notice
+ ii. Renter will be charge remaining month’s stay
+ 1. A month is considered one date to the same date the next month (i.e. 1 month = July 13th to August 13th)
+ b. Renter can request an extension
+ i. Host can either accept or deny extension
+ ii. After requesting extension, they need to be able to Change the date of pick-up. Minimum of 7 days (unless hosts allows for shorter extensions)
+ 7. Review
+ a. Rating and review of space
 
 Host 
 
 Clicks and confirms all the inputted information is correct and the host has entered the necessary information for background check API (Still deciding on background checks). Maybe this could be apart of the timeline as well. 
 
-    1. Confirm Listing information
-        a. Information of space from roo vetting check
-    2. Waiting on approval of Background check
-    3. Waiting on approval
-        a. Space can be approved or denied by roo
-    4. Waiting on reservation
-        a. Host can Remove from listings at anytime
-        b. Host can delete space at anytime
-            i. DOUBLE CHECK that the host wants to delete the space
+ 1. Confirm Listing information
+ a. Information of space from roo vetting check
+ 2. Waiting on approval of Background check
+ 3. Waiting on approval
+ a. Space can be approved or denied by roo
+ 4. Waiting on reservation
+ a. Host can Remove from listings at anytime
+ b. Host can delete space at anytime
+ i. DOUBLE CHECK that the host wants to delete the space
 
 Contact information is available at the time of confirmation for both parties
-    5. Waiting on Drop-off
-        a. Host can cancel anytime (following applies on a yearly basis)
-            i. Will be marked/flagged
-            ii. 1st cancellation 
-                1. Greater than 1 week, no charge
-                    a. First cancellation is waived
-                2. 1 day – 7 days, charged 25% of first month’s rent or $25, whichever is less
-                3. within 24 hours, charged 50% of first month’s rent or $50, whichever is less
-            iii. 2nd cancellation
-                1. Host under review (temporary deactivation)
-                2. Greater than 1 week 25% of first month’s rent or $25, whichever is less
-                3. 1 day – 7 days, charged 50% of first month’s rent or $50, whichever is less
-                4. within 24 hours, charged 75% of first month’s rent or $75, whichever is less
-            iv. 3rd cancellation
-                1. Deactivated until reapproved
-    6. Waiting on pick-up
-        a. Host most approve extension if requested by renter 
-    7. Review 
-        a. Rating and review of renter
-        b. Host can let us know that the items were never picked up 
+ 5. Waiting on Drop-off
+ a. Host can cancel anytime (following applies on a yearly basis)
+ i. Will be marked/flagged
+ ii. 1st cancellation 
+ 1. Greater than 1 week, no charge
+ a. First cancellation is waived
+ 2. 1 day – 7 days, charged 25% of first month’s rent or $25, whichever is less
+ 3. within 24 hours, charged 50% of first month’s rent or $50, whichever is less
+ iii. 2nd cancellation
+ 1. Host under review (temporary deactivation)
+ 2. Greater than 1 week 25% of first month’s rent or $25, whichever is less
+ 3. 1 day – 7 days, charged 50% of first month’s rent or $50, whichever is less
+ 4. within 24 hours, charged 75% of first month’s rent or $75, whichever is less
+ iv. 3rd cancellation
+ 1. Deactivated until reapproved
+ 6. Waiting on pick-up
+ a. Host most approve extension if requested by renter 
+ 7. Review 
+ a. Rating and review of renter
+ b. Host can let us know that the items were never picked up 
  -->
 
 
@@ -126,68 +126,167 @@ Contact information is available at the time of confirmation for both parties
         </ul>
     </nav>
     <div class="flex-auto overflow-auto flex flex-column">
-        <main class="flex-auto flex flex-column items-stretch relative bg-navy w-100">
-            <section class="ma4-l ma3-m ma2 bg-white shadow-4 br1 overflow-auto measure-narrow">
-                <details open class="pv2 bb b--black-20">
-                    <summary class="bl bw2 b--blue outline-0 mh2 pv2 ph3 f5 fw7">Summary of Space</summary>
-                    <div class="bl bw2 b--white mh2 ph2 flex flex-column">
-                        <div class="lh-copy ma2">
-                            Date of use, price, specs, etc.
-                        </div>
-                    </div>
-                </details>
+        <main class="flex-auto flex items-center justify-start-ns justify-center w-100 relative bg-black-05">
+            <section class="ma4-l ma3-m ma2 bg-white shadow-4 br1 measure-narrow-ns">
                 <details class="pv2 bb b--black-20">
-                    <summary class="bl bw2 b--blue outline-0 mh2 pv2 ph3 f5 fw7">Payment</summary>
-                </details>
-                <details class="pv2 bb b--black-20">
-                    <summary class="bl bw2 b--blue outline-0 mh2 pv2 ph3 f5 fw7">Contract</summary>
-                </details>
-                <details class="pv2 bb b--black-20">
-                    <summary class="bl bw2 b--orange outline-0 mh2 pv2 ph3 f5 fw7">Waiting of Confirmation</summary>
-                    <div class="bl bw2 b--white mh2 ph2 flex flex-column">
-                        <div class="lh-copy ma2">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptate minima culpa corrupti! Maxime quae tenetur tempore quo necessitatibus deserunt saepe ducimus quos reiciendis, expedita ullam voluptates et laudantium omnis.
-                        </div>
-                        <div class="self-end f7 fw7 ph3 pv2 bg-orange white br-pill ma2">Cancel Reservation</div>
-                    </div>
-                </details>
-                <details class="pv2 bb b--black-20">
-                    <summary class="bl bw2 b--yellow outline-0 mh2 pv2 ph3 f5 fw7">Drop off date</summary>
-                    <div class="bl bw2 b--white mh2 ph2 flex flex-column">
-                            <div class="lh-copy ma2">
-                    <div> a. Cancellation</div>
-                    <div>
-                        <div> i. Renter can cancel anytime prior to 7 days of drop-off</div>
-                        <div> ii. Within 1-7 days, charged 25% of first months stay</div>
-                        <div> iii. Within 24 hours, Charged 50% of first months stay</div>
-                    </div>
-                </details>
-                <details class="pv2 bb b--black-20">
-                    <summary class="bl bw2 b--yellow outline-0 mh2 pv2 ph3 f5 fw7">Pick up date</summary>
-                    <div class="bl bw2 b--white mh2 ph2 flex flex-column">
-                            <div class="lh-copy ma2">
-                    <div>
-                        <div> a. Renter can request early pick up</div>
-                        <div>
-                            <div> i. Must give host 24 hour notice</div>
-                            <div> ii. Renter will be charge remaining month’s stay</div>
-                            <div> 1. A month is considered one date to the same date the next month (i.e. 1 month = July 13th to
-                                August 13th)
+                    <summary class="z-2 relative bl bw2 b--blue outline-0 mh2 pv2 ph3 f5 fw7">Summary of Space</summary>
+                    <div class="z-1 absolute-ns absolute--fill-ns flex flex-column justify-center items-center pl7-ns">
+                        <div class="flex flex-column items-stretch items-center-m mv4- mh5-ns">
+                            <div class="flex-auto flex flex-column relative">
+                                <div class="pa6 grow z-0 flex-auto bg-center cover br1" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
+                                <div class="flex-none flex z-1 flex-column bg-white br1 shadow-4">
+                                    <div class="flex justify-between items-stretch">
+                                        <div class="flex-auto absolute top-0 left-0 right-0 flex flex-column items-center justify-between z-2 mh6 mt5">
+                                            <div class="pa5 br-pill grow ba bw2-m bw1 b--white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
+                                            <div class="flex shadow-4 grow br1 mv3 f5 bg-white">
+                                                <div class="hover-bg-gold br1">
+                                                    <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/group.svg')"></div>
+                                                </div>
+                                                <div class="hover-bg-gold br1">
+                                                    <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/lock.svg')"></div>
+                                                </div>
+                                                <div class="hover-bg-gold br1">
+                                                    <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/shield.svg')"></div>
+                                                </div>
+                                                <div class="hover-bg-gold br1">
+                                                    <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/check.svg')"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex-auto flex flex-column lh-solid justify-center pa3">
+                                            <div class="f3 measure gold grow ma3">★★★★★</div>
+                                            <div class="f2 measure fw7 mh3">Cassandra's Garage</div>
+                                            <div class="ma3 f5 measure">
+                                                <div class="br1 b--black-40 ba flex">
+                                                    <div class="flex-auto ph3 br flex justify-center pv2 hover-bg-gold">
+                                                        <div class="cover pa2 mr2" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
+                                                        <span class="flex-auto flex justify-center items-center">400
+                                                            <sup> sqft</sup>
+                                                        </span>
+                                                    </div>
+                                                    <div class="flex-auto ph3 flex justify-center pv2 hover-bg-gold">
+                                                        <div class="cover pa2 mr2" style="background:url('https://icongr.am/clarity/map-marker.svg')"></div>
+                                                        <span class="flex-auto flex justify-center items-center">2.6 mi</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mh3 fw5 f6 lh-copy measure">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolorum ratione corporis eos ullam ut vero corrupti
+                                                sint iste id harum.
+                                            </div>
+                                            <div class="flex items-center justify-between shadow-hover br1 f5 hover-bg-purple hover-white purple mv3">
+                                                <span class="mh3 fw7">Reserve for $42</span>
+                                                <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/tag.svg?color=ffffff')"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div> b. Renter can request an extension</div>
-                        <div>
-                            <div> i. Host can either accept or deny extension</div>
-                            <div> ii. After requesting extension, they need to be able to Change the date of pick-up. Minimum of
-                                7 days (unless hosts allows for shorter extensions)</div>
+                </details>
+                <details class="pv2 bb b--black-20">
+                    <summary class="z-2 relative bl bw2 b--blue outline-0 mh2 pv2 ph3 f5 fw7">Payment</summary>
+                    <div class="z-1 absolute-ns absolute--fill-ns flex flex-column justify-center items-center pl7-ns"></div>
+                </details>
+                <details class="pv2 bb b--black-20">
+                    <summary class="z-2 relative bl bw2 b--blue outline-0 mh2 pv2 ph3 f5 fw7">Contract</summary>
+                    <div class="z-1 absolute-ns absolute--fill-ns flex flex-column justify-center items-center pl7-ns">
+                        <div class="shadow-4 pa5-l pa4-m pa3 br1 measure-wide lh-copy bg-white-90">
+                            <h1>Contract Terms</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum voluptas, quisquam hic nobis earum doloremque maxime temporibus
+                                consequatur! Dicta consequuntur aut voluptatem quis itaque eveniet? Similique repudiandae
+                                tempore asperiores quae.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum voluptas, quisquam hic nobis earum doloremque maxime temporibus
+                                consequatur! Dicta consequuntur aut voluptatem quis itaque eveniet? Similique repudiandae
+                                tempore asperiores quae.
+                            </p>
+                            <h3>
+                                Tempore asperiores quae.
+                            </h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum voluptas, quisquam hic nobis earum doloremque maxime temporibus
+                                consequatur! Dicta consequuntur aut voluptatem quis itaque eveniet? Similique repudiandae
+                                tempore asperiores quae.
+                            </p>
                         </div>
                     </div>
                 </details>
                 <details class="pv2 bb b--black-20">
-                    <summary class="bl bw2 b--yellow outline-0 mh2 pv2 ph3 f5 fw7">Review</summary>
-                    <div> a. Rating and review of space</div>
+                    <summary class="z-2 relative bl bw2 b--orange outline-0 mh2 pv2 ph3 f5 fw7">Waiting of Confirmation</summary>
+                    <div class="z-1 absolute-ns absolute--fill-ns flex flex-column justify-center items-center pl7-ns">
+                        <div class="measure-wide pa4-l pa3 bg-white-90 br1 shadow-4 flex flex-column">
+                            <div class="f3 pa2">
+                                We're waiting for Cassandra now.
+                            </div>
+                            <div class="lh-copy pa2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptate minima culpa corrupti! Maxime quae tenetur
+                                tempore quo necessitatibus deserunt saepe ducimus quos reiciendis, expedita ullam voluptates
+                                et laudantium omnis.
+                            </div>
+                        </div>
+                    </div>
+                </details>
+                <details class="pv2 bb b--black-20">
+                    <summary class="z-2 relative bl bw2 b--yellow outline-0 mh2 pv2 ph3 f5 fw7">Drop off date</summary>
+                    <div class="z-1 absolute-ns absolute--fill-ns flex flex-column justify-center items-center pl7-ns">
+                        <div class="z-999 lh-copy ma7 flex flex-column items-end">
+                            <div class="measure-wide bg-white-90 br1 shadow-4 flex flex-column ma2">
+                                <div class="f3 fw9 pa3 bg-orange white tc">
+                                    July
+                                </div>
+                                <div class="f-headline fw9 ph4 mh3 navy">
+                                    17
+                                </div>
+                            </div>
+                            <div class="flex-auto fw7 br1 tc shadow-hover o-20 glow bg-navy white ma2 pv2 ph3">Cancel Reservation</div>
+                        </div>
+                </details>
+                <details class="pv2 bb b--black-20">
+                    <summary class="z-2 relative bl bw2 b--yellow outline-0 mh2 pv2 ph3 f5 fw7">Pick up date</summary>
+                    <div class="z-1 absolute-ns absolute--fill-ns flex flex-column justify-center items-center pl7-ns">
+                        <div class="z-999 lh-copy ma7">
+                            <div class="z-999 lh-copy ma7 flex flex-column items-stretch">
+                                <div class="measure-wide bg-white-90 br1 shadow-4 flex flex-column ma2">
+                                    <div class="f3 fw9 pa3 bg-orange white tc">
+                                        July
+                                    </div>
+                                    <div class="f-headline fw9 ph4 mh3 navy">
+                                        17
+                                    </div>
+                                </div>
+                                <div class="flex-auto fw7 br1 tc shadow-hover o-20 glow bg-navy white ma2 pv2 ph3">Early Pickup</div>
+                                <div class="flex-auto fw7 br1 tc shadow-hover o-20 glow bg-navy white ma2 pv2 ph3">Request Extention</div>
+                            </div>
+                        </div>
+                </details>
+                <details open class="pv2 bb b--black-20">
+                    <summary class="z-2 relative bl bw2 b--yellow outline-0 mh2 pv2 ph3 f5 fw7">Review</summary>
+                    <div class="z-1 absolute-ns absolute--fill-ns flex flex-column justify-center items-center pl7-ns">
+                        <div class="measure-wide tc bg-white br1 shadow-4 pa4-l pa3-m pa2">
+                            <div class="ma2 f1 fw1">Review</div>
+                            <div class="pa2">
+                                <div class="ma2 fw7">rating</div>
+                                <div class="ma2 f1 yellow o-20 glow lh-solid grow">★★★★★</div>
+                            </div>
+                            <div class="pa2">
+                                <div class="ma2 fw7">title</div>
+                                <div class="ma2 f4 fw3 outline-0 grow" contenteditable="true">
+                                    It was delightful!
+                                </div>
+                            </div>
+                            <div class="pa2">
+                                <div class="ma2 fw7">description</div>
+                                <div class="ma2 i o-50 outline-0 lh-copy grow" contenteditable="true">
+                                    Cassandra was the kindest...
+                                </div>
+                            </div>
+                            <div class="flex-auto fw7 br1 tc shadow-hover o-20 glow bg-navy white ma2 pv2 ph3">Submit Review</div>
+                        </div>
+                    </div>
                 </details>
             </section>
         </main>
@@ -195,22 +294,22 @@ Contact information is available at the time of confirmation for both parties
             <div class="flex flex-column flex-row-l">
                 <div class="flex items-center grow ma2 hover-navy">
                     <div class="o-50 cover h1 w1 ma2 grow flex-shrink-0" style="background:url(
-          'https://icongr.am/clarity/email.svg')"></div>
+ 'https://icongr.am/clarity/email.svg')"></div>
                     <div class="flex-shrink-1">hello@roo.com</div>
                 </div>
                 <div class="flex items-center grow ma2 hover-navy">
                     <div class="o-50 cover h1 w1 ma2 grow flex-shrink-0" style="background:url(
-          'https://icongr.am/simple/facebook.svg')"></div>
+ 'https://icongr.am/simple/facebook.svg')"></div>
                     <div class="flex-shrink-1">fb.com/roo</div>
                 </div>
                 <div class="flex items-center grow ma2 hover-navy">
                     <div class="o-50 cover h1 w1 ma2 grow flex-shrink-0" style="background:url(
-          'https://icongr.am/simple/twitter.svg')"></div>
+ 'https://icongr.am/simple/twitter.svg')"></div>
                     <div class="flex-shrink-1">@roo</div>
                 </div>
                 <div class="flex items-center grow ma2 hover-navy">
                     <div class="o-50 cover h1 w1 ma2 grow flex-shrink-0" style="background:url(
-          'https://icongr.am/simple/instagram.svg')"></div>
+ 'https://icongr.am/simple/instagram.svg')"></div>
                     <div class="flex-shrink-1">@roo</div>
                 </div>
             </div>
@@ -218,7 +317,7 @@ Contact information is available at the time of confirmation for both parties
                 Copyright © Roo 2018
             </div>
         </footer>
-    </div>
+        </div>
 </body>
 
 </html>
