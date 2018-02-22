@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h6 bg-white white">
+<html lang="en" class="h6 bg-white navy">
 
 <head>
     <meta charset="UTF-8">
@@ -17,6 +17,18 @@
             -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
         }
+
+        .coolUp {
+            background-attachment: fixed;
+            background-size: 100vv 100vh;
+            background-image: linear-gradient(330deg, var(--navy), var(--blue));
+        }
+
+        .warmUp {
+            background-attachment: fixed;
+            background-size: 100vv 100vh;
+            background-image: linear-gradient(330deg, var(--orange), var(--yellow));
+        }
     </style>
 </head>
 <!-- <div class="static mv4 pb5 flex-none absolute-ns absolute--fill-ns flex items-center-ns items-start justify-center">
@@ -27,54 +39,54 @@
         <div class="z-0 br-pill absolute ba bw1 b--orange animatedSlow infinite wobble" style="width:24vmin;height:24vmin;"></div>
     </div> -->
 
-<body class="flex flex-column items-center w-100">
+<body class="flex flex-column items-center w-100 f6">
     <div class="z-1 self-stretch flex flex-column items-stretch white cover parallax" style="background:url('https://images.unsplash.com/photo-1509600538702-9162c265ac3d')">
         <div class="flex-auto flex-column flex justify-between bg-black-40 pa4-l pa3-m pa2 overflow-hidden">
             <div class="self-center f2-l f3-m f4 measaure-narrow lh-title fw9 tracked flex flex-column justify-center items-center ttu pa4-l pa3-m pa2">
                 <div class="relative z-1">Storage Made</div>
-                <div class="relative z-0 h1 flex flex-row items-center nl5 nr5 f-subheadline-l f1-m f2 lh-solid">
-                    <div class="flex-none mh3 o-05">Simple</div>
-                    <div class="flex-none mh3 o-05">Simple</div>
-                    <div class="flex-none mh3 o-05">Simple</div>
-                    <div class="flex-none mh3 o-05">Simple</div>
-                    <div class="flex-none mh3 o-05">Simple</div>
-                    <div class="flex-none mh3 o-05">Simple</div>
-                    <div class="flex-none mh3 o-05">Simple</div>
-                    <div class="flex-none mh3 orange o-90">Simple</div>
-                    <div class="flex-none mh3 o-05">Simple</div>
-                    <div class="flex-none mh3 o-05">Simple</div>
-                    <div class="flex-none mh3 o-05">Simple</div>
-                    <div class="flex-none mh3 o-05">Simple</div>
-                    <div class="flex-none mh3 o-05">Simple</div>
-                    <div class="flex-none mh3 o-05">Simple</div>
+                <div class="relative z-0 h2 flex flex-row items-center nl5 nr5 f-subheadline-l f1-m f2 lh-solid">
+                    <div class="flex-none mh2 o-20 fw1">Simple</div>
+                    <div class="flex-none mh2 o-20 fw1">Simple</div>
+                    <div class="flex-none mh2 o-20 fw1">Simple</div>
+                    <div class="flex-none mh2 o-20 fw1">Simple</div>
+                    <div class="flex-none mh2 o-20 fw1">Simple</div>
+                    <div class="flex-none mh2 o-20 fw1">Simple</div>
+                    <div class="flex-none mh2 o-20 fw1">Simple</div>
+                    <div class="flex-none mh2 orange">Simple</div>
+                    <div class="flex-none mh2 o-20 fw1">Simple</div>
+                    <div class="flex-none mh2 o-20 fw1">Simple</div>
+                    <div class="flex-none mh2 o-20 fw1">Simple</div>
+                    <div class="flex-none mh2 o-20 fw1">Simple</div>
+                    <div class="flex-none mh2 o-20 fw1">Simple</div>
+                    <div class="flex-none mh2 o-20 fw1">Simple</div>
                 </div>
             </div>
-            <div class="self-center flex-none flex items-center justify-center bg-orange zoomIn animated w4 h4 w5-ns h5-ns ma4-l ma3-m ma2 br-pill grow nb6-l relative">
+            <div class="self-center flex-none flex items-center justify-center zoomIn animated w4 h4 w5-ns h5-ns ma4-l ma3-m ma2 br-pill grow nb6-l relative">
                 <div class="absolute absolute--fill flex-none z-0 br-pill w4 h4 w5-ns h5-ns ba bw1 b--blue animatedSlow rubberBand"></div>
                 <div class="absolute absolute--fill flex-none z-0 br-pill w4 h4 w5-ns h5-ns ba bw1 b--yellow animatedSlow jello"></div>
-                <div class="absolute absolute--fill flex-none z-0 br-pill w4 h4 w5-ns h5-ns ba bw2 b--orange animatedSlow tada"></div>
-                <div class="contain flex-none self-stretch w4 h4 w5-ns h5-ns grow" style="background:url('Logo/Tight/PNG/BOLD/White.png') no-repeat center;"></div>
+                <div class="absolute absolute--fill flex-none z-0 br-pill w4 h4 w5-ns h5-ns ba bw2 b--white animatedSlow tada"></div>
+                <div class="contain flex-none self-stretch w4 h4 w5-ns h5-ns grow" style="background:url('Logo/Tight/PNG/White.png') no-repeat center;"></div>
             </div>
             <div class=" self-center flex flex-row-l flex-column items-center items-end-l justify-between mw9 w-100">
                 <div class="flex flex-column items-start-ns items-center ma4-l ma3-m ma2">
-                    <div class="mh1 flex justify-center f2-l f3-m f4 fw7">Coming Soon</div>
-                    <div class="ma1 flex justify-center f3-l f4-m f5 fw5">Launching in Columbia, MO</div>
+                    <div class="mh1 flex justify-center f2-l f3-m f4 fw5">Coming Soon</div>
+                    <div class="ma1 flex justify-center f3-l f4-m f5 fw3">Launching in Columbia, MO</div>
                     <div class="mt2 flex justify-center">
                         <div class="mh1 flex flex-column">
-                            <div class="navy bg-white pa2 pa3-ns br1 grow shadow-4 f2-l f3-m f4 fw9">12</div>
-                            <div class="mt2 f7 fw9 tc">days</div>
+                            <div class="navy bg-white pa2 pa3-ns br1 grow shadow-4 f2-l f3-m f4 fw3">12</div>
+                            <div class="mt2 f7 fw3 tc">days</div>
                         </div>
                         <div class="mh1 flex flex-column">
-                            <div class="navy bg-white pa2 pa3-ns br1 grow shadow-4 f2-l f3-m f4 fw9">23</div>
-                            <div class="mt2 f7 fw9 tc">hours</div>
+                            <div class="navy bg-white pa2 pa3-ns br1 grow shadow-4 f2-l f3-m f4 fw3">23</div>
+                            <div class="mt2 f7 fw3 tc">hours</div>
                         </div>
                         <div class="mh1 flex flex-column">
-                            <div class="navy bg-white pa2 pa3-ns br1 grow shadow-4 f2-l f3-m f4 fw9">15</div>
-                            <div class="mt2 f7 fw9 tc">mins</div>
+                            <div class="navy bg-white pa2 pa3-ns br1 grow shadow-4 f2-l f3-m f4 fw3">15</div>
+                            <div class="mt2 f7 fw3 tc">mins</div>
                         </div>
                         <div class="mh1 flex flex-column">
-                            <div class="navy bg-white pa2 pa3-ns br1 grow shadow-4 f2-l f3-m f4 fw9">46</div>
-                            <div class="mt2 f7 fw9 tc">secs</div>
+                            <div class="navy bg-white pa2 pa3-ns br1 grow shadow-4 f2-l f3-m f4 fw3">46</div>
+                            <div class="mt2 f7 fw3 tc">secs</div>
                         </div>
                     </div>
                 </div>
@@ -82,239 +94,160 @@
                     <div class="f5 pv2 ph4">Get notified when we launch!</div>
                     <form class="z-999 f7 f6-m f5-l flex-none flex items-end flex-row br-pill f4 overflow-hidden self-center shadow-4">
                         <input class="input-reset pl4 pv3 outline-0 bn flex-auto" placeholder="Your email or cell" type="text">
-                        <button class="button-reset pr4 pa3 outline-0 bn w-auto bg-yellow navy hover-bg-gold bg-animate pointer fw7" type="text">Sign Up!</button>
+                        <button class="button-reset pr4 pa3 outline-0 bn w-auto bg-orange white hover-bg-orange bg-animate pointer fw3" type="text">Sign Up!</button>
                     </form>
                     <div class="pv2 f7 ph3 o-60 glow tr">We will not send you any spam, pinky promise.</div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="self-stretch lh-copy flex flex-wrap-reverse flex-nowrap-ns cover items-stretch relative">
-        <div class="relative flex flex-column bg-blue pa4 measure">
-            <div class="pa4 ma4 flex-auto self-stretch bg-center contain" style="background-image:url('https://icongr.am/clarity/bundle.svg?color=ffffff');"></div>
-            <div class="ph4-l pb4-l">
+    <div class="relative flex flex-column flex-row-l items-center-l navy ma5-l ma4-m lh-copy fw3">
+        <div class="br1 warmUp">
+            <div class="pa4-l ma4-l pa3 ma3 flex-auto self-stretch bg-center contain" style="background-image:url('https://icongr.am/clarity/group.svg?color=ffffff');"></div>
+        </div>
+        <div class="pa4-l pr2-l pa3 center measure-wide f5">
+            Roo is an online platform that connects those with available space in their homes to those in need of storage. This creates
+            opportunities within our communities. It allows those with the space to passively earn income and those seeking
+            storage to find affordable options, right down the street.
+        </div>
+    </div>
+    <div class="z-0 self-stretch flex-auto flex flex-column flex-row-l items-center ma4 mw9 w-100 center">
+        <div class="flex-auto flex flex-column measure-narrow lh-copy bg-white navy ma3">
+            <div class="flex ma3 items-start">
+                <div class="flex-none pa2 ma1 bg-center contain" style="background-image:url('https://icongr.am/clarity/dollar.svg?color=007bc2');"></div>
+                <div class="mh2">
+                    <div class="f5">
+                        Passive Income
+                    </div>
+                    <div class="fw3">
+                        Small time commit for a big return
+                    </div>
+                </div>
+            </div>
+            <div class="flex ma3 items-start">
+                <div class="flex-none pa2 ma1 bg-center contain" style="background-image:url('https://icongr.am/clarity/blocks-group.svg?color=007bc2');"></div>
+                <div class="mh2">
+                    <div class="f5">
+                        Utilize Unused Space
+                    </div>
+                    <div class="fw3">
+                        Garage, spare bedroom, basement, etc.
+                    </div>
+                </div>
+            </div>
+            <div class="flex ma3 items-start">
+                <div class="flex-none pa2 ma1 bg-center contain" style="background-image:url('https://icongr.am/clarity/happy-face.svg?color=007bc2');"></div>
+                <div class="mh2">
+                    <div class="f5">
+                        Premium Support
+                    </div>
+                    <div class="fw3">
+                        Our Resolution Center is available 24/7 to address any and all needs
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="self-stretch flex-auto cover ba bw4 br1 b--white grow shadow-hover shadow-4 mw7" style="background:url('https://source.unsplash.com/weekly?home') center no-repeat;"></div>
+        <div class="flex flex-column measure-narrow bg-white lh-copy pa4">
+            <div class="bb justify-between items-center b--blue flex fw1 f2">
+                Hosting
+            </div>
+            <div class="pv3 f6">
                 As a Roo host, you can earn passive income for a number of reasons that suit different lifestyles and goals - maybe it’s
                 to help with an upcoming mortgage, or to save up for that next vacation, or to give more generously to local
                 charities. Why would you Roo?
             </div>
-        </div>
-        <div class="flex-auto flex items-stretch flex-column">
-            <div class="pa3 f4 navy flex flex-wrap tc justify-center items-center">
-                <div class="pa3 ma3 bg-center contain" style="background-image:url('https://icongr.am/clarity/heart.svg');"></div>
-                Roo creates opportunity within our communities.
-            </div>
-            <div class="flex-auto cover relative flex items-center justify-center" style="background:url('https://source.unsplash.com/weekly?community') no-repeat center;">
-                <div class="relative z-1 pa5-l ph4 pv5 f2 lh-solid">
-                    Community is at the heart of what we do.
-                </div>
-                <div class="absolute absolute--fill flex items-stretch z-0">
-                    <div class="flex-auto cover parallax" style="background-image:linear-gradient(rgba(0,0,0,1), rgba(0,0,0,.3));"></div>
-                </div>
+            <div class="flex items-center ba br2 b--navy coolUp white self-start pv1 ph2 mv2 f7 fw7 ttu">
+                <div class="flex-none pa2 mr2 self-stretch bg-center contain" style="background-image:url('https://icongr.am/clarity/bundle.svg?color=ffffff');"></div>
+                Learn More
             </div>
         </div>
     </div>
-    <div class="z-999 self-stretch flex-auto sticky top-0 flex items-center justify-between f4-l f5 fw9">
-        <div class="pv3-l pv2 ph4-l ph3 bt bw2 b--blue br1 br--right br--bottom ttu tracked bg-white-90 blue">
-            Host
+    <div class="self-stretch flex flex-row-ns flex-column justify-around items-start navy tc-ns f6 fw3 relative mw8 w-100 center lh-copy">
+        <div class="absolute-ns absolute--fill flex items-start ph5 dn">
+            <div style="height:2px;background-attachment:fixed;background-size:100vv 100vh;background-image:linear-gradient(135deg, var(--navy) 50%, white 50%);"
+                class="mh6-l mh5-m mh4 flex-auto w-80 static mt4-m mt5-l"></div>
         </div>
-        <div class="pv3-l pv2 ph4-l ph3 bt bw2 b--orange br1 br--left br--bottom ttu tracked bg-white-90 orange">
-            Rent
+        <div class="relative flex items-start flex-column-ns items-center-ns w-25-ns pa3 pa0-ns">
+            <div class="coolUp z-3 ba bw3-l bw2-m bw1 b--white pa4-l pa3-m pa2 ma3-l ma2-m ma1 br-pill">
+                <div style="background:url('https://icongr.am/clarity/search.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3-m pl3-m pa3-l"></div>
+            </div>
+            <div class="">
+                <div class="fw5 f5">Search</div>
+                <div class="mw5">Search numerous spaces that have been checked and verified by a Roo representative</div>
+            </div>
         </div>
-    </div>
-    <div class="ma4 tc fw9 flex flex-column items-center justify-center f-subheadline-l f1-m f2 lh-solid navy">
-        the roo advantage
-        <div class="dn dib-ns w-70 bb bw1 b--navy o-40 pa2"></div>
-    </div>
-    <div class="z-0 bg-white self-stretch flex-auto flex flex-column items-stretch flex-row-l justify-between-l relative mb6-l mb5-m mb4">
-        <div class="absolute absolute--fill flex-ns flex-wrap-l justify-center-l mv5-m dn mh7-l ph5-l mv3-l">
-            <div class="flex-auto cover ba bw4 ma3-m mr5-l nl3-l mv3-l ph6-l mt7-m br1 b--yellow grow shadow-hover shadow-4 parallax"
-                style="background:url('https://source.unsplash.com/weekly?home') 70% 70%;"></div>
-            <div class="flex-auto cover ba bw4 ma3-m ml5-l nr3-l mv3-l ph6-l mb7-m br1 b--yellow grow shadow-hover shadow-4 parallax"
-                style="background:url('https://source.unsplash.com/weekly?car') 30% 30%;"></div>
+        <div class="relative flex items-start flex-column-ns items-center-ns w-25-ns pa3 pa0-ns">
+            <div class="coolUp z-3 ba bw3-l bw2-m bw1 b--white pa4-l pa3-m pa2 ma3-l ma2-m ma1 br-pill">
+                <div style="background:url('https://icongr.am/clarity/tag.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3-m pl3-m pa3-l"></div>
+            </div>
+            <div class="">
+                <div class="fw5 f5">Reserve</div>
+                <div class="mw5">Reserve the space that matches your needs and budget</div>
+            </div>
         </div>
-        <dl class="z-3 self-start self-stretch-l pa4-ns pa3 ma0 flex-auto flex flex-column measure-narrow bg-blue">
-            <dt class="f2-l f3-m f4 fw7 mt4">
-                Passive Income
-            </dt>
-            <dd class="ml0 mt2 mb4">
-                Small time commit for a big return
-            </dd>
-            <dt class="f2-l f3-m f4 fw7 mt4">
-                Utilize Unused Space
-            </dt>
-            <dd class="ml0 mt2 mb4">
-                Garage, spare bedroom, basement, etc.
-            </dd>
-            <dt class="f2-l f3-m f4 fw7 mt4">
-                Premium Support
-            </dt>
-            <dd class="ml0 mt2 mb4">
-                Our Resolution Center is available 24/7 to address any and all needs
-            </dd>
-        </dl>
-        <dl class="z-3 self-end self-stretch-l pa4-ns pa3 ma0 flex-auto flex flex-column measure-narrow bg-orange">
-            <dt class="f2-l f3-m f4 fw7 mt4">
-                Affordable
-            </dt>
-            <dd class="ml0 mt2 mb4">
-                Save upwards of 50% compared to traditional storage
-            </dd>
-            <dt class="f2-l f3-m f4 fw7 mt4">
-                Flexible
-            </dt>
-            <dd class="ml0 mt2 mb4">
-                Find numerous storage options when and where you need it
-            </dd>
-            <dt class="f2-l f3-m f4 fw7 mt4">
-                Premium Protection
-            </dt>
-            <dd class="ml0 mt2 mb4">
-                Have peace of mind knowing your property is protected up to $3000
-            </dd>
-        </dl>
-    </div>
-    <div class="self-stretch mv3 mv4-ns self-center flex flex-column items-center justify-center lh-solid navy">
-        <div class="mv3 mv4-l fw9 f-subheadline-l f1-m f2">the roo process</div>
-        <div class="mv3 mv4-l self-stretch flex justify-between items-center ph5-l ph4-m ph3 navy tc f7 f6-m f5-l fw3 relative">
-            <div class="absolute absolute--fill flex items-center">
-                <div style="height:2px;background-attachment:fixed;background-size:100vv 100vh;background-image:linear-gradient(135deg, var(--navy) 50%, white 50%);"
-                    class="mh6-l mh5-m mh4 flex-auto w-80 static mb2-m mb3-l"></div>
+        <div class="relative flex items-start flex-column-ns items-center-ns w-25-ns pa3 pa0-ns">
+            <div class="coolUp z-3 ba bw3-l bw2-m bw1 b--white pa4-l pa3-m pa2 ma3-l ma2-m ma1 br-pill">
+                <div style="background:url('https://icongr.am/clarity/clock.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3-m pl3-m pa3-l"></div>
             </div>
-            <div class="relative">
-                <div class="bg-blue z-3 ba bw3-l bw2-m bw1 b--white pa3-l pa2-m pa1 ma3-l ma2-m ma1 br-pill">
-                    <div style="background:url('https://icongr.am/clarity/view-list.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3-m pl3-m pa3-l"></div>
-                </div>
-                <div class="dn di-ns">List</div>
-            </div>
-            <div class="relative">
-                <div class="bg-orange z-3 ba bw3-l bw2-m bw1 b--white pa3-l pa2-m pa1 ma3-l ma2-m ma1 br-pill">
-                    <div style="background:url('https://icongr.am/clarity/tag.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3-m pl3-m pa3-l"></div>
-                </div>
-                <div class="dn di-ns">Reserve</div>
-            </div>
-            <div class="relative">
-                <div class="bg-blue z-3 ba bw3-l bw2-m bw1 b--white pa3-l pa2-m pa1 ma3-l ma2-m ma1 br-pill">
-                    <div style="background:url('https://icongr.am/clarity/check.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3-m pl3-m pa3-l"></div>
-                </div>
-                <div class="dn di-ns">Confirm</div>
-            </div>
-            <div class="relative">
-                <div class="bg-orange z-3 ba bw3-l bw2-m bw1 b--white pa3-l pa2-m pa1 ma3-l ma2-m ma1 br-pill">
-                    <div style="background:url('https://icongr.am/clarity/sign-in.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3-m pl3-m pa3-l"></div>
-                </div>
-                <div class="dn di-ns">Drop-off</div>
-            </div>
-            <div class="relative">
-                <div class="bg-blue z-3 ba bw3-l bw2-m bw1 b--white pa3-l pa2-m pa1 ma3-l ma2-m ma1 br-pill">
-                    <div style="background:url('https://icongr.am/clarity/clock.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3-m pl3-m pa3-l"></div>
-                </div>
-                <div class="dn di-ns">Store</div>
-            </div>
-            <div class="relative">
-                <div class="bg-orange z-3 ba bw3-l bw2-m bw1 b--white pa3-l pa2-m pa1 ma3-l ma2-m ma1 br-pill">
-                    <div style="background:url('https://icongr.am/clarity/sign-out.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3-m pl3-m pa3-l"></div>
-                </div>
-                <div class="dn di-ns">Pick-up</div>
+            <div class="">
+                <div class="fw5 f5">Store</div>
+                <div class="mw5">Simply drop-off and pick-up on the days you choose</div>
             </div>
         </div>
     </div>
-    <div class="flex self-stretch mb6-l mb5-m mb4">
-        <div class="z-0 flex-auto flex flex-column self-stretch bg-white overflow-hidden">
-            <div class="flex-auto flex flex-row-ns overflow-hidden flex-column-reverse br1 mv3 nr5-ns">
-                <div class="bg-blue measure pa4-l pa3 br1 shadow-4">
-                    <div class="f2-ns f3 fw9 ma4-ns ma2">
-                        List
-                    </div>
-                    <div class="lh-copy ma4-ns ma2">
-                        Sign up for free, and create a Host profile to market your extra space. Include the details that make it special and use
-                        our pricing tool if you need a competitive suggestion for rates.
-                    </div>
-                </div>
-                <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow parallax" style="background:url('https://source.unsplash.com/weekly?place') center;">
-                    <div class="absolute absolute--fill flex items-stretch z-0">
-                        <div class="flex-auto cover parallax o-50" style="background-image:linear-gradient(var(--blue),var(--navy));"></div>
+    <div class="z-0 self-stretch flex-auto flex flex-column flex-row-reverse-l items-center ma4 mw9 w-100 center">
+        <div class="flex-auto flex flex-column measure-narrow lh-copy bg-white navy ma3">
+            <div class="flex ma3 items-start">
+                <div class="flex-none pa2 ma1 bg-center contain" style="background-image:url('https://icongr.am/clarity/dollar.svg?color=007bc2');"></div>
+                <div class="mh2">
+                    <div class="f5">
+                        Affordable </div>
+                    <div class="fw3">
+                        Save upwards of 50% compared to traditional storage
                     </div>
                 </div>
             </div>
-            <div class="flex-auto flex flex-row-ns overflow-hidden flex-column br1 mv3 nl5-ns">
-                <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow parallax" style="background:url('https://source.unsplash.com/weekly?appartment') center;">
-                    <div class="absolute absolute--fill flex items-stretch z-0">
-                        <div class="flex-auto cover parallax o-50" style="background-image:linear-gradient(var(--orange),var(--navy));"></div>
+            <div class="flex ma3 items-start">
+                <div class="flex-none pa2 ma1 bg-center contain" style="background-image:url('https://icongr.am/clarity/blocks-group.svg?color=007bc2');"></div>
+                <div class="mh2">
+                    <div class="f5">
+                        Flexible
                     </div>
-                </div>
-                <div class="bg-orange measure pa4-l pa3 br1 shadow-4">
-                    <div class="f2-ns f3 fw9 ma4-ns ma2">
-                        Reserve
-                    </div>
-                    <div class="lh-copy ma4-ns ma2">
-                        Renters search the location, features, or qualities they need in a space, and select the one that meets their needs and budget.
+                    <div class="fw3">
+                        Find numerous storage options when and where you need it
                     </div>
                 </div>
             </div>
-            <div class="flex-auto flex flex-row-ns overflow-hidden flex-column-reverse br1 mv3 nr5-ns">
-                <div class="bg-blue measure pa4-l pa3 br1 shadow-4">
-                    <div class="f2-ns f3 fw9 ma4-ns ma2">
-                        Confirm
+            <div class="flex ma3 items-start">
+                <div class="flex-none pa2 ma1 bg-center contain" style="background-image:url('https://icongr.am/clarity/happy-face.svg?color=007bc2');"></div>
+                <div class="mh2">
+                    <div class="f5">
+                        Premium Protection
                     </div>
-                    <div class="lh-copy ma4-ns ma2">
-                        Hosts confirm the reservation request, and the Renter is immediately notified.
-                    </div>
-                </div>
-                <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow parallax" style="background:url('https://source.unsplash.com/weekly?happy') center;">
-                    <div class="absolute absolute--fill flex items-stretch z-0">
-                        <div class="flex-auto cover parallax o-50" style="background-image:linear-gradient(var(--blue),var(--navy));"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="flex-auto flex flex-row-ns overflow-hidden flex-column br1 mv3 nl5-ns">
-                <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow parallax" style="background:url('https://source.unsplash.com/weekly?working') center;">
-                    <div class="absolute absolute--fill flex items-stretch z-0">
-                        <div class="flex-auto cover parallax o-50" style="background-image:linear-gradient(var(--orange),var(--navy));"></div>
-                    </div>
-                </div>
-                <div class="bg-orange measure pa4-l pa3 br1 shadow-4">
-                    <div class="f2-ns f3 fw9 ma4-ns ma2">
-                        Drop-Off
-                    </div>
-                    <div class="lh-copy ma4-ns ma2">
-                        Hosts and Renters agree on a time for drop-off, and the Renter simply shows up and transfers his or her items.
-                    </div>
-                </div>
-            </div>
-            <div class="flex-auto flex flex-row-ns overflow-hidden flex-column-reverse br1 mv3 nr5-ns">
-                <div class="bg-blue measure pa4-l pa3 br1 shadow-4">
-                    <div class="f2-ns f3 fw9 ma4-ns ma2">
-                        Get Paid
-                    </div>
-                    <div class="lh-copy ma4-ns ma2">
-                        Hooray! If you are a Host - kick back, relax, and enjoy the easiest form of income you’ve ever received.
-                    </div>
-                </div>
-                <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow parallax" style="background:url('https://source.unsplash.com/weekly?cat') center;">
-                    <div class="absolute absolute--fill flex items-stretch z-0">
-                        <div class="flex-auto cover parallax o-50" style="background-image:linear-gradient(var(--blue),var(--navy));"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="flex-auto flex flex-row-ns overflow-hidden flex-column br1 mv3 nl5-ns">
-                <div class="flex-auto pa5-ns pa6 cover mv4-ns mv0 shadow-hover grow parallax" style="background:url('https://source.unsplash.com/weekly?dog') center;">
-                    <div class="absolute absolute--fill flex items-stretch z-0">
-                        <div class="flex-auto cover parallax o-50" style="background-image:linear-gradient(var(--orange),var(--navy));"></div>
-                    </div>
-                </div>
-                <div class="bg-orange measure pa4-l pa3 br1 shadow-4">
-                    <div class="f2-ns f3 fw9 ma4-ns ma2">
-                        Pick-up
-                    </div>
-                    <div class="lh-copy ma4-ns ma2">
-                        At the end of the orangeal period, the Host and Renter agree on a convenient time for the Renter to pick-up his or her belongings.
-                        Renters leave with their items and huge savings, while the Host enjoys some extra cash.
+                    <div class="fw3">
+                        Have peace of mind knowing your property is protected up to $3000
                     </div>
                 </div>
             </div>
         </div>
+        <div class="self-stretch flex-auto cover ba bw4 br1 b--white grow shadow-hover shadow-4 mw7" style="background:url('https://source.unsplash.com/weekly?packing') center no-repeat;"></div>
+        <div class="flex flex-column measure-narrow bg-white lh-copy pa4">
+            <div class="bb justify-between items-center b--blue flex fw1 f2">
+                Renting
+            </div>
+            <div class="pv3 f6">
+                As a Roo host, you can earn passive income for a number of reasons that suit different lifestyles and goals - maybe it’s
+                to help with an upcoming mortgage, or to save up for that next vacation, or to give more generously to local
+                charities. Why would you Roo?
+            </div>
+            <div class="flex items-center ba br2 b--navy coolUp white self-start pv1 ph2 mv2 f7 fw7 ttu">
+                <div class="flex-none pa2 mr2 self-stretch bg-center contain" style="background-image:url('https://icongr.am/clarity/bundle.svg?color=ffffff');"></div>
+                Learn More
+            </div>
+        </div>
     </div>
-    <section class="bg-blue tc pa5-l pa4-m pa3 self-stretch flex flex-column items-center">
+    <section class="coolUp white tc pa5-l pa4-m pa3 self-stretch flex flex-column items-center">
         <div class="self-stretch flex items-center justify-between flex-column">
             <div class="ma3 pv5-l pv4-m pv3 flex-auto self-stretch bg-center contain" style="background-image:url('https://icongr.am/clarity/house.svg?color=ffffff');"></div>
             <div class="ma3-l ma2-m ma1 f-headline-l f-subheadline-m f1 fw9 lh-solid">
