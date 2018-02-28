@@ -22,14 +22,18 @@
 /* CUSTOM GRADIENTS */
 
 .coolUp {
-    background-attachment: fixed;
+    background-attachment: local;
     background-size: 100vv 100vh;
+    background-image: -webkit-linear-gradient(120deg, var(--navy), var(--blue));
+    background-image: -o-linear-gradient(120deg, var(--navy), var(--blue));
     background-image: linear-gradient(330deg, var(--navy), var(--blue));
 }
 
 .warmUp {
-    background-attachment: fixed;
+    background-attachment: local;
     background-size: 100vv 100vh;
+    background-image: -webkit-linear-gradient(120deg, var(--orange), var(--yellow));
+    background-image: -o-linear-gradient(120deg, var(--orange), var(--yellow));
     background-image: linear-gradient(330deg, var(--orange), var(--yellow));
 }
 
@@ -210,7 +214,8 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-kerning: auto;
+    -webkit-font-kerning: auto;
+            font-kerning: auto;
 }
 
 html {
@@ -280,10 +285,16 @@ input[type=date]::-webkit-calendar-picker-indicator {
 /* Addon Tachyons */
 
 .lg-black-fade-up {
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(black));
+    background: -webkit-linear-gradient(transparent, black);
+    background: -o-linear-gradient(transparent, black);
     background: linear-gradient(transparent, black);
 }
 
 .lgh-black-0-white {
+    background: -webkit-gradient(linear, left top, right top, from(black), color-stop(20%, transparent), color-stop(80%, transparent), to(white));
+    background: -webkit-linear-gradient(left, black, transparent 20%, transparent 80%, white);
+    background: -o-linear-gradient(left, black, transparent 20%, transparent 80%, white);
     background: linear-gradient(90deg, black, transparent 20%, transparent 80%, white);
 }
 
