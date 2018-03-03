@@ -21,6 +21,61 @@
 
 /* CUSTOM GRADIENTS */
 
+@-webkit-keyframes breathe {
+    0% {
+        background-position: 50% 0%
+    }
+    50% {
+        background-position: 50% 100%
+    }
+    100% {
+        background-position: 50% 0%
+    }
+}
+
+@-moz-keyframes breathe {
+    0% {
+        background-position: 50% 0%
+    }
+    50% {
+        background-position: 50% 100%
+    }
+    100% {
+        background-position: 50% 0%
+    }
+}
+
+@-o-keyframes breathe {
+    0% {
+        background-position: 50% 0%
+    }
+    50% {
+        background-position: 50% 100%
+    }
+    100% {
+        background-position: 50% 0%
+    }
+}
+
+@keyframes breathe {
+    0% {
+        background-position: 50% 0%
+    }
+    50% {
+        background-position: 50% 100%
+    }
+    100% {
+        background-position: 50% 0%
+    }
+}
+
+.breathe {
+    -webkit-animation: breathe 10s ease infinite;
+    -moz-animation: breathe 10s ease infinite;
+    -o-animation: breathe 10s ease infinite;
+    animation: breathe 10s ease infinite;
+}
+
 .coolUp {
     background-size: 200% 200%;
     background-position: center;
@@ -215,7 +270,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-kerning: auto;
-            font-kerning: auto;
+    font-kerning: auto;
 }
 
 html {
