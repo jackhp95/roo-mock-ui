@@ -271,6 +271,7 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-kerning: auto;
     font-kerning: auto;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 html {
