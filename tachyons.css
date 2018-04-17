@@ -703,11 +703,11 @@ img {
   border-left-width: 0
 }
 
-.shadow-1 {
+.shadow-6 {
   box-shadow: 0 0 4px 2px rgba(0, 0, 0, .2)
 }
 
-.shadow-2 {
+.shadow-6 {
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2)
 }
 
@@ -715,7 +715,7 @@ img {
   box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, .2)
 }
 
-.shadow-4 {
+.shadow-6 {
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .2)
 }
 
@@ -3787,16 +3787,16 @@ img {
   .bl-0-ns {
     border-left-width: 0
   }
-  .shadow-1-ns {
+  .shadow-6-ns {
     box-shadow: 0 0 4px 2px rgba(0, 0, 0, .2)
   }
-  .shadow-2-ns {
+  .shadow-6-ns {
     box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2)
   }
   .shadow-3-ns {
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, .2)
   }
-  .shadow-4-ns {
+  .shadow-6-ns {
     box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .2)
   }
   .shadow-5-ns {
@@ -5185,16 +5185,16 @@ img {
   .bl-0-m {
     border-left-width: 0
   }
-  .shadow-1-m {
+  .shadow-6-m {
     box-shadow: 0 0 4px 2px rgba(0, 0, 0, .2)
   }
-  .shadow-2-m {
+  .shadow-6-m {
     box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2)
   }
   .shadow-3-m {
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, .2)
   }
-  .shadow-4-m {
+  .shadow-6-m {
     box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .2)
   }
   .shadow-5-m {
@@ -6584,16 +6584,16 @@ img {
   .bl-0-l {
     border-left-width: 0
   }
-  .shadow-1-l {
+  .shadow-6-l {
     box-shadow: 0 0 4px 2px rgba(0, 0, 0, .2)
   }
-  .shadow-2-l {
+  .shadow-6-l {
     box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2)
   }
   .shadow-3-l {
     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, .2)
   }
-  .shadow-4-l {
+  .shadow-6-l {
     box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .2)
   }
   .shadow-5-l {
