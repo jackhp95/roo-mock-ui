@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="Custom.css" />
 </head>
 
-<body onload="window.location.hash = 'nav'" class="f6 fw5 flex flex-column-l flex-row-m flex-column-reverse items-stretch vh-100">
+<body class="f6 fw5 flex flex-column-l flex-row-m flex-column-reverse items-stretch vh-100">
     <nav id="nav" class="f5-ns fw6-ns f7 fw7 flex-none pv3-m ph4-l pa0 shadow-hover z-9999 flex flex-column-l bg-white">
         <ul class="flex flex-column-m no-underline list ma0 pa0 overflow-visible-ns overflow-hidden w-100 w-auto-ns">
-            <li class="dn flex-auto-l flex-ns items-center ph4 pv3-m">
+            <li class="dn flex-auto-l flex-ns items-center justify-center-ms ph4 pv3-m">
                 <a class="grow-large dib br-pill black">
                     <div class="contain pa4 pt3-l pl3-l flex-auto self-stretch grow" style="background:url('https://s3.us-east-2.amazonaws.com/roo-image-storage/static-images/logo/Tight/PNG/Orange.png') no-repeat center;"></div>
                 </a>
@@ -24,6 +24,15 @@
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2">
                         <span class="mb1 pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/home.svg')"></span>
                         Home</span>
+                    <div class="b--orange ba child"></div>
+                </a>
+            </li>
+            <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
+                <a class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black active"
+                    routerlink="/listings">
+                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
+                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/info.svg')"></span>
+                        Resolution Center</span>
                     <div class="b--orange ba child"></div>
                 </a>
             </li>
@@ -136,8 +145,8 @@
             <div class="flex flex-column items-center pa2-m">
                 <div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
                     <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
-                        <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
-                        <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6">
+                        <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
+                        <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
                             <div class="flex justify-between items-stretch">
                                 <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
                                     <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
@@ -147,7 +156,7 @@
                                 </div>
                                 <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure">
                                     <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
-                                        <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=357edd')"></div>
+                                        <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
                                         <div class="i mr1 f7">Roo Verified</div>
                                     </div>
                                     <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
@@ -209,8 +218,8 @@
                 </div>
                 <div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
                     <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
-                        <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
-                        <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6">
+                        <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
+                        <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
                             <div class="flex justify-between items-stretch">
                                 <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
                                     <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
@@ -220,7 +229,7 @@
                                 </div>
                                 <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure">
                                     <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
-                                        <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=357edd')"></div>
+                                        <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
                                         <div class="i mr1 f7">Roo Verified</div>
                                     </div>
                                     <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
@@ -282,8 +291,8 @@
                 </div>
                 <div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
                     <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
-                        <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
-                        <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6">
+                        <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
+                        <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
                             <div class="flex justify-between items-stretch">
                                 <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
                                     <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
@@ -293,7 +302,7 @@
                                 </div>
                                 <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure">
                                     <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
-                                        <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=357edd')"></div>
+                                        <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
                                         <div class="i mr1 f7">Roo Verified</div>
                                     </div>
                                     <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
@@ -355,8 +364,8 @@
                 </div>
                 <div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
                     <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
-                        <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
-                        <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6">
+                        <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
+                        <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
                             <div class="flex justify-between items-stretch">
                                 <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
                                     <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
@@ -366,7 +375,7 @@
                                 </div>
                                 <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure">
                                     <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
-                                        <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=357edd')"></div>
+                                        <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
                                         <div class="i mr1 f7">Roo Verified</div>
                                     </div>
                                     <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
@@ -426,48 +435,56 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="flex-auto flex z-1 flex-column bg-white br1 mv5 shadow-6 measure">
-                    <div class="flex-auto flex flex-column lh-solid justify-center ph4-l pa3 f5">
-                        <div class="pv3">
-                            <div class="fw5 pv1 lh-copy f3">
-                                We're here to help!
-                            </div>
-                            <div class="fw5 pv1 lh-copy f6">
-                                Roo isn’t just a storage provider but also a storage consultant. Tell us what you need and we will find you the perfect match!
-                            </div>
+                <div class="flex-auto flex flex-wrap-l flex-column flex-row-l justify-center items-stretch bg-white br2 shadow-6 lh-solid pa3 mv5 f5 z-1 bt bw2 b--yellow">
+                    <div class="measure pa4-l pa3">
+                        <div class="fw1 lh-title f2 blue">
+                            Our team will help you find the right space!
                         </div>
+                        <div class="fw5 pv4-l pv3 lh-copy f6">
+                            Unfortunately, the Roo Hosts that meet your criteria are occupied at the moment. Don’t worry though! There are Hosts going
+                            through the Roo verification process right now, and those spaces should be available shortly.
+                            By filling out the information below, you’ll be placed on the priority list that will notify
+                            you when a space meeting your requirements is ready – giving you first access! Until then, if
+                            you have any questions, you can reach out to us at
+                            <a href="mailto:hello@roostorage.com" target="_top">hello@roostorage.com</a>.
+                        </div>
+                        <div class="self-stretch pa3 flex-l items-center justify-around dn">
+                            <div class="pa3 contain grow pointer" style="background-image:url('https://icongr.am/entypo/facebook.svg?color=fdbc31');"></div>
+                            <div class="pa3 contain grow pointer" style="background-image:url('https://icongr.am/entypo/instagram.svg?color=fdbc31');"></div>
+                            <div class="pa3 contain grow pointer" style="background-image:url('https://icongr.am/entypo/email.svg?color=fdbc31');"></div>
+                        </div>
+                    </div>
+                    <div class="mw6 ph4-l ph3 flex-auto self-stretch flex flex-column items-stretch justify-center">
                         <div class="flex flex-column pv3">
-                            <label for="" class="ph1 flex justify-between">
+                            <label class="ph1 flex justify-between" for="">
                                 Email
                                 <div class="pa1 pt3 pl3 o-50 glow contain bg-center" style="background-image:url('https://icongr.am/clarity/info.svg?color=002D62');"></div>
                             </label>
-                            <input type="text" name="" id="" class="navy fw2 flex-auto ph3 pv2 br1 ba b--black-10">
+                            <input class="navy fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" id="" name="email" type="text">
                         </div>
                         <div class="flex flex-column pv3">
-                            <label for="" class="ph1 flex justify-between">
+                            <label class="ph1 flex justify-between" for="">
                                 Name
                                 <div class="pa1 pt3 pl3 o-50 glow contain bg-center" style="background-image:url('https://icongr.am/clarity/info.svg?color=002D62');"></div>
                             </label>
-                            <input type="text" name="" id="" class="navy fw2 flex-auto ph3 pv2 br1 ba b--black-10">
+                            <input class="navy fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" id="" name="name" type="text">
                         </div>
                         <div class="flex flex-column pv3">
-                            <label for="" class="ph1 flex justify-between">
-                                Address
+                            <label class="ph1 flex justify-between" for="">
+                                Storage near
                                 <div class="pa1 pt3 pl3 o-50 glow contain bg-center" style="background-image:url('https://icongr.am/clarity/info.svg?color=002D62');"></div>
                             </label>
-                            <input type="text" name="" id="" class="navy fw2 flex-auto ph3 pv2 br1 ba b--black-10">
+                            <input class="navy fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" id="" name="address" type="text">
                         </div>
                         <div class="flex flex-column pv3">
-                            <label for="" class="ph1 flex justify-between">
+                            <label class="ph1 flex justify-between" for="">
                                 Description
                                 <div class="pa1 pt3 pl3 o-50 glow contain bg-center" style="background-image:url('https://icongr.am/clarity/info.svg?color=002D62');"></div>
                             </label>
-                            <div contenteditable="true" class="fw2 flex-auto ph3 pv2 br1 ba b--black-10">I'd like help with </div>
+                            <input class="fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" contenteditable="true" name="description">
                         </div>
-                        <div class="flex items-center justify-between white bg-orange br1 f5 mv3 ">
-                            <span class="mh3 fw7">Request Consultation</span>
-                            <div class="cover h1 w1 ma3 flex-shrink-0" style="background:url('https://icongr.am/clarity/user.svg?color=ffffff')"></div>
+                        <div class="white bg-yellow br1 f5 mv3 grow pointer tc pv3 ph4 fw7">
+                            Request Space
                         </div>
                     </div>
                 </div>
