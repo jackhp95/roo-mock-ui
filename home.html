@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Roo Storage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.9.1/tachyons.min.css" />
-    <link rel="stylesheet" href="tachyons.css" />
+    <!-- <link rel="stylesheet" href="tachyons.css" /> -->
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-    <link rel="stylesheet" href="Custom.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-    <style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+                <link rel="stylesheet" href="Custom.css" />
+        <style>
         .animatedSlow {
             -webkit-animation-duration: 2s;
             animation-duration: 2s;
@@ -21,7 +21,7 @@
     </style>
 </head>
 
-<body onload="window.location.hash = 'nav'" class="f6 fw5 flex flex-column-l flex-row-m flex-column-reverse items-stretch vh-100">
+<body class="f6 fw5 flex flex-column-l flex-row-m flex-column-reverse items-stretch vh-100">
     <nav id="nav" class="f5-ns fw6-ns f7 fw7 flex-none pv3-m ph4-l pa0 shadow-hover z-9999 flex flex-column-l bg-white">
         <ul class="flex flex-column-m no-underline list ma0 pa0 overflow-visible-ns overflow-hidden w-100 w-auto-ns">
             <li class="dn flex-auto-l flex-ns items-center ph4 pv3-m">
@@ -99,32 +99,27 @@
                         <div class="mv4 bg-white br2-ns mw7-l w-90-m flex flex-wrap self-stretch self-center-ns pa3 relative">
                             <div class="mv2 flex-auto flex flex-column w-80">
                                 <label class="mh2 f7 ph1">How much space do you need?</label>
-                                <div class="ma1 flex-auto flex flex-row-l flex-wrap items-stretch relative" data-toggle="buttons">
-                                    <button class="ma1 flex-auto flex flex-column-l items-center justify-center f6 pa2 br2 ba b--black-20 outline-0 hover-bg-yellow bg-white f5"
-                                        type="submit">
+                                <div class="ma1 flex-auto flex flex-row-l flex-wrap items-stretch relative">
+                                    <div class="ma1 flex-auto flex flex-column-l items-center justify-center pa2 br2 f5 bt bw2 white hover-orange shadow-hover">
                                         <div class="pa3-l pa2 ma1 contain" style="background: url('https://icongr.am/clarity/block.svg') no-repeat center;"></div>
-                                        <div class="pa1">closet</div>
-                                    </button>
-                                    <button class="ma1 flex-auto flex flex-column-l items-center justify-center f6 pa2 br2 ba b--black-20 outline-0 hover-bg-yellow bg-white f5"
-                                        type="submit">
+                                        <div class="pa1 navy">closet</div>
+                                    </div>
+                                    <div class="ma1 flex-auto flex flex-column-l items-center justify-center pa2 br2 f5 bt bw2 white hover-orange shadow-hover">
                                         <div class="pa3-l pa2 ma1 contain" style="background: url('https://icongr.am/clarity/blocks-group.svg') no-repeat center;"></div>
-                                        <div class="pa1">bedroom</div>
-                                    </button>
-                                    <button class="ma1 flex-auto flex flex-column-l items-center justify-center f6 pa2 br2 ba b--black-20 outline-0 hover-bg-yellow bg-white f5"
-                                        type="submit">
+                                        <div class="pa1 navy">bedroom</div>
+                                    </div>
+                                    <div class="ma1 flex-auto flex flex-column-l items-center justify-center pa2 br2 f5 bt bw2 white hover-orange shadow-hover">
                                         <div class="pa3-l pa2 ma1 contain" style="background: url('https://icongr.am/clarity/building.svg') no-repeat center;"></div>
-                                        <div class="pa1">apartment</div>
-                                    </button>
-                                    <button class="ma1 flex-auto flex flex-column-l items-center justify-center f6 pa2 br2 ba b--black-20 outline-0 hover-bg-yellow bg-white f5"
-                                        type="submit">
+                                        <div class="pa1 navy">apartment</div>
+                                    </div>
+                                    <div class="ma1 flex-auto flex flex-column-l items-center justify-center pa2 br2 f5 bt bw2 white hover-orange shadow-hover">
                                         <div class="pa3-l pa2 ma1 contain" style="background: url('https://icongr.am/clarity/home.svg') no-repeat center;"></div>
-                                        <div class="pa1">house</div>
-                                    </button>
-                                    <button class="ma1 flex-auto flex flex-column-l items-center justify-center f6 pa2 br2 ba b--black-20 outline-0 hover-bg-yellow bg-white f5"
-                                        type="submit">
+                                        <div class="pa1 navy">house</div>
+                                    </div>
+                                    <div class="ma1 flex-auto flex flex-column-l items-center justify-center pa2 br2 f5 bt bw2 white hover-orange shadow-hover">
                                         <div class="pa3-l pa2 ma1 contain" style="background: url('https://icongr.am/clarity/truck.svg') no-repeat center;"></div>
-                                        <div class="pa1">vehicle</div>
-                                    </button>
+                                        <div class="pa1 navy">vehicle</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="ma2 flex-auto flex-column flex">
@@ -147,13 +142,6 @@
                 </div>
             </div>
             <div class="bg-white self-stretch flex flex-column">
-                <div class="self-stretch bg-navy breathe pa3 flex items-center justify-center mb3">
-                    <div class="pa2 mh5-l mh3 contain" style="background-image:url('https://icongr.am/entypo/twitter.svg?color=ffffff');"></div>
-                    <div class="pa2 mh5-l mh3 contain" style="background-image:url('https://icongr.am/entypo/facebook.svg?color=ffffff');"></div>
-                    <div class="pa2 mh5-l mh3 contain" style="background-image:url('https://icongr.am/entypo/instagram.svg?color=ffffff');"></div>
-                    <div class="pa2 mh5-l mh3 contain" style="background-image:url('https://icongr.am/entypo/email.svg?color=ffffff');"></div>
-                    <div class="pa2 mh5-l mh3 contain" style="background-image:url('https://icongr.am/entypo/phone.svg?color=ffffff');"></div>
-                </div>
                 <div class="relative flex self-center items-center-l navy pa5-ns pa4 lh-copy fw3">
                     <div class="br1 bg-yellow breathe">
                         <div class="pa4-l ma4-l pa3-l ma3-l ma1 flex-auto self-stretch bg-center contain" style="background-image:url('https://icongr.am/clarity/group.svg?color=ffffff');"></div>
