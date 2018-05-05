@@ -12,126 +12,102 @@
 
 </head>
 
-<body onload="window.location.hash = 'nav'" class="f6 fw5 flex flex-column-l flex-row-m flex-column-reverse items-stretch vh-100">
+<body class="f6 fw5 flex flex-column-l flex-row-m flex-column-reverse items-stretch vh-100">
     <nav id="nav" class="f5-ns fw6-ns f7 fw7 flex-none pv3-m ph4-l pa0 shadow-hover z-9999 flex flex-column-l bg-white">
         <ul class="flex flex-column-m no-underline list ma0 pa0 overflow-visible-ns overflow-hidden w-100 w-auto-ns">
-            <li class="dn flex-auto-l flex-ns items-center ph4 pv3-m">
-                <a href="index.html#nav" class="fw9 f3 f2-m grow-large hover-purple dib black no-underline">Roo</a>
+            <li class="dn flex-auto-l flex-ns items-center justify-center-ms ph4 pv3-m">
+                <a class="grow-large dib br-pill black">
+                    <div class="contain pa4 pt3-l pl3-l flex-auto self-stretch growss" style="background:url('https://s3.us-east-2.amazonaws.com/roo-image-storage/static-images/logo/Tight/PNG/Orange.png') no-repeat center;"></div>
+                </a>
             </li>
             <li class="flex dn-ns hide-child o-80 glow w-20 w-auto-ns">
-                <a href="index.html#nav" class="flex flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                <a class="flex flex-column-reverse items-stretch self-stretch flex-auto no-underline black active" routerlinkactive="active">
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2">
-                        <div class="mb1 pl3 pt3 pr2 pb2 cover o-60 rotate-270" style="background:url('https://icongr.am/clarity/caret.svg')"></div>
-                        Back</span>
-                    <div class="b--purple ba child"></div>
+                        <span class="mb1 pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/home.svg')"></span>
+                        Home</span>
+                    <div class="b--orange ba child"></div>
                 </a>
             </li>
             <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
-                <a href="listings.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                <a class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black active"
+                    routerlink="/listings">
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
-                        <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/compass.svg')"></div>
-                        Feed</span>
-                    <div class="b--purple ba child"></div>
+                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/info.svg')"></span>
+                        <span class="dn-l">Help</span><span class="dn di-l">Resolution Center</span></span>
+                    <div class="b--orange ba child"></div>
                 </a>
             </li>
             <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
-                <a href="listings.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                <a class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black active"
+                    routerlink="/listings">
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
-                        <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/view-list.svg')"></div>
+                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/view-list.svg')"></span>
                         Listings</span>
-                    <div class="b--purple ba child"></div>
+                    <div class="b--orange ba child"></div>
                 </a>
             </li>
             <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
-                <a href="listing.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                <a class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black" routerlink="/become-a-host"
+                    routerlinkactive="active">
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
-                        <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/house.svg')"></div>
+                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/plus.svg')"></span>
                         Hosting</span>
-                    <div class="b--purple ba child"></div>
+                    <div class="b--orange ba child"></div>
                 </a>
             </li>
             <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
-                <a href="myprofile.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                <a class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black" routerlinkactive="active">
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
-                        <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/user.svg')"></div>
-                        Jack</span>
-                    <div class="b--purple ba child"></div>
+                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/sign-in.svg')"></span>
+                        Account</span>
+                    <div class="b--orange ba child"></div>
                 </a>
             </li>
         </ul>
     </nav>
-    <div class="flex-auto overflow-auto">
-        <main>
-            <section class="vh-75 flex flex-wrap items-stretch justify-stretch pa5-l pa3-m fw7 f2-l f3" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;">
-                <a href="home.html#nav" class="flex-auto flex link black items-center justify-center br1 bg-white-90 ma2 ph4 grow hover-white hover-bg-purple">
-                    Home
-                </a>
-                <a href="listing.html#nav" class="flex-auto flex link black items-center justify-center br1 bg-white-90 ma2 ph4 grow hover-white hover-bg-purple">
-                    Listing
-                </a>
-                <a href="review.html#nav" class="flex-auto flex link black items-center justify-center br1 bg-white-90 ma2 ph4 grow hover-white hover-bg-purple">
-                    Review
-                </a>
-                <a href="abouthosting.html#nav" class="flex-auto flex link black items-center justify-center br1 bg-white-90 ma2 ph4 grow hover-white hover-bg-purple">
-                    About Hosting
-                </a>
-                <a href="faq.html#nav" class="flex-auto flex link black items-center justify-center br1 bg-white-90 ma2 ph4 grow hover-white hover-bg-purple">
-                    Resolution Center
-                </a>
-                <a href="listings.html#nav" class="flex-auto flex link black items-center justify-center br1 bg-white-90 ma2 ph4 grow hover-white hover-bg-purple">
-                    Listings
-                </a>
-                <a href="myprofile.html#nav" class="flex-auto flex link black items-center justify-center br1 bg-white-90 ma2 ph4 grow hover-white hover-bg-purple">
-                    My Profile
-                </a>
-                <a href="becomehost.html#nav" class="flex-auto flex link black items-center justify-center br1 bg-white-90 ma2 ph4 grow hover-white hover-bg-purple">
-                    Become Host
-                </a>
-                <a href="profile.html#nav" class="flex-auto flex link black items-center justify-center br1 bg-white-90 ma2 ph4 grow hover-white hover-bg-purple">
-                    Profile
-                </a>
-                <a href="ComingSoon.html#nav" class="flex-auto flex link black items-center justify-center br1 bg-white-90 ma2 ph4 grow hover-white hover-bg-purple">
-                    Coming Soon
-                </a>
-                <a href="landing.html#nav" class="flex-auto flex link black items-center justify-center br1 bg-white-90 ma2 ph4 grow hover-white hover-bg-purple">
-                    Landing
-                </a>
-                <a href="footer.html#nav" class="flex-auto flex link black items-center justify-center br1 bg-white-90 ma2 ph4 grow hover-white hover-bg-purple">
-                    Footer & Create Listing
-                </a>
-                <a href="reserve1.html#nav" class="flex-auto flex link black items-center justify-center br1 bg-white-90 ma2 ph4 grow hover-white hover-bg-purple">
-                    Reserve Process
-                </a>
-            </section>
-        </main>
-        <footer class="flex flex-wrap items-center justify-between ma3 ma4-l o-50 black-50 glow">
-            <div class="flex flex-column flex-row-l">
-                <div class="flex items-center grow ma2 hover-purple">
-                    <div class="o-50 cover h1 w1 ma2 grow flex-shrink-0" style="background:url(
-                    'https://icongr.am/clarity/email.svg')"></div>
-                    <div class="flex-shrink-1">hello@roo.com</div>
-                </div>
-                <div class="flex items-center grow ma2 hover-purple">
-                    <div class="o-50 cover h1 w1 ma2 grow flex-shrink-0" style="background:url(
-                    'https://icongr.am/simple/facebook.svg')"></div>
-                    <div class="flex-shrink-1">fb.com/roo</div>
-                </div>
-                <div class="flex items-center grow ma2 hover-purple">
-                    <div class="o-50 cover h1 w1 ma2 grow flex-shrink-0" style="background:url(
-                    'https://icongr.am/simple/twitter.svg')"></div>
-                    <div class="flex-shrink-1">@roo</div>
-                </div>
-                <div class="flex items-center grow ma2 hover-purple">
-                    <div class="o-50 cover h1 w1 ma2 grow flex-shrink-0" style="background:url(
-                    'https://icongr.am/simple/instagram.svg')"></div>
-                    <div class="flex-shrink-1">@roo</div>
-                </div>
-            </div>
-            <div class="ma2 ma2 self-center">
-                Copyright © Roo 2018
-            </div>
-        </footer>
-    </div>
+    <main class="flex-auto overflow-auto flex flex-column justify-center items-center">
+        <section class="flex flex-wrap items-stretch justify-stretch ma2 fw1 f5 f4-m f3-l measure-wide">
+            <a href="home.html" class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy">
+                Home
+            </a>
+            <a href="listing.html" class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy">
+                Listing
+            </a>
+            <a href="review.html" class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy">
+                Review
+            </a>
+            <a href="abouthosting.html" class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy">
+                About Hosting
+            </a>
+            <a href="faq.html" class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy">
+                Resolution Center
+            </a>
+            <a href="listings.html" class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy">
+                Listings
+            </a>
+            <a href="myprofile.html" class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy">
+                My Profile
+            </a>
+            <a href="becomehost.html" class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy">
+                Become Host
+            </a>
+            <a href="profile.html" class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy">
+                Profile
+            </a>
+            <a href="ComingSoon.html" class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy">
+                Coming Soon
+            </a>
+            <a href="landing.html" class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy">
+                Landing
+            </a>
+            <a href="footer.html" class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy">
+                Footer & Create Listing
+            </a>
+            <a href="reserve1.html" class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy">
+                Reserve Process
+            </a>
+        </section>
+    </main>
 </body>
 
 </html>
