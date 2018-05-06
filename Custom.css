@@ -92,6 +92,12 @@
   background-image: linear-gradient(330deg, var(--orange), var(--yellow));
 }
 
+/* TEXT SHADOW */
+
+.text-shadow-50 {
+  text-shadow: 0 0 2em rgba(0, 0, 0, .5);
+}
+
 /* CUSTOM COLORS */
 
 .blue {
