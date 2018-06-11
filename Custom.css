@@ -84,7 +84,8 @@
   background-image: linear-gradient(330deg, var(--navy), var(--blue));
 }
 
-.warmUp {   background-size: 200% 200%;
+.warmUp {
+  background-size: 200% 200%;
   background-position: center;
   background-image: -webkit-linear-gradient(120deg, var(--orange), var(--yellow));
   background-image: -o-linear-gradient(120deg, var(--orange), var(--yellow));
@@ -602,4 +603,25 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .shadow-6-l {
     box-shadow: 0px 0px 12px 2px rgba( 0, 0, 0, 0.1);
   }
+}
+
+/* ToolTip */
+
+.tooltip {
+  position: relative;
+  display: inline-block
+}
+
+.tooltip .tooltiptext {
+  opacity: 0;
+  text-align: center;
+  width: auto;
+  margin-left: 10px;
+  transition: all .3s ease-in-out;
+  position: absolute;
+  z-index: 1
+}
+
+.tooltip:hover .tooltiptext {
+  opacity: 1
 }

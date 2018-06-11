@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" class="h6 bg-white navy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Roo Storage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.9.1/tachyons.min.css" />
+    <!-- <link rel="stylesheet" href="tachyons.css" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" href="Custom.css" />
+    <style>
+        .animatedSlow {
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        .shadow-7 {
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04);
+        }
+
+        .shadow-8 {
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.075);
+        }
+    </style>
+</head>
+
+<body class="f6 fw5 flex flex-column-ns flex-column-reverse items-stretch vh-100 overflow-x-hidden">
+    <nav id="nav" class="flex-none flex ph4-l ph3-l ph2-ns shadow-hover z-max">
+        <div class="dn flex-auto-l flex-ns items-center ph4-l pv3-m ttu tracked fw3 f4">
+            <div class="ma1 flex-auto self-stretch pa2 pa3-m mv4-l mw2-l contain bg-center" style="background-image:url('https://icongr.am/clarity/bundle.svg')"></div>
+            <div class="dn dib-l">Outside the box</div>
+        </div>
+        <div class="mv2 flex flex-auto flex-wrap justify-end items-center f5-ns ">
+            <div class="pa3-ns pa2">
+                Categories
+            </div>
+            <div class="pa3-ns pa2">
+                Become a host
+            </div>
+            <div class="mh3-ns mh2 shadow-hover br1 fw4 pv2 ph3 dib fr bg-blue white">
+                Find a Space
+            </div>
+        </div>
+    </nav>
+    <div class="flex-auto f6 overflow-y-auto overflow-x-hidden">
+        <header class="pv7 bg-center cover parallax f1-l f2 tc white" style="background-image: url('https://source.unsplash.com/random');">
+            Outside the Box
+        </header>
+        <main class="mw9-l mw7-ns relative center flex flex-wrap-reverse justify-between pa3 pa4-m pa5-l">
+            <div class="w-third-l w-50-ns w-100 pa3-l pa2 grow">
+                <div class="relative shadow-6 br2 overflow-hidden">
+                    <div class="aspect-ratio--16x9 cover bg-center" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="relative pt6-ns pb3-l pb4-m">
+                        <div class="absolute-ns absolute--fill pa3">
+                            <div class="ma2 ttu tracked fw7 blue">Category</div>
+                            <div class="ma2 f4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-third-l w-50-ns w-100 pa3-l pa2 grow">
+                <div class="relative shadow-6 br2 overflow-hidden">
+                    <div class="aspect-ratio--16x9 cover bg-center" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="relative pt6-ns pb3-l pb4-m">
+                        <div class="absolute-ns absolute--fill pa3">
+                            <div class="ma2 ttu tracked fw7 blue">Category</div>
+                            <div class="ma2 f4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-third-l w-50-ns w-100 pa3-l pa2 grow">
+                <div class="relative shadow-6 br2 overflow-hidden">
+                    <div class="aspect-ratio--16x9 cover bg-center" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="relative pt6-ns pb3-l pb4-m">
+                        <div class="absolute-ns absolute--fill pa3">
+                            <div class="ma2 ttu tracked fw7 blue">Category</div>
+                            <div class="ma2 f4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-third-l w-50-ns w-100 pa3-l pa2 grow">
+                <div class="relative shadow-6 br2 overflow-hidden">
+                    <div class="aspect-ratio--16x9 cover bg-center" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="relative pt6-ns pb3-l pb4-m">
+                        <div class="absolute-ns absolute--fill pa3">
+                            <div class="ma2 ttu tracked fw7 blue">Category</div>
+                            <div class="ma2 f4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-third-l w-50-ns w-100 pa3-l pa2 grow">
+                <div class="relative shadow-6 br2 overflow-hidden">
+                    <div class="aspect-ratio--16x9 cover bg-center" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="relative pt6-ns pb3-l pb4-m">
+                        <div class="absolute-ns absolute--fill pa3">
+                            <div class="ma2 ttu tracked fw7 blue">Category</div>
+                            <div class="ma2 f4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-third-l w-50-ns w-100 pa3-l pa2 grow">
+                <div class="relative shadow-6 br2 overflow-hidden">
+                    <div class="aspect-ratio--16x9 cover bg-center" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="relative pt6-ns pb3-l pb4-m">
+                        <div class="absolute-ns absolute--fill pa3">
+                            <div class="ma2 ttu tracked fw7 blue">Category</div>
+                            <div class="ma2 f4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-third-l w-50-ns w-100 pa3-l pa2 grow">
+                <div class="relative shadow-6 br2 overflow-hidden">
+                    <div class="aspect-ratio--16x9 cover bg-center" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="relative pt6-ns pb3-l pb4-m">
+                        <div class="absolute-ns absolute--fill pa3">
+                            <div class="ma2 ttu tracked fw7 blue">Category</div>
+                            <div class="ma2 f4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-third-l w-50-ns w-100 pa3-l pa2 grow">
+                <div class="relative shadow-6 br2 overflow-hidden">
+                    <div class="aspect-ratio--16x9 cover bg-center" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="relative pt6-ns pb3-l pb4-m">
+                        <div class="absolute-ns absolute--fill pa3">
+                            <div class="ma2 ttu tracked fw7 blue">Category</div>
+                            <div class="ma2 f4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-third-l w-50-ns w-100 pa3-l pa2 grow">
+                <div class="relative shadow-6 br2 overflow-hidden">
+                    <div class="aspect-ratio--16x9 cover bg-center" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="relative pt6-ns pb3-l pb4-m">
+                        <div class="absolute-ns absolute--fill pa3">
+                            <div class="ma2 ttu tracked fw7 blue">Category</div>
+                            <div class="ma2 f4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-third-l w-50-ns w-100 pa3-l pa2 grow">
+                <div class="relative shadow-6 br2 overflow-hidden">
+                    <div class="aspect-ratio--16x9 cover bg-center" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="relative pt6-ns pb3-l pb4-m">
+                        <div class="absolute-ns absolute--fill pa3">
+                            <div class="ma2 ttu tracked fw7 blue">Category</div>
+                            <div class="ma2 f4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-third-l w-50-ns w-100 pa3-l pa2 grow">
+                <div class="relative shadow-6 br2 overflow-hidden">
+                    <div class="aspect-ratio--16x9 cover bg-center" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="relative pt6-ns pb3-l pb4-m">
+                        <div class="absolute-ns absolute--fill pa3">
+                            <div class="ma2 ttu tracked fw7 blue">Category</div>
+                            <div class="ma2 f4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-third-l w-50-ns w-100 pa3-l pa2 grow">
+                <div class="relative shadow-6 br2 overflow-hidden">
+                    <div class="aspect-ratio--16x9 cover bg-center" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="relative pt6-ns pb3-l pb4-m">
+                        <div class="absolute-ns absolute--fill pa3">
+                            <div class="ma2 ttu tracked fw7 blue">Category</div>
+                            <div class="ma2 f4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-third-l w-50-ns w-100 pa3-l pa2 grow">
+                <div class="relative shadow-6 br2 overflow-hidden">
+                    <div class="aspect-ratio--16x9 cover bg-center" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="relative pt6-ns pb3-l pb4-m">
+                        <div class="absolute-ns absolute--fill pa3">
+                            <div class="ma2 ttu tracked fw7 blue">Category</div>
+                            <div class="ma2 f4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-auto ma3-l ma2 flex flex-wrap-l flex-column flex-row-l grow shadow-6 br2 overflow-hidden">
+                <div class="flex-auto relative cover bg-center pa5" style="background-image: url('https://source.unsplash.com/random');">
+                </div>
+                <div class="bg-white dn-m self-center-l measure-narrow pa3">
+                    <div class="ma2 ttu tracked fw7 blue">Category</div>
+                    <div class="ma2 f4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- <main class="flex flex-wrap flex-nowrap-l justify-around lh-copy pa5-l nl3 nr3">
+            <section class="flex-auto flex flex-column mw8 pv4">
+                <div class="flex ma5 flex-wrap">
+                    <div class="nt4 nb4 nr3 pa6 flex-auto bg-center cover" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="bg-white br1 nl3 shadow-8 measure">
+                        <div class="pa4">
+                            <div class="pa2 f3 lh-title">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            </div>
+                            <div class="pa2">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione necessitatibus deserunt, odit illum ad, perspiciatis nobis
+                            </div>
+                        </div>
+                        <div class="flex items-center f5-l f6-m f7 fw5 glow o-50 bt b--black-20">
+                            <div class="nowrap flex-auto flex justify-center items-center mv3 br b--black-20">
+                                <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/clock.svg?color=002d61')"></div>
+                                <span class="dn di-l"> 5 minute read</span>
+                                <span class="dn-l">5 mins</span>
+                            </div>
+                            <div class="nowrap flex-auto flex justify-center items-center mv3">
+                                <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/calendar.svg?color=002d61')"></div>
+                                <span class="dn di-l">Tuesday, June 13th, 2018</span>
+                                <span class="dn-l">6 / 13 / 18</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex ma5 flex-wrap">
+                    <div class="nt4 nb4 nr3 pa6 flex-auto bg-center cover" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="bg-white br1 nl3 shadow-8 measure">
+                        <div class="pa4">
+                            <div class="pa2 f3 lh-title">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            </div>
+                            <div class="pa2">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione necessitatibus deserunt, odit illum ad, perspiciatis nobis
+                            </div>
+                        </div>
+                        <div class="flex items-center f5-l f6-m f7 fw5 glow o-50 bt b--black-20">
+                            <div class="nowrap flex-auto flex justify-center items-center mv3 br b--black-20">
+                                <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/clock.svg?color=002d61')"></div>
+                                <span class="dn di-l"> 5 minute read</span>
+                                <span class="dn-l">5 mins</span>
+                            </div>
+                            <div class="nowrap flex-auto flex justify-center items-center mv3">
+                                <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/calendar.svg?color=002d61')"></div>
+                                <span class="dn di-l">Tuesday, June 13th, 2018</span>
+                                <span class="dn-l">6 / 13 / 18</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex ma5 flex-wrap">
+                    <div class="nt4 nb4 nr3 pa6 flex-auto bg-center cover" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="bg-white br1 nl3 shadow-8 measure">
+                        <div class="pa4">
+                            <div class="pa2 f3 lh-title">
+                                Lorem ipsum, dolor sit.
+                            </div>
+                            <div class="pa2">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione necessitatibus deserunt, odit illum ad, perspiciatis nobis
+                            </div>
+                        </div>
+                        <div class="flex items-center f5-l f6-m f7 fw5 glow o-50 bt b--black-20">
+                            <div class="nowrap flex-auto flex justify-center items-center mv3 br b--black-20">
+                                <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/clock.svg?color=002d61')"></div>
+                                <span class="dn di-l"> 5 minute read</span>
+                                <span class="dn-l">5 mins</span>
+                            </div>
+                            <div class="nowrap flex-auto flex justify-center items-center mv3">
+                                <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/calendar.svg?color=002d61')"></div>
+                                <span class="dn di-l">Tuesday, June 13th, 2018</span>
+                                <span class="dn-l">6 / 13 / 18</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex ma5 flex-wrap">
+                    <div class="nt4 nb4 nr3 pa6 flex-auto bg-center cover" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="bg-white br1 nl3 shadow-8 measure">
+                        <div class="pa4">
+                            <div class="pa2 f3 lh-title">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            </div>
+                            <div class="pa2">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione necessitatibus deserunt, odit illum ad, perspiciatis nobis
+                            </div>
+                        </div>
+                        <div class="flex items-center f5-l f6-m f7 fw5 glow o-50 bt b--black-20">
+                            <div class="nowrap flex-auto flex justify-center items-center mv3 br b--black-20">
+                                <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/clock.svg?color=002d61')"></div>
+                                <span class="dn di-l"> 5 minute read</span>
+                                <span class="dn-l">5 mins</span>
+                            </div>
+                            <div class="nowrap flex-auto flex justify-center items-center mv3">
+                                <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/calendar.svg?color=002d61')"></div>
+                                <span class="dn di-l">Tuesday, June 13th, 2018</span>
+                                <span class="dn-l">6 / 13 / 18</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex ma5 flex-wrap">
+                    <div class="nt4 nb4 nr3 pa6 flex-auto bg-center cover" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="bg-white br1 nl3 shadow-8 measure">
+                        <div class="pa4">
+                            <div class="pa2 f3 lh-title">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            </div>
+                            <div class="pa2">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione necessitatibus deserunt, odit illum ad, perspiciatis nobis
+                            </div>
+                        </div>
+                        <div class="flex items-center f5-l f6-m f7 fw5 glow o-50 bt b--black-20">
+                            <div class="nowrap flex-auto flex justify-center items-center mv3 br b--black-20">
+                                <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/clock.svg?color=002d61')"></div>
+                                <span class="dn di-l"> 5 minute read</span>
+                                <span class="dn-l">5 mins</span>
+                            </div>
+                            <div class="nowrap flex-auto flex justify-center items-center mv3">
+                                <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/calendar.svg?color=002d61')"></div>
+                                <span class="dn di-l">Tuesday, June 13th, 2018</span>
+                                <span class="dn-l">6 / 13 / 18</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex ma5 flex-wrap">
+                    <div class="nt4 nb4 nr3 pa6 flex-auto bg-center cover" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="bg-white br1 nl3 shadow-8 measure">
+                        <div class="pa4">
+                            <div class="pa2 f3 lh-title">
+                                Lorem ipsum, dolor sit.
+                            </div>
+                            <div class="pa2">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione necessitatibus deserunt, odit illum ad, perspiciatis nobis
+                            </div>
+                        </div>
+                        <div class="flex items-center f5-l f6-m f7 fw5 glow o-50 bt b--black-20">
+                            <div class="nowrap flex-auto flex justify-center items-center mv3 br b--black-20">
+                                <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/clock.svg?color=002d61')"></div>
+                                <span class="dn di-l"> 5 minute read</span>
+                                <span class="dn-l">5 mins</span>
+                            </div>
+                            <div class="nowrap flex-auto flex justify-center items-center mv3">
+                                <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/calendar.svg?color=002d61')"></div>
+                                <span class="dn di-l">Tuesday, June 13th, 2018</span>
+                                <span class="dn-l">6 / 13 / 18</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex ma5 flex-wrap">
+                    <div class="nt4 nb4 nr3 pa6 flex-auto bg-center cover" style="background-image: url('https://source.unsplash.com/random');"></div>
+                    <div class="bg-white br1 nl3 shadow-8 measure">
+                        <div class="pa4">
+                            <div class="pa2 f3 lh-title">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            </div>
+                            <div class="pa2">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione necessitatibus deserunt, odit illum ad, perspiciatis nobis
+                            </div>
+                        </div>
+                        <div class="flex items-center f5-l f6-m f7 fw5 glow o-50 bt b--black-20">
+                            <div class="nowrap flex-auto flex justify-center items-center mv3 br b--black-20">
+                                <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/clock.svg?color=002d61')"></div>
+                                <span class="dn di-l"> 5 minute read</span>
+                                <span class="dn-l">5 mins</span>
+                            </div>
+                            <div class="nowrap flex-auto flex justify-center items-center mv3">
+                                <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/calendar.svg?color=002d61')"></div>
+                                <span class="dn di-l">Tuesday, June 13th, 2018</span>
+                                <span class="dn-l">6 / 13 / 18</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <aside class="relative">
+                <div class="sticky top-0 measure-l measure-wide bl-l b--black-05 ph3 mh3">
+                    <!-- <div class="pa3">
+                        <div class="f4 ma2">Categories </div>
+                        <div class="flex-none flex flex-wrap-reverse justify-between f6 tc">
+                            <div class="b--black-20 ba flex-auto ph3 pv2 br1 ma2 shadow-hover">
+                                Hosting
+                            </div>
+                            <div class="b--black-20 ba flex-auto ph3 pv2 br1 ma2 shadow-hover">
+                                Renting
+                            </div>
+                            <div class="b--black-20 ba flex-auto ph3 pv2 br1 ma2 shadow-hover">
+                                Pick-up
+                            </div>
+                            <div class="b--black-20 ba flex-auto ph3 pv2 br1 ma2 shadow-hover">
+                                Reservations
+                            </div>
+                            <div class="b--black-20 ba flex-auto ph3 pv2 br1 ma2 shadow-hover">
+                                Various
+                            </div>
+                            <div class="b--black-20 ba flex-auto ph3 pv2 br1 ma2 shadow-hover">
+                                Various
+                            </div>
+                            <div class="b--black-20 ba flex-auto ph3 pv2 br1 ma2 shadow-hover">
+                                Various
+                            </div>
+                            <div class="b--black-20 ba flex-auto ph3 pv2 br1 ma2 shadow-hover">
+                                Other
+                            </div>
+                            <div class="b--black-20 ba flex-auto ph3 pv2 br1 ma2 shadow-hover">
+                                Topics
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pa3">
+                        <div class="pa2 f4">About Roo Storage</div>
+                        <div class="pa2">
+                            Roo is an online platform that connects those with available space in their homes to those in need of storage. This creates
+                            opportunities within our communities. It allows those with the space to passively earn income
+                            and those seeking storage to find affordable options, right down the street.
+                        </div>
+                        <div class="flex shadow-hover br1 f5 fw4 b--black-20 ba pv2 ph3 ma2">
+                            Find Storage Near You
+                        </div>
+                        <div class="flex shadow-hover br1 f5 fw4 b--black-20 ba pv2 ph3 ma2">
+                            List Your Space
+                        </div>
+                        <div class="flex shadow-hover br1 f5 fw4 b--black-20 ba pv2 ph3 ma2">
+                            Join Referral Program
+                        </div>
+                    </div>
+                    <div class="pa3 mh2">
+                        <div class="pv2 f4"> Get Updates</div>
+                        <input type="text" name="" id="" class="db bg-white br1 ba b--black-20 w-100 pv2 ph3 mv2 f4" placeholder="you@email.com">
+                        <div class="shadow-hover br1 f5 fw4 pv2 ph3 mv2 dib fr bg-blue white">
+                            Sign me up
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main> -->
+        <footer class="flex flex-wrap items-center justify-around bt b--white w-100">
+            <div class="flex flex-wrap items-center justify-center">
+                <div class="flex-auto flex flex-wrap justify-between w-100-l">
+                    <div class="flex-auto flex flex-wrap justify-around items-center bg-navy white pa3">
+                        <div class="flex flex-column pa3 measure">
+                            <div class="f4 pa2 fw7">Become a Host</div>
+                            <div class="pa2">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae soluta laborum voluptate fugit dolore? Corrupti, eos ex!
+                                Quas distinctio voluptatum a similique, excepturi optio iure nulla minus perferendis unde
+                                blanditiis.
+                            </div>
+                        </div>
+                        <div class="flex-auto flex flex-column items-stretch pa3 measure">
+                            <div class="flex flex-column pv3 grow">
+                                <label for="" class="ph1 f7">phone</label>
+                                <input type="text" name="" id="" class="navy flex-auto ph2 pv1 br1 ba b--black-10">
+                            </div>
+                            <div class="flex flex-column pv3 grow">
+                                <label for="" class="ph1 f7">email</label>
+                                <input type="text" name="" id="" class="navy flex-auto ph2 pv1 br1 ba b--black-10">
+                            </div>
+                            <div class="flex flex-column pv3 grow">
+                                <label for="" class="ph1 f7">address</label>
+                                <input type="text" name="" id="" class="navy flex-auto ph2 pv1 br1 ba b--black-10">
+                            </div>
+                            <div class="flex flex-wrap justify-around ma2">
+                                <div class="bg-blue white fw7 ph4 pv2 br1 grow">Sign Up</div>
+                                <div class="hover-bg-black-10 fw7 ph4 pv2 br1 grow">More Info</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-auto bg-blue white self-stretch justify-around flex flex-column pa3">
+                        <div class="pa2">Home</div>
+                        <div class="pa2">About Hosting</div>
+                        <div class="pa2">Resolution Center</div>
+                        <div class="pa2">Listings</div>
+                        <div class="pa2">My Profile</div>
+                        <div class="pa2">FAQ</div>
+                    </div>
+                    <div class="flex-auto flex flex-column self-stretch flex-row-l w-80-l justify-around pa3">
+                        <div class="grow flex pa2">
+                            <div class="flex-none self-center pa3 pt2 pl2 mr2 contain" style="background-image:url('https://icongr.am/clarity/phone-handset.svg?color=333333');"></div>
+                            <div class="flex flex-column">
+                                <div class="f7 fw7">give us a ring</div>
+                                <div>XXX - XXX - XXXX</div>
+                            </div>
+                        </div>
+                        <div class="grow flex pa2">
+                            <div class="flex-none self-center pa3 pt2 pl2 mr2 contain" style="background-image:url('https://icongr.am/clarity/envelope.svg?color=333333');"></div>
+                            <div class="flex flex-column">
+                                <div class="f7 fw7">email us at</div>
+                                <div>Hello@RooStorage.com</div>
+                            </div>
+                        </div>
+                        <div class="grow flex pa2">
+                            <div class="flex-none self-center pa3 pt2 pl2 mr2 contain" style="background-image:url('https://icongr.am/clarity/store.svg?color=333333');"></div>
+                            <div class="flex flex-column">
+                                <div class="f7 fw7">our address</div>
+                                <div>314 stadium blvd</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-around flex-auto bt b--black-05 f7 w-100-l bg-navy white">
+                    <div class="flex bb b--black-05 pv2 ph3">
+                        <div class="glow o-50 flex pv2 ph3">
+                            <div class="mh1 pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/fontawesome/twitter.svg?color=ffffff');"></div>
+                            Twitter
+                        </div>
+                        <div class="glow o-50 flex pv2 ph3">
+                            <div class="mh1 pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/fontawesome/facebook.svg?color=ffffff');"></div>
+                            Facecbook
+                        </div>
+                        <div class="glow o-50 flex pv2 ph3">
+                            <div class="mh1 pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/fontawesome/instagram.svg?color=ffffff');"></div>
+                            Instagram
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap justify-between bb b--black-05 pa3">
+                        <div class="glow o-50 flex mh2">
+                            Diversity Inclusion
+                        </div>
+                        <div class="glow o-50 flex mh2">
+                            Brand Guidelines
+                        </div>
+                        <div class="glow o-50 flex mh2">
+                            Terms of service
+                        </div>
+                        <div class="glow o-50 flex mh2">
+                            Copyright 2018
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,305 +1,357 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h6 bg-white navy">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Roo Storage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.9.1/tachyons.min.css" />
+    <!-- <link rel="stylesheet" href="tachyons.css" /> -->
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
     <link rel="stylesheet" href="Custom.css" />
+    <style>
+        .animatedSlow {
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
 
+        .shadow-7 {
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04);
+        }
+
+        .shadow-8 {
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.075);
+        }
+    </style>
 </head>
 
-<body class="f6 fw3 flex flex-column items-stretch vh-100 navy w-100 navy">
-    <main class="flex-none w-100 flex flex-column justify-center items-center mb3 mb4-ns mb5-l">
-        <heading class="self-stretch vh-100 bg-center cover parallax flex items-center justify-center relative" style="background-image:url('https://images.unsplash.com/photo-1512810730836-1a7cde39c455');">
-            <div class="absolute bottom-0 left-0 right-0 pt7 lg-white-fade-up"></div>
-            <blockquote class="mw6 i tc text-shadow-50 white f1-l f2-ns f3 fw7 mb7 mh3 mh4-ns mh5-l">
-                Modi, temporibus, numquam maxime itaque minus?
-            </blockquote>
-        </heading>
-        <article class="z-2 nt7 bg-white br2 shadow-6 mb3 mb4-ns mb5-l">
-            <div class="flex items-center f5-l f6-m f7 fw5 glow o-50 bb b--black-20">
-                <div class="nowrap flex-auto flex justify-center items-center mv3 br b--black-20">
+<body class="f6 fw5 flex flex-column-ns flex-column-reverse items-stretch vh-100 overflow-x-hidden">
+    <nav id="nav" class="flex-none flex ph4-l ph3-ns ph2 shadow-hover z-max">
+        <div class="pa3 ma3 contain bg-center" style="background-image:url('https://icongr.am/clarity/bundle.svg')"></div>
+        <div class="mv2 flex flex-auto flex-wrap justify-between items-center">
+            <div class="f4 mh2 truncate">Here's an Example of a Blog Post on roostorage.com</div>
+            <div class="flex items-center f7 fw5 glow o-50 mh2">
+                <div class="nowrap flex-auto flex justify-center items-center mr3">
                     <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/clock.svg?color=002d61')"></div>
                     <span class="dn di-l"> 5 minute read</span>
                     <span class="dn-l">5 mins</span>
                 </div>
-                <div class="nowrap flex-auto flex justify-center items-center mv3 br b--black-20">
+                <div class="nowrap flex-auto flex justify-center items-center mr3">
                     <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/tag.svg?color=002d61')"></div>
                     Announcement
                 </div>
-                <div class="nowrap flex-auto flex justify-center items-center mv3 br b--black-20">
+                <div class="nowrap flex-auto flex justify-center items-center mr3">
                     <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/calendar.svg?color=002d61')"></div>
                     <span class="dn di-l">Tuesday, June 13th, 2018</span>
                     <span class="dn-l">6 / 13 / 18</span>
                 </div>
-                <div class="nowrap flex-auto flex justify-center items-center mv3">
+                <div class="nowrap flex-auto flex justify-center items-center">
                     <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/share.svg?color=002d61')"></div>
                     Share
                 </div>
             </div>
-            <main class="mh3 mh4-ns mh5-l mb3 mb4-ns mb5-l f3-l f4-ns f5 measure lh-copy">
-                <h1 class="fw3 mt3 mt4-ns mt5-l lh-title">Here's an Example of a Blog Post on
-                    <a href="index.html" class="link blue">roostorage.com</a>
-                </h1>
-                <blockquote class="bl i measure bw2 mv3 b--blue f4 ph2 ph3-ns ph4-l">
-                    This is a pullquote/blockquote. This is where you would put a testimonial or something. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Blanditiis quam cupiditate ab numquam laboriosam voluptates libero.
+        </div>
+    </nav>
+    <div class="flex-auto f6 overflow-y-auto overflow-x-hidden">
+        <main class="flex-none w-100 flex flex-column justify-center items-center mb3 mb4-ns mb5-l">
+            <heading class="self-stretch vh-100 bg-center cover parallax flex items-center justify-center relative" style="background-image:url('https://images.unsplash.com/photo-1512810730836-1a7cde39c455');">
+                <div class="absolute bottom-0 left-0 right-0 pt7 lg-white-fade-up"></div>
+                <blockquote class="mw6 i tc text-shadow-50 white f1-l f2-ns f3 fw7 mb7 mh3 mh4-ns mh5-l">
+                    Modi, temporibus, numquam maxime itaque minus?
                 </blockquote>
-                <h2 class="fw4 mt3 mt4-ns mt5-l">This is an h2 tag</h2>
-                <p class="mv2 mv3-ns">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam explicabo natus at possimus voluptatum consectetur harum
-                    doloribus accusamus ipsam? Facere repudiandae distinctio iste, quae minus id cupiditate explicabo laboriosam
-                    corporis?
-                </p>
-                <ol class="pl4">
-                    <li class="pa1">Lorem ipsum dolor sit amet consectetur</li>
-                    <li class="pa1">Adipisicing elit exercitationem assumenda?</li>
-                    <li class="pa1">Porro ducimus veritatis nulla ratione.</li>
-                </ol>
-                <h3 class="fw5 mt3 mt4-ns mt5-l">This is an h3 tag</h3>
-                <p class="mv2 mv3-ns">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quam cupiditate ab numquam laboriosam voluptates libero,
-                    pariatur laborum aliquam fugiat impedit? Ut, necessitatibus veniam. Incidunt laudantium ea consequatur
-                    corporis explicabo!
-                </p>
-                <ul class="pl4">
-                    <li class="pa1">Lorem ipsum dulor sit amet consectetur</li>
-                    <li class="pa1">Adipisicing elit exercitationem assumenda?</li>
-                    <li class="pa1">Porro ducimus veritatis nulla ratione.</li>
-                </ul>
-                <p class="mv2 mv3-ns">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quam cupiditate ab numquam laboriosam voluptates libero,
-                    pariatur laborum aliquam fugiat impedit? Ut, necessitatibus veniam. Incidunt laudantium ea consequatur
-                    corporis explicabo!
-                </p>
-                <h4 class="fw6 mt3 mt4-ns mt5-l">This is an h4 tag</h4>
-                <p class="mv2 mv3-ns">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam explicabo natus at possimus voluptatum consectetur harum
-                    doloribus accusamus ipsam? Facere repudiandae distinctio iste, quae minus id cupiditate explicabo laboriosam
-                    corporis?
-                </p>
-                <div class="flex flex-wrap na2">
-                    <div class="flex-auto white tc f2 pa4 ma2 cover br2" style="background-image: url('https://source.unsplash.com/random');">
-                        Gallery
+            </heading>
+            <article class="z-2 nt7 bg-white br2 shadow-6 mb3 mb4-ns mb5-l">
+                <div class="flex items-center f5-l f6-m f7 fw5 glow o-50 bb b--black-20">
+                    <div class="nowrap flex-auto flex justify-center items-center mv3 br b--black-20">
+                        <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/clock.svg?color=002d61')"></div>
+                        <span class="dn di-l"> 5 minute read</span>
+                        <span class="dn-l">5 mins</span>
                     </div>
-                    <div class="flex-auto white tc f2 pa4 ma2 cover br2" style="background-image: url('https://source.unsplash.com/random');">
-                        Gallery
+                    <div class="nowrap flex-auto flex justify-center items-center mv3 br b--black-20">
+                        <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/tag.svg?color=002d61')"></div>
+                        Announcement
                     </div>
-                    <div class="flex-auto white tc f2 pa4 ma2 cover br2" style="background-image: url('https://source.unsplash.com/random');">
-                        Gallery
+                    <div class="nowrap flex-auto flex justify-center items-center mv3 br b--black-20">
+                        <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/calendar.svg?color=002d61')"></div>
+                        <span class="dn di-l">Tuesday, June 13th, 2018</span>
+                        <span class="dn-l">6 / 13 / 18</span>
                     </div>
-                    <div class="flex-auto white tc f2 pa4 ma2 cover br2" style="background-image: url('https://source.unsplash.com/random');">
-                        Gallery
-                    </div>
-                    <div class="flex-auto white tc f2 pa4 ma2 cover br2" style="background-image: url('https://source.unsplash.com/random');">
-                        Gallery
+                    <div class="nowrap flex-auto flex justify-center items-center mv3">
+                        <div class="dib-ns dn cover pa2-ns mr2" style="background-image: url('https://icongr.am/clarity/share.svg?color=002d61')"></div>
+                        Share
                     </div>
                 </div>
-                <h5 class="fw7 mt3 mt4-ns mt5-l">This is an h5 tag</h5>
-                <p class="mv2 mv3-ns">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quam cupiditate ab numquam laboriosam voluptates libero,
-                    pariatur laborum aliquam fugiat impedit?
-                    <span class="i">This is some italic text!</span> Ut, necessitatibus veniam. Incidunt laudantium ea consequatur corporis
-                    explicabo!
-                </p>
-                <p class="mv2 mv3-ns">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quam cupiditate ab numquam laboriosam voluptates libero,
-                    pariatur laborum aliquam fugiat impedit?
-                    <span class="b">This is some bold text!</span> Ut, necessitatibus veniam. Incidunt laudantium ea consequatur corporis
-                    explicabo!
-                </p>
-                <div class="white tc f2 pv7 cover br2 parallax mv3 mv4-ns mv5-l" style="background-image: url('https://source.unsplash.com/random');">
-                    Parallax Example</div>
-                <p class="mv2 mv3-ns">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quam cupiditate ab numquam laboriosam voluptates libero,
-                    pariatur laborum aliquam fugiat impedit? Ut, necessitatibus veniam. Incidunt laudantium ea consequatur
-                    corporis explicabo!
-                </p>
-                <p class="mv2 mv3-ns">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quam cupiditate ab numquam laboriosam voluptates libero,
-                    pariatur laborum aliquam fugiat impedit? Ut, necessitatibus veniam. Incidunt laudantium ea consequatur
-                    corporis explicabo!
-                </p>
-                <h6 class="fw8 mt3 mt4-ns mt5-l">This is an h6 tag</h6>
-                <p class="mv2 mv3-ns">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam explicabo natus at possimus voluptatum consectetur harum
-                    doloribus accusamus ipsam? Facere repudiandae distinctio iste, quae minus id cupiditate explicabo laboriosam
-                    corporis?
-                </p>
-                <div class="white tc f2 pv6 cover br2 mv3 mv4-ns mv5-l" style="background-image: url('https://source.unsplash.com/random');">
-                    Static Example</div>
-                <div class="white tc f2 pv6 cover nr3 nr4-ns nr5-l nl3 nl4-ns nl5-l mv3 mv4-ns mv5-l" style="background-image: url('https://source.unsplash.com/random');">
-                    Full Example</div>
-                <h3 class="fw5 mt3 mt4-ns mt5-l">Aspect Ratios For Images!</h3>
-                <h4 class="fw6 mt3 mt4-ns mt5-l">16:9</h4>
-                <div class="aspect-ratio aspect-ratio--16x9 mv3 mv4-ns mv5-l">
-                    <div class="aspect-ratio--object br2 bg-center cover" style="background-image:url('https://source.unsplash.com/random');"></div>
-                </div>
-                <h4 class="fw6 mt3 mt4-ns mt5-l">8:5</h4>
-                <div class="aspect-ratio aspect-ratio--8x5 mv3 mv4-ns mv5-l">
-                    <div class="aspect-ratio--object br2 bg-center cover" style="background-image:url('https://source.unsplash.com/random');"></div>
-                </div>
-                <h4 class="fw6 mt3 mt4-ns mt5-l">7:5</h4>
-                <div class="aspect-ratio aspect-ratio--7x5 mv3 mv4-ns mv5-l">
-                    <div class="aspect-ratio--object br2 bg-center cover" style="background-image:url('https://source.unsplash.com/random');"></div>
-                </div>
-                <h4 class="fw6 mt3 mt4-ns mt5-l">6:4</h4>
-                <div class="aspect-ratio aspect-ratio--6x4 mv3 mv4-ns mv5-l">
-                    <div class="aspect-ratio--object br2 bg-center cover" style="background-image:url('https://source.unsplash.com/random');"></div>
-                </div>
-                <h4 class="fw6 mt3 mt4-ns mt5-l">4:3</h4>
-                <div class="aspect-ratio aspect-ratio--4x3 mv3 mv4-ns mv5-l">
-                    <div class="aspect-ratio--object br2 bg-center cover" style="background-image:url('https://source.unsplash.com/random');"></div>
-                </div>
-                <h4 class="fw6 mt3 mt4-ns mt5-l">1:1</h4>
-                <div class="aspect-ratio aspect-ratio--1x1 mv3 mv4-ns mv5-l">
-                    <div class="aspect-ratio--object br2 bg-center cover" style="background-image:url('https://source.unsplash.com/random');"></div>
-                </div>
-            </main>
-        </article>
-        <div class="z-2 flex flex-wrap justify-center mw8 pa3">
-            <div class="grow flex-auto overflow-hidden shadow-6 br2 mw6-l w-30-l ma3">
-                <div class="bg-center cover pv5" style="background-image:url('https://source.unsplash.com/random');"></div>
-                <div class="pa3">
-                    <div class="mr3 f4 truncate">Woah, What do different Lengths of titles look like?</div>
-                    <div class="mr3 f6">Apr 15 <span class="ph2 b">·</span> 5 min read</div>
-                </div>
-            </div>
-            <div class="grow flex-auto overflow-hidden shadow-6 br2 mw6-l w-30-l ma3">
-                <div class="bg-center cover pv5" style="background-image:url('https://source.unsplash.com/random');"></div>
-                <div class="pa3">
-                    <div class="mr3 f4 truncate">Another Blog Post</div>
-                    <div class="mr3 f6">Apr 15 <span class="ph2 b">·</span> 5 min read</div>
-                </div>
-            </div>
-            <div class="grow flex-auto overflow-hidden shadow-6 br2 mw6-l w-30-l ma3">
-                <div class="bg-center cover pv5" style="background-image:url('https://source.unsplash.com/random');"></div>
-                <div class="pa3">
-                    <div class="mr3 f4 truncate">Another Blog Post</div>
-                    <div class="mr3 f6">Apr 15 <span class="ph2 b">·</span> 5 min read</div>
-                </div>
-            </div>
-            <div class="grow flex-auto overflow-hidden shadow-6 br2 mw6-l w-30-l ma3">
-                <div class="bg-center cover pv5" style="background-image:url('https://source.unsplash.com/random');"></div>
-                <div class="pa3">
-                    <div class="mr3 f4 truncate">Another Blog Post</div>
-                    <div class="mr3 f6">Apr 15 <span class="ph2 b">·</span> 5 min read</div>
-                </div>
-            </div>
-            <div class="grow flex-auto overflow-hidden shadow-6 br2 mw6-l w-30-l ma3">
-                <div class="bg-center cover pv5" style="background-image:url('https://source.unsplash.com/random');"></div>
-                <div class="pa3">
-                    <div class="mr3 f4 truncate">Another Blog Post</div>
-                    <div class="mr3 f6">Apr 15 <span class="ph2 b">·</span> 5 min read</div>
-                </div>
-            </div>
-            <div class="grow flex-auto overflow-hidden shadow-6 br2 mw6-l w-30-l ma3">
-                <div class="bg-center cover pv5" style="background-image:url('https://source.unsplash.com/random');"></div>
-                <div class="pa3">
-                    <div class="mr3 f4 truncate">Another Blog Post</div>
-                    <div class="mr3 f6">Apr 15 <span class="ph2 b">·</span> 5 min read</div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer class="flex-none flex flex-wrap items-center justify-around bt b--white w-100">
-        <div class="flex flex-wrap items-center justify-center">
-            <div class="flex-auto flex flex-wrap justify-between w-100-l">
-                <div class="flex-auto flex flex-wrap justify-around items-center bg-navy white pa3">
-                    <div class="flex flex-column pa3 measure">
-                        <div class="f4 pa2 fw7">Become a Host</div>
-                        <div class="pa2">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae soluta laborum voluptate fugit dolore? Corrupti, eos ex!
-                            Quas distinctio voluptatum a similique, excepturi optio iure nulla minus perferendis unde blanditiis.
+                <main class="mh3 mh4-ns mh5-l mb3 mb4-ns mb5-l f3-l f4-ns f5 measure lh-copy">
+                    <h1 class="fw3 mt3 mt4-ns mt5-l lh-title">Here's an Example of a Blog Post on
+                        <a href="index.html" class="link blue">roostorage.com</a>
+                    </h1>
+                    <blockquote class="bl i measure bw2 mv3 b--blue f4 ph2 ph3-ns ph4-l">
+                        This is a pullquote/blockquote. This is where you would put a testimonial or something. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Blanditiis quam cupiditate ab numquam laboriosam voluptates libero.
+                    </blockquote>
+                    <h2 class="fw4 mt3 mt4-ns mt5-l">This is an h2 tag</h2>
+                    <p class="mv2 mv3-ns">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam explicabo natus at possimus voluptatum consectetur harum
+                        doloribus accusamus ipsam? Facere repudiandae distinctio iste, quae minus id cupiditate explicabo
+                        laboriosam corporis?
+                    </p>
+                    <ol class="pl4">
+                        <li class="pa1">Lorem ipsum dolor sit amet consectetur</li>
+                        <li class="pa1">Adipisicing elit exercitationem assumenda?</li>
+                        <li class="pa1">Porro ducimus veritatis nulla ratione.</li>
+                    </ol>
+                    <h3 class="fw5 mt3 mt4-ns mt5-l">This is an h3 tag</h3>
+                    <p class="mv2 mv3-ns">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quam cupiditate ab numquam laboriosam voluptates libero,
+                        pariatur laborum aliquam fugiat impedit? Ut, necessitatibus veniam. Incidunt laudantium ea consequatur
+                        corporis explicabo!
+                    </p>
+                    <ul class="pl4">
+                        <li class="pa1">Lorem ipsum dulor sit amet consectetur</li>
+                        <li class="pa1">Adipisicing elit exercitationem assumenda?</li>
+                        <li class="pa1">Porro ducimus veritatis nulla ratione.</li>
+                    </ul>
+                    <p class="mv2 mv3-ns">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quam cupiditate ab numquam laboriosam voluptates libero,
+                        pariatur laborum aliquam fugiat impedit? Ut, necessitatibus veniam. Incidunt laudantium ea consequatur
+                        corporis explicabo!
+                    </p>
+                    <h4 class="fw6 mt3 mt4-ns mt5-l">This is an h4 tag</h4>
+                    <p class="mv2 mv3-ns">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam explicabo natus at possimus voluptatum consectetur harum
+                        doloribus accusamus ipsam? Facere repudiandae distinctio iste, quae minus id cupiditate explicabo
+                        laboriosam corporis?
+                    </p>
+                    <div class="flex flex-wrap na2">
+                        <div class="flex-auto white tc f2 pa4 ma2 cover br2" style="background-image: url('https://source.unsplash.com/random');">
+                            Gallery
+                        </div>
+                        <div class="flex-auto white tc f2 pa4 ma2 cover br2" style="background-image: url('https://source.unsplash.com/random');">
+                            Gallery
+                        </div>
+                        <div class="flex-auto white tc f2 pa4 ma2 cover br2" style="background-image: url('https://source.unsplash.com/random');">
+                            Gallery
+                        </div>
+                        <div class="flex-auto white tc f2 pa4 ma2 cover br2" style="background-image: url('https://source.unsplash.com/random');">
+                            Gallery
+                        </div>
+                        <div class="flex-auto white tc f2 pa4 ma2 cover br2" style="background-image: url('https://source.unsplash.com/random');">
+                            Gallery
                         </div>
                     </div>
-                    <div class="flex-auto flex flex-column items-stretch pa3 measure">
-                        <div class="flex flex-column pv3 grow">
-                            <label for="" class="ph1 f7">phone</label>
-                            <input type="text" name="" id="" class="navy flex-auto ph2 pv1 br1 ba b--black-10">
-                        </div>
-                        <div class="flex flex-column pv3 grow">
-                            <label for="" class="ph1 f7">email</label>
-                            <input type="text" name="" id="" class="navy flex-auto ph2 pv1 br1 ba b--black-10">
-                        </div>
-                        <div class="flex flex-column pv3 grow">
-                            <label for="" class="ph1 f7">address</label>
-                            <input type="text" name="" id="" class="navy flex-auto ph2 pv1 br1 ba b--black-10">
-                        </div>
-                        <div class="flex flex-wrap justify-around ma2">
-                            <div class="bg-blue white fw7 ph4 pv2 br1 grow">Sign Up</div>
-                            <div class="hover-bg-black-10 fw7 ph4 pv2 br1 grow">More Info</div>
-                        </div>
+                    <h5 class="fw7 mt3 mt4-ns mt5-l">This is an h5 tag</h5>
+                    <p class="mv2 mv3-ns">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quam cupiditate ab numquam laboriosam voluptates libero,
+                        pariatur laborum aliquam fugiat impedit?
+                        <span class="i">This is some italic text!</span> Ut, necessitatibus veniam. Incidunt laudantium ea consequatur corporis
+                        explicabo!
+                    </p>
+                    <p class="mv2 mv3-ns">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quam cupiditate ab numquam laboriosam voluptates libero,
+                        pariatur laborum aliquam fugiat impedit?
+                        <span class="b">This is some bold text!</span> Ut, necessitatibus veniam. Incidunt laudantium ea consequatur corporis
+                        explicabo!
+                    </p>
+                    <div class="white tc f2 pv7 cover br2 parallax mv3 mv4-ns mv5-l" style="background-image: url('https://source.unsplash.com/random');">
+                        Parallax Example</div>
+                    <p class="mv2 mv3-ns">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quam cupiditate ab numquam laboriosam voluptates libero,
+                        pariatur laborum aliquam fugiat impedit? Ut, necessitatibus veniam. Incidunt laudantium ea consequatur
+                        corporis explicabo!
+                    </p>
+                    <p class="mv2 mv3-ns">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quam cupiditate ab numquam laboriosam voluptates libero,
+                        pariatur laborum aliquam fugiat impedit? Ut, necessitatibus veniam. Incidunt laudantium ea consequatur
+                        corporis explicabo!
+                    </p>
+                    <h6 class="fw8 mt3 mt4-ns mt5-l">This is an h6 tag</h6>
+                    <p class="mv2 mv3-ns">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam explicabo natus at possimus voluptatum consectetur harum
+                        doloribus accusamus ipsam? Facere repudiandae distinctio iste, quae minus id cupiditate explicabo
+                        laboriosam corporis?
+                    </p>
+                    <div class="white tc f2 pv6 cover br2 mv3 mv4-ns mv5-l" style="background-image: url('https://source.unsplash.com/random');">
+                        Static Example</div>
+                    <div class="white tc f2 pv6 cover nr3 nr4-ns nr5-l nl3 nl4-ns nl5-l mv3 mv4-ns mv5-l" style="background-image: url('https://source.unsplash.com/random');">
+                        Full Example</div>
+                    <h3 class="fw5 mt3 mt4-ns mt5-l">Aspect Ratios For Images!</h3>
+                    <h4 class="fw6 mt3 mt4-ns mt5-l">16:9</h4>
+                    <div class="aspect-ratio aspect-ratio--16x9 mv3 mv4-ns mv5-l">
+                        <div class="aspect-ratio--object br2 bg-center cover" style="background-image:url('https://source.unsplash.com/random');"></div>
+                    </div>
+                    <h4 class="fw6 mt3 mt4-ns mt5-l">8:5</h4>
+                    <div class="aspect-ratio aspect-ratio--8x5 mv3 mv4-ns mv5-l">
+                        <div class="aspect-ratio--object br2 bg-center cover" style="background-image:url('https://source.unsplash.com/random');"></div>
+                    </div>
+                    <h4 class="fw6 mt3 mt4-ns mt5-l">7:5</h4>
+                    <div class="aspect-ratio aspect-ratio--7x5 mv3 mv4-ns mv5-l">
+                        <div class="aspect-ratio--object br2 bg-center cover" style="background-image:url('https://source.unsplash.com/random');"></div>
+                    </div>
+                    <h4 class="fw6 mt3 mt4-ns mt5-l">6:4</h4>
+                    <div class="aspect-ratio aspect-ratio--6x4 mv3 mv4-ns mv5-l">
+                        <div class="aspect-ratio--object br2 bg-center cover" style="background-image:url('https://source.unsplash.com/random');"></div>
+                    </div>
+                    <h4 class="fw6 mt3 mt4-ns mt5-l">4:3</h4>
+                    <div class="aspect-ratio aspect-ratio--4x3 mv3 mv4-ns mv5-l">
+                        <div class="aspect-ratio--object br2 bg-center cover" style="background-image:url('https://source.unsplash.com/random');"></div>
+                    </div>
+                    <h4 class="fw6 mt3 mt4-ns mt5-l">1:1</h4>
+                    <div class="aspect-ratio aspect-ratio--1x1 mv3 mv4-ns mv5-l">
+                        <div class="aspect-ratio--object br2 bg-center cover" style="background-image:url('https://source.unsplash.com/random');"></div>
+                    </div>
+                </main>
+            </article>
+            <div class="z-2 flex flex-wrap justify-center mw8 pa3">
+                <div class="grow flex-auto overflow-hidden shadow-6 br2 mw6-l w-30-l ma3">
+                    <div class="bg-center cover pv5" style="background-image:url('https://source.unsplash.com/random');"></div>
+                    <div class="pa3">
+                        <div class="mr3 f4 truncate">Woah, What do different Lengths of titles look like?</div>
+                        <div class="mr3 f6">Apr 15
+                            <span class="ph2 b">·</span> 5 min read</div>
                     </div>
                 </div>
-                <div class="flex-auto bg-blue white self-stretch justify-around flex flex-column pa3">
-                    <div class="pa2">Home</div>
-                    <div class="pa2">About Hosting</div>
-                    <div class="pa2">Resolution Center</div>
-                    <div class="pa2">Listings</div>
-                    <div class="pa2">My Profile</div>
-                    <div class="pa2">FAQ</div>
+                <div class="grow flex-auto overflow-hidden shadow-6 br2 mw6-l w-30-l ma3">
+                    <div class="bg-center cover pv5" style="background-image:url('https://source.unsplash.com/random');"></div>
+                    <div class="pa3">
+                        <div class="mr3 f4 truncate">Another Blog Post</div>
+                        <div class="mr3 f6">Apr 15
+                            <span class="ph2 b">·</span> 5 min read</div>
+                    </div>
                 </div>
-                <div class="flex-auto flex flex-column self-stretch flex-row-l w-80-l justify-around pa3">
-                    <div class="grow flex pa2">
-                        <div class="flex-none self-center pa3 pt2 pl2 mr2 contain" style="background-image:url('https://icongr.am/clarity/phone-handset.svg?color=333333');"></div>
-                        <div class="flex flex-column">
-                            <div class="f7 fw7">give us a ring</div>
-                            <div>XXX - XXX - XXXX</div>
-                        </div>
+                <div class="grow flex-auto overflow-hidden shadow-6 br2 mw6-l w-30-l ma3">
+                    <div class="bg-center cover pv5" style="background-image:url('https://source.unsplash.com/random');"></div>
+                    <div class="pa3">
+                        <div class="mr3 f4 truncate">Another Blog Post</div>
+                        <div class="mr3 f6">Apr 15
+                            <span class="ph2 b">·</span> 5 min read</div>
                     </div>
-                    <div class="grow flex pa2">
-                        <div class="flex-none self-center pa3 pt2 pl2 mr2 contain" style="background-image:url('https://icongr.am/clarity/envelope.svg?color=333333');"></div>
-                        <div class="flex flex-column">
-                            <div class="f7 fw7">email us at</div>
-                            <div>Hello@RooStorage.com</div>
-                        </div>
+                </div>
+                <div class="grow flex-auto overflow-hidden shadow-6 br2 mw6-l w-30-l ma3">
+                    <div class="bg-center cover pv5" style="background-image:url('https://source.unsplash.com/random');"></div>
+                    <div class="pa3">
+                        <div class="mr3 f4 truncate">Another Blog Post</div>
+                        <div class="mr3 f6">Apr 15
+                            <span class="ph2 b">·</span> 5 min read</div>
                     </div>
-                    <div class="grow flex pa2">
-                        <div class="flex-none self-center pa3 pt2 pl2 mr2 contain" style="background-image:url('https://icongr.am/clarity/store.svg?color=333333');"></div>
-                        <div class="flex flex-column">
-                            <div class="f7 fw7">our address</div>
-                            <div>314 stadium blvd</div>
-                        </div>
+                </div>
+                <div class="grow flex-auto overflow-hidden shadow-6 br2 mw6-l w-30-l ma3">
+                    <div class="bg-center cover pv5" style="background-image:url('https://source.unsplash.com/random');"></div>
+                    <div class="pa3">
+                        <div class="mr3 f4 truncate">Another Blog Post</div>
+                        <div class="mr3 f6">Apr 15
+                            <span class="ph2 b">·</span> 5 min read</div>
+                    </div>
+                </div>
+                <div class="grow flex-auto overflow-hidden shadow-6 br2 mw6-l w-30-l ma3">
+                    <div class="bg-center cover pv5" style="background-image:url('https://source.unsplash.com/random');"></div>
+                    <div class="pa3">
+                        <div class="mr3 f4 truncate">Another Blog Post</div>
+                        <div class="mr3 f6">Apr 15
+                            <span class="ph2 b">·</span> 5 min read</div>
                     </div>
                 </div>
             </div>
-            <div class="flex flex-wrap justify-around flex-auto bt b--black-05 f7 w-100-l bg-navy white">
-                <div class="flex bb b--black-05 pv2 ph3">
-                    <div class="glow o-50 flex pv2 ph3">
-                        <div class="mh1 pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/fontawesome/twitter.svg?color=ffffff');"></div>
-                        Twitter
+        </main>
+        <footer class="flex-none flex flex-wrap items-center justify-around bt b--white w-100">
+            <div class="flex flex-wrap items-center justify-center">
+                <div class="flex-auto flex flex-wrap justify-between w-100-l">
+                    <div class="flex-auto flex flex-wrap justify-around items-center bg-navy white pa3">
+                        <div class="flex flex-column pa3 measure">
+                            <div class="f4 pa2 fw7">Become a Host</div>
+                            <div class="pa2">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae soluta laborum voluptate fugit dolore? Corrupti, eos ex!
+                                Quas distinctio voluptatum a similique, excepturi optio iure nulla minus perferendis unde
+                                blanditiis.
+                            </div>
+                        </div>
+                        <div class="flex-auto flex flex-column items-stretch pa3 measure">
+                            <div class="flex flex-column pv3 grow">
+                                <label for="" class="ph1 f7">phone</label>
+                                <input type="text" name="" id="" class="navy flex-auto ph2 pv1 br1 ba b--black-10">
+                            </div>
+                            <div class="flex flex-column pv3 grow">
+                                <label for="" class="ph1 f7">email</label>
+                                <input type="text" name="" id="" class="navy flex-auto ph2 pv1 br1 ba b--black-10">
+                            </div>
+                            <div class="flex flex-column pv3 grow">
+                                <label for="" class="ph1 f7">address</label>
+                                <input type="text" name="" id="" class="navy flex-auto ph2 pv1 br1 ba b--black-10">
+                            </div>
+                            <div class="flex flex-wrap justify-around ma2">
+                                <div class="bg-blue white fw7 ph4 pv2 br1 grow">Sign Up</div>
+                                <div class="hover-bg-black-10 fw7 ph4 pv2 br1 grow">More Info</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="glow o-50 flex pv2 ph3">
-                        <div class="mh1 pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/fontawesome/facebook.svg?color=ffffff');"></div>
-                        Facecbook
+                    <div class="flex-auto bg-blue white self-stretch justify-around flex flex-column pa3">
+                        <div class="pa2">Home</div>
+                        <div class="pa2">About Hosting</div>
+                        <div class="pa2">Resolution Center</div>
+                        <div class="pa2">Listings</div>
+                        <div class="pa2">My Profile</div>
+                        <div class="pa2">FAQ</div>
                     </div>
-                    <div class="glow o-50 flex pv2 ph3">
-                        <div class="mh1 pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/fontawesome/instagram.svg?color=ffffff');"></div>
-                        Instagram
+                    <div class="flex-auto flex flex-column self-stretch flex-row-l w-80-l justify-around pa3">
+                        <div class="grow flex pa2">
+                            <div class="flex-none self-center pa3 pt2 pl2 mr2 contain" style="background-image:url('https://icongr.am/clarity/phone-handset.svg?color=333333');"></div>
+                            <div class="flex flex-column">
+                                <div class="f7 fw7">give us a ring</div>
+                                <div>XXX - XXX - XXXX</div>
+                            </div>
+                        </div>
+                        <div class="grow flex pa2">
+                            <div class="flex-none self-center pa3 pt2 pl2 mr2 contain" style="background-image:url('https://icongr.am/clarity/envelope.svg?color=333333');"></div>
+                            <div class="flex flex-column">
+                                <div class="f7 fw7">email us at</div>
+                                <div>Hello@RooStorage.com</div>
+                            </div>
+                        </div>
+                        <div class="grow flex pa2">
+                            <div class="flex-none self-center pa3 pt2 pl2 mr2 contain" style="background-image:url('https://icongr.am/clarity/store.svg?color=333333');"></div>
+                            <div class="flex flex-column">
+                                <div class="f7 fw7">our address</div>
+                                <div>314 stadium blvd</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="flex flex-wrap justify-between bb b--black-05 pa3">
-                    <div class="glow o-50 flex mh2">
-                        Diversity Inclusion
+                <div class="flex flex-wrap justify-around flex-auto bt b--black-05 f7 w-100-l bg-navy white">
+                    <div class="flex bb b--black-05 pv2 ph3">
+                        <div class="glow o-50 flex pv2 ph3">
+                            <div class="mh1 pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/fontawesome/twitter.svg?color=ffffff');"></div>
+                            Twitter
+                        </div>
+                        <div class="glow o-50 flex pv2 ph3">
+                            <div class="mh1 pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/fontawesome/facebook.svg?color=ffffff');"></div>
+                            Facecbook
+                        </div>
+                        <div class="glow o-50 flex pv2 ph3">
+                            <div class="mh1 pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/fontawesome/instagram.svg?color=ffffff');"></div>
+                            Instagram
+                        </div>
                     </div>
-                    <div class="glow o-50 flex mh2">
-                        Brand Guidelines
-                    </div>
-                    <div class="glow o-50 flex mh2">
-                        Terms of service
-                    </div>
-                    <div class="glow o-50 flex mh2">
-                        Copyright 2018
+                    <div class="flex flex-wrap justify-between bb b--black-05 pa3">
+                        <div class="glow o-50 flex mh2">
+                            Diversity Inclusion
+                        </div>
+                        <div class="glow o-50 flex mh2">
+                            Brand Guidelines
+                        </div>
+                        <div class="glow o-50 flex mh2">
+                            Terms of service
+                        </div>
+                        <div class="glow o-50 flex mh2">
+                            Copyright 2018
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 
 </html>
