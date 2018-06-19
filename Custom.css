@@ -625,3 +625,140 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .tooltip:hover .tooltiptext {
   opacity: 1
 }
+
+.appearance-none {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider-blue::-webkit-slider-thumb,
+.hover-slider-blue::-webkit-slider-thumb:hover,
+.hover-slider-blue::-webkit-slider-thumb:active,
+.hover-slider-blue::-webkit-slider-thumb:focus {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 1em;
+  /* Set a specific slider handle width */
+  height: 1em;
+  /* Slider handle height */
+  background: var(--blue);
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+  border-radius: 50%
+}
+
+.slider-blue::-moz-range-thumb,
+.hover-slider-blue::-moz-range-thumb:hover,
+.hover-slider-blue::-moz-range-thumb:active,
+.hover-slider-blue::-moz-range-thumb:focus {
+  width: 1em;
+  /* Set a specific slider handle width */
+  height: 1em;
+  /* Slider handle height */
+  background: var(--blue);
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+  border-radius: 50%
+}
+
+.slider-navy::-webkit-slider-thumb,
+.hover-slider-navy::-webkit-slider-thumb:hover,
+.hover-slider-navy::-webkit-slider-thumb:active,
+.hover-slider-navy::-webkit-slider-thumb:focus {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 1em;
+  /* Set a specific slider handle width */
+  height: 1em;
+  /* Slider handle height */
+  background: var(--navy);
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+  border-radius: 50%
+}
+
+.slider-navy::-moz-range-thumb,
+.hover-slider-navy::-moz-range-thumb:hover,
+.hover-slider-navy::-moz-range-thumb:active,
+.hover-slider-navy::-moz-range-thumb:focus {
+  width: 1em;
+  /* Set a specific slider handle width */
+  height: 1em;
+  /* Slider handle height */
+  background: var(--navy);
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+  border-radius: 50%
+}
+
+.slider-orange::-webkit-slider-thumb,
+.hover-slider-orange::-webkit-slider-thumb:hover,
+.hover-slider-orange::-webkit-slider-thumb:active,
+.hover-slider-orange::-webkit-slider-thumb:focus {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 1em;
+  /* Set a specific slider handle width */
+  height: 1em;
+  /* Slider handle height */
+  background: var(--orange);
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+  border-radius: 50%
+}
+
+.slider-orange::-moz-range-thumb,
+.hover-slider-orange::-moz-range-thumb:hover,
+.hover-slider-orange::-moz-range-thumb:active,
+.hover-slider-orange::-moz-range-thumb:focus {
+  width: 1em;
+  /* Set a specific slider handle width */
+  height: 1em;
+  /* Slider handle height */
+  background: var(--orange);
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+  border-radius: 50%
+}
+
+.slider-yellow::-webkit-slider-thumb,
+.hover-slider-yellow::-webkit-slider-thumb:hover,
+.hover-slider-yellow::-webkit-slider-thumb:active,
+.hover-slider-yellow::-webkit-slider-thumb:focus {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 1em;
+  /* Set a specific slider handle width */
+  height: 1em;
+  /* Slider handle height */
+  background: var(--yellow);
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+  border-radius: 50%
+}
+
+.slider-yellow::-moz-range-thumb,
+.hover-slider-yellow::-moz-range-thumb:hover,
+.hover-slider-yellow::-moz-range-thumb:active,
+.hover-slider-yellow::-moz-range-thumb:focus {
+  width: 1em;
+  /* Set a specific slider handle width */
+  height: 1em;
+  /* Slider handle height */
+  background: var(--yellow);
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+  border-radius: 50%
+}
