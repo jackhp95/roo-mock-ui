@@ -21,6 +21,15 @@
         .checkbox:checked+.checkbox-wrapper .checkbox-toggle {
             left: 2rem;
         }
+
+        .no-select {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
     </style>
 </head>
 
@@ -105,51 +114,51 @@
                 </div>
                 <div class="flex flex-column ma2 flex-auto relative">
                     <label class="f7 mv1 mh2" for="">Type</label>
-                    <div class="flex-auto flex ba b--black-20 br2 bg-white">
+                    <div class="flex-auto flex ba b--black-20 br2 fw6 bg-white">
                         <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
                             <label class="pa3 dib f7" for="">Student</label>
-                            <input class="absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="student">
+                            <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="student">
                         </div>
                         <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
                             <label class="pa3 dib f7" for="">Tailgating</label>
-                            <input class="absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="tailgating">
+                            <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="tailgating">
                         </div>
                         <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
                             <label class="pa3 dib f7" for="">Moving</label>
-                            <input class="absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="moving">
+                            <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="moving">
                         </div>
                         <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden hover-bg-blue hover-white">
                             <label class="pa3 dib f7" for="">Vehicle</label>
-                            <input class="absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="vehicle">
+                            <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="vehicle">
                         </div>
                     </div>
                 </div>
                 <div class="flex-auto flex">
                     <div class="flex flex-column ma2 flex-auto relative">
                         <label class="f7 mv1 mh2" for="">Size</label>
-                        <div class="flex-auto flex ba b--black-20 br2 bg-white">
+                        <div class="flex-auto flex ba b--black-20 br2 fw6 bg-white">
                             <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
                                 <label class="pa3 dib f7" for="">S</label>
-                                <input class="absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="s">
+                                <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="s">
                             </div>
                             <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
                                 <label class="pa3 dib f7" for="">M</label>
-                                <input class="absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="m">
+                                <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="m">
                             </div>
                             <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
                                 <label class="pa3 dib f7" for="">L</label>
-                                <input class="absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="l">
+                                <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="l">
                             </div>
                             <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden hover-bg-blue hover-white">
                                 <label class="pa3 dib f7" for="">XL</label>
-                                <input class="absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="xl">
+                                <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="xl">
                             </div>
                         </div>
                     </div>
                     <div class="flex flex-column ma2 justify-center items-center">
                         <label class="f7 mv1 mh2" for="">Indoors</label>
                         <div class="relative dib overflow-hidden br-pill">
-                            <input class="absolute z-5 w-100 h-100 o-0 pointer checkbox" type="checkbox">
+                            <input class="no-select absolute z-5 w-100 h-100 o-0 pointer checkbox" type="checkbox">
                             <div class="relative z-4 dib w3 h2 overflow-hidden bg-black-10 br4 v-mid bg-animate checkbox-wrapper">
                                 <div class="absolute right-auto left-0 w2 h2 br4 ba b--black-40 t-cb bg-animate bg-white checkbox-toggle"></div>
                             </div>
@@ -727,28 +736,28 @@
                                     Email
                                     <div class="pa1 pt3 pl3 o-50 glow contain bg-center" style="background-image:url('https://icongr.am/clarity/info.svg?color=002D62');"></div>
                                 </label>
-                                <input class="navy fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" id="" name="email" type="text">
+                                <input class="no-select navy fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" id="" name="email" type="text">
                             </div>
                             <div class="flex flex-column pv3">
                                 <label class="ph1 flex justify-between" for="">
                                     Name
                                     <div class="pa1 pt3 pl3 o-50 glow contain bg-center" style="background-image:url('https://icongr.am/clarity/info.svg?color=002D62');"></div>
                                 </label>
-                                <input class="navy fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" id="" name="name" type="text">
+                                <input class="no-select navy fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" id="" name="name" type="text">
                             </div>
                             <div class="flex flex-column pv3">
                                 <label class="ph1 flex justify-between" for="">
                                     Storage near
                                     <div class="pa1 pt3 pl3 o-50 glow contain bg-center" style="background-image:url('https://icongr.am/clarity/info.svg?color=002D62');"></div>
                                 </label>
-                                <input class="navy fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" id="" name="address" type="text">
+                                <input class="no-select navy fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" id="" name="address" type="text">
                             </div>
                             <div class="flex flex-column pv3">
                                 <label class="ph1 flex justify-between" for="">
                                     Description
                                     <div class="pa1 pt3 pl3 o-50 glow contain bg-center" style="background-image:url('https://icongr.am/clarity/info.svg?color=002D62');"></div>
                                 </label>
-                                <input class="fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" contenteditable="true" name="description">
+                                <input class="no-select fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" contenteditable="true" name="description">
                             </div>
                             <div class="white bg-yellow br1 f5 mv3 grow pointer tc pv3 ph4 fw7">
                                 Request Space
