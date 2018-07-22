@@ -9,11 +9,24 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <link rel="stylesheet" href="Custom.css" />
+    <style>
+        .t-cb {
+            transition: all .3s cubic-bezier(.33, 1, .66, 1);
+        }
+
+        .checkbox:checked+.checkbox-wrapper {
+            background-color: #007ac3;
+        }
+
+        .checkbox:checked+.checkbox-wrapper .checkbox-toggle {
+            left: 2rem;
+        }
+    </style>
 </head>
 
 <body class="f6 fw5 flex flex-column-l flex-row-m flex-column-reverse items-stretch vh-100">
-    <nav id="nav" class="f5-ns fw6-ns f7 fw7 flex-none pv3-m ph4-l pa0 shadow-hover z-9999 flex flex-column-l bg-white">
-        <ul class="flex flex-column-m no-underline list ma0 pa0 overflow-visible-ns overflow-hidden w-100 w-auto-ns">
+    <nav id="nav" class="f5-ns fw6-ns f7 fw7 flex-none pv3-m pa0 shadow-hover z-9999 flex flex-column-ns flex-column-reverse bg-white">
+        <ul class="flex flex-column-m no-underline list ma0 pa0 ph4-l overflow-visible-ns overflow-hidden w-100 w-auto-ns">
             <li class="dn flex-auto-l flex-ns items-center justify-center-ms ph4 pv3-m">
                 <a class="grow-large dib br-pill black">
                     <div class="contain pa4 pt3-l pl3-l flex-auto self-stretch grow" style="background:url('https://s3.us-east-2.amazonaws.com/roo-image-storage/static-images/logo/Tight/PNG/Orange.png') no-repeat center;"></div>
@@ -32,7 +45,9 @@
                     routerlink="/listings">
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
                         <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/info.svg')"></span>
-                        <span class="dn-l di">FAQ</span><span class="dn di-l">Resolution Center</span></span>
+                        <span class="dn-l di">FAQ</span>
+                        <span class="dn di-l">Resolution Center</span>
+                    </span>
                     <div class="b--orange ba child"></div>
                 </a>
             </li>
@@ -64,626 +79,710 @@
             </li>
         </ul>
     </nav>
-    <div class="flex-auto overflow-auto">
-        <main>
-            <!-- Listings -->
-            <div class="flex flex-column items-center pa2-m">
-                <div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
-                    <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
-                        <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
-                        <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
-                            <div class="flex justify-between items-stretch">
-                                <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
-                                    <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
-                                    <div class="flex items-center justify-between shadow-hover br1 f5 bg-blue grow white mv3">
-                                        <div class="mv3 mh4 fw5 nowrap">Reserve for $42</div>
+    <div class="relative flex-auto overflow-auto flex flex-column-ns flex-column-reverse">
+        <details id="details" open="true" class="z-999">
+            <summary class="fixed bottom-2 right-2-ns right-0 pa3 bg-blue br-pill z-max mb4 mr1 mr0-ns mb0-ns outline-0">
+                <div class="pa2 pt3 pl3 contain" style="background:url('https://icongr.am/clarity/search.svg?color=ffffff')"></div>
+            </summary>
+            <div class="bg-black-60 dn-ns absolute--fill absolute tc pv4 f4 fw7 white">Tap to Clear Search</div>
+            <form style="max-height:75vh" class="flex flex-row flex-wrap flex-nowrap-l self-end-m items-stretch ph4-l pa2 shadow-hover bg-white overflow-auto">
+                <div class="flex flex-column ma2 flex-auto relative">
+                    <label class="f7 mv1 mh2" for="">Address</label>
+                    <div class="flex-auto flex relative">
+                        <input style="border-width: 1px;" class="flex-auto b--black-20 br2 outline-0 pa2" type="text" name="address" id="">
+                        <div class="absolute right-0 top-0 bottom-0 mr2 pa3 pt2 pl2 contain bg-center glow o-40" style="background-image:url('https://icongr.am/clarity/compass.svg')"></div>
+                    </div>
+                </div>
+                <div class="flex flex-column ma2 flex-auto relative">
+                    <label class="f7 mv1 mh2" for="">Start Date</label>
+                    <input style="border-width: 1px;" class="flex-auto b--black-20 br2 outline-0 pa2" type="date" name="start" id="">
+                </div>
+                <div class="flex flex-column ma2 flex-auto relative">
+                    <label class="f7 mv1 mh2" for="">End Date</label>
+                    <input style="border-width: 1px;" class="flex-auto b--black-20 br2 outline-0 pa2" type="date" name="end" id="">
+                </div>
+                <div class="flex flex-column ma2 flex-auto relative">
+                    <label class="f7 mv1 mh2" for="">Type</label>
+                    <div class="flex-auto flex ba b--black-20 br2 bg-white">
+                        <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
+                            <label class="pa3 dib f7" for="">Student</label>
+                            <input class="absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="student">
+                        </div>
+                        <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
+                            <label class="pa3 dib f7" for="">Tailgating</label>
+                            <input class="absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="tailgating">
+                        </div>
+                        <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
+                            <label class="pa3 dib f7" for="">Moving</label>
+                            <input class="absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="moving">
+                        </div>
+                        <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden hover-bg-blue hover-white">
+                            <label class="pa3 dib f7" for="">Vehicle</label>
+                            <input class="absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="vehicle">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-auto flex">
+                    <div class="flex flex-column ma2 flex-auto relative">
+                        <label class="f7 mv1 mh2" for="">Size</label>
+                        <div class="flex-auto flex ba b--black-20 br2 bg-white">
+                            <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
+                                <label class="pa3 dib f7" for="">S</label>
+                                <input class="absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="s">
+                            </div>
+                            <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
+                                <label class="pa3 dib f7" for="">M</label>
+                                <input class="absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="m">
+                            </div>
+                            <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
+                                <label class="pa3 dib f7" for="">L</label>
+                                <input class="absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="l">
+                            </div>
+                            <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden hover-bg-blue hover-white">
+                                <label class="pa3 dib f7" for="">XL</label>
+                                <input class="absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="xl">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-column ma2 justify-center items-center">
+                        <label class="f7 mv1 mh2" for="">Indoors</label>
+                        <div class="relative dib overflow-hidden br-pill">
+                            <input class="absolute z-5 w-100 h-100 o-0 pointer checkbox" type="checkbox">
+                            <div class="relative z-4 dib w3 h2 overflow-hidden bg-black-10 br4 v-mid bg-animate checkbox-wrapper">
+                                <div class="absolute right-auto left-0 w2 h2 br4 ba b--black-40 t-cb bg-animate bg-white checkbox-toggle"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-none pa4 dn-ns"></div>
+                </div>
+            </form>
+        </details>
+        <div class="relative flex-auto overflow-auto">
+            <main>
+                <!-- Listings -->
+                <div class="flex flex-column items-center pa2-m">
+                    <div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
+                        <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
+                            <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
+                            <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
+                                <div class="flex justify-between items-stretch">
+                                    <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
+                                        <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
+                                        <div class="flex items-center justify-between shadow-hover br1 f5 bg-blue grow white mv3">
+                                            <div class="mv3 mh4 fw5 nowrap">Reserve for $42</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure-ns">
-                                    <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
-                                        <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
-                                        <div class="i mr1 f7">Roo Verified</div>
-                                    </div>
-                                    <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
-                                        Joanne's Garage
-                                    </div>
-                                    <div class="mh3 mv2 lh-copy">
-                                        Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iste temporibus in ab sequi omnis provident ullam
-                                        ut assumenda.
-                                    </div>
-                                    <div class="flex flex-wrap items-center">
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Space</div>
-                                            <div class="flex-auto fw3 f5">15
-                                                <sup>sqft</sup>
+                                    <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure-ns">
+                                        <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
+                                            <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
+                                            <div class="i mr1 f7">Roo Verified</div>
+                                        </div>
+                                        <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
+                                            Joanne's Garage
+                                        </div>
+                                        <div class="mh3 mv2 lh-copy">
+                                            Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iste temporibus in ab sequi omnis provident ullam
+                                            ut assumenda.
+                                        </div>
+                                        <div class="flex flex-wrap items-center">
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Space</div>
+                                                <div class="flex-auto fw3 f5">15
+                                                    <sup>sqft</sup>
+                                                </div>
+                                            </div>
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Dimensions</div>
+                                                <div class="flex-auto fw3 f5">5
+                                                    <sup>ft</sup> x 3
+                                                    <sup>ft</sup>
+                                                </div>
+                                            </div>
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Location</div>
+                                                <div class="flex-auto fw3 f5">East Campus</div>
                                             </div>
                                         </div>
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Dimensions</div>
-                                            <div class="flex-auto fw3 f5">5
-                                                <sup>ft</sup> x 3
-                                                <sup>ft</sup>
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Location</div>
-                                            <div class="flex-auto fw3 f5">East Campus</div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-column pv3 ph2">
-                                        <div class="flex-auto fw6 f7 mh2 mv1">Features</div>
-                                        <div class="fw2 flex-auto f7 flex flex-wrap lh-copy">
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/video-camera.svg?color=002D62');"></div>
-                                                <div class="ml2">Security Camera</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/thermometer.svg?color=002D62');"></div>
-                                                <div class="ml2">Climate Control</div>
-                                            </div>
+                                        <div class="flex flex-column pv3 ph2">
+                                            <div class="flex-auto fw6 f7 mh2 mv1">Features</div>
+                                            <div class="fw2 flex-auto f7 flex flex-wrap lh-copy">
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/video-camera.svg?color=002D62');"></div>
+                                                    <div class="ml2">Security Camera</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/thermometer.svg?color=002D62');"></div>
+                                                    <div class="ml2">Climate Control</div>
+                                                </div>
 
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
-                                                <div class="ml2">24/7 Access</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/accessibility-1.svg?color=002D62');"></div>
-                                                <div class="ml2">Easy Entry</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
-                                                <div class="ml2">No Pets</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/ban.svg?color=002D62');"></div>
-                                                <div class="ml2">Non-Smoking</div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
+                                                    <div class="ml2">24/7 Access</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/accessibility-1.svg?color=002D62');"></div>
+                                                    <div class="ml2">Easy Entry</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
+                                                    <div class="ml2">No Pets</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/ban.svg?color=002D62');"></div>
+                                                    <div class="ml2">Non-Smoking</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
+                        <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
+                            <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
+                            <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
+                                <div class="flex justify-between items-stretch">
+                                    <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
+                                        <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
+                                        <div class="flex items-center justify-between shadow-hover br1 f5 bg-blue grow white mv3">
+                                            <div class="mv3 mh4 fw5 nowrap">Reserve for $42</div>
+                                        </div>
+                                    </div>
+                                    <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure-ns">
+                                        <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
+                                            <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
+                                            <div class="i mr1 f7">Roo Verified</div>
+                                        </div>
+                                        <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
+                                            Joanne's Garage
+                                        </div>
+                                        <div class="mh3 mv2 lh-copy">
+                                            Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iste temporibus in ab sequi omnis provident ullam
+                                            ut assumenda.
+                                        </div>
+                                        <div class="flex flex-wrap items-center">
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Space</div>
+                                                <div class="flex-auto fw3 f5">15
+                                                    <sup>sqft</sup>
+                                                </div>
+                                            </div>
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Dimensions</div>
+                                                <div class="flex-auto fw3 f5">5
+                                                    <sup>ft</sup> x 3
+                                                    <sup>ft</sup>
+                                                </div>
+                                            </div>
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Location</div>
+                                                <div class="flex-auto fw3 f5">East Campus</div>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column pv3 ph2">
+                                            <div class="flex-auto fw6 f7 mh2 mv1">Features</div>
+                                            <div class="fw2 flex-auto f7 flex flex-wrap lh-copy">
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/video-camera.svg?color=002D62');"></div>
+                                                    <div class="ml2">Security Camera</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/thermometer.svg?color=002D62');"></div>
+                                                    <div class="ml2">Climate Control</div>
+                                                </div>
+
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
+                                                    <div class="ml2">24/7 Access</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/accessibility-1.svg?color=002D62');"></div>
+                                                    <div class="ml2">Easy Entry</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
+                                                    <div class="ml2">No Pets</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/ban.svg?color=002D62');"></div>
+                                                    <div class="ml2">Non-Smoking</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
+                        <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
+                            <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
+                            <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
+                                <div class="flex justify-between items-stretch">
+                                    <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
+                                        <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
+                                        <div class="flex items-center justify-between shadow-hover br1 f5 bg-blue grow white mv3">
+                                            <div class="mv3 mh4 fw5 nowrap">Reserve for $42</div>
+                                        </div>
+                                    </div>
+                                    <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure-ns">
+                                        <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
+                                            <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
+                                            <div class="i mr1 f7">Roo Verified</div>
+                                        </div>
+                                        <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
+                                            Joanne's Garage
+                                        </div>
+                                        <div class="mh3 mv2 lh-copy">
+                                            Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iste temporibus in ab sequi omnis provident ullam
+                                            ut assumenda.
+                                        </div>
+                                        <div class="flex flex-wrap items-center">
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Space</div>
+                                                <div class="flex-auto fw3 f5">15
+                                                    <sup>sqft</sup>
+                                                </div>
+                                            </div>
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Dimensions</div>
+                                                <div class="flex-auto fw3 f5">5
+                                                    <sup>ft</sup> x 3
+                                                    <sup>ft</sup>
+                                                </div>
+                                            </div>
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Location</div>
+                                                <div class="flex-auto fw3 f5">East Campus</div>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column pv3 ph2">
+                                            <div class="flex-auto fw6 f7 mh2 mv1">Features</div>
+                                            <div class="fw2 flex-auto f7 flex flex-wrap lh-copy">
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/video-camera.svg?color=002D62');"></div>
+                                                    <div class="ml2">Security Camera</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/thermometer.svg?color=002D62');"></div>
+                                                    <div class="ml2">Climate Control</div>
+                                                </div>
+
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
+                                                    <div class="ml2">24/7 Access</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/accessibility-1.svg?color=002D62');"></div>
+                                                    <div class="ml2">Easy Entry</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
+                                                    <div class="ml2">No Pets</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/ban.svg?color=002D62');"></div>
+                                                    <div class="ml2">Non-Smoking</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
+                        <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
+                            <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
+                            <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
+                                <div class="flex justify-between items-stretch">
+                                    <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
+                                        <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
+                                        <div class="flex items-center justify-between shadow-hover br1 f5 bg-blue grow white mv3">
+                                            <div class="mv3 mh4 fw5 nowrap">Reserve for $42</div>
+                                        </div>
+                                    </div>
+                                    <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure-ns">
+                                        <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
+                                            <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
+                                            <div class="i mr1 f7">Roo Verified</div>
+                                        </div>
+                                        <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
+                                            Joanne's Garage
+                                        </div>
+                                        <div class="mh3 mv2 lh-copy">
+                                            Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iste temporibus in ab sequi omnis provident ullam
+                                            ut assumenda.
+                                        </div>
+                                        <div class="flex flex-wrap items-center">
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Space</div>
+                                                <div class="flex-auto fw3 f5">15
+                                                    <sup>sqft</sup>
+                                                </div>
+                                            </div>
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Dimensions</div>
+                                                <div class="flex-auto fw3 f5">5
+                                                    <sup>ft</sup> x 3
+                                                    <sup>ft</sup>
+                                                </div>
+                                            </div>
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Location</div>
+                                                <div class="flex-auto fw3 f5">East Campus</div>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column pv3 ph2">
+                                            <div class="flex-auto fw6 f7 mh2 mv1">Features</div>
+                                            <div class="fw2 flex-auto f7 flex flex-wrap lh-copy">
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/video-camera.svg?color=002D62');"></div>
+                                                    <div class="ml2">Security Camera</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/thermometer.svg?color=002D62');"></div>
+                                                    <div class="ml2">Climate Control</div>
+                                                </div>
+
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
+                                                    <div class="ml2">24/7 Access</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/accessibility-1.svg?color=002D62');"></div>
+                                                    <div class="ml2">Easy Entry</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
+                                                    <div class="ml2">No Pets</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/ban.svg?color=002D62');"></div>
+                                                    <div class="ml2">Non-Smoking</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
+                        <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
+                            <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
+                            <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
+                                <div class="flex justify-between items-stretch">
+                                    <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
+                                        <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
+                                        <div class="flex items-center justify-between shadow-hover br1 f5 bg-blue grow white mv3">
+                                            <div class="mv3 mh4 fw5 nowrap">Reserve for $42</div>
+                                        </div>
+                                    </div>
+                                    <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure-ns">
+                                        <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
+                                            <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
+                                            <div class="i mr1 f7">Roo Verified</div>
+                                        </div>
+                                        <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
+                                            Joanne's Garage
+                                        </div>
+                                        <div class="mh3 mv2 lh-copy">
+                                            Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iste temporibus in ab sequi omnis provident ullam
+                                            ut assumenda.
+                                        </div>
+                                        <div class="flex flex-wrap items-center">
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Space</div>
+                                                <div class="flex-auto fw3 f5">15
+                                                    <sup>sqft</sup>
+                                                </div>
+                                            </div>
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Dimensions</div>
+                                                <div class="flex-auto fw3 f5">5
+                                                    <sup>ft</sup> x 3
+                                                    <sup>ft</sup>
+                                                </div>
+                                            </div>
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Location</div>
+                                                <div class="flex-auto fw3 f5">East Campus</div>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column pv3 ph2">
+                                            <div class="flex-auto fw6 f7 mh2 mv1">Features</div>
+                                            <div class="fw2 flex-auto f7 flex flex-wrap lh-copy">
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/video-camera.svg?color=002D62');"></div>
+                                                    <div class="ml2">Security Camera</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/thermometer.svg?color=002D62');"></div>
+                                                    <div class="ml2">Climate Control</div>
+                                                </div>
+
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
+                                                    <div class="ml2">24/7 Access</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/accessibility-1.svg?color=002D62');"></div>
+                                                    <div class="ml2">Easy Entry</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
+                                                    <div class="ml2">No Pets</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/ban.svg?color=002D62');"></div>
+                                                    <div class="ml2">Non-Smoking</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
+                        <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
+                            <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
+                            <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
+                                <div class="flex justify-between items-stretch">
+                                    <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
+                                        <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
+                                        <div class="flex items-center justify-between shadow-hover br1 f5 bg-blue grow white mv3">
+                                            <div class="mv3 mh4 fw5 nowrap">Reserve for $42</div>
+                                        </div>
+                                    </div>
+                                    <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure-ns">
+                                        <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
+                                            <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
+                                            <div class="i mr1 f7">Roo Verified</div>
+                                        </div>
+                                        <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
+                                            Joanne's Garage
+                                        </div>
+                                        <div class="mh3 mv2 lh-copy">
+                                            Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iste temporibus in ab sequi omnis provident ullam
+                                            ut assumenda.
+                                        </div>
+                                        <div class="flex flex-wrap items-center">
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Space</div>
+                                                <div class="flex-auto fw3 f5">15
+                                                    <sup>sqft</sup>
+                                                </div>
+                                            </div>
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Dimensions</div>
+                                                <div class="flex-auto fw3 f5">5
+                                                    <sup>ft</sup> x 3
+                                                    <sup>ft</sup>
+                                                </div>
+                                            </div>
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Location</div>
+                                                <div class="flex-auto fw3 f5">East Campus</div>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column pv3 ph2">
+                                            <div class="flex-auto fw6 f7 mh2 mv1">Features</div>
+                                            <div class="fw2 flex-auto f7 flex flex-wrap lh-copy">
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/video-camera.svg?color=002D62');"></div>
+                                                    <div class="ml2">Security Camera</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/thermometer.svg?color=002D62');"></div>
+                                                    <div class="ml2">Climate Control</div>
+                                                </div>
+
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
+                                                    <div class="ml2">24/7 Access</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/accessibility-1.svg?color=002D62');"></div>
+                                                    <div class="ml2">Easy Entry</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
+                                                    <div class="ml2">No Pets</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/ban.svg?color=002D62');"></div>
+                                                    <div class="ml2">Non-Smoking</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
+                        <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
+                            <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
+                            <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
+                                <div class="flex justify-between items-stretch">
+                                    <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
+                                        <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
+                                        <div class="flex items-center justify-between shadow-hover br1 f5 bg-blue grow white mv3">
+                                            <div class="mv3 mh4 fw5 nowrap">Reserve for $42</div>
+                                        </div>
+                                    </div>
+                                    <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure-ns">
+                                        <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
+                                            <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
+                                            <div class="i mr1 f7">Roo Verified</div>
+                                        </div>
+                                        <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
+                                            Joanne's Garage
+                                        </div>
+                                        <div class="mh3 mv2 lh-copy">
+                                            Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iste temporibus in ab sequi omnis provident ullam
+                                            ut assumenda.
+                                        </div>
+                                        <div class="flex flex-wrap items-center">
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Space</div>
+                                                <div class="flex-auto fw3 f5">15
+                                                    <sup>sqft</sup>
+                                                </div>
+                                            </div>
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Dimensions</div>
+                                                <div class="flex-auto fw3 f5">5
+                                                    <sup>ft</sup> x 3
+                                                    <sup>ft</sup>
+                                                </div>
+                                            </div>
+                                            <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
+                                                <div class="flex-auto fw6 f7 mv1">Location</div>
+                                                <div class="flex-auto fw3 f5">East Campus</div>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-column pv3 ph2">
+                                            <div class="flex-auto fw6 f7 mh2 mv1">Features</div>
+                                            <div class="fw2 flex-auto f7 flex flex-wrap lh-copy">
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/video-camera.svg?color=002D62');"></div>
+                                                    <div class="ml2">Security Camera</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/thermometer.svg?color=002D62');"></div>
+                                                    <div class="ml2">Climate Control</div>
+                                                </div>
+
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
+                                                    <div class="ml2">24/7 Access</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/accessibility-1.svg?color=002D62');"></div>
+                                                    <div class="ml2">Easy Entry</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
+                                                    <div class="ml2">No Pets</div>
+                                                </div>
+                                                <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
+                                                    <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/ban.svg?color=002D62');"></div>
+                                                    <div class="ml2">Non-Smoking</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-auto flex flex-wrap-l flex-column flex-row-l justify-center items-stretch bg-white br2 shadow-6 lh-solid pa3 mv5 f5 z-1 bt bw2 b--yellow">
+                        <div class="measure pa4-l pa3">
+                            <div class="fw1 lh-title f2 blue">
+                                Our team will help you find the right space!
+                            </div>
+                            <div class="fw5 pv4-l pv3 lh-copy f6">
+                                Unfortunately, the Roo Hosts that meet your criteria are occupied at the moment. Don’t worry though! There are Hosts going
+                                through the Roo verification process right now, and those spaces should be available shortly.
+                                By filling out the information below, you’ll be placed on the priority list that will notify
+                                you when a space meeting your requirements is ready – giving you first access! Until then,
+                                if you have any questions, you can reach out to us at
+                                <a href="mailto:hello@roostorage.com" target="_top">hello@roostorage.com</a>.
+                            </div>
+                            <div class="self-stretch pa3 flex-l items-center justify-around dn">
+                                <div class="pa3 contain grow pointer" style="background-image:url('https://icongr.am/entypo/facebook.svg?color=fdbc31');"></div>
+                                <div class="pa3 contain grow pointer" style="background-image:url('https://icongr.am/entypo/instagram.svg?color=fdbc31');"></div>
+                                <div class="pa3 contain grow pointer" style="background-image:url('https://icongr.am/entypo/email.svg?color=fdbc31');"></div>
+                            </div>
+                        </div>
+                        <div class="mw6 ph4-l ph3 flex-auto self-stretch flex flex-column items-stretch justify-center">
+                            <div class="flex flex-column pv3">
+                                <label class="ph1 flex justify-between" for="">
+                                    Email
+                                    <div class="pa1 pt3 pl3 o-50 glow contain bg-center" style="background-image:url('https://icongr.am/clarity/info.svg?color=002D62');"></div>
+                                </label>
+                                <input class="navy fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" id="" name="email" type="text">
+                            </div>
+                            <div class="flex flex-column pv3">
+                                <label class="ph1 flex justify-between" for="">
+                                    Name
+                                    <div class="pa1 pt3 pl3 o-50 glow contain bg-center" style="background-image:url('https://icongr.am/clarity/info.svg?color=002D62');"></div>
+                                </label>
+                                <input class="navy fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" id="" name="name" type="text">
+                            </div>
+                            <div class="flex flex-column pv3">
+                                <label class="ph1 flex justify-between" for="">
+                                    Storage near
+                                    <div class="pa1 pt3 pl3 o-50 glow contain bg-center" style="background-image:url('https://icongr.am/clarity/info.svg?color=002D62');"></div>
+                                </label>
+                                <input class="navy fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" id="" name="address" type="text">
+                            </div>
+                            <div class="flex flex-column pv3">
+                                <label class="ph1 flex justify-between" for="">
+                                    Description
+                                    <div class="pa1 pt3 pl3 o-50 glow contain bg-center" style="background-image:url('https://icongr.am/clarity/info.svg?color=002D62');"></div>
+                                </label>
+                                <input class="fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" contenteditable="true" name="description">
+                            </div>
+                            <div class="white bg-yellow br1 f5 mv3 grow pointer tc pv3 ph4 fw7">
+                                Request Space
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
-                    <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
-                        <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
-                        <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
-                            <div class="flex justify-between items-stretch">
-                                <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
-                                    <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
-                                    <div class="flex items-center justify-between shadow-hover br1 f5 bg-blue grow white mv3">
-                                        <div class="mv3 mh4 fw5 nowrap">Reserve for $42</div>
-                                    </div>
-                                </div>
-                                <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure-ns">
-                                    <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
-                                        <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
-                                        <div class="i mr1 f7">Roo Verified</div>
-                                    </div>
-                                    <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
-                                        Joanne's Garage
-                                    </div>
-                                    <div class="mh3 mv2 lh-copy">
-                                        Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iste temporibus in ab sequi omnis provident ullam
-                                        ut assumenda.
-                                    </div>
-                                    <div class="flex flex-wrap items-center">
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Space</div>
-                                            <div class="flex-auto fw3 f5">15
-                                                <sup>sqft</sup>
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Dimensions</div>
-                                            <div class="flex-auto fw3 f5">5
-                                                <sup>ft</sup> x 3
-                                                <sup>ft</sup>
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Location</div>
-                                            <div class="flex-auto fw3 f5">East Campus</div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-column pv3 ph2">
-                                        <div class="flex-auto fw6 f7 mh2 mv1">Features</div>
-                                        <div class="fw2 flex-auto f7 flex flex-wrap lh-copy">
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/video-camera.svg?color=002D62');"></div>
-                                                <div class="ml2">Security Camera</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/thermometer.svg?color=002D62');"></div>
-                                                <div class="ml2">Climate Control</div>
-                                            </div>
-
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
-                                                <div class="ml2">24/7 Access</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/accessibility-1.svg?color=002D62');"></div>
-                                                <div class="ml2">Easy Entry</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
-                                                <div class="ml2">No Pets</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/ban.svg?color=002D62');"></div>
-                                                <div class="ml2">Non-Smoking</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
-                    <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
-                        <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
-                        <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
-                            <div class="flex justify-between items-stretch">
-                                <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
-                                    <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
-                                    <div class="flex items-center justify-between shadow-hover br1 f5 bg-blue grow white mv3">
-                                        <div class="mv3 mh4 fw5 nowrap">Reserve for $42</div>
-                                    </div>
-                                </div>
-                                <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure-ns">
-                                    <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
-                                        <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
-                                        <div class="i mr1 f7">Roo Verified</div>
-                                    </div>
-                                    <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
-                                        Joanne's Garage
-                                    </div>
-                                    <div class="mh3 mv2 lh-copy">
-                                        Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iste temporibus in ab sequi omnis provident ullam
-                                        ut assumenda.
-                                    </div>
-                                    <div class="flex flex-wrap items-center">
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Space</div>
-                                            <div class="flex-auto fw3 f5">15
-                                                <sup>sqft</sup>
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Dimensions</div>
-                                            <div class="flex-auto fw3 f5">5
-                                                <sup>ft</sup> x 3
-                                                <sup>ft</sup>
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Location</div>
-                                            <div class="flex-auto fw3 f5">East Campus</div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-column pv3 ph2">
-                                        <div class="flex-auto fw6 f7 mh2 mv1">Features</div>
-                                        <div class="fw2 flex-auto f7 flex flex-wrap lh-copy">
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/video-camera.svg?color=002D62');"></div>
-                                                <div class="ml2">Security Camera</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/thermometer.svg?color=002D62');"></div>
-                                                <div class="ml2">Climate Control</div>
-                                            </div>
-
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
-                                                <div class="ml2">24/7 Access</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/accessibility-1.svg?color=002D62');"></div>
-                                                <div class="ml2">Easy Entry</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
-                                                <div class="ml2">No Pets</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/ban.svg?color=002D62');"></div>
-                                                <div class="ml2">Non-Smoking</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
-                    <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
-                        <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
-                        <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
-                            <div class="flex justify-between items-stretch">
-                                <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
-                                    <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
-                                    <div class="flex items-center justify-between shadow-hover br1 f5 bg-blue grow white mv3">
-                                        <div class="mv3 mh4 fw5 nowrap">Reserve for $42</div>
-                                    </div>
-                                </div>
-                                <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure-ns">
-                                    <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
-                                        <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
-                                        <div class="i mr1 f7">Roo Verified</div>
-                                    </div>
-                                    <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
-                                        Joanne's Garage
-                                    </div>
-                                    <div class="mh3 mv2 lh-copy">
-                                        Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iste temporibus in ab sequi omnis provident ullam
-                                        ut assumenda.
-                                    </div>
-                                    <div class="flex flex-wrap items-center">
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Space</div>
-                                            <div class="flex-auto fw3 f5">15
-                                                <sup>sqft</sup>
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Dimensions</div>
-                                            <div class="flex-auto fw3 f5">5
-                                                <sup>ft</sup> x 3
-                                                <sup>ft</sup>
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Location</div>
-                                            <div class="flex-auto fw3 f5">East Campus</div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-column pv3 ph2">
-                                        <div class="flex-auto fw6 f7 mh2 mv1">Features</div>
-                                        <div class="fw2 flex-auto f7 flex flex-wrap lh-copy">
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/video-camera.svg?color=002D62');"></div>
-                                                <div class="ml2">Security Camera</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/thermometer.svg?color=002D62');"></div>
-                                                <div class="ml2">Climate Control</div>
-                                            </div>
-
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
-                                                <div class="ml2">24/7 Access</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/accessibility-1.svg?color=002D62');"></div>
-                                                <div class="ml2">Easy Entry</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
-                                                <div class="ml2">No Pets</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/ban.svg?color=002D62');"></div>
-                                                <div class="ml2">Non-Smoking</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
-                    <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
-                        <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
-                        <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
-                            <div class="flex justify-between items-stretch">
-                                <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
-                                    <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
-                                    <div class="flex items-center justify-between shadow-hover br1 f5 bg-blue grow white mv3">
-                                        <div class="mv3 mh4 fw5 nowrap">Reserve for $42</div>
-                                    </div>
-                                </div>
-                                <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure-ns">
-                                    <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
-                                        <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
-                                        <div class="i mr1 f7">Roo Verified</div>
-                                    </div>
-                                    <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
-                                        Joanne's Garage
-                                    </div>
-                                    <div class="mh3 mv2 lh-copy">
-                                        Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iste temporibus in ab sequi omnis provident ullam
-                                        ut assumenda.
-                                    </div>
-                                    <div class="flex flex-wrap items-center">
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Space</div>
-                                            <div class="flex-auto fw3 f5">15
-                                                <sup>sqft</sup>
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Dimensions</div>
-                                            <div class="flex-auto fw3 f5">5
-                                                <sup>ft</sup> x 3
-                                                <sup>ft</sup>
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Location</div>
-                                            <div class="flex-auto fw3 f5">East Campus</div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-column pv3 ph2">
-                                        <div class="flex-auto fw6 f7 mh2 mv1">Features</div>
-                                        <div class="fw2 flex-auto f7 flex flex-wrap lh-copy">
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/video-camera.svg?color=002D62');"></div>
-                                                <div class="ml2">Security Camera</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/thermometer.svg?color=002D62');"></div>
-                                                <div class="ml2">Climate Control</div>
-                                            </div>
-
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
-                                                <div class="ml2">24/7 Access</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/accessibility-1.svg?color=002D62');"></div>
-                                                <div class="ml2">Easy Entry</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
-                                                <div class="ml2">No Pets</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/ban.svg?color=002D62');"></div>
-                                                <div class="ml2">Non-Smoking</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
-                    <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
-                        <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
-                        <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
-                            <div class="flex justify-between items-stretch">
-                                <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
-                                    <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
-                                    <div class="flex items-center justify-between shadow-hover br1 f5 bg-blue grow white mv3">
-                                        <div class="mv3 mh4 fw5 nowrap">Reserve for $42</div>
-                                    </div>
-                                </div>
-                                <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure-ns">
-                                    <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
-                                        <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
-                                        <div class="i mr1 f7">Roo Verified</div>
-                                    </div>
-                                    <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
-                                        Joanne's Garage
-                                    </div>
-                                    <div class="mh3 mv2 lh-copy">
-                                        Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iste temporibus in ab sequi omnis provident ullam
-                                        ut assumenda.
-                                    </div>
-                                    <div class="flex flex-wrap items-center">
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Space</div>
-                                            <div class="flex-auto fw3 f5">15
-                                                <sup>sqft</sup>
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Dimensions</div>
-                                            <div class="flex-auto fw3 f5">5
-                                                <sup>ft</sup> x 3
-                                                <sup>ft</sup>
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Location</div>
-                                            <div class="flex-auto fw3 f5">East Campus</div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-column pv3 ph2">
-                                        <div class="flex-auto fw6 f7 mh2 mv1">Features</div>
-                                        <div class="fw2 flex-auto f7 flex flex-wrap lh-copy">
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/video-camera.svg?color=002D62');"></div>
-                                                <div class="ml2">Security Camera</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/thermometer.svg?color=002D62');"></div>
-                                                <div class="ml2">Climate Control</div>
-                                            </div>
-
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
-                                                <div class="ml2">24/7 Access</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/accessibility-1.svg?color=002D62');"></div>
-                                                <div class="ml2">Easy Entry</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
-                                                <div class="ml2">No Pets</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/ban.svg?color=002D62');"></div>
-                                                <div class="ml2">Non-Smoking</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><div class="flex flex-column flex-row-l items-stretch items-center-m w-100 w-75-l mv4 mh5-l">
-                    <div class="flex-auto flex flex-column flex-row-l relative mv3-l">
-                        <div class="pa6 shadow-hover z-0 flex-auto bg-center cover nr4-l br1 pointer" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
-                        <div class="flex-none flex z-1 flex-column bg-white br1 mv4-l shadow-6 pointer">
-                            <div class="flex justify-between items-stretch">
-                                <div class="flex-auto absolute top-0 left-0 right-0 static-l w1-l flex flex-column items-center justify-around z-2 mh6 ml0-l pv4-l mr6-l mt0-l mt5">
-                                    <div class="pa6-l pa5 shadow-hover br-pill ba bw3-l bw2-m bw1 white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
-                                    <div class="flex items-center justify-between shadow-hover br1 f5 bg-blue grow white mv3">
-                                        <div class="mv3 mh4 fw5 nowrap">Reserve for $42</div>
-                                    </div>
-                                </div>
-                                <div class="pa4-l pr5-l pa3 flex flex-column justify-center measure-ns">
-                                    <div class="blue flex lh-solid items-center fw5 pa2 br1 self-start ma2 hover-bg-blue hover-white">
-                                        <div class="contain pa2 mr1" style="background:url('https://icongr.am/clarity/shield-check.svg?color=027bc2')"></div>
-                                        <div class="i mr1 f7">Roo Verified</div>
-                                    </div>
-                                    <div class="mv2 mh3 fw1 f1-ns f2 lh-solid">
-                                        Joanne's Garage
-                                    </div>
-                                    <div class="mh3 mv2 lh-copy">
-                                        Description Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, iste temporibus in ab sequi omnis provident ullam
-                                        ut assumenda.
-                                    </div>
-                                    <div class="flex flex-wrap items-center">
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Space</div>
-                                            <div class="flex-auto fw3 f5">15
-                                                <sup>sqft</sup>
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Dimensions</div>
-                                            <div class="flex-auto fw3 f5">5
-                                                <sup>ft</sup> x 3
-                                                <sup>ft</sup>
-                                            </div>
-                                        </div>
-                                        <div class="flex-auto flex mh3 mv2 flex-column lh-copy">
-                                            <div class="flex-auto fw6 f7 mv1">Location</div>
-                                            <div class="flex-auto fw3 f5">East Campus</div>
-                                        </div>
-                                    </div>
-                                    <div class="flex flex-column pv3 ph2">
-                                        <div class="flex-auto fw6 f7 mh2 mv1">Features</div>
-                                        <div class="fw2 flex-auto f7 flex flex-wrap lh-copy">
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/video-camera.svg?color=002D62');"></div>
-                                                <div class="ml2">Security Camera</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/thermometer.svg?color=002D62');"></div>
-                                                <div class="ml2">Climate Control</div>
-                                            </div>
-
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
-                                                <div class="ml2">24/7 Access</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/accessibility-1.svg?color=002D62');"></div>
-                                                <div class="ml2">Easy Entry</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
-                                                <div class="ml2">No Pets</div>
-                                            </div>
-                                            <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/ban.svg?color=002D62');"></div>
-                                                <div class="ml2">Non-Smoking</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-auto flex flex-wrap-l flex-column flex-row-l justify-center items-stretch bg-white br2 shadow-6 lh-solid pa3 mv5 f5 z-1 bt bw2 b--yellow">
-                    <div class="measure pa4-l pa3">
-                        <div class="fw1 lh-title f2 blue">
-                            Our team will help you find the right space!
-                        </div>
-                        <div class="fw5 pv4-l pv3 lh-copy f6">
-                            Unfortunately, the Roo Hosts that meet your criteria are occupied at the moment. Don’t worry though! There are Hosts going
-                            through the Roo verification process right now, and those spaces should be available shortly.
-                            By filling out the information below, you’ll be placed on the priority list that will notify
-                            you when a space meeting your requirements is ready – giving you first access! Until then, if
-                            you have any questions, you can reach out to us at
-                            <a href="mailto:hello@roostorage.com" target="_top">hello@roostorage.com</a>.
-                        </div>
-                        <div class="self-stretch pa3 flex-l items-center justify-around dn">
-                            <div class="pa3 contain grow pointer" style="background-image:url('https://icongr.am/entypo/facebook.svg?color=fdbc31');"></div>
-                            <div class="pa3 contain grow pointer" style="background-image:url('https://icongr.am/entypo/instagram.svg?color=fdbc31');"></div>
-                            <div class="pa3 contain grow pointer" style="background-image:url('https://icongr.am/entypo/email.svg?color=fdbc31');"></div>
-                        </div>
-                    </div>
-                    <div class="mw6 ph4-l ph3 flex-auto self-stretch flex flex-column items-stretch justify-center">
-                        <div class="flex flex-column pv3">
-                            <label class="ph1 flex justify-between" for="">
-                                Email
-                                <div class="pa1 pt3 pl3 o-50 glow contain bg-center" style="background-image:url('https://icongr.am/clarity/info.svg?color=002D62');"></div>
-                            </label>
-                            <input class="navy fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" id="" name="email" type="text">
-                        </div>
-                        <div class="flex flex-column pv3">
-                            <label class="ph1 flex justify-between" for="">
-                                Name
-                                <div class="pa1 pt3 pl3 o-50 glow contain bg-center" style="background-image:url('https://icongr.am/clarity/info.svg?color=002D62');"></div>
-                            </label>
-                            <input class="navy fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" id="" name="name" type="text">
-                        </div>
-                        <div class="flex flex-column pv3">
-                            <label class="ph1 flex justify-between" for="">
-                                Storage near
-                                <div class="pa1 pt3 pl3 o-50 glow contain bg-center" style="background-image:url('https://icongr.am/clarity/info.svg?color=002D62');"></div>
-                            </label>
-                            <input class="navy fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" id="" name="address" type="text">
-                        </div>
-                        <div class="flex flex-column pv3">
-                            <label class="ph1 flex justify-between" for="">
-                                Description
-                                <div class="pa1 pt3 pl3 o-50 glow contain bg-center" style="background-image:url('https://icongr.am/clarity/info.svg?color=002D62');"></div>
-                            </label>
-                            <input class="fw2 flex-auto ph3 pv2 br1 ba b--black-10 ng-untouched ng-pristine ng-valid" contenteditable="true" name="description">
-                        </div>
-                        <div class="white bg-yellow br1 f5 mv3 grow pointer tc pv3 ph4 fw7">
-                            Request Space
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer class="flex flex-wrap items-center justify-between ma3 ma4-l o-50 black-50 glow">
-            <div class="flex flex-column flex-row-l">
-                <div class="flex items-center ma2 hover-purple">
-                    <div class="o-50 cover h1 w1 ma2 flex-shrink-0" style="background:url(
+            </main>
+            <footer class="flex flex-wrap items-center justify-between ma3 ma4-l o-50 black-50 glow">
+                <div class="flex flex-column flex-row-l">
+                    <div class="flex items-center ma2 hover-purple">
+                        <div class="o-50 cover h1 w1 ma2 flex-shrink-0" style="background:url(
           'https://icongr.am/clarity/email.svg')"></div>
-                    <div class="flex-shrink-1">hello@roo.com</div>
-                </div>
-                <div class="flex items-center ma2 hover-purple">
-                    <div class="o-50 cover h1 w1 ma2 flex-shrink-0" style="background:url(
+                        <div class="flex-shrink-1">hello@roo.com</div>
+                    </div>
+                    <div class="flex items-center ma2 hover-purple">
+                        <div class="o-50 cover h1 w1 ma2 flex-shrink-0" style="background:url(
           'https://icongr.am/simple/facebook.svg')"></div>
-                    <div class="flex-shrink-1">fb.com/roo</div>
-                </div>
-                <div class="flex items-center ma2 hover-purple">
-                    <div class="o-50 cover h1 w1 ma2 flex-shrink-0" style="background:url(
+                        <div class="flex-shrink-1">fb.com/roo</div>
+                    </div>
+                    <div class="flex items-center ma2 hover-purple">
+                        <div class="o-50 cover h1 w1 ma2 flex-shrink-0" style="background:url(
           'https://icongr.am/simple/twitter.svg')"></div>
-                    <div class="flex-shrink-1">@roo</div>
-                </div>
-                <div class="flex items-center ma2 hover-purple">
-                    <div class="o-50 cover h1 w1 ma2 flex-shrink-0" style="background:url(
+                        <div class="flex-shrink-1">@roo</div>
+                    </div>
+                    <div class="flex items-center ma2 hover-purple">
+                        <div class="o-50 cover h1 w1 ma2 flex-shrink-0" style="background:url(
           'https://icongr.am/simple/instagram.svg')"></div>
-                    <div class="flex-shrink-1">@roo</div>
+                        <div class="flex-shrink-1">@roo</div>
+                    </div>
                 </div>
-            </div>
-            <div class="ma2 ma2 self-center">
-                Copyright © Roo 2018
-            </div>
-        </footer>
+                <div class="ma2 ma2 self-center">
+                    Copyright © Roo 2018
+                </div>
+            </footer>
+        </div>
     </div>
 </body>
 
