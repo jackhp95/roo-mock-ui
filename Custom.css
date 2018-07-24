@@ -762,3 +762,27 @@ input[type=date]::-webkit-calendar-picker-indicator {
   /* Cursor on hover */
   border-radius: 50%
 }
+
+
+
+/* TOGGLE BUTTON */
+.t-cb {
+  transition: all .3s cubic-bezier(.33, 1, .66, 1);
+}
+
+.checkbox:checked+.checkbox-wrapper {
+  background-color: #007ac3;
+}
+
+.checkbox:checked+.checkbox-wrapper .checkbox-toggle {
+  left: 2rem;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

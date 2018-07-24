@@ -83,88 +83,90 @@
                                 The nation’s largest network of 5‑star storage providers.
                             </div>
                         </div>
-                        <div class="mv4 bg-white br2-ns mw7-l w-90-m flex flex-wrap self-stretch self-center-ns pa3 relative">
-                            <div class="mv2 flex-auto flex flex-column">
-                                <label class="flex-auto mh2 f7 ph1">
-                                    I have a _____ worth of stuff
-                                </label>
-                                <div class="mv1-l mh1 flex-auto flex flex-row-l flex-column items-stretch relative">
-                                    <div class="ma1 flex-auto hide-child flex z-2 flex-column-l items-center justify-center-l br2 f5 ba black-20 hover-white shadow-hover o-70 glow">
-                                        <div class="bl bt orange bw2 br2 br--top-l br--left-m ma1 ma0-ns self-stretch child"></div>
-                                        <div class="pa3-l pa2 mt3-l ma2 contain" style="background: url('https://icongr.am/clarity/block.svg?color=012d60') no-repeat center;"></div>
-                                        <div class="flex-auto navy mr3 ma1-l mb3-l f4 flex flex-column-l items-center justify-between">
-                                            <div>closet</div>
-                                            <div class="f7 fw5">
-                                                20-80
-                                                <sup>sqft</sup>
-                                            </div>
+                        <form style="max-height:75vh" class="mt5 f5 flex flex-row flex-wrap mw7 br2 self-end-m items-stretch pa4-l pa3-m pa2 shadow-hover bg-white overflow-auto">
+                            <div class="flex flex-column ma2 flex-auto relative">
+                                <label class="f4 mv1 mh2" for="">Address</label>
+                                <div class="flex-auto flex relative">
+                                    <input style="border-width: 1px;" class="flex-auto b--black-20 br2 outline-0 pa3" type="text" name="address" id="">
+                                    <div class="absolute right-0 top-0 bottom-0 mr2 pa3 pt2 pl2 contain bg-center glow o-40" style="background-image:url('https://icongr.am/clarity/compass.svg')"></div>
+                                </div>
+                            </div>
+                            <div class="flex-auto flex">
+                                <div class="flex flex-column ma2 flex-auto relative">
+                                    <label class="f4 mv1 mh2" for="">Start Date</label>
+                                    <input style="border-width: 1px;" class="flex-auto b--black-20 br2 outline-0 pa3" type="date" name="start" id="">
+                                </div>
+                                <div class="flex flex-column ma2 flex-auto relative">
+                                    <label class="f4 mv1 mh2" for="">End Date</label>
+                                    <input style="border-width: 1px;" class="flex-auto b--black-20 br2 outline-0 pa3" type="date" name="end" id="">
+                                </div>
+                            </div>
+                            <div class="flex flex-column ma2 flex-auto relative">
+                                <label class="f4 mv1 mh2" for="">Type</label>
+                                <div class="flex-auto flex ba b--black-20 br2 fw6 bg-white">
+                                    <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
+                                        <label class="pa3 dib f4" for="">Student</label>
+                                        <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="student">
+                                    </div>
+                                    <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
+                                        <label class="pa3 dib f4" for="">Tailgating</label>
+                                        <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="tailgating">
+                                    </div>
+                                    <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
+                                        <label class="pa3 dib f4" for="">Moving</label>
+                                        <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="moving">
+                                    </div>
+                                    <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden hover-bg-blue hover-white">
+                                        <label class="pa3 dib f4" for="">Vehicle</label>
+                                        <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="vehicle">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-auto flex">
+                                <div class="flex flex-column ma2 flex-auto relative">
+                                    <label class="f4 mv1 mh2" for="">Size</label>
+                                    <div class="flex-auto flex ba b--black-20 br2 fw6 bg-white">
+                                        <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
+                                            <label class="tc ma2">
+                                                <span class="db ma3 f4" for="">S</span>
+                                                <span class="db ma2">20ft - 50ft</span>
+                                            </label>
+                                            <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="s">
+                                        </div>
+                                        <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
+                                            <label class="tc ma2">
+                                                <span class="db ma3 f4" for="">M</span>
+                                                <span class="db ma2">20ft - 50ft</span>
+                                            </label>
+                                            <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="m">
+                                        </div>
+                                        <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
+                                            <label class="tc ma2">
+                                                <span class="db ma3 f4" for="">L</span>
+                                                <span class="db ma2">20ft - 50ft</span>
+                                            </label>
+                                            <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="l">
+                                        </div>
+                                        <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden hover-bg-blue hover-white">
+                                            <label class="tc ma2">
+                                                <span class="db ma3 f4" for="">XL</span>
+                                                <span class="db ma2">20ft - 50ft</span>
+                                            </label>
+                                            <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="xl">
                                         </div>
                                     </div>
-                                    <div class="ma1 flex-auto hide-child flex z-2 flex-column-l items-center justify-center-l br2 f5 ba black-20 hover-white shadow-hover o-70 glow">
-                                        <div class="bl bt orange bw2 br2 br--top-l br--left-m ma1 ma0-ns self-stretch child"></div>
-                                        <div class="pa3-l pa2 mt3-l ma2 contain" style="background: url('https://icongr.am/clarity/blocks-group.svg?color=012d60') no-repeat center;"></div>
-                                        <div class="flex-auto navy mr3 ma1-l mb3-l f4 flex flex-column-l items-center justify-between">
-                                            <div>bedroom</div>
-                                            <div class="f7 fw5">
-                                                80-150
-                                                <sup>sqft</sup>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ma1 flex-auto hide-child flex z-2 flex-column-l items-center justify-center-l br2 f5 ba black-20 hover-white shadow-hover o-70 glow">
-                                        <div class="bl bt orange bw2 br2 br--top-l br--left-m ma1 ma0-ns self-stretch child"></div>
-                                        <div class="pa3-l pa2 mt3-l ma2 contain" style="background: url('https://icongr.am/clarity/building.svg?color=012d60') no-repeat center;"></div>
-                                        <div class="flex-auto navy mr3 ma1-l mb3-l f4 flex flex-column-l items-center justify-between">
-                                            <div>apartment</div>
-                                            <div class="f7 fw5">
-                                                150-300
-                                                <sup>sqft</sup>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ma1 flex-auto hide-child flex z-2 flex-column-l items-center justify-center-l br2 f5 ba black-20 hover-white shadow-hover o-70 glow">
-                                        <div class="bl bt orange bw2 br2 br--top-l br--left-m ma1 ma0-ns self-stretch child"></div>
-                                        <div class="pa3-l pa2 mt3-l ma2 contain" style="background: url('https://icongr.am/clarity/home.svg?color=012d60') no-repeat center;"></div>
-                                        <div class="flex-auto navy mr3 ma1-l mb3-l f4 flex flex-column-l items-center justify-between">
-                                            <div>house</div>
-                                            <div class="f7 fw5">
-                                                300+
-                                                <sup>sqft</sup>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="ma1 flex-auto hide-child flex z-2 flex-column-l items-center justify-center-l br2 f5 ba black-20 hover-white shadow-hover o-70 glow">
-                                        <div class="bl bt orange bw2 br2 br--top-l br--left-m ma1 ma0-ns self-stretch child"></div>
-                                        <div class="pa3-l pa2 mt3-l ma2 contain" style="background: url('https://icongr.am/clarity/truck.svg?color=012d60') no-repeat center;"></div>
-                                        <div class="flex-auto navy mr3 ma1-l mb3-l f4 flex flex-column-l items-center justify-between">
-                                            <div>vehicle</div>
-                                            <div class="f7 fw5">
-                                                A Parking Spot
-                                            </div>
+                                </div>
+                                <div class="flex flex-column ma2 justify-center items-center">
+                                    <label class="f4 mv1 mh2" for="">Indoors</label>
+                                    <div class="relative dib overflow-hidden br-pill">
+                                        <input class="no-select absolute z-5 w-100 h-100 o-0 pointer checkbox" type="checkbox">
+                                        <div class="relative z-4 dib w3 h2 overflow-hidden bg-black-10 br4 v-mid bg-animate checkbox-wrapper">
+                                            <div class="absolute right-auto left-0 w2 h2 br4 ba b--black-40 t-cb bg-animate bg-white checkbox-toggle"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex-auto flex flex-row-l flex-column self-stretch">
-                                <div class="ma2 flex-auto-l flex-column justify-center flex">
-                                    <label class="f7 ph1 flex justify-between">
-                                        Storage near
-                                        <div class="pa2 pt1 pl1 contain" style="background: url('https://icongr.am/clarity/map-marker.svg?color=012d60') no-repeat center;"></div>
-                                    </label>
-                                    <input class="br2 outline-0 pa2 ba b--black-20 pa1 mv1" type="text" placeholder="Zip Code or Address" />
-                                </div>
-                                <div class="ma2 flex-auto-l flex flex-column">
-                                    <div class="mb1 f7 ph1">For these days</div>
-                                    <div class="flex flex-auto items-center">
-                                        <div class="br2 outline-0 pa2 ba navy b--black-40 o-50 flex-auto">Drop off</div>
-                                        <div class="pa2 o-40 rotate-90 contain" style="background: url('https://icongr.am/clarity/caret.svg?color=012d60') no-repeat center;">
-                                        </div>
-                                        <div class="br2 outline-0 pa2 ba navy b--black-40 o-50 flex-auto">Pick up</div>
-                                    </div>
-                                </div>
-                                <button class="ma2 self-stretch flex-auto pa3 bg-orange br2 bw0 f5 fw6 white grow" type="submit">Search</button>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
