@@ -36,23 +36,28 @@
                 </p>
             </div>
             <div class="f4 ph3-ns">
-                <div class="mv3 self-stretch flex items-center pa2 br2 fw6 white grow pointer ba" style="background-color: #3b5998">
-                    <div class="ma2 pa3 pt2 pl2 bg-center contain" style="background-image: url('https://icongr.am/entypo/facebook.svg?color=ffffff')"></div>
-                    <span class="ma1"> Continue with Facebook </span>
-                </div>
-                <div class="mv3 self-stretch flex items-center pa2 br2 fw6 white pointer ba b--blue blue">
-                    <div class="ma1 pa2 bg-center contain" style="background-image: url('https://icongr.am/fontawesome/google.svg?color=007bc2')"></div>
-                    <span class="ma1 f5"> Continue with Google </span>
-                </div>
-                <div class="mv3 flex f6">
-                    <a href="emailLogin.html" class="link self-stretch flex-auto flex items-center pa1 br2 fw6 white pointer ba b--blue blue">
-                        <div class="ma1 pa2 bg-center contain " style="background-image: url('https://icongr.am/clarity/email.svg?color=007bc2')"></div>
-                        <span class="ma1"> Email Login </span>
-                    </a>
-                    <a href="emailRegistration.html" class="ml3 link self-stretch flex-auto flex items-center pa1 br2 fw6 white pointer ba b--blue blue">
-                        <div class="ma1 pa2 bg-center contain " style="background-image: url('https://icongr.am/clarity/email.svg?color=007bc2')"></div>
-                        <span class="ma1"> Email Registration </span>
-                    </a>
+                <fieldset class="relative mv3 pa0 pb1 self-stretch flex items-center br2 fw6 white pointer ba b--red blue">
+                    <input type="email" value="Jack&gmail" placeholder="You@email.com" class="bn bg-transparent br2 outline-0 pv2 ph3 w-100">
+                    <legend class="f7 mh2 ph2"> Email Address </legend>
+                    <div class="ml5 absolute top-0 right-0 ph2 tr">
+                        <div class="bg-white ph2 f7 red lh-solid mb1">missing a TLD (.com, .org, .net)</div>
+                        <div class="bg-white ph2 f7 red lh-solid">missing an @</div>
+                    </div>
+                </fieldset>
+                <fieldset class="relative mv3 pa0 pb1 self-stretch flex items-center br2 fw6 white pointer ba b--yellow blue">
+                    <input type="password" placeholder="Password" class="bn bg-transparent br2 outline-0 pv2 ph3 w-100">
+                    <legend class="f7 mh2 ph2"> Password </legend>
+                    <div class="ml5 absolute top-0 right-0 ph2">
+                        <div class="bg-white ph2 f7 lh-solid">weak password</div>
+                    </div>
+                </fieldset>
+                <div class="mv3 flex justify-end f5 o-20">
+                    <div class="self-stretch pv2 ph3 fw6 white pointer tc blue">
+                        Log In
+                    </div>
+                    <div class="ml3 self-stretch pv2 ph3 br2 fw6 tc grow white pointer bg-blue">
+                        Register
+                    </div>
                 </div>
             </div>
         </div>
