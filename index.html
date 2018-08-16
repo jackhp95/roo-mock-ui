@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h6">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -12,113 +12,180 @@
 
 </head>
 
-<body class="f6 fw5 flex flex-column-l flex-row-m flex-column-reverse items-stretch vh-100">
-    <nav id="nav" class="f5-ns fw6-ns f7 fw7 flex-none pv3-m ph4-l pa0 shadow-hover z-9999 flex flex-column-l bg-white">
-        <ul class="flex flex-column-m no-underline list ma0 pa0 overflow-visible-ns overflow-hidden w-100 w-auto-ns">
-            <li class="dn flex-auto-l flex-ns items-center justify-center-ms ph4 pv3-m">
-                <a class="grow-large dib br-pill black">
-                    <div class="contain pa4 pt3-l pl3-l flex-auto self-stretch growss" style="background:url('https://s3.us-east-2.amazonaws.com/roo-image-storage/static-images/logo/Tight/PNG/Orange.png') no-repeat center;"></div>
-                </a>
+<body class="f6 fw5 navy flex flex-wrap vh-100 w-100 bg-navy">
+    <nav class="flex-none pa4 white">
+        <h1 class="">Roo Design</h1>
+        <div class="overflow-auto w-100">
+            <h2 class="f5">Filters</h2>
+            <div class="pv2">
+                <h3 class="f6">progress</h3>
+                <ul class="list ma0 pa0">
+                    <li class="dib">
+                        <label class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer" for="any_progress">any</label>
+                    </li>
+                    <li class="dib">
+                        <label class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer" for="done_progress">done</label>
+                    </li>
+                    <li class="dib">
+                        <label class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer" for="wip_progress">wip</label>
+                    </li>
+                    <li class="dib">
+                        <label class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer" for="todo_progress">todo</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="pv2">
+                <h3 class="f6">type</h3>
+                <ul class="list ma0 pa0">
+                    <li class="dib">
+                        <label class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer" for="any_type">any</label>
+                    </li>
+                    <li class="dib">
+                        <label class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer" for="page_type">page</label>
+                    </li>
+                    <li class="dib">
+                        <label class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer" for="component_type">component</label>
+                    </li>
+                    <li class="dib">
+                        <label class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer" for="element_type">element</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-auto self-stretch bg-white list overflow-auto">
+        <ul class="pa4 ma0 list">
+            <li class="mv2 flex items-center">
+                <input checked type="checkbox" class="mb3" name="" id="home">
+                <div class="ph2">
+                    <label for="home" class="f4 ttc db">home</label>
+                    <a href="home.html" class="link">View Page</a>
+                </div>
             </li>
-            <li class="flex dn-ns hide-child o-80 glow w-20 w-auto-ns">
-                <a class="flex flex-column-reverse items-stretch self-stretch flex-auto no-underline black active" routerlinkactive="active">
-                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2">
-                        <span class="mb1 pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/home.svg')"></span>
-                        Home</span>
-                    <div class="b--orange ba child"></div>
-                </a>
+            <li class="mv2 flex items-center">
+                <input checked type="checkbox" class="mb3" name="" id="listing">
+                <div class="ph2">
+                    <label for="listing" class="f4 ttc db">listing</label>
+                    <a href="listing.html" class="link">View Page</a>
+                </div>
             </li>
-            <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
-                <a class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black active"
-                    routerlink="/listings">
-                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
-                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/info.svg')"></span>
-                        <span class="dn-l">Help</span>
-                        <span class="dn di-l">Resolution Center</span>
-                    </span>
-                    <div class="b--orange ba child"></div>
-                </a>
+            <li class="mv2 flex items-center">
+                <input checked type="checkbox" class="mb3" name="" id="review">
+                <div class="ph2">
+                    <label for="review" class="f4 ttc db">review</label>
+                    <a href="review.html" class="link">View Page</a>
+                </div>
             </li>
-            <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
-                <a class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black active"
-                    routerlink="/listings">
-                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
-                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/view-list.svg')"></span>
-                        Listings</span>
-                    <div class="b--orange ba child"></div>
-                </a>
+            <li class="mv2 flex items-center">
+                <input checked type="checkbox" class="mb3" name="" id="abouthosting">
+                <div class="ph2">
+                    <label for="abouthosting" class="f4 ttc db">about hosting</label>
+                    <a href="abouthosting.html" class="link">View Page</a>
+                </div>
             </li>
-            <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
-                <a class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black" routerlink="/become-a-host"
-                    routerlinkactive="active">
-                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
-                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/plus.svg')"></span>
-                        Hosting</span>
-                    <div class="b--orange ba child"></div>
-                </a>
+            <li class="mv2 flex items-center">
+                <input checked type="checkbox" class="mb3" name="" id="faq">
+                <div class="ph2">
+                    <label for="faq" class="f4 ttc db">faq</label>
+                    <a href="faq.html" class="link">View Page</a>
+                </div>
             </li>
-            <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
-                <a class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black" routerlinkactive="active">
-                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
-                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/sign-in.svg')"></span>
-                        Account</span>
-                    <div class="b--orange ba child"></div>
-                </a>
+            <li class="mv2 flex items-center">
+                <input checked type="checkbox" class="mb3" name="" id="listings">
+                <div class="ph2">
+                    <label for="listings" class="f4 ttc db">listings</label>
+                    <a href="listings.html" class="link">View Page</a>
+                </div>
+            </li>
+            <li class="mv2 flex items-center">
+                <input checked type="checkbox" class="mb3" name="" id="myprofile">
+                <div class="ph2">
+                    <label for="myprofile" class="f4 ttc db">my profile</label>
+                    <a href="myprofile.html" class="link">View Page</a>
+                </div>
+            </li>
+            <li class="mv2 flex items-center">
+                <input checked type="checkbox" class="mb3" name="" id="becomehost">
+                <div class="ph2">
+                    <label for="becomehost" class="f4 ttc db">become host</label>
+                    <a href="becomehost.html" class="link">View Page</a>
+                </div>
+            </li>
+            <li class="mv2 flex items-center">
+                <input checked type="checkbox" class="mb3" name="" id="profile">
+                <div class="ph2">
+                    <label for="profile" class="f4 ttc db">profile</label>
+                    <a href="profile.html" class="link">View Page</a>
+                </div>
+            </li>
+            <li class="mv2 flex items-center">
+                <input checked type="checkbox" class="mb3" name="" id="comingSoon">
+                <div class="ph2">
+                    <label for="comingSoon" class="f4 ttc db">coming Soon</label>
+                    <a href="comingSoon.html" class="link">View Page</a>
+                </div>
+            </li>
+            <li class="mv2 flex items-center">
+                <input checked type="checkbox" class="mb3" name="" id="landing">
+                <div class="ph2">
+                    <label for="landing" class="f4 ttc db">landing</label>
+                    <a href="landing.html" class="link">View Page</a>
+                </div>
+            </li>
+            <li class="mv2 flex items-center">
+                <input checked type="checkbox" class="mb3" name="" id="reserve1">
+                <div class="ph2">
+                    <label for="reserve1" class="f4 ttc db">reserve1</label>
+                    <a href="reserve1.html" class="link">View Page</a>
+                </div>
+            </li>
+            <li class="mv2 flex items-center">
+                <input checked type="checkbox" class="mb3" name="" id="blog">
+                <div class="ph2">
+                    <label for="blog" class="f4 ttc db">blog</label>
+                    <a href="blog.html" class="link">View Page</a>
+                </div>
+            </li>
+            <li class="mv2 flex items-center">
+                <input checked type="checkbox" class="mb3" name="" id="blogs">
+                <div class="ph2">
+                    <label for="blogs" class="f4 ttc db">blogs</label>
+                    <a href="blogs.html" class="link">View Page</a>
+                </div>
+            </li>
+            <li class="mv2 flex items-center">
+                <input type="checkbox" name="" class="mb3" id="loginModal">
+                <div class="ph2">
+                    <label for="loginModal" class="f4 ttc db">login Modal</label>
+                    <a href="loginModal.html" class="link">View Page</a>
+                </div>
+            </li>
+            <li class="mv2 flex items-center">
+                <input type="checkbox" name="" class="mb3" id="footer">
+                <div class="ph2">
+                    <label for="footer" class="f4 ttc db">footer</label>
+                    <a href="footer.html" class="link">View Page</a>
+                </div>
+            </li>
+            <li class="mv2 flex items-center">
+                <input type="checkbox" name="" class="mb3" id="footer">
+                <div class="ph2">
+                    <label for="createListing" class="f4 ttc db">Create Listing</label>
+                    <a href="createListing1.html" class="link">View Page</a>
+                </div>
             </li>
         </ul>
-    </nav>
-    <main class="flex-auto overflow-auto flex flex-column justify-center items-center">
-        <section class="flex flex-wrap items-stretch justify-stretch ma2 fw1 f5 f4-m f3-l measure-wide">
-            <a class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy" href="home.html">
-                Home
-            </a>
-            <a class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy" href="listing.html">
-                Listing
-            </a>
-            <a class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy" href="review.html">
-                Review
-            </a>
-            <a class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy" href="abouthosting.html">
-                About Hosting
-            </a>
-            <a class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy" href="faq.html">
-                Resolution Center
-            </a>
-            <a class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy" href="listings.html">
-                Listings
-            </a>
-            <a class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy" href="myprofile.html">
-                My Profile
-            </a>
-            <a class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy" href="becomehost.html">
-                Become Host
-            </a>
-            <a class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy" href="profile.html">
-                Profile
-            </a>
-            <a class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy" href="comingSoon.html">
-                Coming Soon
-            </a>
-            <a class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy" href="landing.html">
-                Landing
-            </a>
-            <a class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy" href="loginModal.html">
-                Login Modal
-            </a>
-            <a class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy" href="footer.html">
-                Footer & Edit Listing
-            </a>
-            <a class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy" href="reserve1.html">
-                Reserve Process
-            </a>
-            <a class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy" href="blog.html">
-                Blog
-            </a>
-            <a class="flex-auto ba link navy tc br-pill ma2 pv3 ph4 hover-white hover-bg-navy" href="blogs.html">
-                Blogs
-            </a>
-        </section>
     </main>
-</body>
+
+    <!-- PROGRESS -->
+    <input type="radio" name="progress" id="any_progress" class="dn">
+    <input type="radio" name="progress" id="done_progress" class="dn">
+    <input type="radio" name="progress" id="wip_progress" class="dn">
+    <input type="radio" name="progress" id="todo_progress" class="dn">
+    <!-- TYPE -->
+    <input type="radio" name="type" id="any_type" class="dn">
+    <input type="radio" name="type" id="page_type" class="dn">
+    <input type="radio" name="type" id="component_type" class="dn">
+    <input type="radio" name="type" id="element_type" class="dn">
 
 </html>
