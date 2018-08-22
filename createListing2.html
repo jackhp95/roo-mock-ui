@@ -15,7 +15,7 @@
         }
 
         progress[value]::-webkit-progress-bar {
-            background-color: #fff;
+            background-color: inherit;
         }
 
         .grid {
@@ -25,65 +25,170 @@
 
 </head>
 
-<body class="f6 fw3 lh-copy flex flex-column items-stretch vh-100 navy w-100">
-    <progress value="22" max="100" style="height: .25rem;" class="flex-none self-stretch w-auto appearance-none"></progress>
-    <menu class="flex-none ma0 pa0 tc bt bw1 b--white f7 fw6 tracked flex justify-between">
-        <div class="ph3 fw5 f6 pointer bg-blue flex items-center b--blue bt bb br white">Back</div>
-        <div class="flex-auto flex self-stretch overflow-auto bt bl bb b--black-10">
-            <a href="/createListing1.html" class="link navy flex-grow-1 flex-shrink-0 ph3 pv2 br pointer b--black-10 hover-white hover-bg-navy">Space</a>
-            <a href="/createListing2.html" class="link navy flex-grow-1 flex-shrink-0 ph3 pv2 br pointer b--black-10 hover-white hover-bg-navy">Features</a>
-            <a href="/createListing3.html" class="link navy flex-grow-1 flex-shrink-0 ph3 pv2 br pointer b--black-10 hover-white hover-bg-navy">Details</a>
-        </div>
-        <div class="ph3 fw5 f6 pointer bg-blue flex items-center b--blue bt bb bl white">Skip</div>
-    </menu>
-    <section class="flex-auto self-stretch flex flex-row-l flex-column items-stretch overflow-auto overflow-visible-l relative">
-        <header class="navy pa5-l pa4-ns pa3 mt5 mb4 mt6-ns mb5-ns self-stretch-l flex flex-column justify-center items-center mw6-l sticky top-0 z-2 bg-white">
-            <h1 class="f1-l f2-m f3 fw4 fw6-ns fw8-l pa0 mv2 lh-title tc tl-l">Key Features</h1>
-        </header>
-        <main class="flex-auto self-stretch relative flex flex-column justify-center mv3">
-            <form action="" class="measure-wide flex-none shadow-6 br4 overflow-hidden relative flex flex-column self-center z-2 ma3 ba b--black-20">
-                <div class="flex flex-wrap justify-between items-center ph4-ns pv3-ns ph3 pv2">
-                    <h2 class="f5 pa0 ma0 blue">Climate Control</h2>
-                    <nav class="flex justify-center">
-                        <input type="radio" class=" appearance-none pointer pt2 pl2 pa1 grow-large outline-0 hover-bg-blue br-pill ba b--black-20"
-                            name="" id="">
-                        <input type="radio" class="mh2 appearance-none pointer pt2 pl2 pa1 grow-large outline-0 hover-bg-blue br-pill ba b--black-20"
-                            name="" id="">
-                        <input type="radio" class="mh2 appearance-none pointer pt2 pl2 pa1 grow-large outline-0 hover-bg-blue br-pill ba b--black-20 bg-blue"
-                            name="" id="">
-                        <input type="radio" class="mh2 appearance-none pointer pt2 pl2 pa1 grow-large outline-0 hover-bg-blue br-pill ba b--black-20"
-                            name="" id="">
-                        <input type="radio" class=" appearance-none pointer pt2 pl2 pa1 grow-large outline-0 hover-bg-blue br-pill ba b--black-20"
-                            name="" id="">
-                    </nav>
-                </div>
-                <div class="w-100 aspect-ratio--16x9 bg-red bg-center cover" style="background-image: url('https://source.unsplash.com/featured/?Closet')"></div>
-                <div class="flex-auto self-stretch flex flex-column bg-white br1 navy bt b--black-10">
-                    <div class="ph4-ns ph3 pv3 flex-auto">
-                        <h3 class="f4 lh-title mv3-ns mv2">
-                            Is the {{ Space }} is climate controlled?
-                        </h3>
-                        <p class="mv3-ns mv2 lh-copy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur esse nam doloribus minus saepe
-                            in fuga!
-                        </p>
+<body class="f6 fw5 flex flex-column-l flex-row-m flex-column-reverse items-stretch vh-100">
+    <nav id="nav" class="f5-ns fw6-ns f7 fw7 flex-none pv3-m ph4-l pa0 shadow-hover z-9999 flex flex-column-l bg-white">
+        <ul class="flex flex-column-m no-underline list ma0 pa0 overflow-visible-ns overflow-hidden w-100 w-auto-ns">
+            <li class="dn flex-auto-l flex-ns items-center ph4 pv3-m">
+                <a href="index.html#nav" class="grow-large dib br-pill black">
+                    <div class="contain pa4 pt3-l pl3-l flex-auto self-stretch grow" style="background:url('Logo/Tight/PNG/Black.png') no-repeat center;"></div>
+                </a>
+            </li>
+            <li class="flex dn-ns hide-child o-80 glow w-20 w-auto-ns">
+                <a href="index.html#nav" class="flex flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2">
+                        <div class="mb1 pl3 pt3 pr2 pb2 cover o-60 rotate-270" style="background:url('https://icongr.am/clarity/caret.svg')"></div>
+                        Back</span>
+                    <div class="b--purple ba child"></div>
+                </a>
+            </li>
+            <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
+                <a href="listings.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
+                        <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/compass.svg')"></div>
+                        Feed</span>
+                    <div class="b--purple ba child"></div>
+                </a>
+            </li>
+            <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
+                <a href="listings.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
+                        <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/view-list.svg')"></div>
+                        Listings</span>
+                    <div class="b--purple ba child"></div>
+                </a>
+            </li>
+            <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
+                <a href="listing.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
+                        <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/house.svg')"></div>
+                        Hosting</span>
+                    <div class="b--purple ba child"></div>
+                </a>
+            </li>
+            <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
+                <a href="myprofile.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
+                        <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/user.svg')"></div>
+                        Jack</span>
+                    <div class="b--purple ba child"></div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <section class="flex-auto flex flex-column items-stretch">
+        <header class="pa0 ma0 flex-none shadow-6 flex flex-column">
+            <progress value="22" max="100" style="height: .25rem;" class="h1 flex-none self-stretch w-100 appearance-none"></progress>
+            <menu class="flex items-center ma0 pa0 pointer bg-white ttc f6 ph1 ph2-ns ">
+                <a href="createListing1.html" class="link br1 hover-bg-yellow bg-white navy flex items-center">
+                    <span class="pa3 pt2 pl2 ma2 bg-center rotate-270 contain" style="background-image: url('https://icongr.am/clarity/angle.svg')"></span>
+                    <span class="dn di-l mr3">back</span>
+                </a>
+                <details class="flex-auto f4-ns f5">
+                    <summary class="pv3-ns pv2 ph3 fw5 outline-0 z-2 navy">key features</summary>
+                    <div class="flex-none relative">
+                        <ul class="absolute flex flex-column top-0 list pv1 pa0 ma0 bg-white w-100 shadow-6 br3 br--bottom mw5">
+                            <a href="createListing1.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Space</a>
+                            <a href="createListing2.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Features</a>
+                            <a href="createListing3.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Details</a>
+                            <a href="createListing4.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Help Move</a>
+                            <a href="createListing5.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Upload Photos</a>
+                        </ul>
                     </div>
-                    <div class="tc flex fw5 f4 bt b--black-10 bg-white blue fw7">
-                        <input type="checkbox" class="dn" name="environment" id="exposure">
-                        <label class="br b--black-10 pa3 flex-auto hover-bg-blue hover-white pointer" for="exposure">
+                </details>
+                <details>
+                    <summary class="link br1 hover-bg-yellow bg-white navy flex items-center">
+                        <span class="dn di-l ml3">preview</span>
+                        <span class="pa3 pt2 pl2 ma2 bg-center contain" style="background-image: url('https://icongr.am/clarity/eye.svg')"></span>
+                    </summary>
+                    <div class="fixed bg-black-60 hover-bg-black-20 bg-animate ph3 pv6  w-100 vh-100 absolute--fill navy flex flex-column items-center justify-center-ns overflow-auto">
+                        <div class="flex-none overflow-hidden shadow-4 flex flex-column relative br1">
+                            <div class="pa6 grow  flex-auto bg-center cover" style="background:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"></div>
+                            <div class="flex-none flex  flex-column bg-white shadow-6">
+                                <div class="flex justify-between items-stretch">
+                                    <div class="flex-auto absolute top-0 left-0 right-0 flex flex-column items-center justify-between  mh6 mt5">
+                                        <div class=" pa5 br-pill grow ba bw2-ns bw1 b--white bg-center cover" style="background:url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91');"></div>
+                                        <div class="flex shadow-6 grow br1 mv3 f5 bg-white">
+                                            <div class="hover-bg-gold br1">
+                                                <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/group.svg')"></div>
+                                            </div>
+                                            <div class="hover-bg-gold br1">
+                                                <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/lock.svg')"></div>
+                                            </div>
+                                            <div class="hover-bg-gold br1">
+                                                <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/shield.svg')"></div>
+                                            </div>
+                                            <div class="hover-bg-gold br1">
+                                                <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/check.svg')"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-auto flex flex-column lh-solid justify-center pa3">
+                                        <div class=" f2 measure fw7 ma3">Cassandra's Garage</div>
+                                        <div class="ma3 f5 measure">
+                                            <div class="br1 b--black-40 ba flex">
+                                                <div class="flex-auto ph3 br flex justify-center pv2 hover-bg-gold">
+                                                    <div class="cover pa2 mr2" style="background:url('https://icongr.am/clarity/bundle.svg')"></div>
+                                                    <span class="flex-auto flex justify-center items-center">400
+                                                        <sup> sqft</sup>
+                                                    </span>
+                                                </div>
+                                                <div class="flex-auto ph3 flex justify-center pv2 hover-bg-gold">
+                                                    <div class="cover pa2 mr2" style="background:url('https://icongr.am/clarity/map-marker.svg')"></div>
+                                                    <span class="flex-auto flex justify-center items-center">2.6 mi</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mh3 fw5 f6 lh-copy measure">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolorum ratione corporis eos headerlam ut vero corrupti
+                                            sint iste id harum.
+                                        </div>
+                                        <div class="flex items-center justify-between shadow-hover br1 f5 hover-bg-purple hover-white purple mv3">
+                                            <span class="mh3 fw7">Reserve for $42</span>
+                                            <div class="cover h1 w1 ma3 grow flex-shrink-0" style="background:url('https://icongr.am/clarity/tag.svg?color=ffffff')"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+                <a href="createListing3.html" class="link br1 hover-bg-yellow bg-white navy flex items-center">
+                    <span class="dn di-l ml3">next</span>
+                    <span class="pa3 pt2 pl2 ma2 bg-center rotate-90 contain" style="background-image: url('https://icongr.am/clarity/angle.svg')"></span>
+                </a>
+            </menu>
+        </header>
+        <main class="flex-auto flex flex-column flex-row-l overflow-auto">
+            <div class="flex-auto pa5 bg-center cover" style="background-image: url('https://source.unsplash.com/featured/?Closet')"></div>
+            <article class="self-stretch-l flex flex-column flex-none">
+                <div class="flex-auto-l flex-none mh5-l mh4-ns mh3 pv5-l pv4-ns pv3 navy measure f5-ns f6 self-center flex-l flex-column-l justify-center-l">
+                    <h3 class="f1-l f2 lh-title mv3-ns mv2">
+                        Is the {{Space}} climate controlled?
+                    </h3>
+                    <p class="mv3-ns mv2 lh-copy">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sunt tempore eaque quas soluta ad exercitationem beatae deserunt,
+                        libero aliquam porro ullam itaque voluptatum ea dolore. Facilis, ipsa! Quod, optio.
+                    </p>
+                    <p class="mv3-ns mv2 lh-copy">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sunt tempore eaque quas soluta ad exercitationem beatae deserunt,
+                        libero aliquam porro ullam itaque voluptatum ea dolore. Facilis, ipsa! Quod, optio.
+                    </p>
+                </div>
+                <form class="flex-none sticky bottom-0">
+                    <div class="flex tc ma0 pa0 f5 pointer white ba b--white shadow-6">
+                        <div class="flex-auto bg-blue pv3 ba b--white">
                             No
                             <span class="dn di-ns">it's not.</span>
-                        </label>
-                        <input type="checkbox" class="dn" name="environment" id="precipitation">
-                        <label class="pa3 flex-auto hover-bg-blue hover-white pointer" for="precipitation">
+                        </div>
+                        <div class="flex-auto bg-blue pv3 ba b--white">
                             Yes
                             <span class="dn di-ns">it is!</span>
-                        </label>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </article>
         </main>
     </section>
-
 </body>
 
 </html>
