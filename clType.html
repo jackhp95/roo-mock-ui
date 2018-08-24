@@ -76,7 +76,7 @@
         </ul>
     </nav>
     <section class="flex-auto flex flex-column items-stretch">
-        <header class="pa0 ma0 flex-none shadow-6 flex flex-column">
+        <header class="z-1 pa0 ma0 flex-none shadow-6 flex flex-column">
             <progress value="11" max="100" style="height: .25rem;" class="h1 flex-none self-stretch w-100 appearance-none"></progress>
             <menu class="flex items-center ma0 pa0 pointer bg-white ttc f6 ph1 ph2-ns ">
                 <a href="index.html" class="link br1 hover-bg-yellow bg-white navy flex items-center">
@@ -87,11 +87,14 @@
                     <summary class="pv3-ns pv2 ph3 fw5 outline-0 z-2 navy">Type of Space</summary>
                     <div class="flex-none relative">
                         <ul class="absolute flex flex-column top-0 list pv1 pa0 ma0 bg-white w-100 shadow-6 br3 br--bottom mw5">
-                            <a href="createListing1.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Space</a>
-                            <a href="createListing2.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Features</a>
-                            <a href="createListing3.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Details</a>
-                            <a href="createListing4.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Help Move</a>
-                            <a href="createListing5.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Upload Photos</a>
+                            <a href="clType.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Type</a>
+                            <a href="clPhotos.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Photos</a>
+                            <a href="clClimate.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Climate</a>
+                            <a href="clHelp.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Help Move</a>
+                            <a href="clDetails.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Details</a>
+                            <a href="clPrice.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Pricing</a>
+                            <a href="clPayment.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Get Paid</a>
+                            <a href="clChecker.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Background Check</a>
                         </ul>
                     </div>
                 </details>
@@ -152,7 +155,7 @@
                         </div>
                     </div>
                 </details>
-                <a href="createListing2.html" class="link br1 hover-bg-yellow bg-white navy flex items-center">
+                <a href="clPhotos.html" class="link br1 hover-bg-yellow bg-white navy flex items-center">
                     <span class="dn di-l ml3">next</span>
                     <span class="pa3 pt2 pl2 ma2 bg-center rotate-90 contain" style="background-image: url('https://icongr.am/clarity/angle.svg')"></span>
                 </a>
@@ -161,7 +164,7 @@
         <main class="flex-auto flex flex-column flex-row-reverse-l flex-wrap-l overflow-auto">
             <article class="center-l self-stretch-l flex flex-column flex-none">
                 <div class="flex-auto-l flex-none mh5-l mh4-ns mh3 pv5-l pv4-ns pv3 navy measure f5-ns f6 self-center flex-l flex-column-l justify-center-l">
-                    <h3 class="f1-l f2 lh-title mv3-ns mv2">
+                    <h3 class="f1-l f2 lh-title mv3-ns mv2 fw8">
                         Pick your type of space
                     </h3>
                     <p class="mv3-ns mv2 lh-copy">
@@ -171,7 +174,7 @@
                 </div>
             </article>
             <section class="flex-auto overflow-auto-l self-stretch relative flex flex-column white">
-                <ul class="flex-grow-1 flex-shrink-0 list pa0 ma0 flex-none self-stretch flex flex-wrap justify-center f3-ns f4 white">
+                <ul class="flex-grow-1 flex-shrink-0 list pa0 ma0 flex-none self-stretch flex flex-wrap justify-center f3-l f4 white">
                     <li class="flex-auto pointer w-50 w-third-ns w-25-l overflow-hidden self-stretch relative measure cover bg-center bg-yellow"
                         style="background-image: url('https://source.unsplash.com/featured/?Basement')">
                         <div class="absolute bottom-0 z-1 mh3 mv2"> Basement</div>
@@ -245,9 +248,9 @@
                         <div class="absolute absolute--fill lg-black-fade-up"></div>
                     </li>
                 </ul>
-                <div class="flex-none w-100 flex flex-wrap-reverse justify-center">
-                    <details>
-                        <summary class="pa3 pointer ph4-ns appearance-none navy f4 fw5 bn ma0 tc">Custom Entry</summary>
+                <div class="flex-none w-100 flex flex-wrap-reverse justify-center ph2">
+                    <details class="self-center ">
+                        <summary class="pv2-ns pv1 mv1 pointer ph2 self-center ph3-ns appearance-none f4 fw5 ma0 tc br-pill ba b--blue blue mh2">Custom Entry</summary>
                         <div class="fixed bg-black-60 hover-bg-black-20 bg-animate ph3 pv6 z-5 w-100 vh-100 absolute--fill navy flex flex-column items-center justify-center-ns overflow-auto">
                             <div class="flex-none overflow-hidden shadow-4 flex flex-column relative br1">
                                 <div class="flex flex-wrap flex-column flex-row-ns ma3-ns shadow-hover br2-ns bg-white overflow-hidden self-stretch self-center-ns">
@@ -290,7 +293,7 @@
                             </div>
                         </div>
                     </details>
-                    <button class="flex-auto pa3 pointer appearance-none bg-blue white f4 fw5 bn ma0">Load More</button>
+                    <button class="flex-auto pa3 mv1 pointer appearance-none bg-blue white f4 fw5 bn ma0 br-pill mh2 ">Load More</button>
                 </div>
             </section>
         </main>

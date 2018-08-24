@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Roo Storage</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.9.1/tachyons.min.css" />
+    <link rel="stylesheet" href="tachyons.css" />
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <link rel="stylesheet" href="Custom.css" />
@@ -15,7 +15,7 @@
         }
 
         progress[value]::-webkit-progress-bar {
-            background-color: inherit;
+            background-color: #fff;
         }
 
         .grid {
@@ -77,21 +77,22 @@
     </nav>
     <section class="flex-auto flex flex-column items-stretch">
         <header class="pa0 ma0 flex-none shadow-6 flex flex-column">
-            <progress value="44" max="100" style="height: .25rem;" class="h1 flex-none self-stretch w-100 appearance-none"></progress>
+            <progress value="66" max="100" style="height: .25rem;" class="h1 flex-none self-stretch w-100 appearance-none"></progress>
             <menu class="flex items-center ma0 pa0 pointer bg-white ttc f6 ph1 ph2-ns ">
-                <a href="createListing3.html" class="link br1 hover-bg-yellow bg-white navy flex items-center">
+                <a href="clDetails.html" class="link br1 hover-bg-yellow bg-white navy flex items-center">
                     <span class="pa3 pt2 pl2 ma2 bg-center rotate-270 contain" style="background-image: url('https://icongr.am/clarity/angle.svg')"></span>
                     <span class="dn di-l mr3">back</span>
                 </a>
                 <details class="flex-auto f4-ns f5">
-                    <summary class="pv3-ns pv2 ph3 fw5 outline-0 z-2 navy">Help Move</summary>
+                    <summary class="pv3-ns pv2 ph3 fw5 outline-0 z-2 navy">Pricing</summary>
                     <div class="flex-none relative">
                         <ul class="absolute flex flex-column top-0 list pv1 pa0 ma0 bg-white w-100 shadow-6 br3 br--bottom mw5">
-                            <a href="createListing1.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Space</a>
-                            <a href="createListing2.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Features</a>
-                            <a href="createListing3.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Details</a>
-                            <a href="createListing4.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Help Move</a>
-                            <a href="createListing5.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Upload Photos</a>
+                            <a href="clType.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Type</a>
+                            <a href="clPhotos.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Photos</a>
+                            <a href="clClimate.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Climate</a>
+                            <a href="clHelp.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Help Move</a>
+                            <a href="clDetails.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Details</a>
+                            <a href="clPrice.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Pricing</a>                                                <a href="clPayment.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Get Paid</a>                             <a href="clChecker.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Background Check</a>        <a href="clPrice.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Pricing</a>                            <a href="clPayment.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Get Paid</a>
                         </ul>
                     </div>
                 </details>
@@ -152,33 +153,40 @@
                         </div>
                     </div>
                 </details>
-                <a href="createListing5.html" class="link br1 hover-bg-yellow bg-white navy flex items-center">
+                <a href="clPayment.html" class="link br1 hover-bg-yellow bg-white navy flex items-center">
                     <span class="dn di-l ml3">next</span>
                     <span class="pa3 pt2 pl2 ma2 bg-center rotate-90 contain" style="background-image: url('https://icongr.am/clarity/angle.svg')"></span>
                 </a>
             </menu>
         </header>
         <main class="flex-auto flex flex-column flex-row-l overflow-auto">
-            <div class="flex-auto pa5 bg-center cover" style="background-image: url('https://images.unsplash.com/photo-1526384133018-201452728d6c')"></div>
+            <div class="flex-auto pa5 bg-center cover" style="background-image: url('https://source.unsplash.com/featured/?Cash')"></div>
             <article class="self-stretch-l flex flex-column flex-none">
                 <div class="flex-auto-l flex-none mh5-l mh4-ns mh3 pv5-l pv4-ns pv3 navy measure f5-ns f6 self-center flex-l flex-column-l justify-center-l">
-                    <h3 class="f1-l f2 lh-title mv3-ns mv2">
-                        Are you willing to lend a hand?
+                    <h3 class="f1-l f2 lh-title mv3-ns mv2 fw8">
+                        Set Pricing for your {{Space}}
                     </h3>
                     <p class="mv3-ns mv2 lh-copy">
-                        Are you willing to help with moving? This has been proven to help reduce the stress of moving for the renter and increase
-                        satisfaction ratings by 25%. Not to mention, 75% of hosts that help, receive a tip.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta culpa impedit beatae ea nemo aperiam veritatis ab eos praesentium.
+                        Autem, exercitationem explicabo corrupti perferendis dolorem quia mollitia? Ea, quod repellendus.
                     </p>
-                </div>
-                <form class="flex-none sticky bottom-0">
-                    <div class="flex tc ma0 pa0 f5 pointer white ba b--white shadow-6">
-                        <div class="flex-auto bg-blue pa3 ba b--white">
-                            No
-                            <span class="dn di-ns"> thanks.</span>
+                    <div class="w-100">
+                        <div class="mh1 flex items-center pt2">
+                            <div>$67.34</div>
+                            <input type="range" name="" id="" style="height: 0.25em;" class="f4 mh3 outline-0 appearance-none slider-navy hover-slider-blue flex-auto h1 br-pill bg-black-10">
+                            <div>$367.34</div>
                         </div>
-                        <div class="flex-auto bg-blue pa3 ba b--white">
-                            Yes
-                            <span class="dn di-ns">, I'd love to help!</span>
+                        <div class="mh1 flex justify-between f7 pb2">
+                            <div>price per month</div>
+                            <div>expected annual earnings</div>
+                        </div>
+                    </div>
+                </div>
+                <form class="flex-none XXX-sticky XXX-bottom-0">
+                    <div class="flex tc flex-wrap ma0 pa0 ph2 f5 pointer white ba bg-white">
+                        <div class="flex-auto bg-blue pv3 ph4 br-pill mh2 mv1">
+                            Set Price
+                            <span class="dn di-ns">at $67.34</span>
                         </div>
                     </div>
                 </form>
