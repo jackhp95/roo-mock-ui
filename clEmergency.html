@@ -21,8 +21,30 @@
         .grid {
             display: grid;
         }
-    </style>
 
+        input~* .dynamic,
+        input~.dynamic {
+            display: none;
+        }
+
+        #tgl-1--0:checked~* .tgl-1--0.dynamic,
+        #tgl-1--0:checked~.tgl-1--0.dynamic,
+        #tgl-1--1:checked~* .tgl-1--1.dynamic,
+        #tgl-1--1:checked~.tgl-1--1.dynamic,
+        #tgl-1--2:checked~* .tgl-1--2.dynamic,
+        #tgl-1--2:checked~.tgl-1--2.dynamic {
+            display: inherit;
+        }
+
+        #opt-1--0:checked~* .opt-1--0.dynamic,
+        #opt-1--0:checked~.opt-1--0.dynamic,
+        #opt-1--1:checked~* .opt-1--1.dynamic,
+        #opt-1--1:checked~.opt-1--1.dynamic,
+        #opt-1--2:checked~* .opt-1--2.dynamic,
+        #opt-1--2:checked~.opt-1--2.dynamic {
+            display: inherit;
+        }
+    </style>
 </head>
 
 <body class="f6 fw5 flex flex-column-l flex-row-m flex-column-reverse items-stretch vh-100">
@@ -82,14 +104,14 @@
     </nav>
     <section class="flex-auto flex flex-column items-stretch">
         <header class="pa0 ma0 flex-none shadow-6 flex flex-column">
-            <progress value="66" max="100" style="height: .25rem;" class="h1 flex-none self-stretch w-100 appearance-none"></progress>
+            <progress value="55" max="100" style="height: .25rem;" class="h1 flex-none self-stretch w-100 appearance-none"></progress>
             <menu class="flex items-center ma0 pa0 pointer bg-white ttc f6 ph1 ph2-ns ">
-                <a href="clDetails.html" class="link br1 hover-bg-yellow bg-white navy flex items-center">
+                <a href="clHelp.html" class="link br1 hover-bg-yellow bg-white navy flex items-center">
                     <span class="pa3 pt2 pl2 ma2 bg-center rotate-270 contain" style="background-image: url('https://icongr.am/clarity/angle.svg')"></span>
                     <span class="dn di-l mr3">back</span>
                 </a>
                 <details class="flex-auto f4-ns f5">
-                    <summary class="pv3-ns pv2 ph3 fw5 outline-0 z-2 navy">Pricing</summary>
+                    <summary class="pv3-ns pv2 ph3 fw5 outline-0 z-2 navy">Emergency</summary>
                     <div class="flex-none relative">
                         <ul class="absolute flex flex-column top-0 list pv1 pa0 ma0 bg-white w-100 shadow-6 br3 br--bottom mw5">
                             <a href="clType.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Type</a>
@@ -101,8 +123,6 @@
                             <a href="clPayment.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Get Paid</a>
                             <a href="clChecker.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Background
                                 Check</a>
-                            <a href="clPrice.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Pricing</a>
-                            <a href="clPayment.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Get Paid</a>
                         </ul>
                     </div>
                 </details>
@@ -164,46 +184,89 @@
                         </div>
                     </div>
                 </details>
-                <a href="clPayment.html" class="link br1 hover-bg-yellow bg-white navy flex items-center">
+                <a href="clPrice.html" class="link br1 hover-bg-yellow bg-white navy flex items-center">
                     <span class="dn di-l ml3">next</span>
                     <span class="pa3 pt2 pl2 ma2 bg-center rotate-90 contain" style="background-image: url('https://icongr.am/clarity/angle.svg')"></span>
                 </a>
             </menu>
         </header>
         <main class="flex-auto flex flex-column flex-row-l overflow-auto">
-            <div class="flex-auto pa5 bg-center cover" style="background-image: url('https://source.unsplash.com/featured/?Cash')"></div>
+            <div class="flex-auto pa5 bg-center cover" style="background-image: url('https://images.unsplash.com/photo-1485761954900-f9a29f318567')"></div>
             <article class="self-stretch-l flex flex-column flex-none">
                 <div class="flex-auto-l flex-none mh5-l mh4-ns mh3 pv5-l pv4-ns pv3 navy measure f5-ns f6 self-center flex-l flex-column-l justify-center-l">
                     <h3 class="f1-l f2 lh-title mv3-ns mv2 fw8">
-                        Set Pricing for your {{Space}}
+                        Who is your Emergency Contact?
                     </h3>
                     <p class="mv3-ns mv2 lh-copy">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta culpa impedit beatae ea nemo
-                        aperiam veritatis ab eos praesentium.
-                        Autem, exercitationem explicabo corrupti perferendis dolorem quia mollitia? Ea, quod
-                        repellendus.
+                        Who has a spare key? In the situation that you're out of town, or can't make it to your listing
+                        space, our renter will still need a way to access the space. You can either take a picture of
+                        the key you use to access the space, or you can leave the contact information for a trusted
+                        person with a key.
                     </p>
-                    <div class="flex flex-wrap">
-                        <input type="range" name="" id="" style="height: 0.25em;" class="mv3 w-100 f4 outline-0 appearance-none slider-navy hover-slider-blue flex-auto h1 br-pill bg-black-10">
-                        <div class="flex-auto tc ma1">
-                            <div class="f3 fw7 blue mv1">$40</div>
-                            <div class="f7">Your Take</div>
+                    <fieldset class="relative mv2 pa0 pb1 flex flex-auto br2 fw6 white pointer ba b--black-20 blue">
+                        <input type="email" value="Johnny B. Goode" class="navy bn w-100 bg-transparent br2 outline-0 pv2 ph3 flex-auto appearance-none">
+                        <legend class="f7 mh2 ph2"> Full Name </legend>
+                        <!-- Errors -->
+                        <div class="ml5 absolute top-0 right-0 ph2 tr">
+                            <!-- Error -->
+                            <!-- <div class="bg-white ph2 f7 lh-solid">unrecognized email</div> -->
                         </div>
-                        <div class="flex-auto tc ma1">
-                            <div class="f3 fw7 blue mv1">$10</div>
-                            <div class="f7">Our Take</div>
+                    </fieldset>
+                    <fieldset class="relative mv2 pa0 pb1 flex flex-auto br2 fw6 white pointer ba b--black-20 blue">
+                        <input type="email" value="42069" class="navy bn w-100 bg-transparent br2 outline-0 pv2 ph3 flex-auto appearance-none">
+                        <legend class="f7 mh2 ph2"> Address </legend>
+                        <!-- Errors -->
+                        <div class="ml5 absolute top-0 right-0 ph2 tr">
+                            <!-- Error -->
+                            <!-- <div class="bg-white ph2 f7 lh-solid">unrecognized email</div> -->
                         </div>
-                        <div class="flex-auto tc ma1">
-                            <div class="f3 fw7 blue mv1">$50</div>
-                            <div class="f7">Renter Pays</div>
+                    </fieldset>
+                    <fieldset class="relative mv2 pa0 pb1 flex flex-auto br2 fw6 white pointer ba b--black-20 blue">
+                        <input type="email" value="555 ) 867 - 5309" class="navy bn w-100 bg-transparent br2 outline-0 pv2 ph3 flex-auto appearance-none">
+                        <legend class="f7 mh2 ph2"> Phone </legend>
+                        <!-- Errors -->
+                        <div class="ml5 absolute top-0 right-0 ph2 tr">
+                            <!-- Error -->
+                            <!-- <div class="bg-white ph2 f7 lh-solid">unrecognized email</div> -->
                         </div>
-                    </div>
+                    </fieldset>
+                    <fieldset class="relative mv2 pa0 pb1 flex flex-auto br2 fw6 white pointer ba b--black-20 blue">
+                        <input type="email" value="GoGo@woods.us.la" class="navy bn w-100 bg-transparent br2 outline-0 pv2 ph3 flex-auto appearance-none">
+                        <legend class="f7 mh2 ph2"> Email </legend>
+                        <!-- Errors -->
+                        <div class="ml5 absolute top-0 right-0 ph2 tr">
+                            <!-- Error -->
+                            <!-- <div class="bg-white ph2 f7 lh-solid">unrecognized email</div> -->
+                        </div>
+                    </fieldset>
+                    <!-- <div class="pv2 flex flex-column">
+                        <input class="dn" type="radio" name="medium" id="opt-1--0">
+                        <input class="dn" type="radio" name="medium" id="opt-1--1">
+                        <input class="dn" type="radio" name="medium" id="opt-1--2">
+                        <div class="flex justify-around">
+                            <label class="flex pa2 ba b--yellow hover-bg-yellow br2" for="opt-1--0">
+                                <div class="flex-none mh1 pa2 contain bg-center" style="background-image: url('https://icongr.am/clarity/email.svg')"></div>
+                                <div class="ph1">Email</div>
+                            </label>
+                            <label class="flex pa2 ba b--yellow hover-bg-yellow br2" for="opt-1--1">
+                                <div class="flex-none mh1 pa2 contain bg-center" style="background-image: url('https://icongr.am/clarity/phone-handset.svg')"></div>
+                                <div class="ph1">Phone</div>
+                            </label>
+                            <label class="flex pa2 ba b--yellow hover-bg-yellow br2" for="opt-1--2">
+                                <div class="flex-none mh1 pa2 contain bg-center" style="background-image: url('https://icongr.am/clarity/home.svg')"></div>
+                                <div class="ph1">Address</div>
+                            </label>
+                        </div>
+                        <input class="navy mt2 fw2 flex-auto ph3 pv2 br2 ba b--black-20 dynamic opt-1--0" type="email" placeholder="What's their email">
+                        <input class="navy mt2 fw2 flex-auto ph3 pv2 br2 ba b--black-20 dynamic opt-1--1" type="number" placeholder="What's their number" name="" id="">
+                        <input class="navy mt2 fw2 flex-auto ph3 pv2 br2 ba b--black-20 dynamic opt-1--2" type="text" placeholder="What's their address">
+                    </div> -->
                 </div>
                 <form class="flex-none XXX-sticky XXX-bottom-0">
                     <div class="flex tc flex-wrap ma0 pa0 ph2 f5 pointer white ba bg-white">
                         <div class="flex-auto bg-blue pv3 ph4 br-pill mh2 mv1">
-                            Set Price
-                            <span class="dn di-ns">at $67.34</span>
+                            Submit
+                            <span class="dn di-ns">These Details</span>
                         </div>
                     </div>
                 </form>

@@ -21,8 +21,29 @@
         .grid {
             display: grid;
         }
-    </style>
 
+        input ~ * .dynamic, input ~ .dynamic {
+            display: none;
+        }
+
+        #tgl-1--0:checked ~ * .tgl-1--0.dynamic ,
+        #tgl-1--0:checked ~ .tgl-1--0.dynamic,
+        #tgl-1--1:checked ~ * .tgl-1--1.dynamic,
+        #tgl-1--1:checked ~ .tgl-1--1.dynamic,
+        #tgl-1--2:checked ~ * .tgl-1--2.dynamic,
+        #tgl-1--2:checked ~ .tgl-1--2.dynamic {
+            display: inherit;
+        }
+
+        #opt-1--0:checked ~ * .opt-1--0.dynamic ,
+        #opt-1--0:checked ~ .opt-1--0.dynamic,
+        #opt-1--1:checked ~ * .opt-1--1.dynamic,
+        #opt-1--1:checked ~ .opt-1--1.dynamic,
+        #opt-1--2:checked ~ * .opt-1--2.dynamic,
+        #opt-1--2:checked ~ .opt-1--2.dynamic {
+            display: inherit;
+        }
+    </style>
 </head>
 
 <body class="f6 fw5 flex flex-column-l flex-row-m flex-column-reverse items-stretch vh-100">
@@ -37,7 +58,8 @@
                 <a href="index.html#nav" class="flex flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2">
                         <div class="mb1 pl3 pt3 pr2 pb2 cover o-60 rotate-270" style="background:url('https://icongr.am/clarity/caret.svg')"></div>
-                        Back</span>
+                        Back
+                    </span>
                     <div class="b--purple ba child"></div>
                 </a>
             </li>
@@ -45,7 +67,8 @@
                 <a href="listings.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
                         <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/compass.svg')"></div>
-                        Feed</span>
+                        Feed
+                    </span>
                     <div class="b--purple ba child"></div>
                 </a>
             </li>
@@ -53,7 +76,8 @@
                 <a href="listings.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
                         <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/view-list.svg')"></div>
-                        Listings</span>
+                        Listings
+                    </span>
                     <div class="b--purple ba child"></div>
                 </a>
             </li>
@@ -61,7 +85,8 @@
                 <a href="listing.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
                         <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/house.svg')"></div>
-                        Hosting</span>
+                        Hosting
+                    </span>
                     <div class="b--purple ba child"></div>
                 </a>
             </li>
@@ -69,7 +94,8 @@
                 <a href="myprofile.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
                         <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/user.svg')"></div>
-                        Jack</span>
+                        Jack
+                    </span>
                     <div class="b--purple ba child"></div>
                 </a>
             </li>
@@ -94,7 +120,8 @@
                             <a href="clDetails.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Details</a>
                             <a href="clPrice.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Pricing</a>
                             <a href="clPayment.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Get Paid</a>
-                            <a href="clChecker.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Background Check</a>
+                            <a href="clChecker.html" class="link pv2 ph3 hover-bg-navy hover-white bg-animate">Background
+                                Check</a>
                         </ul>
                     </div>
                 </details>
@@ -142,7 +169,8 @@
                                             </div>
                                         </div>
                                         <div class="mh3 fw5 f6 lh-copy measure">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae dolorum ratione corporis eos headerlam ut vero corrupti
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+                                            dolorum ratione corporis eos headerlam ut vero corrupti
                                             sint iste id harum.
                                         </div>
                                         <div class="flex items-center justify-between shadow-hover br1 f5 hover-bg-purple hover-white purple mv3">
@@ -168,8 +196,10 @@
                     <h3 class="f1-l f2 lh-title mv3-ns mv2 fw8">
                         Details about the {{Space}}
                     </h3>
-                    <fieldset class="relative mv3 pa0 pb1 self-stretch flex items-center br2 white pointer ba b--black-20 blue">
-                        <div contenteditable="true" class="bn bg-transparent br2 outline-0 pb2 pt1 ph3 navy">Guessed rd, Columbia MO</div>
+                    <fieldset class="relative mv2 pa0 pb1 self-stretch flex items-center br2 white pointer ba b--black-20 blue">
+                        <div contenteditable="true" class="bn bg-transparent br2 outline-0 pb2 pt1 ph3 navy">Guessed
+                            rd,
+                            Columbia MO</div>
                         <legend class="mh2 ph2 fw4 navy"> Address </legend>
                         <!-- Errors -->
                         <div class="ml5 absolute top-0 right-0 ph1 mh2 bg-white">
@@ -178,7 +208,7 @@
                             </div>
                         </div>
                     </fieldset>
-                    <fieldset class="relative br3 ba b--black-20 navy pa0 ma0">
+                    <fieldset class="relative mv2 br3 ba b--black-20 navy pa0 ma0">
                         <legend class="mh2 ph2 fw4 navy">Size</legend>
                         <div class="ml5 absolute top-0 right-0 ph1 mh2 bg-white">
                             <div class="bg-white flex ba f7 br2 overflow-hidden glow b--black-20 black-40 fw5">
@@ -220,8 +250,57 @@
                             </fieldset>
                         </div>
                     </fieldset>
-                    <fieldset class="relative mv3 pa0 pb1 self-stretch flex items-center br2 white pointer ba b--black-20 blue">
-                        <div contenteditable="true" class="bn bg-transparent br2 outline-0 pb2 pt1 ph3 navy">This {{Space}} has {{ Features }}.</div>
+                    <fieldset class="relative mv2 br3 ba b--black-20 navy pa0 ma0">
+                        <legend class="mh2 ph2 fw4 navy">Emergency Contact</legend>
+                        <div class="ml5 absolute top-0 right-0 ph1 mh2 bg-white">
+                            <div class="bg-white flex ba f7 br2 overflow-hidden glow b--black-20 black-40 fw5">
+                                <input class="dn" type="radio" name="metric" id="">
+                                <input class="dn" type="radio" name="standard" id="">
+                                <label class="dn br hover-bg-blue hover-white ph2" for="metric">metric</label>
+                                <label class="hover-bg-blue hover-white ph2" for="standard">add another contact</label>
+                            </div>
+                        </div>
+                        <div class="flex items-center mh2 mb2 pa1">
+                            <fieldset class="relative pa0 pb1 flex flex-auto br2 fw6 white pointer ba b--black-10 blue">
+                                <input type="email" placeholder="6'7''" class="bn w-100 bg-transparent br2 outline-0 pv2 ph3 flex-auto appearance-none">
+                                <legend class="f7 mh2 ph2"> Name </legend>
+                                <!-- Errors -->
+                                <div class="ml5 absolute top-0 right-0 ph2 tr">
+                                    <!-- Error -->
+                                    <!-- <div class="bg-white ph2 f7 lh-solid">unrecognized email</div> -->
+                                </div>
+                            </fieldset>
+                            <div class="flex flex-wrap">
+                                <input class="dn" type="checkbox" name="medium" id="opt-1--0">
+                                <input class="dn" type="checkbox" name="medium" id="opt-1--1">
+                                <input class="dn" type="checkbox" name="medium" id="opt-1--2">
+                                <div class="flex">
+                                    <label class="flex pa2" for="opt-1--0">
+                                        <div class="mr2 pa2 contain bg-center" style="background-image: url('https://icongr.am/clarity/email.svg')"></div>
+                                        Email
+                                    </label>
+                                    <input class="dynamic opt-1--0" type="email">
+                                </div>
+                                <div class="flex">
+                                    <label class="flex pa2" for="opt-1--1">
+                                        <div class="mr2 pa2 contain bg-center" style="background-image: url('https://icongr.am/clarity/phone-handset.svg')"></div>
+                                        Phone
+                                    </label>
+                                    <input class="dynamic opt-1--1" type="number" name="" id="">
+                                </div>
+                                <div class="flex">
+                                    <label class="flex pa2" for="opt-1--2">
+                                        <div class="mr2 pa2 contain bg-center" style="background-image: url('https://icongr.am/clarity/home.svg')"></div>
+                                        Address
+                                    </label>
+                                    <input class="dynamic opt-1--2" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="relative mv2 pa0 pb1 self-stretch flex items-center br2 white pointer ba b--black-20 blue">
+                        <div contenteditable="true" class="bn bg-transparent br2 outline-0 pb2 pt1 ph3 navy">This
+                            {{Space}} has {{ Features }}.</div>
                         <legend class="mh2 ph2 fw4 navy"> Description </legend>
                         <!-- Errors -->
                         <div class="ml5 absolute top-0 right-0 ph2 tr">
