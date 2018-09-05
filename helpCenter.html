@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en" class="h6 bg-white navy">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Roo Storage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.9.1/tachyons.min.css" />
+    <!-- <link rel="stylesheet" href="tachyons.css" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" href="Custom.css" />
+    <style>
+        .animatedSlow {
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+    </style>
+</head>
+
+<body class="f6 fw5 flex flex-column-l flex-row-m flex-column-reverse items-stretch vh-100">
+    <nav id="nav" class="f5-ns fw6-ns f7 fw7 flex-none pv3-m ph4-l pa0 shadow-hover z-9999 flex flex-column-l bg-white">
+        <ul class="flex flex-column-m no-underline list ma0 pa0 overflow-visible-ns overflow-hidden w-100 w-auto-ns">
+            <li class="dn flex-auto-l flex-ns items-center ph4 pv3-m">
+                <a href="index.html#nav" class="grow-large dib br-pill black">
+                    <div class="contain pa4 pt3-l pl3-l flex-auto self-stretch grow" style="background:url('Logo/Tight/PNG/Black.png') no-repeat center;"></div>
+                </a>
+            </li>
+            <li class="flex dn-ns hide-child o-80 glow w-20 w-auto-ns">
+                <a href="index.html#nav" class="flex flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2">
+                        <div class="mb1 pl3 pt3 pr2 pb2 cover o-60 rotate-270" style="background:url('https://icongr.am/clarity/caret.svg')"></div>
+                        Back
+                    </span>
+                    <div class="b--purple ba child"></div>
+                </a>
+            </li>
+            <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
+                <a href="listings.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
+                        <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/compass.svg')"></div>
+                        Feed
+                    </span>
+                    <div class="b--purple ba child"></div>
+                </a>
+            </li>
+            <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
+                <a href="listings.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
+                        <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/view-list.svg')"></div>
+                        Listings
+                    </span>
+                    <div class="b--purple ba child"></div>
+                </a>
+            </li>
+            <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
+                <a href="listing.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
+                        <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/house.svg')"></div>
+                        Hosting
+                    </span>
+                    <div class="b--purple ba child"></div>
+                </a>
+            </li>
+            <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
+                <a href="myprofile.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
+                        <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/user.svg')"></div>
+                        Jack
+                    </span>
+                    <div class="b--purple ba child"></div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="relative overflow-x-hidden overflow-y-scroll flex-auto">
+        <div class="relative flex flex-column">
+            <h1 class="mt7-l mt6 mh3 tc">We're Here To Help</h1>
+            <div class="self-center mh3 z-2 sticky top-1 shadow-6 mw6 w-90 br3 flex bg-white overflow-hidden f5">
+                <div class="pa2 ml3 bg-center contain" style="background-image:url('https://icongr.am/clarity/search.svg')"></div>
+                <input class="flex-auto bn ph3 outline-0" placeholder="What's Your Question?" type="text" name="" id="">
+                <div class="bl b--navy navy pa3 pv2 mv2 pointer f6">
+                    <span class="dib grow">Search</span>
+                </div>
+            </div>
+            <div class="mt6-l flex flex-row flex-wrap justify-around items-stretch pv4">
+                <div class="measure ma3">
+                    <h2 class="fw6 f4 tc pt4 relative">
+                        <div class="lh-copy bg-white bt bw1 dib mt3 pt3 ph4 br4 br--bottom z-max b--blue">
+                            Hosting
+                        </div>
+                    </h2>
+                    <details class="br2 bg-white navy pa2 ba b--black-10 mv3">
+                        <summary class="pa2 f5 lh-title blue">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Saepe sint architecto nemo?
+                        </summary>
+                        <p class="pa2 lh-copy">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quidem ullam beatae modi,
+                            necessitatibus, deserunt facere quis sed unde aliquam iure, impedit ratione dignissimos
+                            dolorem expedita adipisci! Suscipit, expedita mollitia?
+                        </p>
+                    </details>
+                    <details class="br2 bg-white navy pa2 ba b--black-10 mv3">
+                        <summary class="pa2 f5 lh-title blue">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Saepe sint architecto nemo?
+                        </summary>
+                        <p class="pa2 lh-copy">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quidem ullam beatae modi,
+                            necessitatibus, deserunt facere quis sed unde aliquam iure, impedit ratione dignissimos
+                            dolorem expedita adipisci! Suscipit, expedita mollitia?
+                        </p>
+                    </details>
+                    <details class="br2 bg-white navy pa2 ba b--black-10 mv3">
+                        <summary class="pa2 f5 lh-title blue">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Saepe sint architecto nemo?
+                        </summary>
+                        <p class="pa2 lh-copy">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quidem ullam beatae modi,
+                            necessitatibus, deserunt facere quis sed unde aliquam iure, impedit ratione dignissimos
+                            dolorem expedita adipisci! Suscipit, expedita mollitia?
+                        </p>
+                    </details>
+                    <div class="pa2 ba b--blue hover-bg-blue hover-white bg-animate br-pill center mw4 mv2 tc blue">More
+                        FAQ</div>
+                </div>
+                <div class="measure ma3">
+                    <h2 class="fw6 f4 tc pt4 relative-l">
+                        <div class="lh-copy bg-white bt bw1 dib mt3 pt3 ph4 br4 br--bottom z-max b--blue">
+                            Renting
+                        </div>
+                    </h2>
+                    <details class="br2 bg-white navy pa2 ba b--black-10 mv3">
+                        <summary class="pa2 f5 lh-title blue">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Saepe sint architecto nemo?
+                        </summary>
+                        <p class="pa2 lh-copy">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quidem ullam beatae modi,
+                            necessitatibus, deserunt facere quis sed unde aliquam iure, impedit ratione dignissimos
+                            dolorem expedita adipisci! Suscipit, expedita mollitia?
+                        </p>
+                    </details>
+                    <details class="br2 bg-white navy pa2 ba b--black-10 mv3">
+                        <summary class="pa2 f5 lh-title blue">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Saepe sint architecto nemo?
+                        </summary>
+                        <p class="pa2 lh-copy">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quidem ullam beatae modi,
+                            necessitatibus, deserunt facere quis sed unde aliquam iure, impedit ratione dignissimos
+                            dolorem expedita adipisci! Suscipit, expedita mollitia?
+                        </p>
+                    </details>
+                    <details class="br2 bg-white navy pa2 ba b--black-10 mv3">
+                        <summary class="pa2 f5 lh-title blue">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Saepe sint architecto nemo?
+                        </summary>
+                        <p class="pa2 lh-copy">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quidem ullam beatae modi,
+                            necessitatibus, deserunt facere quis sed unde aliquam iure, impedit ratione dignissimos
+                            dolorem expedita adipisci! Suscipit, expedita mollitia?
+                        </p>
+                    </details>
+                    <div class="pa2 ba b--blue hover-bg-blue hover-white bg-animate br-pill center mw4 mv2 tc blue">More
+                        FAQ</div>
+                </div>
+                <div class="measure ma3">
+                    <h2 class="fw6 f4 tc pt4 relative-l">
+                        <div class="lh-copy bg-white bt bw1 dib mt3 pt3 ph4 br4 br--bottom z-max b--blue">
+                            General
+                        </div>
+                    </h2>
+                    <details class="br2 bg-white navy pa2 ba b--black-10 mv3">
+                        <summary class="pa2 f5 lh-title blue">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Saepe sint architecto nemo?
+                        </summary>
+                        <p class="pa2 lh-copy">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quidem ullam beatae modi,
+                            necessitatibus, deserunt facere quis sed unde aliquam iure, impedit ratione dignissimos
+                            dolorem expedita adipisci! Suscipit, expedita mollitia?
+                        </p>
+                    </details>
+                    <details class="br2 bg-white navy pa2 ba b--black-10 mv3">
+                        <summary class="pa2 f5 lh-title blue">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Saepe sint architecto nemo?
+                        </summary>
+                        <p class="pa2 lh-copy">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quidem ullam beatae modi,
+                            necessitatibus, deserunt facere quis sed unde aliquam iure, impedit ratione dignissimos
+                            dolorem expedita adipisci! Suscipit, expedita mollitia?
+                        </p>
+                    </details>
+                    <details class="br2 bg-white navy pa2 ba b--black-10 mv3">
+                        <summary class="pa2 f5 lh-title blue">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Saepe sint architecto nemo?
+                        </summary>
+                        <p class="pa2 lh-copy">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quidem ullam beatae modi,
+                            necessitatibus, deserunt facere quis sed unde aliquam iure, impedit ratione dignissimos
+                            dolorem expedita adipisci! Suscipit, expedita mollitia?
+                        </p>
+                    </details>
+                    <div class="pa2 ba b--blue hover-bg-blue hover-white bg-animate br-pill center mw4 mv2 tc blue">More
+                        FAQ</div>
+                </div>
+            </div>
+            <div class="relative self-center flex-auto z-2 mw8 ma3-ns items-end-l flex flex-wrap-l w-auto-l w-90-ns w-100 flex-column flex-row-l shadow-6 overflow-hidden br2-ns pa3-ns pa2 ptrn-box-white bg-blue white">
+                <div class="absolute absolute--fill bg-blue o-60"></div>
+                <div class="z-2 flex-auto flex flex-column justify-end pa3-ns pa2 center measure">
+                    <div class="fw3 lh-title f2-ns f3 mv2 mh1">
+                        Didn't find what you were looking for?
+                    </div>
+                    <div class="fw5 lh-copy f6 mv2 mh1">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem praesentium corporis consequatur
+                        mollitia a, asperiores dolore necessitatibus atque quas quia omnis ut cumque officia quasi
+                        reprehenderit hic neque? Quidem, quam.
+                    </div>
+                    <!-- <div class="self-stretch pa3 flex-l items-center justify-around dn">
+                            <div class="pa3 contain grow pointer" style="background-image:url('https://icongr.am/entypo/facebook.svg?color=fdbc31');"></div>
+                            <div class="pa3 contain grow pointer" style="background-image:url('https://icongr.am/entypo/instagram.svg?color=fdbc31');"></div>
+                            <div class="pa3 contain grow pointer" style="background-image:url('https://icongr.am/entypo/email.svg?color=fdbc31');"></div>
+                        </div> -->
+                </div>
+                <div class="z-2 flex-shrink-0 flex w-100 flex-column ph3-ns ph2 center measure">
+                    <fieldset class="bg-blue relative mv2 pa0 pb1 self-stretch br2 white pointer ba b--white white">
+                        <div class="relative mb2 mt1 mh3">
+                            <input placeholder="Kanga Roo" class="placeholder-white bn bg-transparent outline-0 pa0 white">
+                        </div>
+                        <legend class="mh2 ph2 fw4 white"> Name </legend>
+                        <!-- Errors -->
+                        <!-- <div class="ml5 absolute top-0 right-0 ph1 mh2 bg-white">
+                                <div class="bg-white flex ba f7 br2 overflow-hidden glow b--black-20 black-40 fw5">
+                                    <div class="hover-bg-white hover-white ph2">Use Current Location</div>
+                                </div>
+                            </div> -->
+                    </fieldset>
+                    <fieldset class="bg-blue relative mv2 pa0 pb1 self-stretch br2 white pointer ba b--white white">
+                        <div class="relative mb2 mt1 mh3">
+                            <input placeholder="Kanga@RooStorage.com" class=" placeholder-white bn bg-transparent outline-0 pa0 white">
+                        </div>
+                        <legend class="mh2 ph2 fw4 white"> Email </legend>
+                        <!-- Errors -->
+                        <!-- <div class="ml5 absolute top-0 right-0 ph1 mh2 bg-white">
+                                <div class="bg-white flex ba f7 br2 overflow-hidden glow b--black-20 black-40 fw5">
+                                    <div class="hover-bg-white hover-white ph2">Use Current Locflex items-center
+    flex items-center
+    flex items-centeration</div>
+                                </div>
+                            </div> -->
+                    </fieldset>
+                    <fieldset class="bg-blue flex-auto flex-column mv2 pa0 pb1 self-stretch br2 white pointer ba b--white white flex">
+                        <div contenteditable="true" class="flex-auto bn bg-transparent br2 outline-0 pb2 pt1 ph3 measure lh-copy">
+                            ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
+                        <legend class="mh2 ph2 fw4 white"> Question </legend>
+                        <!-- Errors -->
+                        <div class="ml5 absolute top-0 right-0 ph2 tr">
+                            <!-- Error -->
+                            <!-- <div class="bg-white ph2 f7 lh-solid">unrecognized email</div> -->
+                        </div>
+                    </fieldset>
+                    <div class="blue bg-white br1 f5 mv2 grow pointer tc pv3 ph4 fw7">
+                        Send Question!
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="flex-none flex flex-wrap items-center justify-around bt b--white  bg-white">
+            <div class="flex flex-wrap items-center justify-center">
+                <div class="flex-auto flex flex-wrap justify-between w-100-l">
+                    <div class="flex-auto flex flex-wrap justify-around items-center b--black-10 br bt pa3">
+                        <div class="flex flex-column pa3 measure">
+                            <div class="f4 pa2 fw7">Become a Host</div>
+                            <div class="pa2">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae soluta laborum
+                                voluptate fugit dolore? Corrupti, eos ex!
+                                Quas distinctio voluptatum a similique, excepturi optio iure nulla minus
+                                perferendis
+                                unde blanditiis.
+                            </div>
+                        </div>
+                        <div class="flex-auto flex flex-column items-stretch pa3 measure">
+                            <div class="flex flex-column pv3 grow">
+                                <label for="" class="ph1 f7">phone</label>
+                                <input type="text" name="" id="" class="navy flex-auto ph2 pv1 br1 ba b--black-10">
+                            </div>
+                            <div class="flex flex-column pv3 grow">
+                                <label for="" class="ph1 f7">email</label>
+                                <input type="text" name="" id="" class="navy flex-auto ph2 pv1 br1 ba b--black-10">
+                            </div>
+                            <div class="flex flex-column pv3 grow">
+                                <label for="" class="ph1 f7">address</label>
+                                <input type="text" name="" id="" class="navy flex-auto ph2 pv1 br1 ba b--black-10">
+                            </div>
+                            <div class="flex flex-wrap justify-around ma2">
+                                <div class="bg-blue white fw7 ph4 pv2 br1 grow">Sign Up</div>
+                                <div class="hover-bg-black-10 fw7 ph4 pv2 br1 grow">More Info</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-auto b--black-10 br bt self-stretch justify-around flex flex-column pa3">
+                        <div class="pa2">Home</div>
+                        <div class="pa2">About Hosting</div>
+                        <div class="pa2">Resolution Center</div>
+                        <div class="pa2">Listings</div>
+                        <div class="pa2">My Profile</div>
+                        <div class="pa2">FAQ</div>
+                    </div>
+                    <div class="b--black-10 br bt flex-auto flex flex-column self-stretch flex-row-l w-80-l justify-around pa3">
+                        <div class="grow flex pa2">
+                            <div class="flex-none self-center pa3 pt2 pl2 mr2 contain" style="background-image:url('https://icongr.am/clarity/phone-handset.svg?color=333333');"></div>
+                            <div class="flex flex-column">
+                                <div class="f7 fw7">give us a ring</div>
+                                <div>XXX - XXX - XXXX</div>
+                            </div>
+                        </div>
+                        <div class="grow flex pa2">
+                            <div class="flex-none self-center pa3 pt2 pl2 mr2 contain" style="background-image:url('https://icongr.am/clarity/envelope.svg?color=333333');"></div>
+                            <div class="flex flex-column">
+                                <div class="f7 fw7">email us at</div>
+                                <div>Hello@RooStorage.com</div>
+                            </div>
+                        </div>
+                        <div class="grow flex pa2">
+                            <div class="flex-none self-center pa3 pt2 pl2 mr2 contain" style="background-image:url('https://icongr.am/clarity/store.svg?color=333333');"></div>
+                            <div class="flex flex-column">
+                                <div class="f7 fw7">our address</div>
+                                <div>314 stadium blvd</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-around flex-auto bt b--black-05 f7 w-100-l bg-navy white">
+                    <div class="flex bb b--black-05 pv2 ph3">
+                        <div class="glow o-50 flex pv2 ph3">
+                            <div class="mh1 pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/fontawesome/twitter.svg?color=ffffff');"></div>
+                            Twitter
+                        </div>
+                        <div class="glow o-50 flex pv2 ph3">
+                            <div class="mh1 pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/fontawesome/facebook.svg?color=ffffff');"></div>
+                            Facecbook
+                        </div>
+                        <div class="glow o-50 flex pv2 ph3">
+                            <div class="mh1 pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/fontawesome/instagram.svg?color=ffffff');"></div>
+                            Instagram
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap justify-between bb b--black-05 pa3">
+                        <div class="glow o-50 flex mh2">
+                            Diversity Inclusion
+                        </div>
+                        <div class="glow o-50 flex mh2">
+                            Brand Guidelines
+                        </div>
+                        <div class="glow o-50 flex mh2">
+                            Terms of service
+                        </div>
+                        <div class="glow o-50 flex mh2">
+                            Copyright 2018
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

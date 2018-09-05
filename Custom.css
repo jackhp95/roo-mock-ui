@@ -853,24 +853,34 @@ progress[value]::-webkit-progress-bar {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cmVjdCB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBmaWxsPSJyZ2JhKDAsMCwwLDApIj48L3JlY3Q+CjxwYXRoIGQ9Ik0yOCA2NkwwIDUwTDAgMTZMMjggMEw1NiAxNkw1NiA1MEwyOCA2NkwyOCAxMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwuMTUpIiBzdHJva2Utd2lkdGg9IjIiPjwvcGF0aD4KPHBhdGggZD0iTTI4IDBMMjggMzRMMCA1MEwwIDg0TDI4IDEwMEw1NiA4NEw1NiA1MEwyOCAzNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LC4xKSIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+Cjwvc3ZnPg==");
 }
 
-.placeholder-white::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-  color:    rgba(255,255,255,.65);
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-.placeholder-white color:    rgba(255,255,255,.65);
- opacity:  1;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-.placeholder-white color:    rgba(255,255,255,.65);
- opacity:  1;
-}
-.placeholder-white:-ms-input-placeholder { /* Internet Explorer 10-11 */
- color:    rgba(255,255,255,.65);
-}
-.placeholder-white::-ms-input-placeholder { /* Microsoft Edge */
- color:    rgba(255,255,255,.65);
+.placeholder-white::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: rgba(255, 255, 255, .65);
 }
 
-.placeholder-white::placeholder { /* Most modern browsers support this now. */
- color:    rgba(255,255,255,.65);
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  .placeholder-white color: rgba(255, 255, 255, .65);
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  .placeholder-white color: rgba(255, 255, 255, .65);
+  opacity: 1;
+}
+
+.placeholder-white:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgba(255, 255, 255, .65);
+}
+
+.placeholder-white::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgba(255, 255, 255, .65);
+}
+
+.placeholder-white::placeholder {
+  /* Most modern browsers support this now. */
+  color: rgba(255, 255, 255, .65);
 }
