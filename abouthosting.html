@@ -9,10 +9,90 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <link rel="stylesheet" href="Custom.css" />
+    <style>
+        @media screen and (min-width:60em){
+                     input[name="r1"] ,
+                            input[name="r2"] { 
+                outline: 0;
+            }
+                     input[name="r1"]:checked ,
+                            input[name="r2"]:checked { 
+                background-color:white;
+            }
+                    #r1a:checked ~ label.r1a,
+                        #r2a:checked ~ label.r2a,
+                    #r1b:checked ~ label.r1b,
+                        #r2b:checked ~ label.r2b,
+                    #r1c:checked ~ label.r1c ,
+                            #r2c:checked ~ label.r2c {
+                display: none;
+            }
+            
+                    #r1a:checked ~ li.r1.r1a,
+                        #r2a:checked ~ li.r2.r2a,
+                    #r1b:checked ~ li.r1.r1b,
+                        #r2b:checked ~ li.r2.r2b,
+                    #r1c:checked ~ li.r1.r1c ,
+                            #r2c:checked ~ li.r2.r2c {
+                opacity: 1;
+                transform: scale(1);
+                -webkit-transition: all .75s; /* Safari */
+                transition: all .75s;
+                z-index: 1;
+            }
+                    #r1a:checked ~ li.r1,
+                        #r2a:checked ~ li.r2,
+                    #r1b:checked ~ li.r1,
+                        #r2b:checked ~ li.r2,
+                    #r1c:checked ~ li.r1 ,
+                            #r2c:checked ~ li.r2 {
+                opacity: 0;
+                transform: scale(1.1);
+                -webkit-transition: all .75s; /* Safari */
+                transition: all .75s;
+            }
+            
+                    #r1a:checked ~ .r1b,
+                        #r2a:checked ~ .r2b,
+                    #r1b:checked ~ .r1c,
+                        #r2b:checked ~ .r2c,
+                    #r1c:checked ~ .r1a ,
+                            #r2c:checked ~ .r2a { 
+                right: 0;
+            }
+            
+                    #r1a:checked ~ .r1c,
+                        #r2a:checked ~ .r2c,
+                    #r1b:checked ~ .r1a,
+                        #r2b:checked ~ .r2a,
+                    #r1c:checked ~ .r1b ,
+                            #r2c:checked ~ .r2b { 
+                left: 0;
+            }
+
+                    #r1a:checked ~ .r1b .arrow,
+                        #r2a:checked ~ .r2b .arrow,
+                    #r1b:checked ~ .r1c .arrow,
+                        #r2b:checked ~ .r2c .arrow,
+                    #r1c:checked ~ .r1a .arrow ,
+                            #r2c:checked ~ .r2a .arrow { 
+               transform:  rotate(90deg)
+            }
+            
+                    #r1a:checked ~ .r1c .arrow,
+                        #r2a:checked ~ .r2c .arrow,
+                    #r1b:checked ~ .r1a .arrow,
+                        #r2b:checked ~ .r2a .arrow,
+                    #r1c:checked ~ .r1b .arrow ,
+                            #r2c:checked ~ .r2b .arrow { 
+               transform:  rotate(270deg)
+            }
+        }
+    </style>
 </head>
 
 <body class="pa0 ma0">
-    <header class="z-2 w-100 pa0 ma0 bg-black-05 white bg-center cover pt7-ns relative" style="background-image:url('https://source.unsplash.com/random?talking');">
+    <header class="z-3 w-100 pa0 ma0 bg-black-05 white bg-center cover pt7-ns relative" style="background-image:url('https://source.unsplash.com/random?talking');">
         <div class="pt7 pa3 pa5-l tc tl-ns lg-black-fade-up f5">
             <h1 class="f1-ns mv3 mh4">
                 Host a space on Roo
@@ -31,8 +111,8 @@
             </div>
         </div>
     </header>
-    <div class="z-2 bg-white relative w-100 pt2 pt4-ns"></div>
-    <section class="z-2 relative ma2 ma4-ns mt0 mt0-ns bg-black-05 tc bg-center cover shadow-6 br1" style="background-image:url('https://source.unsplash.com/random?landscape');">
+    <div class="z-3 bg-white relative w-100 pt2 pt4-ns"></div>
+    <section class="z-3 relative ma2 ma4-ns mt0 mt0-ns bg-black-05 tc bg-center cover shadow-6 br1" style="background-image:url('https://source.unsplash.com/random?landscape');">
         <div class="lg-white-fade-down pa3 pt4 pt5-ns pb7 f4-ns">
             <h2 class="f1-l f2-ns mv3 mh4">
                 What is Roo?
@@ -46,7 +126,7 @@
             </p>
         </div>
     </section>
-    <section class="mv4-l flex-l items-center-l">
+    <section class="mv4-l flex-l items-center-l flex-row-l">
         <header class="flex-none-l tl-l pa3 pa5-ns lh-copy tc measure center f4-ns">
             <h2 class="f1-l f2-ns ma3 blue">Happy Hosts</h2>
             <p class="ma3">
@@ -57,34 +137,51 @@
                 facilis quod.
             </p>
         </header>
-        <ul class="ma0 ph1 ph4-ns list flex overflow-auto br1">
-            <li class="flex-none w-90 mh1 ml0-ns mr4-ns overflow-hidden pt7-ns pt6-l br2 bg-center cover shadow-6"
+        <ul class="ma0 ph1 ph4-ns list flex overflow-auto overflow-hidden-l br1 br--left-l relative-l flex-auto-l vh-75-l ph0-l items-start-l justify-center-l">
+            <!-- MODEL -->
+            <input class="dn dib-l appearance-none pa1 br-pill z-4 ba b--white hover-bg-blue mv3 mh1" type="radio" name="r2"
+                id="r2a" checked>
+            <input class="dn dib-l appearance-none pa1 br-pill z-4 ba b--white hover-bg-blue mv3 mh1" type="radio" name="r2"
+                id="r2b">
+            <input class="dn dib-l appearance-none pa1 br-pill z-4 ba b--white hover-bg-blue mv3 mh1" type="radio" name="r2"
+                id="r2c">
+            <!-- MSGS -->
+            <label class="r2 r2a dn flex-l ph4 glow o-50 hover-bg-black-20 bg-animate absolute top-0 bottom-0 z-2" for="r2a">
+                <div class="arrow self-center pa3 flex-auto bg-center" style="background-image:url('https://icongr.am/clarity/angle.svg?color=ffffff')"></div>
+            </label>
+            <label class="r2 r2b dn flex-l ph4 glow o-50 hover-bg-black-20 bg-animate absolute top-0 bottom-0 z-2" for="r2b">
+                <div class="arrow self-center pa3 flex-auto bg-center" style="background-image:url('https://icongr.am/clarity/angle.svg?color=ffffff')"></div>
+            </label>
+            <label class="r2 r2c dn flex-l ph4 glow o-50 hover-bg-black-20 bg-animate absolute top-0 bottom-0 z-2" for="r2c">
+                <div class="arrow self-center pa3 flex-auto bg-center" style="background-image:url('https://icongr.am/clarity/angle.svg?color=ffffff')"></div>
+            </label>
+            <li class="r2 r2a flex-none w-90 mh1 ml0-ns mr4-ns overflow-hidden pt7-ns pt6-l br2 bg-center cover shadow-6 br--left-l absolute-l absolute--fill-l w-auto-l ma0-l"
                 style="background-image:url('https://source.unsplash.com/random?person');">
-                <article class="pt7 pb3 ph4 pa5-ns pt7-ns lg-black-fade-up tc white lh-copy">
+                <article class="pt7 pb3 ph4 pa5-ns pt7-ns lg-black-fade-up tc white lh-copy absolute-l bottom-0-l left-0-l right-0-l">
                     <blockquote class="measure center">
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corporis eos
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corporis eos iste, tempora beatae
                         repellendus, vel totam et culpa."
                     </blockquote>
                     <h3 class="mt2">Namey Name</h3>
                     <p>Job / Occupation / Other</p>
                 </article>
             </li>
-            <li class="flex-none w-90 mh1 ml0-ns mr4-ns overflow-hidden pt7-ns pt6-l br2 bg-center cover shadow-6"
+            <li class="r2 r2b flex-none w-90 mh1 ml0-ns mr4-ns overflow-hidden pt7-ns pt6-l br2 bg-center cover shadow-6 br--right-l absolute-l absolute--fill-l w-auto-l ma0-l"
                 style="background-image:url('https://source.unsplash.com/random?man');">
-                <article class="pt7 pb3 ph4 pa5-ns pt7-ns lg-black-fade-up tc white lh-copy">
+                <article class="pt7 pb3 ph4 pa5-ns pt7-ns lg-black-fade-up tc white lh-copy absolute-l bottom-0-l left-0-l right-0-l">
                     <blockquote class="measure center">
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corporis eos
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corporis eos iste, tempora beatae
                         repellendus, vel totam et culpa."
                     </blockquote>
                     <h3 class="mt2">Namey Name</h3>
                     <p>Job / Occupation / Other</p>
                 </article>
             </li>
-            <li class="flex-none w-90 mh1 ml0-ns mr4-ns overflow-hidden pt7-ns pt6-l br2 bg-center cover shadow-6"
+            <li class="r2 r2c flex-none w-90 mh1 ml0-ns mr4-ns overflow-hidden pt7-ns pt6-l br2 bg-center cover shadow-6 br--right-l absolute-l absolute--fill-l w-auto-l ma0-l"
                 style="background-image:url('https://source.unsplash.com/random?woman');">
-                <article class="pt7 pb3 ph4 pa5-ns pt7-ns lg-black-fade-up tc white lh-copy">
+                <article class="pt7 pb3 ph4 pa5-ns pt7-ns lg-black-fade-up tc white lh-copy absolute-l bottom-0-l left-0-l right-0-l">
                     <blockquote class="measure center">
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corporis eos
+                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corporis eos iste, tempora beatae
                         repellendus, vel totam et culpa."
                     </blockquote>
                     <h3 class="mt2">Namey Name</h3>
@@ -105,10 +202,27 @@
                 facilis quod.
             </p>
         </header>
-        <ul class="ma0 ph1 ph4-ns list flex overflow-auto br1">
-            <li class="flex-none w-90 mh1 ml0-ns mr4-ns overflow-hidden pt7-ns pt6-l br2 bg-center cover shadow-6"
+        <ul class="ma0 ph1 ph4-ns list flex overflow-auto overflow-hidden-l br1 br--right-l relative-l flex-auto-l vh-75-l ph0-l items-start-l justify-center-l">
+            <!-- MODEL -->
+            <input class="dn dib-l appearance-none pa1 br-pill z-4 ba b--white hover-bg-blue mv3 mh1" type="radio" name="r1"
+                id="r1a" checked>
+            <input class="dn dib-l appearance-none pa1 br-pill z-4 ba b--white hover-bg-blue mv3 mh1" type="radio" name="r1"
+                id="r1b">
+            <input class="dn dib-l appearance-none pa1 br-pill z-4 ba b--white hover-bg-blue mv3 mh1" type="radio" name="r1"
+                id="r1c">
+            <!-- MSGS -->
+            <label class="r1 r1a dn flex-l ph4 glow o-50 hover-bg-black-20 bg-animate absolute top-0 bottom-0 z-2" for="r1a">
+                <div class="arrow self-center pa3 flex-auto bg-center" style="background-image:url('https://icongr.am/clarity/angle.svg?color=ffffff')"></div>
+            </label>
+            <label class="r1 r1b dn flex-l ph4 glow o-50 hover-bg-black-20 bg-animate absolute top-0 bottom-0 z-2" for="r1b">
+                <div class="arrow self-center pa3 flex-auto bg-center" style="background-image:url('https://icongr.am/clarity/angle.svg?color=ffffff')"></div>
+            </label>
+            <label class="r1 r1c dn flex-l ph4 glow o-50 hover-bg-black-20 bg-animate absolute top-0 bottom-0 z-2" for="r1c">
+                <div class="arrow self-center pa3 flex-auto bg-center" style="background-image:url('https://icongr.am/clarity/angle.svg?color=ffffff')"></div>
+            </label>
+            <li class="r1 r1a flex-none w-90 mh1 ml0-ns mr4-ns overflow-hidden pt7-ns pt6-l br2 bg-center cover shadow-6 br--right-l absolute-l absolute--fill-l w-auto-l ma0-l"
                 style="background-image:url('https://source.unsplash.com/random?friends');">
-                <article class="pt7 pb3 ph4 pa5-ns pt7-ns lg-black-fade-up tc white lh-copy">
+                <article class="pt7 pb3 ph4 pa5-ns pt7-ns lg-black-fade-up tc white lh-copy absolute-l bottom-0-l left-0-l right-0-l">
                     <div class="f3">★★★★★</div>
                     <blockquote class="measure center">
                         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corporis eos iste, tempora beatae
@@ -118,9 +232,9 @@
                     <p>Job / Occupation / Other</p>
                 </article>
             </li>
-            <li class="flex-none w-90 mh1 ml0-ns mr4-ns overflow-hidden pt7-ns pt6-l br2 bg-center cover shadow-6"
+            <li class="r1 r1b flex-none w-90 mh1 ml0-ns mr4-ns overflow-hidden pt7-ns pt6-l br2 bg-center cover shadow-6 br--right-l absolute-l absolute--fill-l w-auto-l ma0-l"
                 style="background-image:url('https://source.unsplash.com/random?couple');">
-                <article class="pt7 pb3 ph4 pa5-ns pt7-ns lg-black-fade-up tc white lh-copy">
+                <article class="pt7 pb3 ph4 pa5-ns pt7-ns lg-black-fade-up tc white lh-copy absolute-l bottom-0-l left-0-l right-0-l">
                     <div class="f3">★★★★★</div>
                     <blockquote class="measure center">
                         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corporis eos iste, tempora beatae
@@ -130,9 +244,9 @@
                     <p>Job / Occupation / Other</p>
                 </article>
             </li>
-            <li class="flex-none w-90 mh1 ml0-ns mr4-ns overflow-hidden pt7-ns pt6-l br2 bg-center cover shadow-6"
+            <li class="r1 r1c flex-none w-90 mh1 ml0-ns mr4-ns overflow-hidden pt7-ns pt6-l br2 bg-center cover shadow-6 br--right-l absolute-l absolute--fill-l w-auto-l ma0-l"
                 style="background-image:url('https://source.unsplash.com/random?buddies');">
-                <article class="pt7 pb3 ph4 pa5-ns pt7-ns lg-black-fade-up tc white lh-copy">
+                <article class="pt7 pb3 ph4 pa5-ns pt7-ns lg-black-fade-up tc white lh-copy absolute-l bottom-0-l left-0-l right-0-l">
                     <div class="f3">★★★★★</div>
                     <blockquote class="measure center">
                         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corporis eos iste, tempora beatae
@@ -244,7 +358,7 @@
         </h2>
     </section>
     <!-- NAV -->
-    <menu class="dn-l sticky bottom-0 bg-white pa3 ph4-ns flex justify-between items-center shadow-hover">
+    <menu class="z-2 dn-l sticky bottom-0 bg-white pa3 ph4-ns flex justify-between items-center shadow-hover">
         <p class="f6 mt2 mh1">
             Become a host on Roo
         </p>
@@ -252,7 +366,7 @@
             Started</button>
     </menu>
     <!-- NAV FOR LARGE SCREENS -->
-    <menu class="fixed-l dn left-0 right-0 top-0 bg-white pa3 ph4-ns flex justify-between items-center shadow-hover">
+    <menu class="z-2 fixed-l dn left-0 right-0 top-0 bg-white pa3 ph4-ns flex justify-between items-center shadow-hover">
         <p class="f6 mt2 mh1">
             Become a host on Roo
         </p>
