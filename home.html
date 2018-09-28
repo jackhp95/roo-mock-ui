@@ -18,6 +18,59 @@
             -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
         }
+        
+        @media screen and (min-width:60em) {
+            input[name="r1"] {
+                outline: 0;
+            }
+            input[name="r1"]:checked {
+                background-color: white;
+            }
+            #r1a:checked ~ label.r1a,
+            #r1b:checked ~ label.r1b,
+            #r1c:checked ~ label.r1c {
+                display: none;
+            }
+            #r1a:checked ~ li.r1.r1a,
+            #r1b:checked ~ li.r1.r1b,
+            #r1c:checked ~ li.r1.r1c {
+                opacity: 1;
+                transform: scale(1);
+                -webkit-transition: all .75s;
+                /* Safari */
+                transition: all .75s;
+                z-index: 1;
+            }
+            #r1a:checked ~ li.r1,
+            #r1b:checked ~ li.r1,
+            #r1c:checked ~ li.r1 {
+                opacity: 0;
+                transform: scale(1.1);
+                -webkit-transition: all .75s;
+                /* Safari */
+                transition: all .75s;
+            }
+            #r1a:checked ~ .r1b,
+            #r1b:checked ~ .r1c,
+            #r1c:checked ~ .r1a {
+                right: 0;
+            }
+            #r1a:checked ~ .r1c,
+            #r1b:checked ~ .r1a,
+            #r1c:checked ~ .r1b {
+                left: 0;
+            }
+            #r1a:checked ~ .r1b .arrow,
+            #r1b:checked ~ .r1c .arrow,
+            #r1c:checked ~ .r1a .arrow {
+                transform: rotate(90deg)
+            }
+            #r1a:checked ~ .r1c .arrow,
+            #r1b:checked ~ .r1a .arrow,
+            #r1c:checked ~ .r1b .arrow {
+                transform: rotate(270deg)
+            }
+        }
     </style>
 </head>
 
@@ -33,7 +86,8 @@
                 <a href="index.html#nav" class="flex flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2">
                         <div class="mb1 pl3 pt3 pr2 pb2 cover o-60 rotate-270" style="background:url('https://icongr.am/clarity/caret.svg')"></div>
-                        Back</span>
+                        Back
+                    </span>
                     <div class="b--purple ba child"></div>
                 </a>
             </li>
@@ -41,7 +95,8 @@
                 <a href="listings.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
                         <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/compass.svg')"></div>
-                        Feed</span>
+                        Feed
+                    </span>
                     <div class="b--purple ba child"></div>
                 </a>
             </li>
@@ -49,7 +104,8 @@
                 <a href="listings.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
                         <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/view-list.svg')"></div>
-                        Listings</span>
+                        Listings
+                    </span>
                     <div class="b--purple ba child"></div>
                 </a>
             </li>
@@ -57,7 +113,8 @@
                 <a href="listing.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
                         <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/house.svg')"></div>
-                        Hosting</span>
+                        Hosting
+                    </span>
                     <div class="b--purple ba child"></div>
                 </a>
             </li>
@@ -65,7 +122,8 @@
                 <a href="myprofile.html#nav" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
                     <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
                         <div class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/user.svg')"></div>
-                        Jack</span>
+                        Jack
+                    </span>
                     <div class="b--purple ba child"></div>
                 </a>
             </li>
@@ -87,18 +145,22 @@
                             <div class="flex flex-column ma2 flex-auto relative">
                                 <label class="f6 mv1 mh2" for="">Address</label>
                                 <div class="flex-auto flex relative">
-                                    <input style="border-width: 1px;" class="flex-auto b--black-20 br2 outline-0 pa3" type="text" name="address" id="">
-                                    <div class="absolute right-0 top-0 bottom-0 mr2 pa3 pt2 pl2 contain bg-center glow o-40" style="background-image:url('https://icongr.am/clarity/compass.svg')"></div>
+                                    <input style="border-width: 1px;" class="flex-auto b--black-20 br2 outline-0 pa3"
+                                        type="text" name="address" id="">
+                                    <div class="absolute right-0 top-0 bottom-0 mr2 pa3 pt2 pl2 contain bg-center glow o-40"
+                                        style="background-image:url('https://icongr.am/clarity/compass.svg')"></div>
                                 </div>
                             </div>
                             <div class="flex-auto flex flex-wrap">
                                 <div class="flex flex-column ma2 flex-auto relative">
                                     <label class="f6 mv1 mh2" for="">Start Date</label>
-                                    <input style="border-width: 1px;" class="flex-auto b--black-20 br2 outline-0 pa3" type="date" name="start" id="">
+                                    <input style="border-width: 1px;" class="flex-auto b--black-20 br2 outline-0 pa3"
+                                        type="date" name="start" id="">
                                 </div>
                                 <div class="flex flex-column ma2 flex-auto relative">
                                     <label class="f6 mv1 mh2" for="">End Date</label>
-                                    <input style="border-width: 1px;" class="flex-auto b--black-20 br2 outline-0 pa3" type="date" name="end" id="">
+                                    <input style="border-width: 1px;" class="flex-auto b--black-20 br2 outline-0 pa3"
+                                        type="date" name="end" id="">
                                 </div>
                             </div>
                             <div class="flex flex-column ma2 flex-auto relative">
@@ -106,19 +168,23 @@
                                 <div class="flex-auto flex ba b--black-20 br2 fw6 bg-white">
                                     <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
                                         <label class="pv3 ph2 dib f6" for="">Student</label>
-                                        <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="student">
+                                        <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="type"
+                                            id="student">
                                     </div>
                                     <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
                                         <label class="pv3 ph2 dib f6" for="">Tailgating</label>
-                                        <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="tailgating">
+                                        <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="type"
+                                            id="tailgating">
                                     </div>
                                     <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
                                         <label class="pv3 ph2 dib f6" for="">Moving</label>
-                                        <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="moving">
+                                        <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="type"
+                                            id="moving">
                                     </div>
                                     <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden hover-bg-blue hover-white">
                                         <label class="pv3 ph2 dib f6" for="">Vehicle</label>
-                                        <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="type" id="vehicle">
+                                        <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="type"
+                                            id="vehicle">
                                     </div>
                                 </div>
                             </div>
@@ -131,28 +197,32 @@
                                                 <span class="db ma3-l ma2 f4-l f5-m f6" for="">S</span>
                                                 <span class="db ma2-l ma1 f6-l f7">20ft - 50ft</span>
                                             </label>
-                                            <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="s">
+                                            <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio"
+                                                name="size" id="s">
                                         </div>
                                         <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
                                             <label class="tc ma2-l">
                                                 <span class="db ma3-l ma2 f4-l f5-m f6" for="">M</span>
                                                 <span class="db ma2-l ma1 f6-l f7">20ft - 50ft</span>
                                             </label>
-                                            <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="m">
+                                            <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio"
+                                                name="size" id="m">
                                         </div>
                                         <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden br b--black-10 hover-bg-blue hover-white">
                                             <label class="tc ma2-l">
                                                 <span class="db ma3-l ma2 f4-l f5-m f6" for="">L</span>
                                                 <span class="db ma2-l ma1 f6-l f7">20ft - 50ft</span>
                                             </label>
-                                            <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="l">
+                                            <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio"
+                                                name="size" id="l">
                                         </div>
                                         <div class="flex flex-column flex-auto relative items-center justify-center overflow-hidden hover-bg-blue hover-white">
                                             <label class="tc ma2-l">
                                                 <span class="db ma3-l ma2 f4-l f5-m f6" for="">XL</span>
                                                 <span class="db ma2-l ma1 f6-l f7">20ft - 50ft</span>
                                             </label>
-                                            <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio" name="size" id="xl">
+                                            <input class="no-select absolute w-100 dn h3 absolute--fill" type="radio"
+                                                name="size" id="xl">
                                         </div>
                                     </div>
                                 </div>
@@ -176,7 +246,8 @@
                 <div class="flex-auto self-stretch flex flex-column items-stretch mw9 pv4">
                     <div class="mh4-l mh3-ns mh2 mv4 relative flex flex-wrap justify-center items-center lh-copy">
                         <div class="flex-auto relative">
-                            <div class="br1 flex-auto ph6 aspect-ratio--16x9 bg-center cover relative br2 overflow-hidden" style="background-image: url('https://source.unsplash.com/random');">
+                            <div class="br1 flex-auto ph6 aspect-ratio--16x9 bg-center cover relative br2 overflow-hidden"
+                                style="background-image: url('https://source.unsplash.com/random');">
                                 <div class="absolute absolute--fill flex items-center justify-center bg-black-50">
                                     <iframe id="ytplayer" type="text/html" width="100%" height="100%" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
                                         frameborder="0"></iframe>
@@ -188,9 +259,10 @@
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                             </div>
                             <div class="pt2-ns pt1 f5">
-                                Roo is an online platform that connects those with available space in their homes to those in need of storage. This creates
-                                opportunities within our communities. It allows those with the space to passively earn income
-                                and those seeking storage to find affordable options, right down the street.
+                                Roo is an online platform that connects those with available space in their homes to
+                                those in need of storage. This creates opportunities within our communities. It allows
+                                those with the space to passively earn income and those seeking storage to find
+                                affordable options, right down the street.
                             </div>
                         </div>
                     </div>
@@ -321,35 +393,75 @@
                             </div>
                         </div>
                     </article>
-                    <div class="mh4-l mv4 flex-auto flex flex-wrap bg-center cover br2-l overflow-hidden" style="background-image:url('https://images.unsplash.com/photo-1462223347096-1593383775d8')">
-                        <div class="flex-auto flex items-end fw1 f1 white bg-black-50 pa3 pa4-ns pa5-l">
-                            testimonials
-                        </div>
-                        <div class="flex-auto flex flex-column bg-black-50 pa2 pa3-ns pa4-l measure-l">
-                            <div class="mv2 tr flex-auto f5 ph3 br bw2 pv3 b--white hide-child">
-                                <span class="white child">Dylan</span>
-                            </div>
-                            <div class="mv2 tr flex-auto f5 ph3 br bw2 pv3 b--white hide-child">
-                                <span class="white child">Doug</span>
-                            </div>
-                            <div class="mv2 flex-auto bl bw2 pv3 white measure-narrow">
-                                <div class="ph4">
-                                    <div class="f3 fw3 i lh-solid">Scarlett Royal</div>
-                                    <div class="f6 pt2 lh-copy">
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam dolorem non culpa praesentium, placeat optio quibusdam autem
-                                        vel obcaecati deserunt minus tempora nihil sapiente! Cum dolor ullam enim voluptatum
-                                        provident!
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mv2 tr flex-auto f5 ph3 br bw2 pv3 b--white hide-child">
-                                <span class="white child">David</span>
-                            </div>
-                            <div class="mv2 tr flex-auto f5 ph3 br bw2 pv3 b--white hide-child">
-                                <span class="white child">Derek</span>
-                            </div>
-                        </div>
-                    </div>
+                    <section class="mv4-l flex-l items-center-l flex-row-reverse-l">
+                        <header class="flex-none-l tl-l pa3 pa5-ns lh-copy tc measure center f5-ns">
+                            <h2 class="f2-ns ma3 blue fw1">Testimonials</h2>
+                            <p class="ma3">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero suscipit sed
+                                necessitatibus reiciendis odio sapiente laudantium commodi consequuntur, ad consequatur
+                                eveniet nesciunt nam vitae modi magni non! Non, facilis quod.
+                            </p>
+                        </header>
+                        <ul class="ma0 ph1 ph4-ns list flex overflow-auto overflow-hidden-l br1 relative-l flex-auto-l vh-75-l pa4-l pr3-l items-start-l justify-center-l">
+                            <!-- MODEL -->
+                            <input class="dn dib-l appearance-none pa1 br-pill z-2 ba b--white hover-bg-blue mh2" type="radio"
+                                name="r1" id="r1a" checked>
+                            <input class="dn dib-l appearance-none pa1 br-pill z-2 ba b--white hover-bg-blue mh2" type="radio"
+                                name="r1" id="r1b">
+                            <input class="dn dib-l appearance-none pa1 br-pill z-2 ba b--white hover-bg-blue mh2" type="radio"
+                                name="r1" id="r1c">
+                            <!-- MSGS -->
+                            <label class="r1 r1a dn flex-l ph4 glow o-50 hover-bg-black-20 bg-animate absolute top-0 bottom-0 z-2"
+                                for="r1a">
+                                <div class="arrow self-center pa3 flex-auto bg-center" style="background-image:url('https://icongr.am/clarity/angle.svg?color=ffffff')"></div>
+                            </label>
+                            <label class="r1 r1b dn flex-l ph4 glow o-50 hover-bg-black-20 bg-animate absolute top-0 bottom-0 z-2"
+                                for="r1b">
+                                <div class="arrow self-center pa3 flex-auto bg-center" style="background-image:url('https://icongr.am/clarity/angle.svg?color=ffffff')"></div>
+                            </label>
+                            <label class="r1 r1c dn flex-l ph4 glow o-50 hover-bg-black-20 bg-animate absolute top-0 bottom-0 z-2"
+                                for="r1c">
+                                <div class="arrow self-center pa3 flex-auto bg-center" style="background-image:url('https://icongr.am/clarity/angle.svg?color=ffffff')"></div>
+                            </label>
+                            <li class="r1 r1a flex-none w-90 mh1 ml0-ns mr4-ns overflow-hidden pt7-ns pt6-l br2 bg-center cover shadow-6 absolute-l absolute--fill-l w-auto-l ma0-l"
+                                style="background-image:url('https://source.unsplash.com/random?friends');">
+                                <article class="pt7 pb3 ph4 pa5-ns pt7-ns lg-black-fade-up tc white lh-copy absolute-l bottom-0-l left-0-l right-0-l">
+                                    <div class="f3">★★★★★</div>
+                                    <blockquote class="measure center">
+                                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corporis eos
+                                        iste, tempora beatae repellendus, vel totam et culpa."
+                                    </blockquote>
+                                    <h3 class="mt2">Namey Name</h3>
+                                    <p>Job / Occupation / Other</p>
+                                </article>
+                            </li>
+                            <li class="r1 r1b flex-none w-90 mh1 ml0-ns mr4-ns overflow-hidden pt7-ns pt6-l br2 bg-center cover shadow-6 br--right-l absolute-l absolute--fill-l w-auto-l ma0-l"
+                                style="background-image:url('https://source.unsplash.com/random?couple');">
+                                <article class="pt7 pb3 ph4 pa5-ns pt7-ns lg-black-fade-up tc white lh-copy absolute-l bottom-0-l left-0-l right-0-l">
+                                    <div class="f3">★★★★★</div>
+                                    <blockquote class="measure center">
+                                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corporis eos
+                                        iste, tempora beatae repellendus, vel totam et culpa."
+                                    </blockquote>
+                                    <h3 class="mt2">Namey Name</h3>
+                                    <p>Job / Occupation / Other</p>
+                                </article>
+                            </li>
+                            <li class="r1 r1c flex-none w-90 mh1 ml0-ns mr4-ns overflow-hidden pt7-ns pt6-l br2 bg-center cover shadow-6 br--right-l absolute-l absolute--fill-l w-auto-l ma0-l"
+                                style="background-image:url('https://source.unsplash.com/random?buddies');">
+                                <article class="pt7 pb3 ph4 pa5-ns pt7-ns lg-black-fade-up tc white lh-copy absolute-l bottom-0-l left-0-l right-0-l">
+                                    <div class="f3">★★★★★</div>
+                                    <blockquote class="measure center">
+                                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corporis eos
+                                        iste, tempora beatae repellendus, vel totam et culpa."
+                                    </blockquote>
+                                    <h3 class="mt2">Namey Name</h3>
+                                    <p>Job / Occupation / Other</p>
+                                </article>
+                            </li>
+                            <div class="flex-none w1"></div>
+                        </ul>
+                    </section>
                     <div class="f2 fw1 tc pt5">Easy as 1-2-3</div>
                     <div class="mh4-l mh3-ns mh2 mv4 self-stretch flex flex-row-ns flex-column justify-around items-start navy tc-ns f6 fw3 relative center lh-copy">
                         <div class="absolute-ns flex-ns w-70 mt2-l mt1 center dn">
@@ -357,7 +469,8 @@
                         </div>
                         <div class="relative flex flex-auto items-start flex-column-ns items-center-ns pa3 pa0-ns">
                             <div class="bg-orange breathe z-3 ba bw3-l bw2-m bw1 b--white pa4-l pa3 ma3-l ma2 br-pill-ns br2">
-                                <div style="background:url('https://icongr.am/clarity/search.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3 pl3 pa3-l"></div>
+                                <div style="background:url('https://icongr.am/clarity/search.svg?color=ffffff') center no-repeat;"
+                                    class="contain pa2 pt3 pl3 pa3-l"></div>
                             </div>
                             <div class="ma2 ma0-ns">
                                 <div class="fw5 f5-ns f4">Search</div>
@@ -366,7 +479,8 @@
                         </div>
                         <div class="relative flex flex-auto items-start flex-column-ns items-center-ns pa3 pa0-ns">
                             <div class="bg-orange breathe z-3 ba bw3-l bw2-m bw1 b--white pa4-l pa3 ma3-l ma2 br-pill-ns br2">
-                                <div style="background:url('https://icongr.am/clarity/tag.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3 pl3 pa3-l"></div>
+                                <div style="background:url('https://icongr.am/clarity/tag.svg?color=ffffff') center no-repeat;"
+                                    class="contain pa2 pt3 pl3 pa3-l"></div>
                             </div>
                             <div class="ma2 ma0-ns">
                                 <div class="fw5 f5-ns f4">Reserve</div>
@@ -375,7 +489,8 @@
                         </div>
                         <div class="relative flex flex-auto items-start flex-column-ns items-center-ns pa3 pa0-ns">
                             <div class="bg-orange breathe z-3 ba bw3-l bw2-m bw1 b--white pa4-l pa3 ma3-l ma2 br-pill-ns br2">
-                                <div style="background:url('https://icongr.am/clarity/clock.svg?color=ffffff') center no-repeat;" class="contain pa2 pt3 pl3 pa3-l"></div>
+                                <div style="background:url('https://icongr.am/clarity/clock.svg?color=ffffff') center no-repeat;"
+                                    class="contain pa2 pt3 pl3 pa3-l"></div>
                             </div>
                             <div class="ma2 ma0-ns">
                                 <div class="fw5 f5-ns f4">Store</div>
@@ -392,9 +507,9 @@
                             <div class="flex flex-column pa3 measure">
                                 <div class="f4 pa2 fw7">Become a Host</div>
                                 <div class="pa2">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae soluta laborum voluptate fugit dolore? Corrupti, eos ex!
-                                    Quas distinctio voluptatum a similique, excepturi optio iure nulla minus perferendis
-                                    unde blanditiis.
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae soluta laborum
+                                    voluptate fugit dolore? Corrupti, eos ex! Quas distinctio voluptatum a similique,
+                                    excepturi optio iure nulla minus perferendis unde blanditiis.
                                 </div>
                             </div>
                             <div class="flex-auto flex flex-column items-stretch pa3 measure">
