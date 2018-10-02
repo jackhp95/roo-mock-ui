@@ -9,6 +9,20 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
     <link rel="stylesheet" href="Custom.css" />
+    <style>
+        .bg-bar-graph {
+            background: linear-gradient(to bottom,
+                #eeeeee,
+                #eeeeee 60%,
+                #007bc2 60%,
+                #007bc2 80%,
+                #002d61 80%,
+                #002d61);
+            /* The rectangle in which to repeat. 
+   It can be fully wide in this case */
+            background-size: 20px 100%;
+        }
+    </style>
 </head>
 
 <body class="f6 fw5 flex flex-column-l flex-row-m flex-column-reverse items-stretch vh-100 navy">
@@ -61,6 +75,15 @@
     </nav>
     <div class="flex-auto flex flex-row-l flex-column-reverse overflow-auto">
         <div class="flex-auto-l flex-none bg-center cover relative flex flex-column">
+            <!-- <div class="pa3 f4 flex items-center justify-between ba b--black-20 br2 mh3">
+                <div>
+                    become an ambassador
+                </div>
+                <div>
+                    make cash,
+                </div>
+                <div class="contain bg-center pa2 self-center" style="background:url('https://icongr.am/clarity/close.svg?color=002D62')"></div>
+            </div> -->
             <div class="flex-none dn flex-l pt3-l f5-ns f7 pr4-l overflow-hidden lh-copy">
                 <div class="flex-auto glow o-50 pv3 shadow-hover hover-bg-white flex flex-wrap items-center justify-center">
                     <div class="contain bg-center ma2 pa2 self-center" style="background:url('https://icongr.am/clarity/view-list.svg')"></div>
@@ -75,8 +98,8 @@
                     <span class="dn di-ns">Transactions</span>
                 </div>
                 <div class="flex-auto glow o-50 pv3 shadow-hover hover-bg-white flex flex-wrap items-center justify-center">
-                    <div class="contain bg-center ma2 pa2 self-center" style="background:url('https://icongr.am/clarity/user.svg')"></div>
-                    <span class="dn di-ns">Profile</span>
+                    <div class="contain bg-center ma2 pa2 self-center" style="background:url('https://icongr.am/clarity/users.svg')"></div>
+                    <span class="dn di-ns">Referrals</span>
                 </div>
                 <div class="flex-auto glow o-50 pv3 shadow-hover hover-bg-white flex flex-wrap items-center justify-center">
                     <div class="contain bg-center ma2 pa2 self-center" style="background:url('https://icongr.am/clarity/bell.svg')"></div>
@@ -93,7 +116,123 @@
                     <div class="contain bg-center ma2 pa2 o-70 glow self-center" style="background:url('https://icongr.am/clarity/bell.svg')"></div>
                 </div>
             </div>
-            <div class="flex-none flex-auto-l shadow-1 flex flex-column items-stretch overflow-y-auto pa3-ns pa4-l">
+
+            <div class="flex-auto flex-l flex-row flex-wrap-l justify-center overflow-x-hidden overflow-y-auto">
+                <header class="mw7-l flex-auto-l flex flex-column items-stretch pa3 ph4-l pv5-l center">
+                    <div class="flex justify-between items-end pv3">
+                        <div class="lh-solid mh2">
+                            <div class="f2 fw1 blue">250$</div>
+                            <div class="f5">Earnings</div>
+                        </div>
+                        <div class="flex">
+                            <div class="ph1 pointer br2 grow shadow-hover mh2 glow o-50">
+                                <div class="contain bg-center pa3 pt2 pl2 ma2" style="background-image:url('https://icongr.am/clarity/bar-chart.svg?color=ff4236')"></div>
+                            </div>
+                            <div class="ph1 pointer br2 grow shadow-hover mh2 glow o-50">
+                                <div class="contain bg-center pa3 pt2 pl2 ma2" style="background-image:url('https://icongr.am/clarity/line-chart.svg?color=002d61')"></div>
+                            </div>
+                            <div class="ph1 pointer br2 grow shadow-hover mh2 glow o-50">
+                                <div class="contain bg-center pa3 pt2 pl2 ma2" style="background-image:url('https://icongr.am/clarity/curve-chart.svg?color=002d61')"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-auto b--black-10 ba br2 flex items-stretch">
+                        <div class="flex flex-column items-end justify-around ph3 pt3 o-30 fw1 pb4">
+                            <div>12</div>
+                            <div>11</div>
+                            <div>10</div>
+                            <div>9</div>
+                            <div>8</div>
+                            <div>6</div>
+                            <div>5</div>
+                            <div>4</div>
+                            <div>3</div>
+                            <div>2</div>
+                            <div>1</div>
+                        </div>
+                        <div class="flex-auto flex flex-column overflow-auto">
+                            <div class="flex-auto flex items-end pt4">
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt1"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt1 pb1"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt2 pb1"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt2 pb2"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt3 pb1"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt3 pb2"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt3 pb3"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt4 pb1"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt4 pb2"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt4 pb3"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt4 pb4"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt5 pb1"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt5 pb2"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt5 pb3"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt5 pb4"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt5 pb5"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt6 pb1"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt6 pb2"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt6 pb3"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt6 pb4"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt6 pb5"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt6 pb6"> </div>
+                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt7 pb1"> </div>
+                            </div>
+                            <div class="flex justify-between f7 tracked o-30">
+                                <div class="ma2">JAN</div>
+                                <div class="ma2">FEB</div>
+                                <div class="ma2">MAR</div>
+                                <div class="ma2">APR</div>
+                                <div class="ma2">MAY</div>
+                                <div class="ma2">JUN</div>
+                                <div class="ma2">JUL</div>
+                                <div class="ma2">AUG</div>
+                                <div class="ma2">SEP</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-column justify-end pa2 pb4">
+                            <div class="pointer grow">
+                                <div class="contain bg-center pa3 pt2 pl2 ma2" style="background-image:url('https://icongr.am/clarity/cursor-hand.svg?color=aaaaaa')"></div>
+                            </div>
+                            <div class="pointer grow">
+                                <div class="contain bg-center pa3 pt2 pl2 ma2" style="background-image:url('https://icongr.am/clarity/user.svg?color=007bc2')"></div>
+                            </div>
+                            <div class="pointer grow">
+                                <div class="contain bg-center pa3 pt2 pl2 ma2" style="background-image:url('https://icongr.am/clarity/piggy-bank.svg?color=002d61')"></div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <section class="flex-none overflow-auto measure pa4-l ph3 lh-copy f5 relative center ma0-l">
+                    <h1 class="mt3 mb2">Referrals</h1>
+                    <p>
+                        As a Roo Storage User, You are provided with a Referral link which you can share with friends,
+                        family, or network. Post it to faceebook, twitter, insta, wherever you thrive.
+                    </p>
+                    <h2 class="mt3 mb2">Your Link</h2>
+                    <a href="https://media3.giphy.com/media/9Dk1b9ZQt98GShqy8P/giphy.webp" class="db bg-black-05 b--black-10 ba pa3 overflow-auto">
+                        https://media3.giphy.com/media/9Dk1b9ZQt98GShqy8P/giphy.webp
+                    </a>
+                    <button class="appearance-none pv2 ph3 bg-blue br2 bn white w-100 mt1 mb3">Copy Link to Clipboard</button>
+                    <h2 class="mt3 mb2">Lorem ipsum</h2>
+                    <p>
+                        dolor sit amet consectetur adipisicing elit. Nam qui fugiat nostrum animi possimus eaque, quia
+                        vero non assumenda aperiam, aut eius, iusto distinctio repudiandae iste sit sint soluta
+                        repellendus.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dignissimos, et, voluptas
+                        excepturi sequi delectus alias quae quod optio odit, sunt quidem quo fugiat? Eum sed suscipit
+                        eligendi temporibus eaque.
+                    </p>
+                    <button class="appearance-none pv2 ph3 bg-blue br2 bn white w-100 mv3">Lorem</button>
+                    <h2 class="mt3 mb2">Ambassador Program</h2>
+                    <p>
+                        If you're looking to become a hobbyist marketer, or you'd like level up your referrals, inquire
+                        about our Ambassador program. You'll be provided the tools to A/B test different links, and
+                        cold-hard cash for each conversion you create.
+                    </p>
+                    <button class="appearance-none pv2 ph3 bg-blue br2 bn white w-100 mv3">Become an Ambassador</button>
+                </section>
+            </div>
+            <!-- Listings -->
+            <!-- <div class="flex-none flex-auto-l shadow-1 flex flex-column items-stretch overflow-y-auto pa3-ns pa4-l">
                 <div class="flex-none flex flex-wrap flex-nowrap-l bg-white shadow-6 mh3-ns mv3 overflow-hidden br2">
                     <div class="bg-navy self-stretch-l flex-auto flex-none-l relative w-30-ns mw5-l">
                         <div class="br1 pl4 pr5 aspect-ratio--16x9"></div>
@@ -250,10 +389,25 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="flex-none overflow-y-scroll-l mw6-l w-30-l flex flex-column lh-solid shadow-6">
-            <div class="flex-auto cover bg-center bg-blue pv5" style="background-image: url('https://source.unsplash.com/random')"></div>
+            <div class="flex-auto cover bg-center bg-blue pb6" style="background-image: url('https://source.unsplash.com/random')">
+                <div class="pa3 flex relative hide-child">
+                    <div class="flex items-center br-pill ph2 bg-white pointer">
+                        <div class="dib contain bg-center pa3 pt1 pl1" style="background-image:url('https://icongr.am/clarity/link.svg?color=007bc2')"></div>
+                        <a href="" class="dib blue fw7 link truncate pa2">
+                            Referral Link
+                        </a>
+                    </div>
+                    <div class="absolute child flex items-center br-pill ph2 bg-blue pointer">
+                        <div class="dib contain bg-center pa3 pt1 pl1" style="background-image:url('https://icongr.am/clarity/copy.svg?color=ffffff')"></div>
+                        <a href="" class="dib white fw7 link truncate pa2">
+                            http://192.168.0.2:5500/myprofile.html
+                        </a>
+                    </div>
+                </div>
+            </div>
             <div class="flex-none pa3 pt0 flex flex-wrap bg-white">
                 <div class="nt5 flex-none w-40 grow center z-4 br-pill ba bw2-ns bw1 b--white bg-center cover relative overflow-hidden hide-child"
                     style="background:url('http://thesource.com/wp-content/uploads/2017/12/Chance-The-Rapper-Gifts-Students-With-300-Pairs-of-Unreleased-Jordans.jpg') center;">
