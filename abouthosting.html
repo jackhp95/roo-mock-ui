@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="Custom.css" />
     <style>
         @media screen and (min-width:60em) {
+            .shadowed {
+                -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+                filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+            }
+
             input[name="r1"],
             input[name="r2"] {
                 outline: 0;
@@ -89,6 +94,7 @@
 </head>
 
 <body class="pa0 ma0">
+    <div class="shadowed z-4 mh5-l ma4 absolute top-2-l left-2-l contain pa3 pt5 pl5 grow" style="background:url('https://s3.us-east-2.amazonaws.com/roo-image-storage/static-images/logo/Tight/PNG/White.png') no-repeat center;"></div>
     <header class="z-3 w-100 pa0 ma0 bg-black-05 white bg-center cover pt7-ns relative" style="background-image:url('https://source.unsplash.com/random?talking');">
         <div class="pt7 pa3 pa5-l tc tl-ns lg-black-fade-up f5">
             <h1 class="f1-ns mv3 mh4">
