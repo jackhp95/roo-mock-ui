@@ -1,72 +1,106 @@
 <!DOCTYPE html>
-<html lang="en" class="h6">
+<html lang="en"
+      class="h6">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1">
     <title>Roo Storage</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.9.1/tachyons.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.9.1/tachyons.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-    <link rel="stylesheet" href="Custom.css" />
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="Custom.css" />
     <style>
-        .bg-bar-graph {
-            background: linear-gradient(to bottom,
-                #eeeeee,
-                #eeeeee 60%,
-                #007bc2 60%,
-                #007bc2 80%,
-                #002d61 80%,
-                #002d61);
-            /* The rectangle in which to repeat. 
-   It can be fully wide in this case */
-            background-size: 20px 100%;
+        .up {
+        transition: all 0.15s ease-in-out !important;
         }
+
+        .up:hover {
+        -webkit-transform: translateY(-.25rem);
+        -ms-transform: translateY(-.25rem);
+        transform: translateY(-.25rem);
+        }
+
+        .down {
+        transition: all 0.15s ease-in-out !important;
+        }
+
+        .down:hover {
+        -webkit-transform: translateY(.25rem);
+        -ms-transform: translateY(.25rem);
+        transform: translateY(.25rem);
+        }
+
+        .right {
+        transition: all 0.15s ease-in-out !important;
+        }
+
+        .right:hover {
+        -webkit-transform: translateX(.25rem);
+        -ms-transform: translateX(.25rem);
+        transform: translateX(.25rem);
+        }
+
     </style>
 </head>
 
 <body class="f6 fw5 flex flex-column-l flex-row-m flex-column-reverse items-stretch vh-100 navy">
-    <nav id="nav" class="f5-ns fw6-ns f7 fw7 flex-none pv3-m ph4-l pa0 shadow-hover z-9999 flex flex-column-l bg-white">
+    <nav id="nav"
+         class="f5-ns fw6-ns f7 fw7 flex-none pv3-m ph4-l pa0 shadow-hover z-9999 flex flex-column-l bg-white">
         <ul class="flex flex-column-m no-underline list ma0 pa0 overflow-visible-ns overflow-hidden w-100 w-auto-ns">
             <li class="dn flex-auto-l flex-ns items-center ph4 pv3-m">
-                <a href="index.html" class="fw9 f3 f2-m grow-large hover-purple dib black no-underline">Roo</a>
+                <a href="index.html"
+                   class="fw9 f3 f2-m grow-large hover-purple dib black no-underline">Roo</a>
             </li>
             <li class="flex dn-ns hide-child o-80 glow w-20 w-auto-ns">
-                <a href="index.html" class="flex flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                <a href="index.html"
+                   class="flex flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
                     <span class="grow flex-none flex flex-column flex-row-ns items-center pv3-ns pv2">
-                        <span class="mb1 pl3 pt3 pr2 pb2 cover o-60 rotate-270" style="background:url('https://icongr.am/clarity/caret.svg')"></span>
+                        <span class="mb1 pl3 pt3 pr2 pb2 cover o-60 rotate-270"
+                              style="background:url('https://icongr.am/clarity/caret.svg')"></span>
                         Back</span>
                     <div class="b--purple ba child"></div>
                 </a>
             </li>
             <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
-                <a href="listings.html" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                <a href="listings.html"
+                   class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
                     <span class="grow flex-none flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
-                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/view-list.svg')"></span>
+                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60"
+                              style="background:url('https://icongr.am/clarity/view-list.svg')"></span>
                         Reserved</span>
                     <div class="b--purple ba child"></div>
                 </a>
             </li>
             <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
-                <a href="listing.html" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                <a href="listing.html"
+                   class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
                     <span class="grow flex-none flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
-                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/house.svg')"></span>
+                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60"
+                              style="background:url('https://icongr.am/clarity/house.svg')"></span>
                         Hosting</span>
                     <div class="b--purple ba child"></div>
                 </a>
             </li>
             <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
-                <a href="listings.html" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                <a href="listings.html"
+                   class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
                     <span class="grow flex-none flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
-                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/history.svg')"></span>
+                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60"
+                              style="background:url('https://icongr.am/clarity/history.svg')"></span>
                         History</span>
                     <div class="b--purple ba child"></div>
                 </a>
             </li>
             <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
-                <a href="myprofile.html" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
+                <a href="myprofile.html"
+                   class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
                     <span class="grow flex-none flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
-                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/bell.svg')"></span>
+                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60"
+                              style="background:url('https://icongr.am/clarity/bell.svg')"></span>
                         Alerts</span>
                     <div class="b--purple ba child"></div>
                 </a>
@@ -75,160 +109,164 @@
     </nav>
     <div class="flex-auto flex flex-row-l flex-column-reverse overflow-auto">
         <div class="flex-auto-l flex-none bg-center cover relative flex flex-column">
-            <details open class="flex-auto relative o-90 glow pointer">
+            <details open
+                     class="flex-none relative o-90 glow pointer">
                 <summary class="absolute absolute--fill z-3"></summary>
                 <div class="pa2 f4 flex items-center justify-between bg-blue white br2 mh3">
                     <p class="mv2 ph3">
                         Refer a friend to start hosting and earn more.
                     </p>
-                    <div class="contain bg-center ma2 pa2 contain self-center grow" style="background:url('https://icongr.am/clarity/close.svg?color=ffffff')"></div>
+                    <div class="contain bg-center ma2 pa2 contain self-center grow"
+                         style="background:url('https://icongr.am/clarity/close.svg?color=ffffff')"></div>
                 </div>
             </details>
             <div class="flex-none dn flex-l pt3-l f5-ns f7 pr4-l overflow-hidden lh-copy">
                 <div class="flex-auto glow o-50 pv3 shadow-hover hover-bg-white flex flex-wrap items-center justify-center">
-                    <div class="contain bg-center ma2 pa2 self-center" style="background:url('https://icongr.am/clarity/view-list.svg')"></div>
+                    <div class="contain bg-center ma2 pa2 self-center"
+                         style="background:url('https://icongr.am/clarity/view-list.svg')"></div>
                     <span class="dn di-ns">Listings</span>
                 </div>
                 <div class="flex-auto glow o-50 pv3 shadow-hover hover-bg-white flex flex-wrap items-center justify-center">
-                    <div class="contain bg-center ma2 pa2 self-center" style="background:url('https://icongr.am/clarity/bundle.svg?color=ff4236')"></div>
+                    <div class="contain bg-center ma2 pa2 self-center"
+                         style="background:url('https://icongr.am/clarity/bundle.svg?color=ff4236')"></div>
                     <span class="dn di-ns">Reservations</span>
                 </div>
                 <div class="flex-auto glow o-50 pv3 shadow-hover hover-bg-white flex flex-wrap items-center justify-center">
-                    <div class="contain bg-center ma2 pa2 self-center" style="background:url('https://icongr.am/clarity/dollar.svg')"></div>
+                    <div class="contain bg-center ma2 pa2 self-center"
+                         style="background:url('https://icongr.am/clarity/dollar.svg')"></div>
                     <span class="dn di-ns">Transactions</span>
                 </div>
                 <div class="flex-auto glow o-50 pv3 shadow-hover hover-bg-white flex flex-wrap items-center justify-center">
-                    <div class="contain bg-center ma2 pa2 self-center" style="background:url('https://icongr.am/clarity/users.svg')"></div>
+                    <div class="contain bg-center ma2 pa2 self-center"
+                         style="background:url('https://icongr.am/clarity/users.svg')"></div>
                     <span class="dn di-ns">Referrals</span>
                 </div>
                 <div class="flex-auto glow o-50 pv3 shadow-hover hover-bg-white flex flex-wrap items-center justify-center">
-                    <div class="contain bg-center ma2 pa2 self-center" style="background:url('https://icongr.am/clarity/bell.svg')"></div>
+                    <div class="contain bg-center ma2 pa2 self-center"
+                         style="background:url('https://icongr.am/clarity/bell.svg')"></div>
                     <span class="dn di-ns">Notifications</span>
                 </div>
             </div>
             <div class="top-0 sticky dn-l bg-white z-3 shadow-hover">
                 <div class="flex mh3 mv2 ma3-ns items-center f5 f3-ns">
-                    <div class="contain bg-center ma2 pa2 pt3-ns pl3-ns self-center" style="background:url('https://icongr.am/clarity/view-list.svg')"></div>
+                    <div class="contain bg-center ma2 pa2 pt3-ns pl3-ns self-center"
+                         style="background:url('https://icongr.am/clarity/view-list.svg')"></div>
                     <span class="flex-auto ph1-ns">Listings</span>
-                    <div class="contain bg-center ma2 pa2 o-70 glow self-center" style="background:url('https://icongr.am/clarity/bundle.svg?color=ff4236')"></div>
-                    <div class="contain bg-center ma2 pa2 o-70 glow self-center" style="background:url('https://icongr.am/clarity/dollar.svg')"></div>
-                    <div class="contain bg-center ma2 pa2 o-70 glow self-center" style="background:url('https://icongr.am/clarity/user.svg')"></div>
-                    <div class="contain bg-center ma2 pa2 o-70 glow self-center" style="background:url('https://icongr.am/clarity/bell.svg')"></div>
+                    <div class="contain bg-center ma2 pa2 o-70 glow self-center"
+                         style="background:url('https://icongr.am/clarity/bundle.svg?color=ff4236')"></div>
+                    <div class="contain bg-center ma2 pa2 o-70 glow self-center"
+                         style="background:url('https://icongr.am/clarity/dollar.svg')"></div>
+                    <div class="contain bg-center ma2 pa2 o-70 glow self-center"
+                         style="background:url('https://icongr.am/clarity/user.svg')"></div>
+                    <div class="contain bg-center ma2 pa2 o-70 glow self-center"
+                         style="background:url('https://icongr.am/clarity/bell.svg')"></div>
                 </div>
             </div>
 
-            <div class="flex-auto flex-l flex-row flex-wrap-l justify-center overflow-x-hidden overflow-y-auto">
-                <header class="mw7-l flex-auto-l flex flex-column items-stretch pa3 ph4-l pv5-l center">
-                    <div class="flex justify-between items-end pv3">
-                        <div class="lh-solid mh2">
-                            <div class="f2 fw1 blue">250$</div>
-                            <div class="f5">Earnings</div>
+            <div class="flex-auto flex-l flex-row flex-wrap-l justify-center items-stretch pa4-l pa3-ns pa2">
+                <main class="overflow-auto flex-auto pa3-l pa2-ns pa1">
+                    <section class="measure pa3-l pa2-ns pa1 center">
+                        <h2>Make $25 when someone you referred starts hosting!</h2>
+                        <input type="text"
+                               value="https://roostorage.com/hosting">
+                        <div>
+                            <h3>Share</h3>
+                            <ul class="list ma0 pa0 flex">
+                                <li class="pointer ph2 pv1 mh1 br2 ba b--blue">Copy Link</li>
+                                <li class="pointer ph2 pv1 mh1 br2 ba b--blue">Twitter</li>
+                                <li class="pointer ph2 pv1 mh1 br2 ba b--blue">Facebook</li>
+                                <li class="pointer ph2 pv1 mh1 br2 ba b--blue">Instagram</li>
+                                <li class="pointer ph2 pv1 mh1 br2 ba b--blue">Email</li>
+                                <li class="pointer ph2 pv1 mh1 br2 ba b--blue">Texting</li>
+                            </ul>
                         </div>
+                    </section>
+                    <section class="measure pa3-l pa2-ns pa1 center">
+                        <h2>Save 10% on a transaction when someone you referred becomes a renter!</h2>
+                        <input type="text"
+                               value="https://roostorage.com/hosting">
+                        <div>
+                            <h3>Share</h3>
+                            <ul class="list ma0 pa0 flex">
+                                <li class="pointer ph2 pv1 mh1 br2 ba b--blue">Copy Link</li>
+                                <li class="pointer ph2 pv1 mh1 br2 ba b--blue">Twitter</li>
+                                <li class="pointer ph2 pv1 mh1 br2 ba b--blue">Facebook</li>
+                                <li class="pointer ph2 pv1 mh1 br2 ba b--blue">Instagram</li>
+                                <li class="pointer ph2 pv1 mh1 br2 ba b--blue">Email</li>
+                                <li class="pointer ph2 pv1 mh1 br2 ba b--blue">Texting</li>
+                            </ul>
+                        </div>
+                    </section>
+                </main>
+                <section class="overflow-auto flex-none pa4-l pa3-ns pa2">
+                    <h2>Referrals</h2>
+                    <div>
+                        <h3>Quick Stats</h3>
                         <div class="flex">
-                            <div class="ph1 pointer br2 grow shadow-hover mh2 glow o-50">
-                                <div class="contain bg-center pa3 pt2 pl2 ma2" style="background-image:url('https://icongr.am/clarity/bar-chart.svg?color=ff4236')"></div>
+                            <div class="pa3">
+                                <label for="">Total Earnings</label>
+                                <span>$265</span>
                             </div>
-                            <div class="ph1 pointer br2 grow shadow-hover mh2 glow o-50">
-                                <div class="contain bg-center pa3 pt2 pl2 ma2" style="background-image:url('https://icongr.am/clarity/line-chart.svg?color=002d61')"></div>
-                            </div>
-                            <div class="ph1 pointer br2 grow shadow-hover mh2 glow o-50">
-                                <div class="contain bg-center pa3 pt2 pl2 ma2" style="background-image:url('https://icongr.am/clarity/curve-chart.svg?color=002d61')"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-auto b--black-10 ba br2 flex items-stretch">
-                        <div class="flex flex-column items-end justify-around ph3 pt3 o-30 fw1 pb4">
-                            <div>12</div>
-                            <div>11</div>
-                            <div>10</div>
-                            <div>9</div>
-                            <div>8</div>
-                            <div>6</div>
-                            <div>5</div>
-                            <div>4</div>
-                            <div>3</div>
-                            <div>2</div>
-                            <div>1</div>
-                        </div>
-                        <div class="flex-auto flex flex-column overflow-auto">
-                            <div class="flex-auto flex items-end pt4">
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt1"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt1 pb1"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt2 pb1"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt2 pb2"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt3 pb1"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt3 pb2"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt3 pb3"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt4 pb1"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt4 pb2"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt4 pb3"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt4 pb4"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt5 pb1"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt5 pb2"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt5 pb3"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt5 pb4"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt5 pb5"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt6 pb1"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt6 pb2"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt6 pb3"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt6 pb4"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt6 pb5"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt6 pb6"> </div>
-                                <div class="bg-bar-graph flex-auto mh1 pl2 pr1 pt7 pb1"> </div>
-                            </div>
-                            <div class="flex justify-between f7 tracked o-30">
-                                <div class="ma2">JAN</div>
-                                <div class="ma2">FEB</div>
-                                <div class="ma2">MAR</div>
-                                <div class="ma2">APR</div>
-                                <div class="ma2">MAY</div>
-                                <div class="ma2">JUN</div>
-                                <div class="ma2">JUL</div>
-                                <div class="ma2">AUG</div>
-                                <div class="ma2">SEP</div>
-                            </div>
-                        </div>
-                        <div class="flex flex-column justify-end pa2 pb4">
-                            <div class="pointer grow">
-                                <div class="contain bg-center pa3 pt2 pl2 ma2" style="background-image:url('https://icongr.am/clarity/cursor-hand.svg?color=aaaaaa')"></div>
-                            </div>
-                            <div class="pointer grow">
-                                <div class="contain bg-center pa3 pt2 pl2 ma2" style="background-image:url('https://icongr.am/clarity/user.svg?color=007bc2')"></div>
-                            </div>
-                            <div class="pointer grow">
-                                <div class="contain bg-center pa3 pt2 pl2 ma2" style="background-image:url('https://icongr.am/clarity/piggy-bank.svg?color=002d61')"></div>
+                            <div class="pa3">
+                                <label for="">Total People</label>
+                                <span>31</span>
                             </div>
                         </div>
                     </div>
-                </header>
-                <section class="flex-none overflow-auto measure pa4-l ph3 lh-copy f5 relative center ma0-l">
-                    <h1 class="mt3 mb2">Referrals</h1>
-                    <p>
-                        As a Roo Storage User, You are provided with a Referral link which you can share with friends,
-                        family, or network. Post it to faceebook, twitter, insta, wherever you thrive.
-                    </p>
-                    <h2 class="mt3 mb2">Your Link</h2>
-                    <a href="https://media3.giphy.com/media/9Dk1b9ZQt98GShqy8P/giphy.webp" class="db bg-black-05 b--black-10 ba pa3 overflow-auto">
-                        https://media3.giphy.com/media/9Dk1b9ZQt98GShqy8P/giphy.webp
-                    </a>
-                    <button class="appearance-none pv2 ph3 bg-blue br2 bn white w-100 mt1 mb3">Copy Link to Clipboard</button>
-                    <h2 class="mt3 mb2">Lorem ipsum</h2>
-                    <p>
-                        dolor sit amet consectetur adipisicing elit. Nam qui fugiat nostrum animi possimus eaque, quia
-                        vero non assumenda aperiam, aut eius, iusto distinctio repudiandae iste sit sint soluta
-                        repellendus.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dignissimos, et, voluptas
-                        excepturi sequi delectus alias quae quod optio odit, sunt quidem quo fugiat? Eum sed suscipit
-                        eligendi temporibus eaque.
-                    </p>
-                    <button class="appearance-none pv2 ph3 bg-blue br2 bn white w-100 mv3">Lorem</button>
-                    <h2 class="mt3 mb2">Ambassador Program</h2>
-                    <p>
-                        If you're looking to become a hobbyist marketer, or you'd like level up your referrals, inquire
-                        about our Ambassador program. You'll be provided the tools to A/B test different links, and
-                        cold-hard cash for each conversion you create.
-                    </p>
-                    <button class="appearance-none pv2 ph3 bg-blue br2 bn white w-100 mv3">Become an Ambassador</button>
+                    <div>
+                        <h3>Per Person Progress</h3>
+                        <ol class="list ma0 pa0">
+
+                            <li class="br-pill bg-blue mv3">
+                                <div class="bg-white pr3 flex items-center up br-pill na1 ba b--black-10">
+                                    <div style="background-image: url('https://source.unsplash.com/featured/?man')"
+                                         class="bg-center cover ma1 pa4 br-pill"></div>
+                                    <div class="flex-auto flex items-center">
+                                        <div class="pa2">
+                                            <div>Host</div>
+                                            <div class="f4 ma0 pa0">Alex Heron</div>
+                                        </div>
+                                        <div class="pa2 flex-auto tr o-60">
+                                            <div>Created Listing!</div>
+                                            <div class="f4 ma0 pa0"> 26% </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="br-pill bg-blue mv3">
+                                <div class="bg-white pr3 flex items-center up br-pill na1 ba b--black-10">
+                                    <div style="background-image: url('https://source.unsplash.com/featured/?woman')"
+                                         class="bg-center cover ma1 pa4 br-pill"></div>
+                                    <div class="flex-auto flex items-center">
+                                        <div class="pa2">
+                                            <div>Renter</div>
+                                            <div class="f4 ma0 pa0">Avery Paul</div>
+                                        </div>
+                                        <div class="pa2 flex-auto tr o-60">
+                                            <div>Made Reservation!</div>
+                                            <div class="f4 ma0 pa0"> 26% </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="br-pill bg-blue mv3">
+                                <div class="bg-white pr3 flex items-center up br-pill na1 ba b--black-10">
+                                    <div style="background-image: url('https://source.unsplash.com/featured/?person')"
+                                         class="bg-center cover ma1 pa4 br-pill"></div>
+                                    <div class="flex-auto flex items-center">
+                                        <div class="pa2">
+                                            <div>Renter</div>
+                                            <div class="f4 ma0 pa0">Cameron Simpson</div>
+                                        </div>
+                                        <div class="pa2 flex-auto tr o-60">
+                                            <div>Signed Up!</div>
+                                            <div class="f4 ma0 pa0"> 13% </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
                 </section>
             </div>
             <!-- Listings -->
@@ -392,17 +430,22 @@
             </div> -->
         </div>
         <div class="flex-none overflow-y-scroll-l mw6-l w-30-l flex flex-column lh-solid shadow-6">
-            <div class="flex-auto cover bg-center bg-blue pb6" style="background-image: url('https://source.unsplash.com/random')">
+            <div class="flex-auto cover bg-center bg-blue pb6"
+                 style="background-image: url('https://source.unsplash.com/random')">
                 <div class="pa3 flex relative hide-child">
                     <div class="flex items-center br-pill ph2 bg-white pointer">
-                        <div class="dib contain bg-center pa3 pt1 pl1" style="background-image:url('https://icongr.am/clarity/link.svg?color=007bc2')"></div>
-                        <a href="" class="dib blue fw7 link truncate pa2">
+                        <div class="dib contain bg-center pa3 pt1 pl1"
+                             style="background-image:url('https://icongr.am/clarity/link.svg?color=007bc2')"></div>
+                        <a href=""
+                           class="dib blue fw7 link truncate pa2">
                             Referral Link
                         </a>
                     </div>
                     <div class="absolute child flex items-center br-pill ph2 bg-blue pointer">
-                        <div class="dib contain bg-center pa3 pt1 pl1" style="background-image:url('https://icongr.am/clarity/copy.svg?color=ffffff')"></div>
-                        <a href="" class="dib white fw7 link truncate pa2">
+                        <div class="dib contain bg-center pa3 pt1 pl1"
+                             style="background-image:url('https://icongr.am/clarity/copy.svg?color=ffffff')"></div>
+                        <a href=""
+                           class="dib white fw7 link truncate pa2">
                             http://192.168.0.2:5500/myprofile.html
                         </a>
                     </div>
@@ -410,7 +453,7 @@
             </div>
             <div class="flex-none pa3 pt0 flex flex-wrap bg-white">
                 <div class="nt5 flex-none w-40 grow center z-4 br-pill ba bw2-ns bw1 b--white bg-center cover relative overflow-hidden hide-child"
-                    style="background:url('http://thesource.com/wp-content/uploads/2017/12/Chance-The-Rapper-Gifts-Students-With-300-Pairs-of-Unreleased-Jordans.jpg') center;">
+                     style="background:url('http://thesource.com/wp-content/uploads/2017/12/Chance-The-Rapper-Gifts-Students-With-300-Pairs-of-Unreleased-Jordans.jpg') center;">
                     <div class="aspect-ratio aspect-ratio--1x1"></div>
                     <div class="child absolute absolute--fill bg-navy flex items-center justify-center white lh-title">
                         Change Pic
@@ -448,23 +491,28 @@
                         <div class="flex-auto fw6 f5 mh2 mv1">Badges</div>
                         <div class="flex flex-wrap flex-auto lh-copy">
                             <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/camera.svg?color=002D62');"></div>
+                                <div class="pa1 pt2 pl2 contain bg-center"
+                                     style="background-image:url('https://icongr.am/clarity/camera.svg?color=002D62');"></div>
                                 <div class="ml2">Photogenic</div>
                             </div>
                             <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/heart.svg?color=002D62');"></div>
+                                <div class="pa1 pt2 pl2 contain bg-center"
+                                     style="background-image:url('https://icongr.am/clarity/heart.svg?color=002D62');"></div>
                                 <div class="ml2">Charitable</div>
                             </div>
                             <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
+                                <div class="pa1 pt2 pl2 contain bg-center"
+                                     style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
                                 <div class="ml2">24/7 Access</div>
                             </div>
                             <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
+                                <div class="pa1 pt2 pl2 contain bg-center"
+                                     style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
                                 <div class="ml2">No Pets</div>
                             </div>
                             <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill bg-blue white">
-                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/ban.svg?color=ffffff');"></div>
+                                <div class="pa1 pt2 pl2 contain bg-center"
+                                     style="background-image:url('https://icongr.am/clarity/ban.svg?color=ffffff');"></div>
                                 <div class="ml2">Get More Badges</div>
                             </div>
                         </div>
@@ -473,23 +521,28 @@
                         <div class="flex-auto fw6 f5 mh2 mv1">Badges</div>
                         <div class="flex flex-wrap flex-auto lh-copy">
                             <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/camera.svg?color=002D62');"></div>
+                                <div class="pa1 pt2 pl2 contain bg-center"
+                                     style="background-image:url('https://icongr.am/clarity/camera.svg?color=002D62');"></div>
                                 <div class="ml2">Photogenic</div>
                             </div>
                             <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/heart.svg?color=002D62');"></div>
+                                <div class="pa1 pt2 pl2 contain bg-center"
+                                     style="background-image:url('https://icongr.am/clarity/heart.svg?color=002D62');"></div>
                                 <div class="ml2">Charitable</div>
                             </div>
                             <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
+                                <div class="pa1 pt2 pl2 contain bg-center"
+                                     style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"></div>
                                 <div class="ml2">24/7 Access</div>
                             </div>
                             <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill ba b--black-10">
-                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
+                                <div class="pa1 pt2 pl2 contain bg-center"
+                                     style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"></div>
                                 <div class="ml2">No Pets</div>
                             </div>
                             <div class="flex-auto flex items-center justify-center ma1 ph3 pv1 pointer br-pill bg-blue white">
-                                <div class="pa1 pt2 pl2 contain bg-center" style="background-image:url('https://icongr.am/clarity/ban.svg?color=ffffff');"></div>
+                                <div class="pa1 pt2 pl2 contain bg-center"
+                                     style="background-image:url('https://icongr.am/clarity/ban.svg?color=ffffff');"></div>
                                 <div class="ml2">Get More Badges</div>
                             </div>
                         </div>
