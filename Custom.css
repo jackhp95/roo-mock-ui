@@ -948,3 +948,8 @@ progress[value]::-webkit-progress-bar {
     font-weight: inherit;
     opacity: .65;
 }
+
+
+.tracked-tiny {
+    letter-spacing: .05em
+  }
