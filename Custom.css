@@ -953,3 +953,13 @@ progress[value]::-webkit-progress-bar {
 .tracked-tiny {
     letter-spacing: .05em
   }
+
+
+.unset-all {
+    all: unset;
+    }
+
+.inherit-all {
+    all: inherit;
+    }
+
