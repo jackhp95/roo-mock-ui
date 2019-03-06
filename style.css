@@ -9219,7 +9219,7 @@ a[href].link:hover {
   -- Tabular Styling --
   ------------------ */
 table.tabular {
-    border-top: 0.125rem solid rgba(0, 32, 51, 0.12);
+    /* border-top: 0.125rem solid rgba(0, 32, 51, 0.08); */
     margin-bottom: 1rem;
 }
 
@@ -9229,18 +9229,20 @@ table.tabular {
 
 .tabular thead th {
     border: 0;
-    border-bottom: 0.125rem solid rgba(0, 32, 51, 0.12);
-    text-align: left;
+    border-bottom: 0.0625rem solid rgba(0, 32, 51, 0.08);
+    padding: 0.38rem 0.62rem;
+    font: inherit;
 }
 
 .tabular tr {
     margin-bottom: 0.5rem;
+    vertical-align: middle;
+    font: inherit;
 }
 
-th,
 .tabular td {
-    border-bottom: 0.125rem solid rgba(0, 32, 51, 0.12);
-    padding: 1rem;
+    border-bottom: 0.0625rem solid rgba(0, 32, 51, 0.08);
+    padding: 0.38rem 0.62rem;
     vertical-align: inherit;
 }
 
