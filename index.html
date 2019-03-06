@@ -1,276 +1,638 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Roo Storage</title>
-    <link rel="stylesheet" target="_blank" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.9.1/tachyons.min.css" />
-    <link target="_blank" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-    <link rel="stylesheet" target="_blank" href="Custom.css" />
+    <head>
+        <meta charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1"
+        >
+        <title>Roo Storage</title>
+        <link
+            rel="stylesheet"
+            target="_blank"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.9.1/tachyons.min.css"
+        />
+        <link
+            target="_blank"
+            href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet"
+        >
+        <link
+            rel="stylesheet"
+            target="_blank"
+            href="Custom.css"
+        />
 
-</head>
+    </head>
 
-<body class="f6 fw5 navy flex flex-row-l flex-column vh-100 w-100 overflow-auto overflow-visible-l">
-    <nav class="flex-none pa4 white bg-navy">
-        <h1 class="">Roo Design</h1>
-        <div class="overflow-auto w-100">
-            <h2 class="f5">Filters</h2>
-            <div class="pv2">
-                <h3 class="f6">progress</h3>
-                <ul class="list ma0 pa0">
-                    <li class="dib">
-                        <label class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer" for="any_progress">any</label>
-                    </li>
-                    <li class="dib">
-                        <label class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer" for="done_progress">done</label>
-                    </li>
-                    <li class="dib">
-                        <label class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer" for="wip_progress">wip</label>
-                    </li>
-                    <li class="dib">
-                        <label class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer" for="todo_progress">todo</label>
-                    </li>
-                </ul>
+    <body class="f6 fw5 navy flex flex-row-l flex-column vh-100 w-100 overflow-auto overflow-visible-l">
+        <nav class="flex-none pa4 white bg-navy">
+            <h1 class="">Roo Design</h1>
+            <div class="overflow-auto w-100">
+                <h2 class="f5">Filters</h2>
+                <div class="pv2">
+                    <h3 class="f6">progress</h3>
+                    <ul class="list ma0 pa0">
+                        <li class="dib">
+                            <label
+                                class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer"
+                                for="any_progress"
+                            >any</label>
+                        </li>
+                        <li class="dib">
+                            <label
+                                class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer"
+                                for="done_progress"
+                            >done</label>
+                        </li>
+                        <li class="dib">
+                            <label
+                                class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer"
+                                for="wip_progress"
+                            >wip</label>
+                        </li>
+                        <li class="dib">
+                            <label
+                                class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer"
+                                for="todo_progress"
+                            >todo</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pv2">
+                    <h3 class="f6">type</h3>
+                    <ul class="list ma0 pa0">
+                        <li class="dib">
+                            <label
+                                class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer"
+                                for="any_type"
+                            >any</label>
+                        </li>
+                        <li class="dib">
+                            <label
+                                class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer"
+                                for="page_type"
+                            >page</label>
+                        </li>
+                        <li class="dib">
+                            <label
+                                class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer"
+                                for="component_type"
+                            >component</label>
+                        </li>
+                        <li class="dib">
+                            <label
+                                class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer"
+                                for="element_type"
+                            >element</label>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="pv2">
-                <h3 class="f6">type</h3>
-                <ul class="list ma0 pa0">
-                    <li class="dib">
-                        <label class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer" for="any_type">any</label>
-                    </li>
-                    <li class="dib">
-                        <label class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer" for="page_type">page</label>
-                    </li>
-                    <li class="dib">
-                        <label class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer" for="component_type">component</label>
-                    </li>
-                    <li class="dib">
-                        <label class="lh-copy ph2 ba b--white-20 br1 dib mb1 pointer" for="element_type">element</label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <main class="flex-auto self-stretch bg-white list overflow-auto-l">
-        <ul class="pa4 ma0 list">
-            <li class="done page mv2 flex measure">
-                <input checked type="checkbox" class="mt2" name="" id="home">
-                <div class="ph2">
-                    <label for="home" class="f3 ttc db">home</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="home.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+        </nav>
+        <main class="flex-auto self-stretch bg-white list overflow-auto-l">
+            <ul class="pa4 ma0 list">
+                <li class="done page mv2 flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        class="mt2"
+                        name=""
+                        id="home"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="home"
+                            class="f3 ttc db"
+                        >home</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="home.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="done page mv2 flex measure">
-                <input checked type="checkbox" class="mt2" name="" id="listing">
-                <div class="ph2">
-                    <label for="listing" class="f3 ttc db">listing</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="listing.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="done page mv2 flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        class="mt2"
+                        name=""
+                        id="listing"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="listing"
+                            class="f3 ttc db"
+                        >listing</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="listing.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="done page mv2 flex measure">
-                <input checked type="checkbox" class="mt2" name="" id="review">
-                <div class="ph2">
-                    <label for="review" class="f3 ttc db">review</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="review.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="done page mv2 flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        class="mt2"
+                        name=""
+                        id="review"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="review"
+                            class="f3 ttc db"
+                        >review</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="review.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="done page mv2 flex measure">
-                <input checked type="checkbox" class="mt2" name="" id="abouthosting">
-                <div class="ph2">
-                    <label for="abouthosting" class="f3 ttc db">about hosting</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="abouthosting.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="done page mv2 flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        class="mt2"
+                        name=""
+                        id="abouthosting"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="abouthosting"
+                            class="f3 ttc db"
+                        >about hosting</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="abouthosting.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="done page mv2 flex measure">
-                <input checked type="checkbox" class="mt2" name="" id="faq">
-                <div class="ph2">
-                    <label for="faq" class="f3 ttc db">faq</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="faq.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="done page mv2 flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        class="mt2"
+                        name=""
+                        id="accountnotifications"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="accountnotifications"
+                            class="f3 ttc db"
+                        >account notifications</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="accountNotifications.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="done page mv2 flex measure">
-                <input checked type="checkbox" class="mt2" name="" id="listings">
-                <div class="ph2">
-                    <label for="listings" class="f3 ttc db">listings</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="listings.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="done page mv2 flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        class="mt2"
+                        name=""
+                        id="faq"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="faq"
+                            class="f3 ttc db"
+                        >faq</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="faq.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="done page mv2 flex measure">
-                <input checked type="checkbox" class="mt2" name="" id="myprofile">
-                <div class="ph2">
-                    <label for="myprofile" class="f3 ttc db">my profile</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="myprofile.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="done page mv2 flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        class="mt2"
+                        name=""
+                        id="listings"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="listings"
+                            class="f3 ttc db"
+                        >listings</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="listings.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="done page mv2 flex measure">
-                <input checked type="checkbox" class="mt2" name="" id="payinfo">
-                <div class="ph2">
-                    <label for="payinfo" class="f3 ttc db">pay info</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="payInfo.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="done page mv2 flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        class="mt2"
+                        name=""
+                        id="myprofile"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="myprofile"
+                            class="f3 ttc db"
+                        >my profile</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="myprofile.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="done page mv2 flex measure">
-                <input checked type="checkbox" class="mt2" name="" id="becomehost">
-                <div class="ph2">
-                    <label for="becomehost" class="f3 ttc db">become host</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="becomehost.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="done page mv2 flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        class="mt2"
+                        name=""
+                        id="payinfo"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="payinfo"
+                            class="f3 ttc db"
+                        >pay info</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="payInfo.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="done page mv2 flex measure">
-                <input checked type="checkbox" class="mt2" name="" id="profile">
-                <div class="ph2">
-                    <label for="profile" class="f3 ttc db">profile</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="profile.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="done page mv2 flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        class="mt2"
+                        name=""
+                        id="becomehost"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="becomehost"
+                            class="f3 ttc db"
+                        >become host</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="becomehost.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="done page mv2 flex measure">
-                <input checked type="checkbox" class="mt2" name="" id="comingSoon">
-                <div class="ph2">
-                    <label for="comingSoon" class="f3 ttc db">coming Soon</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="comingSoon.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="done page mv2 flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        class="mt2"
+                        name=""
+                        id="profile"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="profile"
+                            class="f3 ttc db"
+                        >profile</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="profile.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="done page mv2 flex measure">
-                <input checked type="checkbox" class="mt2" name="" id="landing">
-                <div class="ph2">
-                    <label for="landing" class="f3 ttc db">landing</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="landing.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="done page mv2 flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        class="mt2"
+                        name=""
+                        id="comingSoon"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="comingSoon"
+                            class="f3 ttc db"
+                        >coming Soon</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="comingSoon.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="done page mv2 flex measure">
-                <input checked type="checkbox" class="mt2" name="" id="reserve1">
-                <div class="ph2">
-                    <label for="reserve1" class="f3 ttc db">reserve1</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="reserve1.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="done page mv2 flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        class="mt2"
+                        name=""
+                        id="landing"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="landing"
+                            class="f3 ttc db"
+                        >landing</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="landing.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="done page mv2 flex measure">
-                <input checked type="checkbox" class="mt2" name="" id="blog">
-                <div class="ph2">
-                    <label for="blog" class="f3 ttc db">blog</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="blog.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="done page mv2 flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        class="mt2"
+                        name=""
+                        id="reserve1"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="reserve1"
+                            class="f3 ttc db"
+                        >reserve1</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="reserve1.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="done page mv2 flex measure">
-                <input checked type="checkbox" class="mt2" name="" id="blogs">
-                <div class="ph2">
-                    <label for="blogs" class="f3 ttc db">blogs</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="blogs.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="done page mv2 flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        class="mt2"
+                        name=""
+                        id="blog"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="blog"
+                            class="f3 ttc db"
+                        >blog</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="blog.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="mv2 wip component flex measure">
-                <input type="checkbox" name="" class="mt2" id="footer">
-                <div class="ph2">
-                    <label for="footer" class="f3 ttc db">footer</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="footer.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="done page mv2 flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        class="mt2"
+                        name=""
+                        id="blogs"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="blogs"
+                            class="f3 ttc db"
+                        >blogs</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="blogs.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="mv2 wip component flex measure">
-                <input checked type="checkbox" name="" class="mt2" id="loginModal">
-                <div class="ph2">
-                    <label for="loginModal" class="f3 ttc db">login Modal</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="loginModal.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="mv2 wip component flex measure">
+                    <input
+                        type="checkbox"
+                        name=""
+                        class="mt2"
+                        id="footer"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="footer"
+                            class="f3 ttc db"
+                        >footer</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="footer.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="mv2 wip component flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        name=""
+                        class="mt2"
+                        id="loginModal"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="loginModal"
+                            class="f3 ttc db"
+                        >login Modal</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="loginModal.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
 
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="mv2 wip page flex measure">
-                <input checked type="checkbox" name="" class="mt2" id="clProcess">
-                <div class="ph2">
-                    <label for="createListing" class="mh1 f3 ttc db">Create Listing Process</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="clType.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="mv2 wip page flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        name=""
+                        class="mt2"
+                        id="clProcess"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="createListing"
+                            class="mh1 f3 ttc db"
+                        >Create Listing Process</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="clType.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
 
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="mv2 wip page flex measure">
-                <input checked type="checkbox" name="" class="mt2" id="welcomeModal">
-                <div class="ph2">
-                    <label for="createListing" class="mh1 f3 ttc db">Welcome Modal</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="welcomeModal.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="mv2 wip page flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        name=""
+                        class="mt2"
+                        id="welcomeModal"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="createListing"
+                            class="mh1 f3 ttc db"
+                        >Welcome Modal</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="welcomeModal.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
 
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="mv2 wip page flex measure">
-                <input checked type="checkbox" name="" class="mt2" id="helpCenter">
-                <div class="ph2">
-                    <label for="helpCenter" class="mh1 f3 ttc db">Help Center</label>
-                    <div class="flex flex-wrap">
-                        <a target="_blank" href="helpCenter.html" class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib">View
-                            Page</a>
+                </li>
+                <li class="mv2 wip page flex measure">
+                    <input
+                        checked
+                        type="checkbox"
+                        name=""
+                        class="mt2"
+                        id="helpCenter"
+                    >
+                    <div class="ph2">
+                        <label
+                            for="helpCenter"
+                            class="mh1 f3 ttc db"
+                        >Help Center</label>
+                        <div class="flex flex-wrap">
+                            <a
+                                target="_blank"
+                                href="helpCenter.html"
+                                class="ma1 link pv2 fw6 ph3 ba b--black-20 br2 dib"
+                            >View
+                                Page</a>
 
+                        </div>
                     </div>
-                </div>
-            </li>
-        </ul>
-    </main>
+                </li>
+            </ul>
+        </main>
 
-    <!-- PROGRESS -->
-    <input type="radio" name="progress" checked id="any_progress" class="dn">
-    <input type="radio" name="progress" id="done_progress" class="dn">
-    <input type="radio" name="progress" id="wip_progress" class="dn">
-    <input type="radio" name="progress" id="todo_progress" class="dn">
-    <!-- TYPE -->
-    <input type="radio" name="type" checked id="any_type" class="dn">
-    <input type="radio" name="type" id="page_type" class="dn">
-    <input type="radio" name="type" id="component_type" class="dn">
-    <input type="radio" name="type" id="element_type" class="dn">
+        <!-- PROGRESS -->
+        <input
+            type="radio"
+            name="progress"
+            checked
+            id="any_progress"
+            class="dn"
+        >
+        <input
+            type="radio"
+            name="progress"
+            id="done_progress"
+            class="dn"
+        >
+        <input
+            type="radio"
+            name="progress"
+            id="wip_progress"
+            class="dn"
+        >
+        <input
+            type="radio"
+            name="progress"
+            id="todo_progress"
+            class="dn"
+        >
+        <!-- TYPE -->
+        <input
+            type="radio"
+            name="type"
+            checked
+            id="any_type"
+            class="dn"
+        >
+        <input
+            type="radio"
+            name="type"
+            id="page_type"
+            class="dn"
+        >
+        <input
+            type="radio"
+            name="type"
+            id="component_type"
+            class="dn"
+        >
+        <input
+            type="radio"
+            name="type"
+            id="element_type"
+            class="dn"
+        >
 
 </html>

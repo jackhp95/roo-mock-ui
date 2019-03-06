@@ -27,7 +27,7 @@
 
     <body class="flex flex-column-ns navy vh-100 items-stretch flex-column-reverse">
         <nav class="flex-none shadow-hover z-9999 bg-white h3">
-            <menu class="flex w-100 justify-end-ns ph4-l ph3-ns tracked-1 f-1">
+            <menu class="flex w-100 justify-between-ns ph4-l ph3-ns tracked-1 f-1">
                 <li class="relative dn db-ns mr-auto">
                     <a
                         class="pointer w-100 h-100 flex items-center pv3 grow"
@@ -215,319 +215,355 @@
                         >Payment</span>
                     </div>
                 </nav>
-                <article class="relative ph3 flex flex-row-reverse flex-wrap">
+                <article class="relative ph3 flex flex-row-reverse-l flex-wrap-l justify-around flex-column">
                     <details
                         open
                         class="measure"
                     >
-                        <summary class="nb4 pt3 mt2 bt bw1 b--transparent">
+                        <summary class="absolute top-0 right-0 mh3 mv3-ns mv1">
                             <button
                                 type="button"
-                                class="f-1 ml-auto blue hover-bg-navy hover-white flex items-center ba"
-                            >Settings <img
+                                class="f-1 ml-auto blue hover-bg-navy hover-white flex items-center ba relative"
+                            >Settings
+                                <div class="absolute absolute--fill pointer"></div>
+                                <img
                                     src="https://icongr.am/clarity/cog.svg?color=007ac3"
                                     alt=""
                                     class="ml2 nr1"
                                     style="height: 1.38em; width: 1.38em;"
                                 ></button>
                         </summary>
-                        <h2 class="f3 tracked-1 bb b--black-05">Notification Settings</h2>
-                        <section class="dib center pt3">
-                            <h3 class="pl1 f1 tracked-1 bb b--black-05">Platforms</h3>
-                            <table class="tabular">
-                                <thead class="pt3 pb1 fw7 f-1 tracked-1">
-                                    <tr>
-                                        <th>Medium</th>
-                                        <th>Handle</th>
-                                        <th class="tr">Tier</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Email</td>
-                                        <td><input
-                                                type="email"
-                                                value="jack@roostorage.com"
-                                            ></td>
-                                        <td class="tr"><select
-                                                class="bn blue fw5 pa0 ma0 bg-transparent"
-                                                name=""
-                                                id=""
-                                            >
+                        <div class="mv4 pt3 pt0-ns">
+                            <h2 class="f2 tracked-1 bb b--black-05">Notification Settings</h2>
+                            <section class="dib center pt2 relative">
+                                <h3 class="mv2 pl1 f1 tracked-1 bb b--black-05">Modes of Notice</h3>
+                                <div
+                                    style="max-width:100vw;"
+                                    class="nl3 nr3 overflow-x-auto"
+                                >
+                                    <table class="tabular mh3">
+                                        <thead class="pt3 pb1 fw5 i f-1 tracked-2-ns">
+                                            <tr>
+                                                <th>Medium</th>
+                                                <th style="min-width:13rem;">Handle</th>
+                                                <th>Tier</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Email</td>
+                                                <td><input
+                                                        type="email"
+                                                        value="jack@roostorage.com"
+                                                    ></td>
+                                                <td><select
+                                                        class="bn blue fw5 pa0 ma0 bg-transparent"
+                                                        name=""
+                                                        id=""
+                                                    >
 
-                                                <option
-                                                    selected
-                                                    value="Primary"
-                                                >Primary</option>
-                                                <option value="Email">Email</option>
-                                                <option value="SMS">SMS</option>
-                                                <option value="SMS">Inactive</option>
-                                            </select></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email</td>
-                                        <td><input
-                                                type="email"
-                                                value="jack@hotmail.com"
-                                            ></td>
-                                        <td class="tr"><select
-                                                class="bn blue fw5 pa0 ma0 bg-transparent"
-                                                name=""
-                                                id=""
-                                            >
-                                                <option value="Primary">Default</option>
-                                                <option value="Email">Email</option>
-                                                <option value="SMS">SMS</option>
-                                                <option value="SMS">Inactive</option>
-                                            </select></td>
-                                    </tr>
-                                    <tr>
-                                        <td>SMS</td>
-                                        <td><input
-                                                type="text"
-                                                value="( 573 ) 867 - 5309"
-                                            ></td>
-                                        <td class="tr"><button
-                                                type="button"
-                                                class="ba b--orange bg-orange white f-1 pv1 ph2"
-                                            >Verify
-                                                Number</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Web Push</td>
-                                        <td><input
-                                                type="text"
-                                                placeholder="This Device"
-                                            ></td>
-                                        <td class="tr"><button
-                                                type="button"
-                                                class="ba blue f-1 pv1 ph2"
-                                            >Grant Permission</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><select
-                                                class="bn blue fw5 pa0 ma0 bg-transparent"
-                                                name=""
-                                                id=""
-                                            >
-                                                <option
-                                                    value=""
-                                                    selected
-                                                    disabled
-                                                    hidden
-                                                >+ New</option>
-                                                <option value="SMS">SMS</option>
-                                                <option value="Email">Email</option>
-                                                <option value="Webpush">Web Push</option>
-                                                <option value="Webhook">Webhook</option>
-                                                <option value="Webpoll">Webpoll</option>
-                                                <option value="Twitter">Twitter DM</option>
-                                                <option value="Instagram">Instagram DM</option>
-                                                <option value="Telegram">Telegram</option>
-                                                <option value="Facebook">Facebook Messenger</option>
-                                            </select></td>
-                                        <td><input
-                                                type="text"
-                                                placeholder="Chrome on Jack's Computer"
-                                            ></td>
-                                        <td class="tr"><button
-                                                type="button"
-                                                class="ba blue f-1 pv1 ph2"
-                                            >Add</button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </section>
-                        <section class="dib center pt3">
-                            <h3 class="pl1 f1 tracked-1 bb b--black-05">Types</h3>
-                            <table class="tabular">
-                                <thead class="pt3 pb1 fw7 f-1 tracked-1">
-                                    <tr>
-                                        <th>Tier</th>
-                                        <th>CTA</th>
-                                        <th>Billing</th>
-                                        <th>Notices</th>
-                                        <th>Marketing</th>
-                                        <th>Newsletter</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Primary</td>
-                                        <td><input
-                                                type="radio"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="radio"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="radio"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="checkbox"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="checkbox"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Default</td>
-                                        <td><input
-                                                type="radio"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="radio"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="radio"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="radio"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="radio"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email</td>
-                                        <td><input
-                                                type="checkbox"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="checkbox"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="checkbox"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="checkbox"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="checkbox"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                    </tr>
-                                    <tr>
-                                        <td>SMS</td>
-                                        <td><input
-                                                type="checkbox"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="checkbox"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="checkbox"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="checkbox"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="checkbox"
-                                                name=""
-                                                id=""
-                                            ></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input
-                                                type="text"
-                                                name=""
-                                                id=""
-                                                class="bn pa0 ma0 bg-transparent"
-                                                placeholder="+ New"
-                                            ></td>
-                                        <td><input
-                                                type="checkbox"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="checkbox"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="checkbox"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="checkbox"
-                                                checked
-                                                name=""
-                                                id=""
-                                            ></td>
-                                        <td><input
-                                                type="checkbox"
-                                                name=""
-                                                id=""
-                                            ></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </section>
+                                                        <option
+                                                            selected
+                                                            value="Primary"
+                                                        >Primary</option>
+                                                        <option value="Email">Email</option>
+                                                        <option value="SMS">SMS</option>
+                                                        <option value="SMS">Inactive</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Email</td>
+                                                <td><input
+                                                        type="email"
+                                                        value="jack@hotmail.com"
+                                                    ></td>
+                                                <td><select
+                                                        class="bn blue fw5 pa0 ma0 bg-transparent"
+                                                        name=""
+                                                        id=""
+                                                    >
+                                                        <option value="Primary">Default</option>
+                                                        <option value="Email">Email</option>
+                                                        <option value="SMS">SMS</option>
+                                                        <option value="SMS">Inactive</option>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <td>SMS</td>
+                                                <td><input
+                                                        type="text"
+                                                        value="( 573 ) 867 - 5309"
+                                                    ></td>
+                                                <td><button
+                                                        type="button"
+                                                        class="ba b--orange bg-orange white f-1 pv1 ph2"
+                                                    >Verify
+                                                        Number</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Web Push</td>
+                                                <td><input
+                                                        type="text"
+                                                        placeholder="This Device"
+                                                    ></td>
+                                                <td><button
+                                                        type="button"
+                                                        class="ba blue f-1 pv1 ph2"
+                                                    >Grant Permission</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td><select
+                                                        class="bn blue fw5 pa0 ma0 bg-transparent"
+                                                        name=""
+                                                        id=""
+                                                    >
+                                                        <option
+                                                            value=""
+                                                            selected
+                                                            disabled
+                                                            hidden
+                                                        >+ New</option>
+                                                        <option value="SMS">SMS</option>
+                                                        <option value="Email">Email</option>
+                                                        <option value="Webpush">Web Push</option>
+                                                        <option value="Webhook">Webhook</option>
+                                                        <option value="Webpoll">Webpoll</option>
+                                                        <option value="Twitter">Twitter DM</option>
+                                                        <option value="Instagram">Instagram DM</option>
+                                                        <option value="Telegram">Telegram</option>
+                                                        <option value="Facebook">Facebook Messenger</option>
+                                                    </select></td>
+                                                <td><input
+                                                        type="text"
+                                                        placeholder="Chrome on Jack's Computer"
+                                                    ></td>
+                                                <td><button
+                                                        type="button"
+                                                        class="ba blue f-1 pv1 ph2"
+                                                    >Add</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                            <section class="dib center pt2 relative">
+                                <h3 class="mv2 pl1 f1 tracked-1 bb b--black-05">Types Per Tier</h3>
+                                <div
+                                    style="max-width:100vw;"
+                                    class="nl3 nr3 overflow-x-auto"
+                                >
+                                    <table class="tabular mh3">
+                                        <thead class="pt3 pb1 fw5 i f-1 tracked-2-ns">
+                                            <tr>
+                                                <th>Tier</th>
+                                                <th>CTA</th>
+                                                <th>Billing</th>
+                                                <th>Updates</th>
+                                                <th>Marketing</th>
+                                                <th>Newsletter</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Primary</td>
+                                                <td><input
+                                                        type="radio"
+                                                        checked
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="radio"
+                                                        checked
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="radio"
+                                                        checked
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="checkbox"
+                                                        checked
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="checkbox"
+                                                        checked
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Default</td>
+                                                <td><input
+                                                        type="radio"
+                                                        checked
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="radio"
+                                                        checked
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="radio"
+                                                        checked
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="radio"
+                                                        checked
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="radio"
+                                                        checked
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input
+                                                        type="text"
+                                                        name=""
+                                                        id=""
+                                                        class="bn pa0 ma0 bg-transparent"
+                                                        value="Email"
+                                                    ></td>
+                                                <td><input
+                                                        type="checkbox"
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="checkbox"
+                                                        checked
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="checkbox"
+                                                        checked
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="checkbox"
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="checkbox"
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input
+                                                        type="text"
+                                                        name=""
+                                                        id=""
+                                                        class="bn pa0 ma0 bg-transparent"
+                                                        value="SMS"
+                                                    ></td>
+                                                <td><input
+                                                        type="checkbox"
+                                                        checked
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="checkbox"
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="checkbox"
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="checkbox"
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="checkbox"
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input
+                                                        type="text"
+                                                        name=""
+                                                        id=""
+                                                        class="bn pa0 ma0 bg-transparent"
+                                                        placeholder="+ New"
+                                                    ></td>
+                                                <td><input
+                                                        type="checkbox"
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="checkbox"
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="checkbox"
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="checkbox"
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                                <td><input
+                                                        type="checkbox"
+                                                        name=""
+                                                        id=""
+                                                    ></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                            <menu class="sticky top-0 bg-white flex nl2 nr2">
+                                <button
+                                    type="button"
+                                    class="flex-auto white hover-bg-navy bg-blue mh2"
+                                >Save Changes</button>
+                                <button
+                                    type="button"
+                                    class="blue hover-navy ba mh2"
+                                >Cancel</button>
+                            </menu>
+                        </div>
                     </details>
-                    <section class="flex-auto center measure measure-wide-l mv4 ph2">
-                        <h2 class="f3 tracked-1 bb b--black-05">Notification History</h2>
-                        <ol class="relative">
+                    <section class="flex-auto center measure pt3 pt0-ns">
+                        <h2 class="mt4 f2 tracked-1 bb b--black-05">New Notifications</h2>
+                        <ol class="mb4 relative">
+                            <li class="center flex flex-wrap items-stretch mv3 br4 shadow-4 overflow-hidden">
+
+                                <div class="flex flex-auto flex-column justify-between pv2 ph3">
+                                    <h3 class="pv1">This is where a listing is</h3>
+                                    <div class="flex f-2 o-60 justify-between">
+                                        <div>4:20pm • 6/14/19</div>
+                                        <span class="blue">#Marketing</span>
+                                    </div>
+                                </div>
+                            </li>
                             <li class="center flex flex-wrap items-stretch mv3 br4 shadow-4 overflow-hidden">
                                 <div
                                     class="flex-auto relative flex items-start pb5"
@@ -547,23 +583,52 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="flex flex-auto flex-column justify-center pa3">
-                                    <h3 class="f1 pv1">This Notification has an absurdly long title, like unrealistic,
+                                <div class="flex flex-auto flex-column justify-between pv2 ph3">
+                                    <h3 class="pv1">Notification has a long title</h3>
+                                    <div class="flex f-2 o-60 justify-between">
+                                        <div>4:20pm • 6/14/19</div>
+                                        <span class="blue">#Marketing</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                        <h2 class="mt4 f2 tracked-1 bb b--black-05">Notification History</h2>
+                        <ol class="mb4 relative">
+                            <li class="center flex flex-wrap items-stretch mv3 br4 shadow-4 overflow-hidden">
+                                <div
+                                    class="flex-auto relative flex items-start pb5"
+                                    style="background-image:url('https://source.unsplash.com/random?home');"
+                                >
+                                    <div class="absolute absolute--fill bg-black-20"></div>
+                                    <div class="relative bg-white br-pill flex items-center ma2 ba b--white">
+                                        <img
+                                            src="https://source.unsplash.com/random?person"
+                                            alt="user profile image"
+                                            class="br-pill f4"
+                                            style="width:1em; height:1em;"
+                                        >
+                                        <div class="pl2 pr3 lh-title">
+                                            <p class="f-2 blue fw6">Douggie Bean</p>
+                                            <time class="f-3 tracked-1 o-80">Host</time>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-auto flex-column justify-between pv2 ph3">
+                                    <h3 class="pv1">This Notification has an absurdly long title, like unrealistic,
                                         something that shouldn't ever happen</h3>
-                                    <div class="tr f-1">
-                                        <div class="o-60">Tuesday, June 15th</div>
-                                        <div class="o-60">4:20pm</div>
+                                    <div class="flex f-2 o-60 justify-between">
+                                        <div>4:20pm • 6/14/19</div>
+                                        <span class="blue">#Marketing</span>
                                     </div>
                                 </div>
                             </li>
                             <li class="center flex flex-wrap items-stretch mv3 br4 shadow-4 overflow-hidden">
 
-                                <div class="flex flex-auto flex-column justify-center pa3">
-                                    <h3 class="f1 pv1">Notification</h3>
-                                    <div class="tr f-2">
-
-                                        <div class="o-60">Tuesday, June 15th</div>
-                                        <div class="o-60">4:20pm</div>
+                                <div class="flex flex-auto flex-column justify-between pv2 ph3">
+                                    <h3 class="pv1">Notification</h3>
+                                    <div class="flex f-2 o-60 justify-between">
+                                        <div>4:20pm • 6/14/19</div>
+                                        <span class="blue">#Marketing</span>
                                     </div>
                                 </div>
                             </li>
@@ -586,21 +651,21 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="flex flex-auto flex-column justify-center pa3">
-                                    <h3 class="f1 pv1">Placeholder text is here</h3>
-                                    <div class="tr f-2">
-                                        <div class="o-60">Tuesday, June 15th</div>
-                                        <div class="o-60">4:20pm</div>
+                                <div class="flex flex-auto flex-column justify-between pv2 ph3">
+                                    <h3 class="pv1">Placeholder text is here</h3>
+                                    <div class="flex f-2 o-60 justify-between">
+                                        <div>4:20pm • 6/14/19</div>
+                                        <span class="blue">#Marketing</span>
                                     </div>
                                 </div>
                             </li>
                             <li class="center flex flex-wrap items-stretch mv3 br4 shadow-4 overflow-hidden">
 
-                                <div class="flex flex-auto flex-column justify-center pa3">
-                                    <h3 class="f1 pv1">This is where a listing is</h3>
-                                    <div class="tr f-2">
-                                        <div class="o-60">Tuesday, June 15th</div>
-                                        <div class="o-60">4:20pm</div>
+                                <div class="flex flex-auto flex-column justify-between pv2 ph3">
+                                    <h3 class="pv1">This is where a listing is</h3>
+                                    <div class="flex f-2 o-60 justify-between">
+                                        <div>4:20pm • 6/14/19</div>
+                                        <span class="blue">#Marketing</span>
                                     </div>
                                 </div>
                             </li>
@@ -623,27 +688,27 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="flex flex-auto flex-column justify-center pa3">
-                                    <h3 class="f1 pv1">Notification has a long title</h3>
-                                    <div class="tr f-2">
-                                        <div class="o-60">Tuesday, June 15th</div>
-                                        <div class="o-60">4:20pm</div>
+                                <div class="flex flex-auto flex-column justify-between pv2 ph3">
+                                    <h3 class="pv1">Notification has a long title</h3>
+                                    <div class="flex f-2 o-60 justify-between">
+                                        <div>4:20pm • 6/14/19</div>
+                                        <span class="blue">#Marketing</span>
                                     </div>
                                 </div>
                             </li>
                             <li class="center flex flex-wrap items-stretch mv3 br4 shadow-4 overflow-hidden">
 
-                                <div class="flex flex-auto flex-column justify-center pa3">
-                                    <h3 class="f1 pv1">Notification</h3>
-                                    <div class="tr f-2">
-                                        <div class="o-60">Tuesday, June 15th</div>
-                                        <div class="o-60">4:20pm</div>
+                                <div class="flex flex-auto flex-column justify-between pv2 ph3">
+                                    <h3 class="pv1">Notification</h3>
+                                    <div class="flex f-2 o-60 justify-between">
+                                        <div>4:20pm • 6/14/19</div>
+                                        <span class="blue">#Marketing</span>
                                     </div>
                                 </div>
                             </li>
                         </ol>
                     </section>
-                    <hr class="w4 o-0">
+                    <!-- <hr class="w4 o-0"> -->
                 </article>
             </div>
         </main>
