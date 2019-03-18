@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Roo | Affordable Storage</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        >
+        <meta
+            name="description"
+            content="Find affordable storage in your neighborhood and only pay for the days that you need it. We make storage simple. Roo is a neighborhood friendly platform that connects those with extra space to those in need of storage. Sign up now to ensure you get storage for the summer!"
+        >
+        <meta
+            name="keywords"
+            content="Storage,Roo Storage,Roo,roo,storage,college"
+        >
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet"
+        >
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+        >
+        <link
+            rel="stylesheet"
+            href="style.css"
+        />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    </head>
+
+    <body class="vh-100 flex flex-column overflow-hidden">
+        <navbar
+            class="z-5 fixed top-0 right-0 w-100 w-auto-ns"
+            id="navbar"
+        >
+            <nav
+                appclassoverheader="white-ns mv4-ns fadeIn child-shadow-ns fw6"
+                class="mv2 mr3-ns mr4-l flex flex-row-ns flex-row-reverse w-100 w-auto-ns justify-between tracked-1 fadeInUp relative"
+                style="animation-duration: 100ms; transition-duration: 100ms; animation-delay: 0s; transition-delay: 0s;"
+            ><button
+                    angulartics2on="click"
+                    angularticsaction="Call To Action Mobile Click"
+                    class="self-center mh2 fw7 white tracked-1 bg-blue f-1 hover-bg-navy grow nv3 dn-ns"
+                    type="button"
+                > Dashboard </button><button
+                    angulartics2on="click"
+                    angularticsaction="Call To Action Desktop Click"
+                    class="self-center mh2 fw7 white tracked-1 bg-blue f-1 hover-bg-navy grow nv3 dn db-ns"
+                    type="button"
+                > Dashboard </button><a
+                    angulartics2on="click"
+                    angularticsaction="Home Navbar Click"
+                    class="db dn-ns self-stretch flex-auto"
+                    routerlink="/"
+                    href="/"
+                ></a><input
+                    class="dn"
+                    id="menu"
+                    name="menuToggle"
+                    type="radio"
+                ><label
+                    class="relative z-1 dn-ns flex items-center pv2 ph3 slideInLeft animated faster br3 br--right bg-white-80"
+                    for="menu"
+                    id="menuLabel"
+                ><img
+                        class="h1 w1 mr2"
+                        src="https://icongr.am/clarity/menu.svg?color=002b64"
+                    > Menu </label><input
+                    checked="true"
+                    class="dn"
+                    id="close"
+                    name="menuToggle"
+                    type="radio"
+                ><label
+                    class="relative z-1 dn-ns flex items-center pv2 ph3 slideInLeft animated faster br3 br--right bg-navy white"
+                    for="close"
+                    id="closeLabel"
+                ><img
+                        class="h1 w1 mr2"
+                        src="https://icongr.am/clarity/close.svg?color=ffffff"
+                    > Close </label>
+                <ul class="flex-ns tc dn fixed relative-ns absolute--fill flex-row-ns flex-column justify-end justify-start-ns bg-white bg-transparent-ns pb5 pb0-ns f1 ph2-l f0-ns animated faster fadeInLeft overflow-hidden br3-ns br0">
+                    <li class="flex-auto self-stretch dn-ns flex flex-column items-center justify-center fadeInRight animated faster"><img
+                            angulartics2on="click"
+                            angularticsaction="Home Navbar Click"
+                            class="w-40 zoomInDown animated faster text-shadow active"
+                            routerlink="/"
+                            routerlinkactive="active"
+                            src="https://s3.us-east-2.amazonaws.com/roo-image-storage/static-images/logo/Tight/PNG/Orange.png"
+                            tabindex="0"
+                        ></li>
+                    <li
+                        class="br4 br--right mb2 nb2-ns mt2 nt2-ns mr4 mr0-ns shadow-4 shadow-0-ns bounceInUp animated"
+                        style="animation-duration: 100ms; animation-delay: 0s; transition-duration: 100ms; transition-delay: 0s"
+                    ><a
+                            angulartics2on="click"
+                            angularticsaction="Listings Navbar Click"
+                            angularticscategory="Renter Funnel"
+                            class="grow pa3 pl3-ns pl4 db"
+                            routerlink="/listings"
+                            routerlinkactive="active"
+                            href="/listings"
+                        > Listings </a></li>
+                    <li
+                        class="br4 br--right mb2 nb2-ns mt2 nt2-ns mr4 mr0-ns shadow-4 shadow-0-ns bounceInUp animated"
+                        style="animation-duration: 100ms; transition-duration: 100ms;"
+                    ><a
+                            angulartics2on="click"
+                            angularticsaction="Hosting Navbar Click"
+                            angularticscategory="Host Funnel"
+                            class="grow pa3 pl3-ns pl4 db"
+                            routerlink="/hosting"
+                            routerlinkactive="active"
+                            href="/hosting"
+                        > Hosting </a></li>
+                    <li
+                        class="br4 br--right mb2 nb2-ns mt2 nt2-ns mr4 mr0-ns shadow-4 shadow-0-ns bounceInUp animated"
+                        style="animation-duration: 100ms; animation-delay: 0s; transition-duration: 100ms; transition-delay: 0s"
+                    ><a
+                            angulartics2on="click"
+                            angularticsaction="Help Navbar Click"
+                            class="grow pa3 pl3-ns pl4 db"
+                            routerlink="/help"
+                            routerlinkactive="active"
+                            href="/help"
+                        > Help </a></li>
+                    <!---->
+                    <!---->
+                    <li
+                        class="br4 br--right mb2 nb2-ns mt2 nt2-ns mr4 mr0-ns shadow-4 shadow-0-ns bounceInUp animated"
+                        style="animation-duration: 100ms; animation-delay: 0s; transition-duration: 100ms; transition-delay: 0s"
+                    ><a
+                            angulartics2on="click"
+                            angularticsaction="Dashboard Navbar Click"
+                            class="grow pa3 pl3-ns pl4 db"
+                            routerlink="/dashboard"
+                            href="/dashboard"
+                        > Jack </a></li>
+                    <!---->
+                </ul>
+            </nav>
+        </navbar>
+        <h1
+            class="z-4 w-100 relative sticky top-0 bg-white ph4-ns ph3 f1 shadow-3 flex items-center justify-center justify-start-ns"
+            style="height:3.375rem;"
+        ><img
+                class="h2 w2 mr2 ml3-l ml2-ns"
+                routerlink="/"
+                src="https://s3.us-east-2.amazonaws.com/roo-image-storage/static-images/logo/Tight/PNG/Blue.png"
+                tabindex="0"
+            ><span class="clip"> Create Listing </span></h1>
+        <!---->
+        <div
+            class="vh-100 flex-auto flex overflow-auto"
+            style="margin:-3.375rem 0;padding:3.375rem 0;"
+        >
+            <main class="flex-auto self-stretch flex items-stretch flex-row-reverse flex-wrap">
+                <article class="flex-none flex flex-column pa4 pt5 pa5-ns center mw-100">
+                    <hr class="flex-auto o-0 pv3">
+                    <div class="flex-none measure-narrow center">
+                        <h3 class="f3 lh-title mv3 fw5">Select Features</h3>
+                        <p class="mv3-ns mv2 lh-copy"> Select the features that represent your space. Accuracy
+                            is the name of the game. No one
+                            likes
+                            to show up expecting a 5-star restaurant and it turns out to be only 2-stars.
+                            Accurately
+                            describing the space will result in happier renters and produce better ratings and
+                            reviews.
+                        </p>
+                        <p class="mv3-ns mv2 lh-copy"> If you have any questions regarding features, please
+                            reach out to us at
+                            hello@roostorage.com
+                        </p>
+                        <form
+                            class="mv3 ng-untouched ng-pristine ng-valid"
+                            novalidate=""
+                        ><button
+                                angulartics2on="click"
+                                angularticsaction="CL Features Continue Click"
+                                angularticscategory="Host Funnel"
+                                class="w-100 bg-blue hover-bg-navy white"
+                            > Continue </button></form>
+                    </div>
+                    <hr class="flex-auto o-0 pv3">
+                </article>
+                <section class="flex-grow-1 flex-shrink-0 relative mw-100 overflow-auto flex flex-column bg-blue">
+                    <hr class="flex-auto o-0 pv3">
+                    <ul class="f1 fw5 center bg-white pv2 br4 shadow-5">
+                        <li>
+                            <details>
+                                <summary class="flex items-center pv2 ph3">
+                                    <div
+                                        class="ma2 mr3 pa1 pt3 pl3 contain bg-center"
+                                        style="background-image:url('https://icongr.am/clarity/clock.svg?color=002D62');"
+                                    ></div>
+                                    <div class="flex-auto">24/7 Access</div>
+                                    <div
+                                        class="ma2 ml4 pa2 contain bg-center grow"
+                                        style="background-image:url('https://icongr.am/clarity/close.svg?color=002D62');"
+                                    ></div>
+                                </summary>
+                                <p class="measure bb b--black-10 f0 ph4 pb3">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque excepturi, quas
+                                    doloribus quia perferendis accusamus odit sunt itaque assumenda numquam reiciendis
+                                    repudiandae voluptatibus, deleniti consectetur sequi iure eos dolorum autem?
+                                </p>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary class="flex items-center pv2 ph3">
+                                    <div
+                                        class="ma2 mr3 pa1 pt3 pl3 contain bg-center"
+                                        style="background-image:url('https://icongr.am/clarity/accessibility-1.svg?color=002D62');"
+                                    ></div>
+                                    <div class="flex-auto">Easy Entry</div>
+                                    <div
+                                        class="ma2 ml4 pa2 contain bg-center grow"
+                                        style="background-image:url('https://icongr.am/clarity/close.svg?color=002D62');"
+                                    ></div>
+                                </summary>
+                                <p class="measure bb b--black-10 f0 ph4 pb3">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque excepturi, quas
+                                    doloribus quia perferendis accusamus odit sunt itaque assumenda numquam reiciendis
+                                    repudiandae voluptatibus, deleniti consectetur sequi iure eos dolorum autem?
+                                </p>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary class="flex items-center pv2 ph3">
+                                    <div
+                                        class="ma2 mr3 pa1 pt3 pl3 contain bg-center"
+                                        style="background-image:url('https://icongr.am/clarity/no-access.svg?color=002D62');"
+                                    ></div>
+                                    <div class="flex-auto">No Pets</div>
+                                    <div
+                                        class="ma2 ml4 pa2 contain bg-center grow"
+                                        style="background-image:url('https://icongr.am/clarity/close.svg?color=002D62');"
+                                    ></div>
+                                </summary>
+                                <p class="measure bb b--black-10 f0 ph4 pb3">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque excepturi, quas
+                                    doloribus quia perferendis accusamus odit sunt itaque assumenda numquam reiciendis
+                                    repudiandae voluptatibus, deleniti consectetur sequi iure eos dolorum autem?
+                                </p>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary class="flex items-center pv2 ph3">
+                                    <div
+                                        class="ma2 mr3 pa1 pt3 pl3 contain bg-center"
+                                        style="background-image:url('https://icongr.am/clarity/ban.svg?color=002D62');"
+                                    ></div>
+                                    <div class="flex-auto">Non-Smoking</div>
+                                    <div
+                                        class="ma2 ml4 pa2 contain bg-center grow"
+                                        style="background-image:url('https://icongr.am/clarity/close.svg?color=002D62');"
+                                    ></div>
+                                </summary>
+                                <p class="measure bb b--black-10 f0 ph4 pb3">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque excepturi, quas
+                                    doloribus quia perferendis accusamus odit sunt itaque assumenda numquam reiciendis
+                                    repudiandae voluptatibus, deleniti consectetur sequi iure eos dolorum autem?
+                                </p>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary class="flex items-center pv2 ph3">
+                                    <div
+                                        class="ma2 mr3 pa1 pt3 pl3 contain bg-center"
+                                        style="background-image:url('https://icongr.am/clarity/license.svg?color=002D62');"
+                                    ></div>
+                                    <div class="flex-auto">Background Check Verified</div>
+                                    <div
+                                        class="ma2 ml4 pa2 contain bg-center grow"
+                                        style="background-image:url('https://icongr.am/clarity/add.svg?color=002D62');"
+                                    ></div>
+                                </summary>
+                                <p class="measure bb b--black-10 f0 ph4 pb3">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque excepturi, quas
+                                    doloribus quia perferendis accusamus odit sunt itaque assumenda numquam reiciendis
+                                    repudiandae voluptatibus, deleniti consectetur sequi iure eos dolorum autem?
+                                </p>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary class="flex items-center pv2 ph3">
+                                    <div
+                                        class="ma2 mr3 pa1 pt3 pl3 contain bg-center"
+                                        style="background-image:url('https://icongr.am/clarity/talk-bubbles.svg?color=002D62');"
+                                    ></div>
+                                    <div class="flex-auto">Excellent Response Rate</div>
+                                    <div
+                                        class="ma2 ml4 pa2 contain bg-center grow"
+                                        style="background-image:url('https://icongr.am/clarity/add.svg?color=002D62');"
+                                    ></div>
+                                </summary>
+                                <p class="measure bb b--black-10 f0 ph4 pb3">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque excepturi, quas
+                                    doloribus quia perferendis accusamus odit sunt itaque assumenda numquam reiciendis
+                                    repudiandae voluptatibus, deleniti consectetur sequi iure eos dolorum autem?
+                                </p>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary class="flex items-center pv2 ph3">
+                                    <div
+                                        class="ma2 mr3 pa1 pt3 pl3 contain bg-center"
+                                        style="background-image:url('https://icongr.am/clarity/event.svg?color=002D62');"
+                                    ></div>
+                                    <div class="flex-auto">Time Flexibility</div>
+                                    <div
+                                        class="ma2 ml4 pa2 contain bg-center grow"
+                                        style="background-image:url('https://icongr.am/clarity/add.svg?color=002D62');"
+                                    ></div>
+                                </summary>
+                                <p class="measure bb b--black-10 f0 ph4 pb3">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque excepturi, quas
+                                    doloribus quia perferendis accusamus odit sunt itaque assumenda numquam reiciendis
+                                    repudiandae voluptatibus, deleniti consectetur sequi iure eos dolorum autem?
+                                </p>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary class="flex items-center pv2 ph3">
+                                    <div
+                                        class="ma2 mr3 pa1 pt3 pl3 contain bg-center"
+                                        style="background-image:url('https://icongr.am/clarity/deploy.svg?color=002D62');"
+                                    ></div>
+                                    <div class="flex-auto">Move-In Assistance</div>
+                                    <div
+                                        class="ma2 ml4 pa2 contain bg-center grow"
+                                        style="background-image:url('https://icongr.am/clarity/add.svg?color=002D62');"
+                                    ></div>
+                                </summary>
+                                <p class="measure bb b--black-10 f0 ph4 pb3">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque excepturi, quas
+                                    doloribus quia perferendis accusamus odit sunt itaque assumenda numquam reiciendis
+                                    repudiandae voluptatibus, deleniti consectetur sequi iure eos dolorum autem?
+                                </p>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>
+                                    <form class="flex items-center pv2 ph3">
+                                        <div
+                                            class="ma2 mr3 pa1 pt3 pl3 contain bg-center"
+                                            style="background-image:url('https://icongr.am/clarity/add.svg?color=002D62');"
+                                        ></div>
+                                        <input
+                                            type="text"
+                                            class="flex-auto pa0 bn ma0 lh-solid bg-transparent"
+                                            placeholder="Suggest Feature"
+                                        />
+                                        <div
+                                            class="ma2 ml4 pa2 contain bg-center grow"
+                                            style="background-image:url('https://icongr.am/clarity/add.svg?color=002D62');"
+                                        ></div>
+                                    </form>
+                                </summary>
+                                <div class="flex">
+                                    <textarea class="f0 mh3 db flex-auto"></textarea>
+                                </div>
+                                <button type="button" class="bg-blue hover-bg-navy white mh3 mv2 f0 ml-auto db">Submit</button>
+                            </details>
+                        </li>
+                    </ul>
+                    <hr class="flex-auto o-0 pv5 pv3-l">
+                </section>
+            </main>
+        </div>
+        <header
+            class="w-100 bg-white sticky bottom-0 shadow-5 flex flex-column"
+            style="height:3.375rem;"
+        ><progress
+                max="100"
+                style="max-height:0.25rem"
+                value="20"
+            ></progress>
+            <menu class="flex-auto flex items-center ma0 pa0 pointer ttc f0 ph1 ph2-ns"><a
+                    angulartics2on="click"
+                    angularticsaction="CL Back Click"
+                    angularticscategory="Host Funnel"
+                    class="button hover-bg-black-10 bg-white navy flex items-center"
+                ><span
+                        class="rotate-270 pa2 dn di-l"
+                        style="background-image: url('https://icongr.am/clarity/angle.svg')"
+                    ></span><span class="ml2">back</span></a>
+                <div class="flex-auto f1">
+                    <div class="pv3-ns pv2 ph3 tracked-2 fw7 truncate outline-0 z-2 navy">Features</div>
+                </div><button class="hover-bg-black-10 navy flex items-center">
+                    <div class="circle-loader load-complete">
+                        <div class="draw checkmark"></div>
+                    </div><span class="dn di-l ml2">saved</span>
+                </button>
+                <div><button
+                        angulartics2on="click"
+                        angularticsaction="CL Preview Click"
+                        angularticscategory="Host Funnel"
+                        class="link hover-bg-black-10 navy flex items-center"
+                    ><span class="dn di-l mr2">preview</span><span
+                            class="pa2"
+                            style="background-image: url('https://icongr.am/clarity/eye.svg')"
+                        ></span></button>
+                    <!---->
+                </div><a
+                    angulartics2on="click"
+                    angularticsaction="CL Next Click"
+                    angularticscategory="Host Funnel"
+                    class="button hover-bg-black-10 bg-white navy flex items-center"
+                ><span class="mr2">next</span><span
+                        class="pa2 rotate-90 dn di-l"
+                        style="background-image: url('https://icongr.am/clarity/angle.svg')"
+                    ></span></a>
+            </menu>
+        </header>
+    </body>
+
+
+</html>
