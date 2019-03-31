@@ -1,274 +1,492 @@
-<!DOCTYPE html>
-<html lang="en" class="h6">
+<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Roo Storage</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.9.1/tachyons.min.css" />
-    <link rel="stylesheet" href="tachyons.css" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-    <link rel="stylesheet" href="Custom.css" />
-</head>
+    <head>
+        <meta charset="utf-8">
+        <title>Roo | Affordable Storage</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        >
+        <meta
+            name="description"
+            content="Find affordable storage in your neighborhood and only pay for the days that you need it. We make storage simple. Roo is a neighborhood friendly platform that connects those with extra space to those in need of storage. Sign up now to ensure you get storage for the summer!"
+        >
+        <meta
+            name="keywords"
+            content="Storage,Roo Storage,Roo,roo,storage,college"
+        >
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet"
+        >
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+        >
+        <link
+            rel="stylesheet"
+            href="style.css"
+        />
+        <!-- For Modals -->
+        <script
+            type="text/javascript"
+            src="https://unpkg.com/details-dialog-element@latest"
+        ></script>
+    </head>
 
-<!-- User experience:
-
-Renter
-
-Clicks reserve from listing
-Takes you to my reservations page
- 1. Summary of space 
- a. Date of use, price, specs, etc.
- 2. Payment
- 3. Contract
- 4. Waiting of confirmation 
- a. Renter can cancel at anytime prior to host confirmation
- 5. Drop off date
- a. Cancellation
- i. Renter can cancel anytime prior to 7 days of drop-off
- ii. Within 1-7 days, charged 25% of first months stay
- iii. Within 24 hours, Charged 50% of first months stay
- 6. Pick up date
- a. Renter can request early pick up
- i. Must give host 24 hour notice
- ii. Renter will be charge remaining month’s stay
- 1. A month is considered one date to the same date the next month (i.e. 1 month = July 13th to August 13th)
- b. Renter can request an extension
- i. Host can either accept or deny extension
- ii. After requesting extension, they need to be able to Change the date of pick-up. Minimum of 7 days (unless hosts allows for shorter extensions)
- 7. Review
- a. Rating and review of space
-
-Host 
-
-Clicks and confirms all the inputted information is correct and the host has entered the necessary information for background check API (Still deciding on background checks). Maybe this could be apart of the timeline as well. 
-
- 1. Confirm Listing information
- a. Information of space from roo vetting check
- 2. Waiting on approval of Background check
- 3. Waiting on approval
- a. Space can be approved or denied by roo
- 4. Waiting on reservation
- a. Host can Remove from listings at anytime
- b. Host can delete space at anytime
- i. DOUBLE CHECK that the host wants to delete the space
-
-Contact information is available at the time of confirmation for both parties
- 5. Waiting on Drop-off
- a. Host can cancel anytime (following applies on a yearly basis)
- i. Will be marked/flagged
- ii. 1st cancellation 
- 1. Greater than 1 week, no charge
- a. First cancellation is waived
- 2. 1 day – 7 days, charged 25% of first month’s rent or $25, whichever is less
- 3. within 24 hours, charged 50% of first month’s rent or $50, whichever is less
- iii. 2nd cancellation
- 1. Host under review (temporary deactivation)
- 2. Greater than 1 week 25% of first month’s rent or $25, whichever is less
- 3. 1 day – 7 days, charged 50% of first month’s rent or $50, whichever is less
- 4. within 24 hours, charged 75% of first month’s rent or $75, whichever is less
- iv. 3rd cancellation
- 1. Deactivated until reapproved
- 6. Waiting on pick-up
- a. Host most approve extension if requested by renter 
- 7. Review 
- a. Rating and review of renter
- b. Host can let us know that the items were never picked up 
- -->
-
-
-<body class="f6 fw5 flex flex-column-l flex-row-m flex-column-reverse items-stretch vh-100">
-    <nav id="nav" class="f5-ns fw6-ns f7 fw7 flex-none pv3-m ph4-l pa0 shadow-hover z-9999 flex flex-column-l bg-white">
-        <ul class="flex flex-column-m no-underline list ma0 pa0 overflow-visible-ns overflow-hidden w-100 w-auto-ns">
-            <li class="dn flex-auto-l flex-ns items-center ph4 pv3-m">
-                <a href="index.html" class="fw9 f3 f2-m grow-large hover-navy dib black no-underline">Roo</a>
-            </li>
-            <li class="flex dn-ns hide-child o-80 glow w-20 w-auto-ns">
-                <a href="index.html" class="flex flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
-                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2">
-                        <span class="mb1 pl3 pt3 pr2 pb2 cover o-60 rotate-270" style="background:url('https://icongr.am/clarity/caret.svg')"></span>
-                        Back</span>
-                    <div class="b--navy ba child"></div>
-                </a>
-            </li>
-            <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
-                <a href="listings.html" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
-                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
-                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/view-list.svg')"></span>
-                        Reserved</span>
-                    <div class="b--navy ba child"></div>
-                </a>
-            </li>
-            <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
-                <a href="listing.html" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
-                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
-                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/house.svg')"></span>
-                        Hosting</span>
-                    <div class="b--navy ba child"></div>
-                </a>
-            </li>
-            <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
-                <a href="listings.html" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
-                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
-                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/history.svg')"></span>
-                        History</span>
-                    <div class="b--navy ba child"></div>
-                </a>
-            </li>
-            <li class="flex hide-child o-80 ph3-l glow w-20 w-auto-ns">
-                <a href="myprofile.html" class="flex flex-column-l flex-row-m flex-column-reverse items-stretch self-stretch flex-auto no-underline black">
-                    <span class="grow flex-auto flex flex-column flex-row-ns items-center pv3-ns pv2 pv4-l ph2-l mv1-m pl3-m pr4-m w-auto-ns">
-                        <span class="mr3-l mr2-m mb1 mb0-ns pa2-ns pl3 pt3 pr2 pb2 cover o-60" style="background:url('https://icongr.am/clarity/bell.svg')"></span>
-                        Alerts</span>
-                    <div class="b--navy ba child"></div>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <div class="flex-auto overflow-auto flex-ns flex-column">
-        <main class="flex-auto-l flex-none-m flex cover" style="background:url('https://fthmb.tqn.com/OiHafI02UCiFNrdDnPogfwwmHoU=/2121x1414/filters:no_upscale():fill(transparent,1)/about/Car-garage-GettyImages-528098460-58a1fba93df78c475869ff29.jpg') center;">
-            <div class="bg-black-70 flex self-stretch flex-auto flex-column-l flex-column-reverse">
-                <section class="flex-auto overflow-auto self-center flex flex-row-l flex-column-reverse justify-center relative mw8">
-                    <div class="flex-auto flex flex-column overflow-auto">
-                        <header class="flex-none flex flex-wrap-reverse justify-between items-end z-3 h2 ph4-l ph3 mt6-l">
-                            <div class="flex justify-around items-center bg-white br1 shadow-6 relative f7 lh-copy">
-                                <div class="hover-bg-gold hide-child br1">
-                                    <div class="ma3 pa2 cover bg-center" style="background-image: url('https://icongr.am/clarity/lock.svg');">
-                                    </div>
-                                    <div class="absolute left-0 bottom-2 child bg-white mb4 pa3 br1">
-                                        incidunt nisi in quidem porro modi aut omnis distinctio culpa vero?
-                                    </div>
-                                </div>
-                                <div class="hover-bg-gold hide-child br1">
-                                    <div class="ma3 pa2 cover bg-center" style="background-image: url('https://icongr.am/clarity/shield.svg');">
-                                    </div>
-                                    <div class="absolute left-0 bottom-2 child bg-white mb4 pa3 br1">
-                                        suscipit blanditiis eligendi aliquam sapiente ratione quasi, magnam optio corrupti earum modi!
-                                    </div>
-                                </div>
-                                <div class="hover-bg-gold hide-child br1">
-                                    <div class="ma3 pa2 cover bg-center" style="background-image: url('https://icongr.am/clarity/check.svg');">
-                                    </div>
-                                    <div class="absolute left-0 bottom-2 child bg-white mb4 pa3 br1">
-                                        quae mollitia architecto cumque nobis quidem, possimus, recusandae aperiam aspernatur vitae in!
-                                    </div>
-                                </div>
-                                <div class="hover-bg-gold hide-child br1">
-                                    <div class="ma3 pa2 cover bg-center" style="background-image: url('https://icongr.am/clarity/history.svg');">
-                                    </div>
-                                    <div class="absolute left-0 bottom-2 child bg-white mb4 pa3 br1">
-                                        officiis, debitis sed quibusdam veniam autem aliquid vel architecto.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="bg-black pt5-ns pl5-ns pa4 mv2 br-pill cover ba bw1 shadow-6 white" style="background:url('https://images.unsplash.com/photo-1494790108377-be9c29b29330')"></div>
-                        </header>
-                        <div class="flex flex-none flex-wrap items-start justify-center-l bg-white pa4-l pa3-m mh4-m pa2 br1 br--top shadow-6 z-2 lh-copy">
-                            <div class="pa3 mw6">
-                                <div class="f1-l f2 fw3 pv3 lh-solid flex-auto items-end flex">
-                                    Joanne's Garage
-                                </div>
-                                <div class="f6">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque repellendus fugiat nihil consequatur voluptatem ipsum.
-                                    Repellendus ipsam quos. Labore excepturi a amet.
-                                </div>
-                            </div>
-                            <section class="pa3 flex-auto mw5-ns">
-                                <div class="f4 fw5 pv2">Reviews</div>
-                                <div class="flex-auto flex flex-column justify-between f6">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sit, velit eaque placeat tempora est totam architecto.
-                                </div>
-                                <div class="pv2 i fw3">
-                                    -- Borth Filmuth
-                                </div>
-                            </section>
-                            <section class="pa3 flex-auto mw5-ns">
-                                <div class="f4 fw5 pv2">Features</div>
-                                <div class="flex-auto flex flex-column justify-between">
-                                    <div class="flex">
-                                        <div class="dib pa2 pt3 pl3 contain" style="background: url('https://icongr.am/clarity/thermometer.svg') no-repeat center;"></div>
-                                        <span class="dib pa2">Climate Controlled</span>
-                                    </div>
-                                    <div class="flex">
-                                        <div class="dib pa2 pt3 pl3 contain" style="background: url('https://icongr.am/clarity/shield.svg') no-repeat center;"></div>
-                                        <span class="dib pa2">Security System</span>
-                                    </div>
-                                    <div class="flex">
-                                        <div class="dib pa2 pt3 pl3 contain" style="background: url('https://icongr.am/clarity/eye-show.svg') no-repeat center;"></div>
-                                        <span class="dib pa2">Security Camera</span>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="mw6 self-center flex justify-center flex-column flex-none">
-                        <div class="bg-white shadow-6 z-2 pa4 ma4 br1">
-                            <div class="f2 fw7">Summary</div>
-                            <div class="ph1 pv2">
-                                <div class="pv3">
-                                    <div class="pv1 f7">Drop-off Date</div>
-                                    <div class="pv1 bb b--black-05">Saturday, June 5th, 2018</div>
-                                </div>
-                                <div class="pv3">
-                                    <div class="pv1 f7">Pick-up Date</div>
-                                    <div class="pv1 bb b--black-05">Monday, July 5th, 2018</div>
-                                </div>
-                                <div class="pv3">
-                                    <div class="pv1 f7">Total Price</div>
-                                    <div class="pv1 bb b--black-05">$78.55</div>
-                                </div>
-                            </div>
-                            <div class="warmUp breathe ph4 pv3 br1 white fw7 f5 self-center">Sounds Good! I'll take it!</div>
-                        </div>
-                    </div>
-                </section>
-                <div class="flex-none self-stretch flex justify-center relative pa2 coolUp">
-                    <div class="self-center flex flex-row justify-around white tc lh-copy f6 fw3 mw7 w-100">
-                        <div class="relative flex-column flex-row-l flex items-center o-50 glow">
-                            <div class="z-3 br-pill bg-navy blue ma2-l ma1 h2 w2 flex justify-center items-center f5 fw7">1</div>
-                            <div class="fw5 f5-l f7 navy">Summary</div>
-                        </div>
-                        <div class="relative flex-column flex-row-l flex items-center">
-                            <div class="z-3 br-pill bg-white blue ma2-l ma1 h2 w2 flex justify-center items-center f5 fw7">2</div>
-                            <div class="fw5 f5-l f7">Contract</div>
-                        </div>
-                        <div class="relative flex-column flex-row-l flex items-center">
-                            <div class="z-3 br-pill ba bw1 blue ma2-l ma1 h2 w2 flex justify-center items-center f5 fw7">3</div>
-                            <div class="fw5 f5-l f7 blue">Payment</div>
-                        </div>
-                    </div>
-                </div>
+    <body class="">
+        <header
+            class="z-2 bg-black-05 relative pt6 white sticky"
+            style="top: -8rem; background-image:url('https://source.unsplash.com/random')"
+        >
+            <div
+                class="center relative z-1"
+                style="max-width:56em;"
+            >
+                <h1 class="f3 ph3 mh3-ns mh4-l pv2 w-100">Request Ned's Shed</h1>
             </div>
+            <div class="absolute absolute--fill lg-black-fade-up"></div>
+        </header>
+        <main class="flex-ns items-stretch justify-center ma3-ns ma4-l">
+            <section class="measure flex-auto">
+                <div
+                    class="sticky"
+                    style="top:3rem;"
+                >
+                    <h2
+                        id="1"
+                        style="top:3rem;"
+                        class="z-1 sticky bg-white ph3 pv2 mt3 f2"
+                    >Compose Request</h2>
+                    <p class="ma3 mt1">
+                        Hosts get to approve or deny reservation requests. Let's build your reservation request and send
+                        it
+                        to Ned!
+                    </p>
+                    <ul>
+                        <li class="ma3">
+                            <details class="o-40">
+                                <summary class="f1">📦 What I'm storing.</summary>
+                                <div class="pa1 ma1 bt b--black-05">
+                                    <p class="mv2">
+                                        Just give a general description of what you're storing.
+                                    </p>
+                                    <textarea
+                                        name=""
+                                        id=""
+                                        class="mv3 w-100"
+                                    >I need to store my funiture between leases.</textarea>
+                                    <button
+                                        type="button"
+                                        class="bg-blue white db w-100 mv3"
+                                    >Save</button>
+                                </div>
+                            </details>
+                        </li>
+                        <li class="ma3">
+                            <details open>
+                                <summary class="f1">💳 Set Up Payment</summary>
+                                <div class="pa1 ma1 bt b--black-05">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi velit
+                                        rerum
+                                        magnam distinctio dicta dolorum, ducimus facilis voluptate voluptatem
+                                        cum
+                                        vitae
+                                        error totam, iste voluptatibus neque consequuntur iure ab quo!
+                                    </p>
+                                    <output class="flex tc pa2">
+                                        <div class="pa2 flex-auto flex flex-column-reverse">
+                                            <div class="i f-1">Monthly</div>
+                                            <div class="f2">$60</div>
+                                        </div>
+                                        <div class="pa2 flex-auto flex flex-column-reverse">
+                                            <div class="i f-1">Total</div>
+                                            <div class="f2">$63</div>
+                                        </div>
+                                    </output>
+                                    <button
+                                        type="button"
+                                        class="bg-blue white db w-100 mv3"
+                                    >Proceed to Stripe</button>
+                                </div>
+                            </details>
+                        </li>
+                        <li class="ma3">
+                            <details>
+                                <summary class="f1">🤝 Terms and Conditions</summary>
+                                <div class="pa1 ma1 bt b--black-05">
+                                    <p class="mv2">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                        dignissimos
+                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                        sapiente
+                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                        excepturi.
+                                    </p>
+                                    <p class="mv2">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                        dignissimos
+                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                        sapiente
+                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                        excepturi.
+                                    </p>
+                                    <p class="mv2">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                        dignissimos
+                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                        sapiente
+                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                        excepturi.
+                                    </p>
+                                    <p class="mv2">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                        dignissimos
+                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                        sapiente
+                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                        excepturi.
+                                    </p>
+                                    <p class="mv2">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                        dignissimos
+                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                        sapiente
+                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                        excepturi.
+                                    </p>
+                                    <p class="mv2">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                        dignissimos
+                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                        sapiente
+                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                        excepturi.
+                                    </p>
+                                    <button
+                                        type="button"
+                                        class="bg-blue white db w-100 mv3"
+                                    >I Agree</button>
+                                </div>
+                            </details>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="relative measure flex-column justify-end">
+                <div
+                    class="sticky"
+                    style="top:3rem;"
+                >
+                    <h2
+                        id="1"
+                        style="top:3rem;"
+                        class="z-1 sticky bg-white ph3 pv2 mt3 f2 bn"
+                    >Request Message</h2>
+                    <div class="mh3 mv1 relative">
+                        <article
+                            class="relative overflow-hidden shadow-3 bg-blue measure-narrow ml-auto white br5 pa1 fw5 lh-title"
+                        >
+                            <div
+                                class="parallax absolute absolute--fill lg-white-fade-down"
+                                style="mix-blend-mode:soft-light;"
+                            ></div>
+                            <form
+                                action=""
+                                class="relative"
+                            >
+                                <p class="ma2 tracked-1">
+                                    Hey <a
+                                        href="#"
+                                        class="underline"
+                                    >Ned</a>,
+                                </p>
+                                <p class="ma2">
+                                    My name is Jack. <a
+                                        href="#"
+                                        class="underline"
+                                    >I need to store my funiture between leases.</a>
+                                </p>
+                                <p class="ma2">
+                                    I'd like to rent your <a
+                                        href="#"
+                                        class="underline"
+                                    >shed</a> for <a
+                                        href="#"
+                                        class="underline"
+                                    >about a
+                                        month</a>.
+                                    My
+                                    plan
+                                    is to drop all my stuff on
+                                    <a
+                                        href="#"
+                                        class="underline"
+                                    >Friday, June 4th</a> and I'll pick it up on <a class="underline">Thursday,
+                                        July
+                                        5th</a>.
+                                </p>
+                                <p class="ma2">
+                                    I'm all set up on <a
+                                        href="#"
+                                        class="underline"
+                                    >Stripe</a> and I'll be paying <a class="underline">$60
+                                        bucks
+                                        per month</a>, <a
+                                        href="#"
+                                        class="underline"
+                                    >$63 bucks total</a>.
+                                </p>
+                                <p class="ma2">
+                                    I've read, understood, and agree to the <a
+                                        href="#"
+                                        class="underline"
+                                    >terms of service</a>.
+                                </p>
+                                <h3 class="ma2 mb0">
+                                    I still need to:
+                                </h3>
+                                <ul class="mh2">
+                                    <li>
+                                        <details>
+                                            <summary class="bg-white blue underline mv1 lh-solid br-pill dib pv1 ph2">
+                                                📦 <i>Describe what I'm storing.</i>
+                                            </summary>
+                                            <details-dialog
+                                                class="z-999 fixed navy absolute--fill bg-black-80 flex flex-column pa2 overflow-auto"
+                                            >
+                                                <hr
+                                                    class="flex-auto h-auto pv5"
+                                                    data-close-dialog
+                                                />
+                                                <article class="bg-white br3 ph3 relative measure center">
+                                                    <input
+                                                        type="image"
+                                                        src="https://icongr.am/clarity/close.svg"
+                                                        alt="close"
+                                                        class="sticky z-3 top-0 db ml-auto pa2 nr3 nb3 f4"
+                                                        style="height:1em; width:1em;"
+                                                        data-close-dialog
+                                                    >
+                                                    <h1 class="f2 pv3 bg-white sticky top-0">What I'm storing.</h1>
+                                                    <p class="mv2">
+                                                        Just give a general description of what you're storing.
+                                                    </p>
+                                                    <textarea
+                                                        name=""
+                                                        id=""
+                                                        class="mv3 w-100"
+                                                    >I'd like to store ...</textarea>
+                                                    <button
+                                                        type="button"
+                                                        data-close-dialog
+                                                        class="bg-blue white db w-100 mv3"
+                                                    >Save</button>
+                                                </article>
+                                                <hr
+                                                    class="flex-auto h-auto"
+                                                    data-close-dialog
+                                                />
+                                            </details-dialog>
+                                        </details>
+                                    </li>
+                                    <li>
+                                        <details>
+                                            <summary class="bg-white blue underline mv1 lh-solid br-pill dib pv1 ph2">
+                                                💳 <i>Set up Payment.</i>
+                                            </summary>
+                                            <details-dialog
+                                                class="z-999 fixed navy absolute--fill bg-black-80 flex flex-column pa2 overflow-auto"
+                                            >
+                                                <hr
+                                                    class="flex-auto h-auto pv5"
+                                                    data-close-dialog
+                                                />
+                                                <article class="bg-white br3 ph3 relative measure center">
+                                                    <input
+                                                        type="image"
+                                                        src="https://icongr.am/clarity/close.svg"
+                                                        alt="close"
+                                                        class="sticky z-3 top-0 db ml-auto pa2 nr3 nb3 f4"
+                                                        style="height:1em; width:1em;"
+                                                        data-close-dialog
+                                                    >
+                                                    <h1 class="f2 pv3 bg-white sticky top-0">Set Up Payment</h1>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                                                        velit
+                                                        rerum
+                                                        magnam distinctio dicta dolorum, ducimus facilis voluptate
+                                                        voluptatem
+                                                        cum
+                                                        vitae
+                                                        error totam, iste voluptatibus neque consequuntur iure ab quo!
+                                                    </p>
+                                                    <output class="flex tc pa2">
+                                                        <div class="pa2 flex-auto flex flex-column-reverse">
+                                                            <div class="i f-1">Monthly</div>
+                                                            <div class="f2">$60</div>
+                                                        </div>
+                                                        <div class="pa2 flex-auto flex flex-column-reverse">
+                                                            <div class="i f-1">Total</div>
+                                                            <div class="f2">$63</div>
+                                                        </div>
+                                                    </output>
+                                                    <button
+                                                        type="button"
+                                                        data-close-dialog
+                                                        class="bg-blue white db w-100 mv3"
+                                                    >Proceed to Stripe</button>
+                                                </article>
+                                                <hr
+                                                    class="flex-auto h-auto"
+                                                    data-close-dialog
+                                                />
+                                            </details-dialog>
+                                        </details>
+                                    </li>
+                                    <li>
+                                        <details>
+                                            <summary class="bg-white blue underline mv1 lh-solid br-pill dib pv1 ph2">
+                                                🤝 <i>Agree to the Terms.</i>
+                                            </summary>
+                                            <details-dialog
+                                                class="z-999 fixed navy absolute--fill bg-black-80 flex flex-column pa2 overflow-auto"
+                                            >
+                                                <hr
+                                                    class="flex-auto h-auto pv5"
+                                                    data-close-dialog
+                                                />
+                                                <article class="bg-white br3 ph3 relative measure center">
+                                                    <input
+                                                        type="image"
+                                                        src="https://icongr.am/clarity/close.svg"
+                                                        alt="close"
+                                                        class="sticky z-3 top-0 db ml-auto pa2 nr3 nb3 f4"
+                                                        style="height:1em; width:1em;"
+                                                        data-close-dialog
+                                                    >
+                                                    <h1 class="f2 pv3 bg-white sticky top-0">Terms and Conditions</h1>
+                                                    <p class="mv2">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Nesciunt
+                                                        dignissimos
+                                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam
+                                                        debitis
+                                                        sapiente
+                                                        exercitationem necessitatibus harum in minus minima. Aliquid,
+                                                        eveniet
+                                                        excepturi.
+                                                    </p>
+                                                    <p class="mv2">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Nesciunt
+                                                        dignissimos
+                                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam
+                                                        debitis
+                                                        sapiente
+                                                        exercitationem necessitatibus harum in minus minima. Aliquid,
+                                                        eveniet
+                                                        excepturi.
+                                                    </p>
+                                                    <p class="mv2">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Nesciunt
+                                                        dignissimos
+                                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam
+                                                        debitis
+                                                        sapiente
+                                                        exercitationem necessitatibus harum in minus minima. Aliquid,
+                                                        eveniet
+                                                        excepturi.
+                                                    </p>
+                                                    <p class="mv2">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Nesciunt
+                                                        dignissimos
+                                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam
+                                                        debitis
+                                                        sapiente
+                                                        exercitationem necessitatibus harum in minus minima. Aliquid,
+                                                        eveniet
+                                                        excepturi.
+                                                    </p>
+                                                    <p class="mv2">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Nesciunt
+                                                        dignissimos
+                                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam
+                                                        debitis
+                                                        sapiente
+                                                        exercitationem necessitatibus harum in minus minima. Aliquid,
+                                                        eveniet
+                                                        excepturi.
+                                                    </p>
+                                                    <p class="mv2">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Nesciunt
+                                                        dignissimos
+                                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam
+                                                        debitis
+                                                        sapiente
+                                                        exercitationem necessitatibus harum in minus minima. Aliquid,
+                                                        eveniet
+                                                        excepturi.
+                                                    </p>
+                                                    <button
+                                                        type="button"
+                                                        data-close-dialog
+                                                        class="bg-blue white db w-100 mv3"
+                                                    >I Agree</button>
+                                                </article>
+                                                <hr
+                                                    class="flex-auto h-auto"
+                                                    data-close-dialog
+                                                />
+                                            </details-dialog>
+                                        </details>
+                                    </li>
+                                </ul>
+                                <p class="ma2">
+                                    You can contact me over
+                                    <a class="ba b--white-60 lh-solid br-pill pv1 ph2 inline-flex items-end">
+                                        💬text
+                                        <img
+                                            src="https://icongr.am/clarity/close.svg?color=ffffff"
+                                            alt="close"
+                                            class="o-40 ml1 nr1"
+                                            style="height:1em; width:1em;"
+                                        > </a>
+                                    <span class="o-20"> or
+                                        <a class="ba b--white-60 lh-solid br-pill pv1 ph2 inline-flex items-end">
+                                            📧email
+                                            <img
+                                                src="https://icongr.am/clarity/add.svg?color=ffffff"
+                                                alt="close"
+                                                class="ml1 nr1"
+                                                style="height:1em; width:1em;"
+                                            > </a>.
+                                    </span>
+                                </p>
+                                <p class="ma2">Thanks Ned!</p>
+                            </form>
+                        </article>
+                        <div
+                            class="bl bw4 b--blue absolute bottom-0 right--1"
+                            style="border-bottom-left-radius:1rem; height: 1rem; width: 1.5rem;"
+                        ></div>
+                    </div>
+                    <footer class="sticky bottom-0 lg-white-fade-up pa3">
+                        <a
+                            href="#2"
+                            class="db bg-white ba blue hover-white hover-bg-blue w-100 button"
+                        >Next Step Modal</a>
+                    </footer>
+                </div>
+
+            </section>
         </main>
-        <footer class="flex-none flex flex-wrap items-center justify-between ma3 ma4-l o-50 black-50 glow">
-            <div class="flex flex-column flex-row-l">
-                <div class="flex items-center grow ma2 hover-navy">
-                    <div class="o-50 cover h1 w1 ma2 grow flex-shrink-0" style="background:url(
- 'https://icongr.am/clarity/email.svg')"></div>
-                    <div class="flex-shrink-1">hello@roo.com</div>
-                </div>
-                <div class="flex items-center grow ma2 hover-navy">
-                    <div class="o-50 cover h1 w1 ma2 grow flex-shrink-0" style="background:url(
- 'https://icongr.am/simple/facebook.svg')"></div>
-                    <div class="flex-shrink-1">fb.com/roo</div>
-                </div>
-                <div class="flex items-center grow ma2 hover-navy">
-                    <div class="o-50 cover h1 w1 ma2 grow flex-shrink-0" style="background:url(
- 'https://icongr.am/simple/twitter.svg')"></div>
-                    <div class="flex-shrink-1">@roo</div>
-                </div>
-                <div class="flex items-center grow ma2 hover-navy">
-                    <div class="o-50 cover h1 w1 ma2 grow flex-shrink-0" style="background:url(
- 'https://icongr.am/simple/instagram.svg')"></div>
-                    <div class="flex-shrink-1">@roo</div>
-                </div>
-            </div>
-            <div class="ma2 ma2 self-center">
-                Copyright © Roo 2018
-            </div>
-        </footer>
-    </div>
-</body>
+    </body>
 
 </html>
