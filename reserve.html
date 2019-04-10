@@ -27,67 +27,280 @@
             rel="stylesheet"
             href="style.css"
         />
-        <!-- For Modals -->
-        <script
-            type="text/javascript"
-            src="https://unpkg.com/details-dialog-element@latest"
-        ></script>
-    </head>
+        <style>
+            .green {
+                color: #00894b;
+            }
 
-    <body class="">
-        <header
-            class="z-2 bg-black-05 relative pt6 white sticky"
-            style="top: -8rem; background-image:url('https://source.unsplash.com/random')"
-        >
-            <div
-                class="center relative z-1"
-                style="max-width:56em;"
-            >
-                <h1 class="f3 ph3 mh3-ns mh4-l pv2 w-100">Request Ned's Shed</h1>
-            </div>
-            <div class="absolute absolute--fill lg-black-fade-up"></div>
-        </header>
-        <main class="flex-ns items-stretch justify-center ma3-ns ma4-l">
-            <section class="measure flex-auto">
-                <div
-                    class="sticky"
-                    style="top:3rem;"
-                >
-                    <h2
-                        id="1"
-                        style="top:3rem;"
-                        class="z-1 sticky bg-white ph3 pv2 mt3 f2"
-                    >Compose Request</h2>
-                    <p class="ma3 mt1">
-                        Hosts get to approve or deny reservation requests. Let's build your reservation request and send
-                        it
-                        to Ned!
-                    </p>
-                    <ul>
-                        <li class="ma3">
-                            <details class="o-40">
-                                <summary class="f1">📦 What I'm storing.</summary>
-                                <div class="pa1 ma1 bt b--black-05">
-                                    <p class="mv2">
-                                        Just give a general description of what you're storing.
-                                    </p>
-                                    <textarea
-                                        name=""
-                                        id=""
-                                        class="mv3 w-100"
-                                    >I need to store my funiture between leases.</textarea>
+            .bg-green {
+                background-color: #00894b;
+            }
+
+            .b--green {
+                border-color: #00894b;
+            }
+
+            .anchor-top {
+                position: relative;
+                cursor: pointer;
+                top: -7rem;
+            }
+
+            .anchor-top .anchor-child {
+                position: relative;
+                top: 7rem;
+            }
+
+            .anchor-mid {
+                position: relative;
+                cursor: pointer;
+                top: -50vh;
+            }
+
+            .anchor-mid .anchor-child {
+                position: relative;
+                top: 50vh;
+            }
+
+        </style>
+    </head>
+    <!-- 
+        Here it is:
+    - Improve navigation (put navigation under compose request instead of the request message)
+    - Reduce clutter on mobile (possibly put the request message in a section)
+    - Change header to non-image (maybe similar to the features page)
+    - Remove modals
+    - Add confirm details page (phone number, email, and name)
+    - use emoji in message 
+-->
+
+    <body class="flex-ns items-stretch justify-center ma3 ma4-ns ma5-l">
+        <section class="measure flex-auto">
+            <div class="sticky top-0">
+                <h2
+                    id="1"
+                    class="z-2 sticky top-0 bg-white ph3 pv2 pv3-ns f3"
+                >Compose Request</h2>
+                <p class="ma1 ph3 lh-copy">
+                    Hosts get to approve or deny reservation requests. Let's build your reservation request and send
+                    it to Ned!
+                </p>
+                <ul class="pv2">
+                    <li class="ma3">
+                        <details>
+                            <summary class="f1 relative pointer z-1 flex items-center justify-between">
+                                📇 Confirm Contact Info
+                                <input
+                                    type="checkbox"
+                                    class="f0"
+                                    checked
+                                > </summary>
+                            <div class="pa1 ma1 bt b--black-05">
+                                <p class="mv2 lh-copy">
+                                    This section is so you can confirm our information is up to date. When we
+                                    contact Ned, we need to make sure he can contact you to let you know if he
+                                    approved or denied the request.
+                                </p>
+                                <div class="mv3">
+                                    <label
+                                        class="f-1 mh2 mv1 db navy hover-blue anchor-mid"
+                                        for="name"
+                                    >
+                                        <span class="anchor-child"> Name </span>
+                                    </label>
+                                    <input
+                                        id="name"
+                                        autocomplete="name"
+                                        type="text"
+                                        value="Jack Peterson"
+                                    >
+                                </div>
+                                <div class="mv3">
+                                    <label
+                                        class="f-1 mh2 mv1 db navy hover-blue anchor-mid"
+                                        for="phone"
+                                    >
+                                        <span class="anchor-child"> Phone </span>
+                                    </label>
+                                    <input
+                                        id="phone"
+                                        pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+                                        autocomplete="tel-national"
+                                        type="text"
+                                        value="573-268-0047"
+                                    >
+                                </div>
+                                <div class="mv3">
+                                    <label
+                                        class="f-1 mh2 mv1 db navy hover-blue anchor-mid"
+                                        for="email"
+                                    >
+                                        <span class="anchor-child"> Email </span>
+                                    </label>
+                                    <input
+                                        id="email"
+                                        type="email"
+                                        autocomplete="email"
+                                        value="jack@roostorage.com"
+                                    >
+                                </div>
+                                <menu class="lg-white-fade-up pv3 sticky bottom-0">
                                     <button
                                         type="button"
-                                        class="bg-blue white db w-100 mv3"
-                                    >Save</button>
+                                        class="ba bg-white green db w-100"
+                                    >Contact info Confirmed</button>
+                                </menu>
+                            </div>
+                        </details>
+                    </li>
+                    <li class="ma3">
+                        <details open>
+                            <summary class="f1 relative pointer z-1 flex items-center justify-between">
+                                📝 Listing Summary
+                                <input
+                                    type="checkbox"
+                                    class="f0"
+                                    checked
+                                > </summary>
+                            <div
+                                id="summary"
+                                class="anchor-top"
+                            >
+                                <div class="anchor-child pa1 ma1 bt b--black-05">
+                                    <p class="mv2 lh-copy">
+                                        This should look familiar! It's just the summary of the listing you're
+                                        requesting.
+                                        We'll email you all of these details if the host confirms your request.
+                                    </p>
+                                    <article class="shadow-3 flex-auto mt3 flex flex-column br4 overflow-hidden">
+                                        <header
+                                            class="z-1 flex-auto flex items-start justify-between bg-center cover mb2"
+                                            style="background-image:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"
+                                        >
+                                            <div class="flex lh-solid items-center fw6 pa2 br3 ma1 bg-white blue">
+                                                <img
+                                                    src="https://icongr.am/clarity/shield-check.svg?color=027bc2"
+                                                    alt="Verification Icon"
+                                                    class="contain mr1"
+                                                    style="width:1em; height:1em;"
+                                                >
+                                                <span class="i mr1 f7">Roo Verified</span>
+                                            </div>
+                                            <img
+                                                src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91"
+                                                alt="Ned's Avatar"
+                                                class="br-pill ba bw2-ns bw1 white bg-center cover f3 nb4 ma4"
+                                                style="width:4em; height:4em;"
+                                            >
+                                        </header>
+                                        <main class="flex-none flex flex-column bg-white ma2">
+                                            <h1 class="mv2 mh3 fw3 f3 lh-solid">
+                                                Ned's Shed
+                                            </h1>
+                                            <p class="mh3 mv2 lh-copy">
+                                                Description Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            </p>
+                                            <ul class="flex flex-wrap items-center">
+                                                <li class="flex-auto mv2 mh3">
+                                                    <h2 class="f-1 tracked-1 hover-blue db mv1">Space</h2>
+                                                    <p class="">15
+                                                        <sup>sqft</sup>
+                                                    </p>
+                                                </li>
+                                                <li class="flex-auto mv2 mh3">
+                                                    <h2 class="f-1 tracked-1 hover-blue db mv1">Dimensions</h2>
+                                                    <p class="">5
+                                                        <sup>ft</sup> x 3
+                                                        <sup>ft</sup>
+                                                    </p>
+                                                </li>
+                                                <li class="flex-auto mv2 mh3">
+                                                    <h2 class="f-1 tracked-1 hover-blue db mv1">Location</h2>
+                                                    <p class="">East Campus</p>
+                                                </li>
+                                            </ul>
+                                            <ol class="flex">
+                                                <li class="flex-auto ma2">
+                                                    <label
+                                                        class="f-1 tracked-1 hover-blue db mv1 mh2"
+                                                        for="listingsFilterStartDate"
+                                                    >Start Date</label>
+                                                    <input
+                                                        class="w-100"
+                                                        type="datetime"
+                                                        value="2019-04-09"
+                                                    >
+                                                </li>
+                                                <li class="flex-auto ma2">
+                                                    <label
+                                                        class="f-1 tracked-1 hover-blue db mv1 mh2"
+                                                        for="listingsFilterEndDate"
+                                                    >End Date</label>
+                                                    <input
+                                                        class="w-100"
+                                                        type="datetime"
+                                                        value="2019-04-09"
+                                                    >
+                                                </li>
+                                            </ol>
+                                        </main>
+                                    </article>
+                                    <menu class="lg-white-fade-up pv3 sticky bottom-0">
+                                        <button
+                                            type="button"
+                                            class="ba bg-white green db w-100"
+                                        >Listing Summary Approved</button>
+                                    </menu>
                                 </div>
-                            </details>
-                        </li>
-                        <li class="ma3">
-                            <details open>
-                                <summary class="f1">💳 Set Up Payment</summary>
-                                <div class="pa1 ma1 bt b--black-05">
-                                    <p>
+                            </div>
+                        </details>
+                    </li>
+                    <li class="ma3">
+                        <details open>
+                            <summary class="f1 relative pointer z-1 flex items-center justify-between">
+                                📦 What I'm storing.
+                                <input
+                                    type="checkbox"
+                                    class="f0"
+                                > </summary>
+                            <div class="pa1 ma1 bt b--black-05">
+                                <label
+                                    for="storing"
+                                    class="mv2 db lh-copy anchor-mid"
+                                >
+                                    <span class="anchor-child">
+                                        Just give a general description of what you're storing.
+                                    </span>
+                                </label>
+                                <textarea
+                                    name=""
+                                    id=""
+                                    id="storing"
+                                    class="mt3 w-100"
+                                >I need to store my furniture between leases.</textarea>
+                                <menu class="lg-white-fade-up pv3 sticky bottom-0">
+                                    <button
+                                        type="button"
+                                        class="bg-blue white db w-100"
+                                    >Save Storage Description</button>
+                                </menu>
+                            </div>
+                        </details>
+                    </li>
+                    <li class="ma3">
+                        <details open>
+                            <summary class="f1 relative pointer z-1 flex items-center justify-between">
+                                💳 Set Up Payment
+                                <input
+                                    type="checkbox"
+                                    class="f0"
+                                > </summary>
+                            <div
+                                id="payment"
+                                class="anchor-top pa1 ma1 bt b--black-05"
+                            >
+                                <div class="anchor-child">
+                                    <p class="mv2 lh-copy">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi velit
                                         rerum
                                         magnam distinctio dicta dolorum, ducimus facilis voluptate voluptatem
@@ -105,388 +318,191 @@
                                             <div class="f2">$63</div>
                                         </div>
                                     </output>
-                                    <button
-                                        type="button"
-                                        class="bg-blue white db w-100 mv3"
-                                    >Proceed to Stripe</button>
+                                    <menu class="lg-white-fade-up pv3 sticky bottom-0">
+                                        <button
+                                            type="button"
+                                            class="bg-blue white db w-100"
+                                        >Proceed to Stripe</button>
+                                    </menu>
                                 </div>
-                            </details>
-                        </li>
-                        <li class="ma3">
-                            <details>
-                                <summary class="f1">🤝 Terms and Conditions</summary>
-                                <div class="pa1 ma1 bt b--black-05">
-                                    <p class="mv2">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                                        dignissimos
-                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
-                                        sapiente
-                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
-                                        excepturi.
-                                    </p>
-                                    <p class="mv2">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                                        dignissimos
-                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
-                                        sapiente
-                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
-                                        excepturi.
-                                    </p>
-                                    <p class="mv2">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                                        dignissimos
-                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
-                                        sapiente
-                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
-                                        excepturi.
-                                    </p>
-                                    <p class="mv2">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                                        dignissimos
-                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
-                                        sapiente
-                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
-                                        excepturi.
-                                    </p>
-                                    <p class="mv2">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                                        dignissimos
-                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
-                                        sapiente
-                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
-                                        excepturi.
-                                    </p>
-                                    <p class="mv2">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                                        dignissimos
-                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
-                                        sapiente
-                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
-                                        excepturi.
-                                    </p>
-                                    <button
-                                        type="button"
-                                        class="bg-blue white db w-100 mv3"
-                                    >I Agree</button>
-                                </div>
-                            </details>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="relative measure flex-column justify-end">
-                <div
-                    class="sticky"
-                    style="top:3rem;"
-                >
-                    <h2
-                        id="1"
-                        style="top:3rem;"
-                        class="z-1 sticky bg-white ph3 pv2 mt3 f2 bn"
-                    >Request Message</h2>
-                    <div class="mh3 mv1 relative">
-                        <article
-                            class="relative overflow-hidden shadow-3 bg-blue measure-narrow ml-auto white br5 pa1 fw5 lh-title"
-                        >
+                            </div>
+                        </details>
+                    </li>
+                    <li class="ma3">
+                        <details open>
+                            <summary class="f1 relative pointer z-1 flex items-center justify-between">
+                                🤝 Terms and Conditions
+                                <input
+                                    type="checkbox"
+                                    class="f0"
+                                > </summary>
                             <div
-                                class="parallax absolute absolute--fill lg-white-fade-down"
-                                style="mix-blend-mode:soft-light;"
-                            ></div>
-                            <form
-                                action=""
-                                class="relative"
+                                id="terms"
+                                class="anchor-top"
                             >
-                                <p class="ma2 tracked-1">
-                                    Hey <a
-                                        href="#"
-                                        class="underline"
-                                    >Ned</a>,
-                                </p>
-                                <p class="ma2">
-                                    My name is Jack. <a
-                                        href="#"
-                                        class="underline"
-                                    >I need to store my funiture between leases.</a>
-                                </p>
-                                <p class="ma2">
-                                    I'd like to rent your <a
-                                        href="#"
-                                        class="underline"
-                                    >shed</a> for <a
-                                        href="#"
-                                        class="underline"
-                                    >about a
-                                        month</a>.
-                                    My
-                                    plan
-                                    is to drop all my stuff on
-                                    <a
-                                        href="#"
-                                        class="underline"
-                                    >Friday, June 4th</a> and I'll pick it up on <a class="underline">Thursday,
-                                        July
-                                        5th</a>.
-                                </p>
-                                <p class="ma2">
-                                    I'm all set up on <a
-                                        href="#"
-                                        class="underline"
-                                    >Stripe</a> and I'll be paying <a class="underline">$60
-                                        bucks
-                                        per month</a>, <a
-                                        href="#"
-                                        class="underline"
-                                    >$63 bucks total</a>.
-                                </p>
-                                <p class="ma2">
-                                    I've read, understood, and agree to the <a
-                                        href="#"
-                                        class="underline"
-                                    >terms of service</a>.
-                                </p>
-                                <h3 class="ma2 mb0">
-                                    I still need to:
-                                </h3>
-                                <ul class="mh2">
-                                    <li>
-                                        <details>
-                                            <summary class="bg-white blue underline mv1 lh-solid br-pill dib pv1 ph2">
-                                                📦 <i>Describe what I'm storing.</i>
-                                            </summary>
-                                            <details-dialog
-                                                class="z-999 fixed navy absolute--fill bg-black-80 flex flex-column pa2 overflow-auto"
-                                            >
-                                                <hr
-                                                    class="flex-auto h-auto pv5"
-                                                    data-close-dialog
-                                                />
-                                                <article class="bg-white br3 ph3 relative measure center">
-                                                    <input
-                                                        type="image"
-                                                        src="https://icongr.am/clarity/close.svg"
-                                                        alt="close"
-                                                        class="sticky z-3 top-0 db ml-auto pa2 nr3 nb3 f4"
-                                                        style="height:1em; width:1em;"
-                                                        data-close-dialog
-                                                    >
-                                                    <h1 class="f2 pv3 bg-white sticky top-0">What I'm storing.</h1>
-                                                    <p class="mv2">
-                                                        Just give a general description of what you're storing.
-                                                    </p>
-                                                    <textarea
-                                                        name=""
-                                                        id=""
-                                                        class="mv3 w-100"
-                                                    >I'd like to store ...</textarea>
-                                                    <button
-                                                        type="button"
-                                                        data-close-dialog
-                                                        class="bg-blue white db w-100 mv3"
-                                                    >Save</button>
-                                                </article>
-                                                <hr
-                                                    class="flex-auto h-auto"
-                                                    data-close-dialog
-                                                />
-                                            </details-dialog>
-                                        </details>
-                                    </li>
-                                    <li>
-                                        <details>
-                                            <summary class="bg-white blue underline mv1 lh-solid br-pill dib pv1 ph2">
-                                                💳 <i>Set up Payment.</i>
-                                            </summary>
-                                            <details-dialog
-                                                class="z-999 fixed navy absolute--fill bg-black-80 flex flex-column pa2 overflow-auto"
-                                            >
-                                                <hr
-                                                    class="flex-auto h-auto pv5"
-                                                    data-close-dialog
-                                                />
-                                                <article class="bg-white br3 ph3 relative measure center">
-                                                    <input
-                                                        type="image"
-                                                        src="https://icongr.am/clarity/close.svg"
-                                                        alt="close"
-                                                        class="sticky z-3 top-0 db ml-auto pa2 nr3 nb3 f4"
-                                                        style="height:1em; width:1em;"
-                                                        data-close-dialog
-                                                    >
-                                                    <h1 class="f2 pv3 bg-white sticky top-0">Set Up Payment</h1>
-                                                    <p>
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                                                        velit
-                                                        rerum
-                                                        magnam distinctio dicta dolorum, ducimus facilis voluptate
-                                                        voluptatem
-                                                        cum
-                                                        vitae
-                                                        error totam, iste voluptatibus neque consequuntur iure ab quo!
-                                                    </p>
-                                                    <output class="flex tc pa2">
-                                                        <div class="pa2 flex-auto flex flex-column-reverse">
-                                                            <div class="i f-1">Monthly</div>
-                                                            <div class="f2">$60</div>
-                                                        </div>
-                                                        <div class="pa2 flex-auto flex flex-column-reverse">
-                                                            <div class="i f-1">Total</div>
-                                                            <div class="f2">$63</div>
-                                                        </div>
-                                                    </output>
-                                                    <button
-                                                        type="button"
-                                                        data-close-dialog
-                                                        class="bg-blue white db w-100 mv3"
-                                                    >Proceed to Stripe</button>
-                                                </article>
-                                                <hr
-                                                    class="flex-auto h-auto"
-                                                    data-close-dialog
-                                                />
-                                            </details-dialog>
-                                        </details>
-                                    </li>
-                                    <li>
-                                        <details>
-                                            <summary class="bg-white blue underline mv1 lh-solid br-pill dib pv1 ph2">
-                                                🤝 <i>Agree to the Terms.</i>
-                                            </summary>
-                                            <details-dialog
-                                                class="z-999 fixed navy absolute--fill bg-black-80 flex flex-column pa2 overflow-auto"
-                                            >
-                                                <hr
-                                                    class="flex-auto h-auto pv5"
-                                                    data-close-dialog
-                                                />
-                                                <article class="bg-white br3 ph3 relative measure center">
-                                                    <input
-                                                        type="image"
-                                                        src="https://icongr.am/clarity/close.svg"
-                                                        alt="close"
-                                                        class="sticky z-3 top-0 db ml-auto pa2 nr3 nb3 f4"
-                                                        style="height:1em; width:1em;"
-                                                        data-close-dialog
-                                                    >
-                                                    <h1 class="f2 pv3 bg-white sticky top-0">Terms and Conditions</h1>
-                                                    <p class="mv2">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                        Nesciunt
-                                                        dignissimos
-                                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam
-                                                        debitis
-                                                        sapiente
-                                                        exercitationem necessitatibus harum in minus minima. Aliquid,
-                                                        eveniet
-                                                        excepturi.
-                                                    </p>
-                                                    <p class="mv2">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                        Nesciunt
-                                                        dignissimos
-                                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam
-                                                        debitis
-                                                        sapiente
-                                                        exercitationem necessitatibus harum in minus minima. Aliquid,
-                                                        eveniet
-                                                        excepturi.
-                                                    </p>
-                                                    <p class="mv2">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                        Nesciunt
-                                                        dignissimos
-                                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam
-                                                        debitis
-                                                        sapiente
-                                                        exercitationem necessitatibus harum in minus minima. Aliquid,
-                                                        eveniet
-                                                        excepturi.
-                                                    </p>
-                                                    <p class="mv2">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                        Nesciunt
-                                                        dignissimos
-                                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam
-                                                        debitis
-                                                        sapiente
-                                                        exercitationem necessitatibus harum in minus minima. Aliquid,
-                                                        eveniet
-                                                        excepturi.
-                                                    </p>
-                                                    <p class="mv2">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                        Nesciunt
-                                                        dignissimos
-                                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam
-                                                        debitis
-                                                        sapiente
-                                                        exercitationem necessitatibus harum in minus minima. Aliquid,
-                                                        eveniet
-                                                        excepturi.
-                                                    </p>
-                                                    <p class="mv2">
-                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                        Nesciunt
-                                                        dignissimos
-                                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam
-                                                        debitis
-                                                        sapiente
-                                                        exercitationem necessitatibus harum in minus minima. Aliquid,
-                                                        eveniet
-                                                        excepturi.
-                                                    </p>
-                                                    <button
-                                                        type="button"
-                                                        data-close-dialog
-                                                        class="bg-blue white db w-100 mv3"
-                                                    >I Agree</button>
-                                                </article>
-                                                <hr
-                                                    class="flex-auto h-auto"
-                                                    data-close-dialog
-                                                />
-                                            </details-dialog>
-                                        </details>
-                                    </li>
-                                </ul>
-                                <p class="ma2">
-                                    You can contact me over
-                                    <a class="ba b--white-60 lh-solid br-pill pv1 ph2 inline-flex items-end">
-                                        💬text
-                                        <img
-                                            src="https://icongr.am/clarity/close.svg?color=ffffff"
-                                            alt="close"
-                                            class="o-40 ml1 nr1"
-                                            style="height:1em; width:1em;"
-                                        > </a>
-                                    <span class="o-20"> or
-                                        <a class="ba b--white-60 lh-solid br-pill pv1 ph2 inline-flex items-end">
-                                            📧email
-                                            <img
-                                                src="https://icongr.am/clarity/add.svg?color=ffffff"
-                                                alt="close"
-                                                class="ml1 nr1"
-                                                style="height:1em; width:1em;"
-                                            > </a>.
-                                    </span>
-                                </p>
-                                <p class="ma2">Thanks Ned!</p>
-                            </form>
-                        </article>
+                                <div class="pa1 ma1 bt b--black-05 anchor-child">
+                                    <p class="mv2 lh-copy">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                        dignissimos
+                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                        sapiente
+                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                        excepturi.
+                                    </p>
+                                    <p class="mv2 lh-copy">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                        dignissimos
+                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                        sapiente
+                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                        excepturi.
+                                    </p>
+                                    <p class="mv2 lh-copy">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                        dignissimos
+                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                        sapiente
+                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                        excepturi.
+                                    </p>
+                                    <p class="mv2 lh-copy">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                        dignissimos
+                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                        sapiente
+                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                        excepturi.
+                                    </p>
+                                    <p class="mv2 lh-copy">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                        dignissimos
+                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                        sapiente
+                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                        excepturi.
+                                    </p>
+                                    <p class="mv2 lh-copy">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                        dignissimos
+                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                        sapiente
+                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                        excepturi.
+                                    </p>
+                                    <menu class="lg-white-fade-up pv3 sticky bottom-0">
+                                        <button
+                                            type="button"
+                                            class="bg-blue white db w-100"
+                                        >Yep, I Agree</button>
+                                    </menu>
+                                </div>
+                            </div>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="relative measure flex-column justify-end">
+            <div class="sticky top-0">
+                <h2
+                    id="1"
+                    class="z-2 sticky top-0 bg-white ph3 pv2 pv3-ns f3 bn"
+                >Request Message</h2>
+                <div class="mh3 mv1 relative">
+                    <article
+                        class="z-1 relative overflow-hidden shadow-3 bg-blue measure-narrow ml-auto white br5 pa1 fw5 lh-title"
+                    >
                         <div
-                            class="bl bw4 b--blue absolute bottom-0 right--1"
-                            style="border-bottom-left-radius:1rem; height: 1rem; width: 1.5rem;"
-                        ></div>
+                            class="parallax absolute absolute--fill lg-white-fade-down o-30"
+                            style="mix-blend-mode:soft-light;"
+                        >
+                        </div>
+                        <form
+                            action=""
+                            class="relative"
+                        >
+                            <p class="ma2 tracked-1">
+                                Hey <a
+                                    href="#summary"
+                                    class="underline"
+                                >Ned</a>,
+                            </p>
+                            <p class="ma2">
+                                My name is Jack. <a
+                                    href="#storing"
+                                    class="underline"
+                                >I need to store my funiture between leases.</a>
+                            </p>
+                            <p class="ma2">
+                                I'd like to rent your <a
+                                    href="#summary"
+                                    class="underline"
+                                >shed</a> for <a
+                                    href="#summary"
+                                    class="underline"
+                                >about a
+                                    month</a>.
+                                My
+                                plan
+                                is to drop all my stuff on
+                                <a
+                                    href="#summary"
+                                    class="underline"
+                                >Friday, June 4th</a> and I'll pick it up on <a class="underline">Thursday,
+                                    July
+                                    5th</a>.
+                            </p>
+                            <p class="ma2">
+                                I'm all set up on <a
+                                    href="#payment"
+                                    class="underline"
+                                >💳Stripe</a> and I'll be paying <a
+                                    href="#payment"
+                                    class="underline"
+                                >$60
+                                    bucks
+                                    per month</a>, <a
+                                    href="#payment"
+                                    class="underline"
+                                >$63 bucks total</a>.
+                            </p>
+                            <p class="ma2">
+                                I've read, understood, and agree to the <a
+                                    href="#terms"
+                                    class="underline"
+                                >terms of service</a>.
+                            </p>
+                            <p class="ma2">
+                                📇 My contact info
+                                <br>
+                                <a
+                                    class="underline"
+                                    href="#to-phone"
+                                >💬text : 573-268-0047</a>
+                                <br>
+                                <a
+                                    class="underline"
+                                    href="#to-email"
+                                >📧email : jack@roostorage.com</a>
+                            </p>
+                            <p class="ma2">Thanks Ned!</p>
+                        </form>
+                    </article>
+                    <div
+                        class="bl bw4 b--blue absolute bottom-0 right--1"
+                        style="border-bottom-left-radius:1rem; height: 1rem; width: 1.5rem;"
+                    >
                     </div>
-                    <footer class="sticky bottom-0 lg-white-fade-up pa3">
-                        <a
-                            href="#2"
-                            class="db bg-white ba blue hover-white hover-bg-blue w-100 button"
-                        >Next Step Modal</a>
-                    </footer>
                 </div>
+                <menu class="sticky z-2 bottom-0 lg-white-fade-up pa3">
+                    <a
+                        href="#2"
+                        class="db bg-white ba blue hover-white hover-bg-blue w-100 button"
+                    >Next Step Modal</a>
+                </menu>
+            </div>
 
-            </section>
-        </main>
+        </section>
     </body>
 
 </html>
