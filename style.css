@@ -1131,8 +1131,10 @@ textarea[disabled] {
     /* in case this ever gets supported */
     background: #fff;
     border: 0.125rem solid transparent;
-    -webkit-box-shadow: 0 0 0 0.125rem rgba(0, 32, 51, 0.125), inset 0 0 0 0 #007ac3;
-    box-shadow: 0 0 0 0.125rem rgba(0, 32, 51, 0.125), inset 0 0 0 0 #007ac3;
+    -webkit-box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.125), inset 0 0 0 0 #007ac3;
+    box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.125), #007ac3 inset 0 0 0 0;
+    box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.125), inset 0 0 0 0 #007ac3;
+
     display: inline-block;
     height: 1em;
     margin: 0.25em;
@@ -1149,20 +1151,26 @@ textarea[disabled] {
 [type=radio]:focus {
     border-color: transparent;
     -webkit-box-shadow: 0 0 0 0.125rem #007ac3, inset 0 0 0 0 #007ac3;
+    box-shadow: 0 0 0 0.125rem #007ac3, #007ac3 inset 0 0 0 0;
     box-shadow: 0 0 0 0.125rem #007ac3, inset 0 0 0 0 #007ac3;
+
 }
 
 [type=checkbox]:checked,
 [type=radio]:checked {
     border-color: #fff;
-    -webkit-box-shadow: 0 0 0 0.125rem rgba(0, 32, 51, 0.125), inset 0 0 0 0.5rem #007ac3;
-    box-shadow: 0 0 0 0.125rem rgba(0, 32, 51, 0.125), inset 0 0 0 0.5rem #007ac3;
+    -webkit-box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.125), inset 0 0 0 0.5rem #007ac3;
+    box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.125), #007ac3 inset 0 0 0 0.5rem;
+    box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.125), inset 0 0 0 0.5rem #007ac3;
+
 }
 
 [type=checkbox]:checked:focus,
 [type=radio]:checked:focus {
     -webkit-box-shadow: 0 0 0 0.125rem #007ac3, inset 0 0 0 0.5rem #007ac3;
+    box-shadow: 0 0 0 0.125rem #007ac3, #007ac3 inset 0 0 0 0.5rem;
     box-shadow: 0 0 0 0.125rem #007ac3, inset 0 0 0 0.5rem #007ac3;
+
 }
 
 [type=checkbox][disabled],
@@ -6225,7 +6233,6 @@ a[href].link:hover {
 }
 
 .sticky {
-    position: -webkit-sticky;
     position: sticky;
 }
 
@@ -6247,7 +6254,6 @@ a[href].link:hover {
     }
 
     .sticky-m {
-        position: -webkit-sticky;
         position: sticky;
     }
 
@@ -6270,7 +6276,6 @@ a[href].link:hover {
     }
 
     .sticky-m {
-        position: -webkit-sticky;
         position: sticky;
     }
 
@@ -6293,7 +6298,6 @@ a[href].link:hover {
     }
 
     .sticky-l {
-        position: -webkit-sticky;
         position: sticky;
     }
 
@@ -7092,31 +7096,31 @@ a[href].link:hover {
 
 */
 .lg-black-fade-up {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black));
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0), black);
-    background: -o-linear-gradient(rgba(0, 0, 0, 0), black);
-    background: linear-gradient(rgba(0, 0, 0, 0), black);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.001)), to(black));
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.001), black);
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.001), black);
+    background: linear-gradient(rgba(255, 255, 255, 0.001), black);
 }
 
 .lg-white-fade-up {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(white));
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0), white);
-    background: -o-linear-gradient(rgba(0, 0, 0, 0), white);
-    background: linear-gradient(rgba(0, 0, 0, 0), white);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.001)), to(white));
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.001), white);
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.001), white);
+    background: linear-gradient(rgba(255, 255, 255, 0.001), white);
 }
 
 .lg-white-fade-down {
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(0, 0, 0, 0)));
-    background: -webkit-linear-gradient(white, rgba(0, 0, 0, 0));
-    background: -o-linear-gradient(white, rgba(0, 0, 0, 0));
-    background: linear-gradient(white, rgba(0, 0, 0, 0));
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0.001)));
+    background: -webkit-linear-gradient(white, rgba(255, 255, 255, 0.001));
+    background: -o-linear-gradient(white, rgba(255, 255, 255, 0.001));
+    background: linear-gradient(white, rgba(255, 255, 255, 0.001));
 }
 
 .lgh-black-0-white {
-    background: -webkit-gradient(linear, left top, right top, from(black), color-stop(20%, rgba(0, 0, 0, 0)), color-stop(80%, rgba(0, 0, 0, 0)), to(white));
-    background: -webkit-linear-gradient(left, black, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, white);
-    background: -o-linear-gradient(left, black, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, white);
-    background: linear-gradient(90deg, black, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, white);
+    background: -webkit-gradient(linear, left top, right top, from(black), color-stop(20%, rgba(255, 255, 255, 0.001)), color-stop(80%, rgba(255, 255, 255, 0.001)), to(white));
+    background: -webkit-linear-gradient(left, black, rgba(255, 255, 255, 0.001) 20%, rgba(255, 255, 255, 0.001) 80%, white);
+    background: -o-linear-gradient(left, black, rgba(255, 255, 255, 0.001) 20%, rgba(255, 255, 255, 0.001) 80%, white);
+    background: linear-gradient(90deg, black, rgba(255, 255, 255, 0.001) 20%, rgba(255, 255, 255, 0.001) 80%, white);
 }
 
 /* Variables */
