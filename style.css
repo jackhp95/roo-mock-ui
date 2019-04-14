@@ -437,14 +437,14 @@ menu {
 
 ::-moz-selection,
 ::-moz-selection {
-    color: white;
+    color: rgba(255, 255, 255, 1);
     background-color: rgba(0, 122, 195, 0.62);
     text-shadow: 0px 0px 0.125rem rgba(0, 32, 51, 0.38);
 }
 
 ::selection,
 ::-moz-selection {
-    color: white;
+    color: rgba(255, 255, 255, 1);
     background-color: rgba(0, 122, 195, 0.62);
     text-shadow: 0px 0px 0.125rem rgba(0, 32, 51, 0.38);
 }
@@ -758,7 +758,7 @@ textarea,
     -webkit-appearance: none;
     -webkit-transform: translate3d(0, -0.5rem, 0) scale3d(1, 1, 1);
     transform: translate3d(0, -0.5rem, 0) scale3d(1, 1, 1);
-    border: 0.0625rem solid white;
+    border: 0.0625rem solid rgba(255, 255, 255, 1);
     -webkit-transition-property: border-color, background-color, -webkit-transform;
     transition-property: border-color, background-color, -webkit-transform;
     -o-transition-property: border-color, transform, background-color;
@@ -772,7 +772,7 @@ textarea,
     -webkit-transform: translate3d(0, -0.5rem, 0) scale3d(1.2, 1.2, 1.2);
     transform: translate3d(0, -0.5rem, 0) scale3d(1.2, 1.2, 1.2);
     border: 0.125rem solid #007ac3;
-    background: white;
+    background: rgba(255, 255, 255, 1);
     -webkit-transition-property: border-color, background-color, -webkit-transform;
     transition-property: border-color, background-color, -webkit-transform;
     -o-transition-property: border-color, transform, background-color;
@@ -794,14 +794,14 @@ textarea,
 
 [type=range]::-moz-range-thumb {
     box-shadow: none;
-    border: 0.0625rem solid white;
+    border: 0.0625rem solid rgba(255, 255, 255, 1);
     height: 1rem;
     width: 1rem;
     border-radius: 99999px;
     background: #007ac3;
     cursor: pointer;
     transform: scale3d(1, 1, 1);
-    border: 0.0625rem solid white;
+    border: 0.0625rem solid rgba(255, 255, 255, 1);
     -webkit-transition-property: border-color, background-color, -webkit-transform;
     transition-property: border-color, background-color, -webkit-transform;
     -o-transition-property: border-color, transform, background-color;
@@ -814,7 +814,7 @@ textarea,
 [type=range]:active::-moz-range-thumb {
     transform: scale3d(1.2, 1.2, 1.2);
     border: 0.125rem solid #007ac3;
-    background: white;
+    background: rgba(255, 255, 255, 1);
     -webkit-transition-property: border-color, background-color, -webkit-transform;
     transition-property: border-color, background-color, -webkit-transform;
     -o-transition-property: border-color, transform, background-color;
@@ -850,14 +850,14 @@ textarea,
 
 [type=range]::-ms-thumb {
     box-shadow: none;
-    border: 0.0625rem solid white;
+    border: 0.0625rem solid rgba(255, 255, 255, 1);
     height: 1rem;
     width: 1rem;
     border-radius: 99999px;
     background: #007ac3;
     cursor: pointer;
     transform: scale3d(1, 1, 1);
-    border: 0.0625rem solid white;
+    border: 0.0625rem solid rgba(255, 255, 255, 1);
     -webkit-transition-property: border-color, background-color, -webkit-transform;
     transition-property: border-color, background-color, -webkit-transform;
     -o-transition-property: border-color, transform, background-color;
@@ -869,7 +869,7 @@ textarea,
 [type=range]:active::-ms-thumb {
     transform: scale3d(1.2, 1.2, 1.2);
     border: 0.125rem solid #007ac3;
-    background: white;
+    background: rgba(255, 255, 255, 1);
     -webkit-transition-property: border-color, background-color, -webkit-transform;
     transition-property: border-color, background-color, -webkit-transform;
     -o-transition-property: border-color, transform, background-color;
@@ -940,7 +940,7 @@ textarea {
 [type=tel]:focus,
 select:focus,
 textarea:focus {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 1);
     border-color: rgba(0, 122, 195, 0.62);
     outline: 0;
 }
@@ -1027,7 +1027,7 @@ textarea[disabled] {
     vertical-align: text-bottom;
     overflow: hidden;
     display: inline-block;
-    background: #fff;
+    background: rgba(255, 255, 255, 1);
     /* in case this ever gets supported */
     border-radius: 1em;
     border: 0.125rem solid transparent;
@@ -1129,7 +1129,7 @@ textarea[disabled] {
     -webkit-appearance: none;
     appearance: none;
     /* in case this ever gets supported */
-    background: #fff;
+    background: rgba(255, 255, 255, 1);
     border: 0.125rem solid transparent;
     -webkit-box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.125), inset 0 0 0 0 #007ac3;
     box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.125), #007ac3 inset 0 0 0 0;
@@ -1158,7 +1158,7 @@ textarea[disabled] {
 
 [type=checkbox]:checked,
 [type=radio]:checked {
-    border-color: #fff;
+    border-color: rgba(255, 255, 255, 1);
     -webkit-box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.125), inset 0 0 0 0.5rem #007ac3;
     box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.125), #007ac3 inset 0 0 0 0.5rem;
     box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.125), inset 0 0 0 0.5rem #007ac3;
@@ -1200,7 +1200,7 @@ select[multiple] {
 
 select:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 #000;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 1);
 }
 
 option:not(:checked) {
@@ -1978,13 +1978,13 @@ summary::-webkit-details-marker {
 .hover-b--black:focus,
 .hover-b--black:hover,
 .b--black {
-    border-color: #000;
+    border-color: rgba(0, 0, 0, 1);
 }
 
 .hover-b--white:focus,
 .hover-b--white:hover,
 .b--white {
-    border-color: #fff;
+    border-color: rgba(255, 255, 255, 1);
 }
 
 .hover-b--white-90:focus,
@@ -6650,11 +6650,11 @@ a[href].link:hover {
 }
 
 .black {
-    color: #000;
+    color: rgba(0, 0, 0, 1);
 }
 
 .white {
-    color: #fff;
+    color: rgba(255, 255, 255, 1);
 }
 
 .orange {
@@ -6686,7 +6686,7 @@ a[href].link:hover {
     background-color: #3b5998;
 }
 
-.bg -black-90 {
+.bg-black-90 {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -6783,11 +6783,11 @@ a[href].link:hover {
 }
 
 .bg-black {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 1);
 }
 
 .bg-white {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .bg-transparent {
@@ -6873,23 +6873,23 @@ a[href].link:hover {
 /* BLACK */
 .hover-black:hover,
 .hover-black:focus {
-    color: #000;
+    color: rgba(0, 0, 0, 1);
 }
 
 .hover-bg-black:hover,
 .hover-bg-black:focus {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 1);
 }
 
 /* WHITE */
 .hover-white:hover,
 .hover-white:focus {
-    color: #fff;
+    color: rgba(255, 255, 255, 1);
 }
 
 .hover-bg-white:hover,
 .hover-bg-white:focus {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 /* W/OPACITY */
@@ -7096,31 +7096,31 @@ a[href].link:hover {
 
 */
 .lg-black-fade-up {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.001)), to(black));
-    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.001), black);
-    background: -o-linear-gradient(rgba(255, 255, 255, 0.001), black);
-    background: linear-gradient(rgba(255, 255, 255, 0.001), black);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.001)), to(rgba(0, 0, 0, 1)));
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.001), rgba(0, 0, 0, 1));
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.001), rgba(0, 0, 0, 1));
+    background: linear-gradient(rgba(255, 255, 255, 0.001), rgba(0, 0, 0, 1));
 }
 
 .lg-white-fade-up {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.001)), to(white));
-    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.001), white);
-    background: -o-linear-gradient(rgba(255, 255, 255, 0.001), white);
-    background: linear-gradient(rgba(255, 255, 255, 0.001), white);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.001)), to(rgba(255, 255, 255, 1)));
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.001), rgba(255, 255, 255, 1));
+    background: -o-linear-gradient(rgba(255, 255, 255, 0.001), rgba(255, 255, 255, 1));
+    background: linear-gradient(rgba(255, 255, 255, 0.001), rgba(255, 255, 255, 1));
 }
 
 .lg-white-fade-down {
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0.001)));
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 1)), to(rgba(255, 255, 255, 0.001)));
     background: -webkit-linear-gradient(white, rgba(255, 255, 255, 0.001));
     background: -o-linear-gradient(white, rgba(255, 255, 255, 0.001));
     background: linear-gradient(white, rgba(255, 255, 255, 0.001));
 }
 
 .lgh-black-0-white {
-    background: -webkit-gradient(linear, left top, right top, from(black), color-stop(20%, rgba(255, 255, 255, 0.001)), color-stop(80%, rgba(255, 255, 255, 0.001)), to(white));
-    background: -webkit-linear-gradient(left, black, rgba(255, 255, 255, 0.001) 20%, rgba(255, 255, 255, 0.001) 80%, white);
-    background: -o-linear-gradient(left, black, rgba(255, 255, 255, 0.001) 20%, rgba(255, 255, 255, 0.001) 80%, white);
-    background: linear-gradient(90deg, black, rgba(255, 255, 255, 0.001) 20%, rgba(255, 255, 255, 0.001) 80%, white);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 1)), color-stop(20%, rgba(255, 255, 255, 0.001)), color-stop(80%, rgba(255, 255, 255, 0.001)), to(rgba(255, 255, 255, 1)));
+    background: -webkit-linear-gradient(left, black, rgba(255, 255, 255, 0.001) 20%, rgba(255, 255, 255, 0.001) 80%, rgba(255, 255, 255, 1));
+    background: -o-linear-gradient(left, black, rgba(255, 255, 255, 0.001) 20%, rgba(255, 255, 255, 0.001) 80%, rgba(255, 255, 255, 1));
+    background: linear-gradient(90deg, black, rgba(255, 255, 255, 0.001) 20%, rgba(255, 255, 255, 0.001) 80%, rgba(255, 255, 255, 1));
 }
 
 /* Variables */

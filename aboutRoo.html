@@ -63,6 +63,22 @@
             }
 
         </style>
+        <script>
+            window.onload = function () { //executes code after DOM loads
+                //--- select all <video> on the page
+                const vids = document.getElementsByTagName('video')
+                // Loop over the selected elements and add event listeners
+                for (let i = 0; i < vids.length; i++) {
+                    vids[i].addEventListener('mouseover', function (e) {
+                        vids[i].play()
+                    })
+                    // vids[i].addEventListener('mouseout', function (e) {
+                    //     vids[i].pause()
+                    // })
+                }
+            }
+
+        </script>
     </head>
     <!-- 
         Here it is:
@@ -74,8 +90,271 @@
     - use emoji in message 
 -->
 
-    <body class="flex-ns items-stretch justify-center ma3 ma4-ns ma5-l">
-        <h1>About Roo Storage</h1>
+    <body class="">
+        <header class="pv3 bg-blue white">
+            <h1 class="f4 tc">About Roo Storage</h1>
+        </header>
+        <section class="pv3">
+            <h2 class="f4 tc">
+                Our Team
+            </h2>
+            <style>
+                .focus-profile:focus *,
+                .focus-profile:hover * {
+                    transition-duration: .25s;
+                    transition-timing-function: ease;
+                    transition-property: color, background-color, flex, transform, transform-origin;
+                    transition-delay: 0s;
+                }
+
+                .focus-profile *,
+                .focus-profile * {
+                    transition-duration: .25s;
+                    transition-timing-function: ease;
+                    transition-property: color, background-color, flex, transform, transform-origin;
+                    transition-delay: 0s;
+                }
+
+                .focus-profile:focus hr,
+                .focus-profile:hover hr {
+                    flex: none;
+                }
+
+                .focus-profile:focus article,
+                .focus-profile:hover article {
+                    transform: scale(0.5);
+                    transform-origin: 0 0;
+                    font-size: 1rem;
+                }
+
+            </style>
+            <ul class="relative ma1 ma3-ns ma4-l flex flex-wrap">
+                <li class="relative w-100 w-50-ns w-third-l measure focus-profile">
+                    <div class="relative ma3 hide-child">
+                        <video
+                        src="/vids/jack.mp4"
+                        muted
+                        class="relative w-100 br4 child"
+                        ></video>
+                        <div
+                            style="pointer-events:none;"
+                            class="absolute absolute--fill br4 flex flex-column shadow-4"
+                        >
+                            <hr class="flex-auto">
+                            <article class="ma2 flex items-center f1 bg-white-90 br-pill">
+                                <img
+                                    src="https://pbs.twimg.com/profile_images/921053650880839680/MxHCQiO0_400x400.jpg"
+                                    alt=""
+                                    class="br-100 ma1"
+                                    style="width:3.38em; height:3.38em"
+                                >
+                                <div class="lh-title mh2">
+                                    <h3 class="fw6 f3">Jack Peterson</h3>
+                                    <p class="f1">Product Designer</p>
+                                </div>
+                            </article>
+                            <hr class="flex-auto">
+                        </div>
+                    </div>
+                </li>
+                <li class="relative w-100 w-50-ns w-third-l measure focus-profile">
+                    <div class="relative ma3 hide-child">
+                        <video
+                        src="/vids/jack.mp4"
+                        muted
+                        class="relative w-100 br4 child"
+                        ></video>
+                        <div
+                            style="pointer-events:none;"
+                            class="absolute absolute--fill br4 flex flex-column shadow-4"
+                        >
+                            <hr class="flex-auto">
+                            <article class="ma2 flex items-center f1 bg-white-90 br-pill">
+                                <img
+                                    src="https://pbs.twimg.com/profile_images/921053650880839680/MxHCQiO0_400x400.jpg"
+                                    alt=""
+                                    class="br-100 ma1"
+                                    style="width:3.38em; height:3.38em"
+                                >
+                                <div class="lh-title mh2">
+                                    <h3 class="fw6 f3">Jack Peterson</h3>
+                                    <p class="f1">Product Designer</p>
+                                </div>
+                            </article>
+                            <hr class="flex-auto">
+                        </div>
+                    </div>
+                </li>
+                <li class="relative w-100 w-50-ns w-third-l measure focus-profile">
+                    <div class="relative ma3 hide-child">
+                        <video
+                        src="/vids/jack.mp4"
+                        muted
+                        class="relative w-100 br4 child"
+                        ></video>
+                        <div
+                            style="pointer-events:none;"
+                            class="absolute absolute--fill br4 flex flex-column shadow-4"
+                        >
+                            <hr class="flex-auto">
+                            <article class="ma2 flex items-center f1 bg-white-90 br-pill">
+                                <img
+                                    src="https://pbs.twimg.com/profile_images/921053650880839680/MxHCQiO0_400x400.jpg"
+                                    alt=""
+                                    class="br-100 ma1"
+                                    style="width:3.38em; height:3.38em"
+                                >
+                                <div class="lh-title mh2">
+                                    <h3 class="fw6 f3">Jack Peterson</h3>
+                                    <p class="f1">Product Designer</p>
+                                </div>
+                            </article>
+                            <hr class="flex-auto">
+                        </div>
+                    </div>
+                </li>
+                <li class="relative w-100 w-50-ns w-third-l measure focus-profile">
+                    <div class="relative ma3 hide-child">
+                        <video
+                        src="/vids/jack.mp4"
+                        muted
+                        class="relative w-100 br4 child"
+                        ></video>
+                        <div
+                            style="pointer-events:none;"
+                            class="absolute absolute--fill br4 flex flex-column shadow-4"
+                        >
+                            <hr class="flex-auto">
+                            <article class="ma2 flex items-center f1 bg-white-90 br-pill">
+                                <img
+                                    src="https://pbs.twimg.com/profile_images/921053650880839680/MxHCQiO0_400x400.jpg"
+                                    alt=""
+                                    class="br-100 ma1"
+                                    style="width:3.38em; height:3.38em"
+                                >
+                                <div class="lh-title mh2">
+                                    <h3 class="fw6 f3">Jack Peterson</h3>
+                                    <p class="f1">Product Designer</p>
+                                </div>
+                            </article>
+                            <hr class="flex-auto">
+                        </div>
+                    </div>
+                </li>
+                <li class="relative w-100 w-50-ns w-third-l measure focus-profile">
+                    <div class="relative ma3 hide-child">
+                        <video
+                        src="/vids/jack.mp4"
+                        muted
+                        class="relative w-100 br4 child"
+                        ></video>
+                        <div
+                            style="pointer-events:none;"
+                            class="absolute absolute--fill br4 flex flex-column shadow-4"
+                        >
+                            <hr class="flex-auto">
+                            <article class="ma2 flex items-center f1 bg-white-90 br-pill">
+                                <img
+                                    src="https://pbs.twimg.com/profile_images/921053650880839680/MxHCQiO0_400x400.jpg"
+                                    alt=""
+                                    class="br-100 ma1"
+                                    style="width:3.38em; height:3.38em"
+                                >
+                                <div class="lh-title mh2">
+                                    <h3 class="fw6 f3">Jack Peterson</h3>
+                                    <p class="f1">Product Designer</p>
+                                </div>
+                            </article>
+                            <hr class="flex-auto">
+                        </div>
+                    </div>
+                </li>
+                <li class="relative w-100 w-50-ns w-third-l measure focus-profile">
+                    <div class="relative ma3 hide-child">
+                        <video
+                        src="/vids/jack.mp4"
+                        muted
+                        class="relative w-100 br4 child"
+                        ></video>
+                        <div
+                            style="pointer-events:none;"
+                            class="absolute absolute--fill br4 flex flex-column shadow-4"
+                        >
+                            <hr class="flex-auto">
+                            <article class="ma2 flex items-center f1 bg-white-90 br-pill">
+                                <img
+                                    src="https://pbs.twimg.com/profile_images/921053650880839680/MxHCQiO0_400x400.jpg"
+                                    alt=""
+                                    class="br-100 ma1"
+                                    style="width:3.38em; height:3.38em"
+                                >
+                                <div class="lh-title mh2">
+                                    <h3 class="fw6 f3">Jack Peterson</h3>
+                                    <p class="f1">Product Designer</p>
+                                </div>
+                            </article>
+                            <hr class="flex-auto">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="pv3">
+            <h2 class="f4 tc">Our misson</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt eum quisquam suscipit vero,
+                laboriosam dolorum sequi quidem eligendi voluptate aut laborum? Sapiente, minima consequuntur laudantium
+                voluptate neque placeat omnis illum?
+            </p>
+        </section>
+        <section class="pv3">
+            <h2 class="f4 navy tc"><span class="relative z-1">Our</span>
+                <span class="dib relative">
+                    <div class="absolute absolute--fill flex items-center justify-center">
+                        <div
+                            class="ba bw2 o-60 b--blue br-100"
+                            style="min-width: 2em;min-height: 2em; transform: translateY(0.1em) scale(1.05)"
+                        ></div>
+                    </div><span class="relative">roo</span>
+                </span><span class="relative bg-white-90">ts</span></h2>
+        </section>
+        <section class="pv3">
+            <h2 class="f4 tc">Our buzz</h2>
+            <article class="pa2">
+                <h3 class="f2 tc">
+                    What our renters say
+                </h3>
+            </article>
+            <article class="pa2">
+                <h3 class="f2 tc">
+                    What our hosts say
+                </h3>
+            </article>
+            <article class="pa2">
+                <h3 class="f2 tc">
+                    Press
+                </h3>
+            </article>
+        </section>
+        <section class="pv3">
+            <h2 class="f4 tc">
+                Resources
+            </h2>
+            <article class="pa2">
+                <h3 class="f2 tc">Brand Guidelines</h3>
+            </article>
+            <article class="pa2">
+                <h3 class="f2 tc"> FAQ </h3>
+            </article>
+            <article class="pa2">
+                <h3 class="f2 tc"> Apply today! </h3>
+                <div>
+                    <h4>Become a Host</h4>
+                    <h4>Become a Partner</h4>
+                    <h4>Join Our Team</h4>
+                </div>
+            </article>
+        </section>
     </body>
 
 </html>
