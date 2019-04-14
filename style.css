@@ -10618,18 +10618,18 @@ table.tabular {
 */
 .hide-child .child {
     opacity: 0;
-    -webkit-transition: opacity 0.15s ease-in;
-    -o-transition: opacity 0.15s ease-in;
-    transition: opacity 0.15s ease-in;
+    -webkit-transition: opacity 0.5s ease-in;
+    -o-transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in;
 }
 
 .hide-child:hover .child,
 .hide-child:focus .child,
 .hide-child:active .child {
     opacity: 1;
-    -webkit-transition: opacity 0.15s ease-in;
-    -o-transition: opacity 0.15s ease-in;
-    transition: opacity 0.15s ease-in;
+    -webkit-transition: opacity 0.5s ease-in;
+    -o-transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in;
 }
 
 .underline-hover:hover,
