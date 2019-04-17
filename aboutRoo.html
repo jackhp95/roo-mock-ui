@@ -27,322 +27,945 @@
             rel="stylesheet"
             href="style.css"
         />
+
+        <!-- ADDED -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Caveat:400,700"
+            rel="stylesheet"
+        >
         <style>
-            .green {
-                color: #00894b;
+            .handwritten {
+                font-family: 'Caveat', cursive;
             }
 
-            .bg-green {
-                background-color: #00894b;
+            .bottom--12 {
+                bottom: -12rem;
             }
 
-            .b--green {
-                border-color: #00894b;
+            @media screen and (min-width: 30em) {
+                .z-0-ns {
+                    z-index: 0
+                }
+
+                .bottom-unset-ns {
+                    bottom: unset
+                }
             }
 
-            .anchor-top {
-                position: relative;
-                cursor: pointer;
-                top: -7rem;
+
+            /* TESTIMONIALS  */
+            .animatedSlow {
+                -webkit-animation-duration: 2s;
+                animation-duration: 2s;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
             }
 
-            .anchor-top .anchor-child {
-                position: relative;
-                top: 7rem;
-            }
+            @media screen and (min-width:60em) {
 
-            .anchor-mid {
-                position: relative;
-                cursor: pointer;
-                top: -50vh;
-            }
+                input[name="r1"],
+                input[name="r2"] {
+                    outline: 0;
+                }
 
-            .anchor-mid .anchor-child {
-                position: relative;
-                top: 50vh;
+                input[name="r1"]:checked,
+                input[name="r2"]:checked {
+                    background-color: white;
+                }
+
+                #r1a:checked~label.r1a,
+                #r2a:checked~label.r2a,
+                #r1b:checked~label.r1b,
+                #r2b:checked~label.r2b,
+                #r1c:checked~label.r1c,
+                #r2c:checked~label.r2c {
+                    display: none;
+                }
+
+                #r1a:checked~li.r1.r1a,
+                #r2a:checked~li.r2.r2a,
+                #r1b:checked~li.r1.r1b,
+                #r2b:checked~li.r2.r2b,
+                #r1c:checked~li.r1.r1c,
+                #r2c:checked~li.r2.r2c {
+                    opacity: 1;
+                    transform: scale(1);
+                    -webkit-transition: all .75s;
+                    /* Safari */
+                    transition: all .75s;
+                    z-index: 1;
+                }
+
+                #r1a:checked~li.r1,
+                #r2a:checked~li.r2,
+                #r1b:checked~li.r1,
+                #r2b:checked~li.r2,
+                #r1c:checked~li.r1,
+                #r2c:checked~li.r2 {
+                    opacity: 0;
+                    transform: scale(1.1);
+                    -webkit-transition: all .75s;
+                    /* Safari */
+                    transition: all .75s;
+                }
+
+                #r1a:checked~.r1b,
+                #r2a:checked~.r2b,
+                #r1b:checked~.r1c,
+                #r2b:checked~.r2c,
+                #r1c:checked~.r1a,
+                #r2c:checked~.r2a {
+                    right: 0;
+                }
+
+                #r1a:checked~.r1c,
+                #r2a:checked~.r2c,
+                #r1b:checked~.r1a,
+                #r2b:checked~.r2a,
+                #r1c:checked~.r1b,
+                #r2c:checked~.r2b {
+                    left: 0;
+                }
+
+                #r1a:checked~.r1b .arrow,
+                #r2a:checked~.r2b .arrow,
+                #r1b:checked~.r1c .arrow,
+                #r2b:checked~.r2c .arrow,
+                #r1c:checked~.r1a .arrow,
+                #r2c:checked~.r2a .arrow {
+                    transform: rotate(90deg)
+                }
+
+                #r1a:checked~.r1c .arrow,
+                #r2a:checked~.r2c .arrow,
+                #r1b:checked~.r1a .arrow,
+                #r2b:checked~.r2a .arrow,
+                #r1c:checked~.r1b .arrow,
+                #r2c:checked~.r2b .arrow {
+                    transform: rotate(270deg)
+                }
             }
 
         </style>
-        <script>
-            window.onload = function () { //executes code after DOM loads
-                //--- select all <video> on the page
-                const vids = document.getElementsByTagName('video')
-                // Loop over the selected elements and add event listeners
-                for (let i = 0; i < vids.length; i++) {
-                    vids[i].addEventListener('mouseover', function (e) {
-                        vids[i].play()
-                    })
-                    // vids[i].addEventListener('mouseout', function (e) {
-                    //     vids[i].pause()
-                    // })
-                }
-            }
-
-        </script>
     </head>
-    <!-- 
-        Here it is:
-    - Improve navigation (put navigation under compose request instead of the request message)
-    - Reduce clutter on mobile (possibly put the request message in a section)
-    - Change header to non-image (maybe similar to the features page)
-    - Remove modals
-    - Add confirm details page (phone number, email, and name)
-    - use emoji in message 
--->
 
-    <body class="">
-        <header class="pv3 bg-blue white">
-            <h1 class="f4 tc">About Roo Storage</h1>
+
+    <body class="parallax-page vh-100 overflow-auto">
+        <header
+            class="bg-blue white flex items-end pt7"
+            style="background-image:url('https://source.unsplash.com/random?storage')"
+        >
+            <div class="measure ma5-ns bg-black-30 pa4">
+                <h1 class="f5 mv2 fw3">About</h1>
+                <p class="lh-copy">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis eos voluptatum nobis debitis
+                    in, error!
+                </p>
+            </div>
         </header>
-        <section class="pv3">
-            <h2 class="f4 tc">
-                Our Team
-            </h2>
-            <style>
-                .focus-profile:focus *,
-                .focus-profile:hover * {
-                    transition-duration: .25s;
-                    transition-timing-function: ease;
-                    transition-property: color, background-color, flex, transform, transform-origin;
-                    transition-delay: 0s;
-                }
-
-                .focus-profile *,
-                .focus-profile * {
-                    transition-duration: .25s;
-                    transition-timing-function: ease;
-                    transition-property: color, background-color, flex, transform, transform-origin;
-                    transition-delay: 0s;
-                }
-
-                .focus-profile:focus hr,
-                .focus-profile:hover hr {
-                    flex: none;
-                }
-
-                .focus-profile:focus article,
-                .focus-profile:hover article {
-                    transform: scale(0.5);
-                    transform-origin: 0 0;
-                    font-size: 1rem;
-                }
-
-            </style>
-            <ul class="relative ma1 ma3-ns ma4-l flex flex-wrap">
-                <li class="relative w-100 w-50-ns w-third-l measure focus-profile">
-                    <div class="relative ma3 hide-child">
-                        <div class="absolute absolute--fill bg-black br4"></div>
-                        <video
-                            src="https://jackhp95.github.io/Client/vids/jack.mp4"
-                            muted
-                            class="relative w-100 br4 child"
-                        ></video>
-                        <div
-                            style="pointer-events:none;"
-                            class="absolute absolute--fill br4 flex flex-column shadow-4"
-                        >
-                            <hr class="flex-auto">
-                            <article class="self-start ma2 flex items-center f1 bg-black-80 white br-pill">
-                                <img
-                                    src="https://pbs.twimg.com/profile_images/921053650880839680/MxHCQiO0_400x400.jpg"
-                                    alt=""
-                                    class="br-100 ma1"
-                                    style="width:3.38em; height:3.38em"
-                                >
-                                <div class="lh-title pl2 pr4">
-                                    <h3 class="fw6 f3">Jack Peterson</h3>
-                                    <p class="f1">Product Designer</p>
-                                </div>
-                            </article>
-                            <hr class="flex-auto">
+        <article class="pv5">
+            <header class="mv3 ph4">
+                <h2 class="lh-solid mv3 f5 fw3 tc-ns blue">
+                    Our Team
+                </h2>
+                <p class="mv3 measure center lh-copy tc-ns">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, quasi eaque? Adipisci tenetur
+                    corrupti accusantium dolores maxime dolor minima voluptatum quos itaque autem mollitia fuga unde
+                    rem,
+                    qui illum voluptatibus.
+                </p>
+            </header>
+            <!-- This list displays in reverse. If order matters, put VIP on the bottom also change from ul to ol -->
+            <ul
+                class="relative mw8 w-80-l mh3 mv4-l mh4-ns center-l flex justify-around justify-center-ns flex-wrap-reverse">
+                <li class="pa5 flex-none ma2 ma3-ns ma4-l mw5 relative hide-child overflow-hidden">
+                    <hr class="aspect-ratio--1x1 bn">
+                    <div class="absolute absolute--fill">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 white"
+                                src="Pics/eric.jpeg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Eric Laurent</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Co-Founder</p>
+                        </div>
+                    </div>
+                    <div class="child absolute absolute--fill bg-white">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 blue"
+                                src="Pics/hubbie.jpg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Eric Laurent</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Hubby</p>
                         </div>
                     </div>
                 </li>
-                <li class="relative w-100 w-50-ns w-third-l measure focus-profile">
-                    <div class="relative ma3 hide-child">
-                        <div class="absolute absolute--fill bg-black br4"></div>
-                        <video
-                            src="https://jackhp95.github.io/Client/vids/jack.mp4"
-                            muted
-                            class="relative w-100 br4 child"
-                        ></video>
-                        <div
-                            style="pointer-events:none;"
-                            class="absolute absolute--fill br4 flex flex-column shadow-4"
-                        >
-                            <hr class="flex-auto">
-                            <article class="self-start ma2 flex items-center f1 bg-black-80 white br-pill">
-                                <img
-                                    src="https://pbs.twimg.com/profile_images/921053650880839680/MxHCQiO0_400x400.jpg"
-                                    alt=""
-                                    class="br-100 ma1"
-                                    style="width:3.38em; height:3.38em"
-                                >
-                                <div class="lh-title pl2 pr4">
-                                    <h3 class="fw6 f3">Jack Peterson</h3>
-                                    <p class="f1">Product Designer</p>
-                                </div>
-                            </article>
-                            <hr class="flex-auto">
+                <li class="pa5 flex-none ma2 ma3-ns ma4-l mw5 relative hide-child overflow-hidden">
+                    <hr class="aspect-ratio--1x1 bn">
+                    <div class="absolute absolute--fill">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 white"
+                                src="Pics/joe.jpeg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Joe McAllister</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">CTO</p>
+                        </div>
+                    </div>
+                    <div class="child absolute absolute--fill bg-white">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 blue"
+                                src="Pics/dogwhisperer.jpg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Joe McAllister</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Dog Whisperer</p>
                         </div>
                     </div>
                 </li>
-                <li class="relative w-100 w-50-ns w-third-l measure focus-profile">
-                    <div class="relative ma3 hide-child">
-                        <div class="absolute absolute--fill bg-black br4"></div>
-                        <video
-                            src="https://jackhp95.github.io/Client/vids/jack.mp4"
-                            muted
-                            class="relative w-100 br4 child"
-                        ></video>
-                        <div
-                            style="pointer-events:none;"
-                            class="absolute absolute--fill br4 flex flex-column shadow-4"
-                        >
-                            <hr class="flex-auto">
-                            <article class="self-start ma2 flex items-center f1 bg-black-80 white br-pill">
-                                <img
-                                    src="https://pbs.twimg.com/profile_images/921053650880839680/MxHCQiO0_400x400.jpg"
-                                    alt=""
-                                    class="br-100 ma1"
-                                    style="width:3.38em; height:3.38em"
-                                >
-                                <div class="lh-title pl2 pr4">
-                                    <h3 class="fw6 f3">Jack Peterson</h3>
-                                    <p class="f1">Product Designer</p>
-                                </div>
-                            </article>
-                            <hr class="flex-auto">
+                <li class="pa5 flex-none ma2 ma3-ns ma4-l mw5 relative hide-child overflow-hidden">
+                    <hr class="aspect-ratio--1x1 bn">
+                    <div class="absolute absolute--fill">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 white"
+                                src="https://pbs.twimg.com/profile_images/921053650880839680/MxHCQiO0_400x400.jpg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Jack Peterson</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Product Designer</p>
+                        </div>
+                    </div>
+                    <div class="child absolute absolute--fill bg-white">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 blue"
+                                src="Pics/chickenjack.jpg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Jack Peterson</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Chick Magnet</p>
                         </div>
                     </div>
                 </li>
-                <li class="relative w-100 w-50-ns w-third-l measure focus-profile">
-                    <div class="relative ma3 hide-child">
-                        <div class="absolute absolute--fill bg-black br4"></div>
-                        <video
-                            src="https://jackhp95.github.io/Client/vids/jack.mp4"
-                            muted
-                            class="relative w-100 br4 child"
-                        ></video>
-                        <div
-                            style="pointer-events:none;"
-                            class="absolute absolute--fill br4 flex flex-column shadow-4"
-                        >
-                            <hr class="flex-auto">
-                            <article class="self-start ma2 flex items-center f1 bg-black-80 white br-pill">
-                                <img
-                                    src="https://pbs.twimg.com/profile_images/921053650880839680/MxHCQiO0_400x400.jpg"
-                                    alt=""
-                                    class="br-100 ma1"
-                                    style="width:3.38em; height:3.38em"
-                                >
-                                <div class="lh-title pl2 pr4">
-                                    <h3 class="fw6 f3">Jack Peterson</h3>
-                                    <p class="f1">Product Designer</p>
-                                </div>
-                            </article>
-                            <hr class="flex-auto">
+                <li class="pa5 flex-none ma2 ma3-ns ma4-l mw5 relative hide-child overflow-hidden">
+                    <hr class="aspect-ratio--1x1 bn">
+                    <div class="absolute absolute--fill">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 white"
+                                src="Pics/eric.jpeg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Eric Laurent</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Co-Founder</p>
+                        </div>
+                    </div>
+                    <div class="child absolute absolute--fill bg-white">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 blue"
+                                src="Pics/hubbie.jpg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Eric Laurent</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Hubby</p>
                         </div>
                     </div>
                 </li>
-                <li class="relative w-100 w-50-ns w-third-l measure focus-profile">
-                    <div class="relative ma3 hide-child">
-                        <div class="absolute absolute--fill bg-black br4"></div>
-                        <video
-                            src="https://jackhp95.github.io/Client/vids/jack.mp4"
-                            muted
-                            class="relative w-100 br4 child"
-                        ></video>
-                        <div
-                            style="pointer-events:none;"
-                            class="absolute absolute--fill br4 flex flex-column shadow-4"
-                        >
-                            <hr class="flex-auto">
-                            <article class="self-start ma2 flex items-center f1 bg-black-80 white br-pill">
-                                <img
-                                    src="https://pbs.twimg.com/profile_images/921053650880839680/MxHCQiO0_400x400.jpg"
-                                    alt=""
-                                    class="br-100 ma1"
-                                    style="width:3.38em; height:3.38em"
-                                >
-                                <div class="lh-title pl2 pr4">
-                                    <h3 class="fw6 f3">Jack Peterson</h3>
-                                    <p class="f1">Product Designer</p>
-                                </div>
-                            </article>
-                            <hr class="flex-auto">
+                <li class="pa5 flex-none ma2 ma3-ns ma4-l mw5 relative hide-child overflow-hidden">
+                    <hr class="aspect-ratio--1x1 bn">
+                    <div class="absolute absolute--fill">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 white"
+                                src="Pics/joe.jpeg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Joe McAllister</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">CTO</p>
+                        </div>
+                    </div>
+                    <div class="child absolute absolute--fill bg-white">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 blue"
+                                src="Pics/dogwhisperer.jpg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Joe McAllister</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Dog Whisperer</p>
                         </div>
                     </div>
                 </li>
-                <li class="relative w-100 w-50-ns w-third-l measure focus-profile">
-                    <div class="relative ma3 hide-child">
-                        <div class="absolute absolute--fill bg-black br4"></div>
-                        <video
-                            src="https://jackhp95.github.io/Client/vids/jack.mp4"
-                            muted
-                            class="relative w-100 br4 child"
-                        ></video>
-                        <div
-                            style="pointer-events:none;"
-                            class="absolute absolute--fill br4 flex flex-column shadow-4"
-                        >
-                            <hr class="flex-auto">
-                            <article class="self-start ma2 flex items-center f1 bg-black-80 white br-pill">
-                                <img
-                                    src="https://pbs.twimg.com/profile_images/921053650880839680/MxHCQiO0_400x400.jpg"
-                                    alt=""
-                                    class="br-100 ma1"
-                                    style="width:3.38em; height:3.38em"
-                                >
-                                <div class="lh-title pl2 pr4">
-                                    <h3 class="fw6 f3">Jack Peterson</h3>
-                                    <p class="f1">Product Designer</p>
-                                </div>
-                            </article>
-                            <hr class="flex-auto">
+                <li class="pa5 flex-none ma2 ma3-ns ma4-l mw5 relative hide-child overflow-hidden">
+                    <hr class="aspect-ratio--1x1 bn">
+                    <div class="absolute absolute--fill">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 white"
+                                src="https://pbs.twimg.com/profile_images/921053650880839680/MxHCQiO0_400x400.jpg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Jack Peterson</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Product Designer</p>
+                        </div>
+                    </div>
+                    <div class="child absolute absolute--fill bg-white">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 blue"
+                                src="Pics/chickenjack.jpg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Jack Peterson</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Chick Magnet</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="pa5 flex-none ma2 ma3-ns ma4-l mw5 relative hide-child overflow-hidden">
+                    <hr class="aspect-ratio--1x1 bn">
+                    <div class="absolute absolute--fill">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 white"
+                                src="Pics/eric.jpeg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Eric Laurent</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Co-Founder</p>
+                        </div>
+                    </div>
+                    <div class="child absolute absolute--fill bg-white">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 blue"
+                                src="Pics/hubbie.jpg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Eric Laurent</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Hubby</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="pa5 flex-none ma2 ma3-ns ma4-l mw5 relative hide-child overflow-hidden">
+                    <hr class="aspect-ratio--1x1 bn">
+                    <div class="absolute absolute--fill">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 white"
+                                src="Pics/joe.jpeg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Joe McAllister</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">CTO</p>
+                        </div>
+                    </div>
+                    <div class="child absolute absolute--fill bg-white">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 blue"
+                                src="Pics/dogwhisperer.jpg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Joe McAllister</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Dog Whisperer</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="pa5 flex-none ma2 ma3-ns ma4-l mw5 relative hide-child overflow-hidden">
+                    <hr class="aspect-ratio--1x1 bn">
+                    <div class="absolute absolute--fill">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 white"
+                                src="https://pbs.twimg.com/profile_images/921053650880839680/MxHCQiO0_400x400.jpg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Jack Peterson</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Product Designer</p>
+                        </div>
+                    </div>
+                    <div class="child absolute absolute--fill bg-white">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 blue"
+                                src="Pics/chickenjack.jpg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Jack Peterson</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Chick Magnet</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="pa5 flex-none ma2 ma3-ns ma4-l mw5 relative hide-child overflow-hidden">
+                    <hr class="aspect-ratio--1x1 bn">
+                    <div class="absolute absolute--fill">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 white"
+                                src="Pics/eric.jpeg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Eric Laurent</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Co-Founder</p>
+                        </div>
+                    </div>
+                    <div class="child absolute absolute--fill bg-white">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 blue"
+                                src="Pics/hubbie.jpg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Eric Laurent</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Hubby</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="pa5 flex-none ma2 ma3-ns ma4-l mw5 relative hide-child overflow-hidden">
+                    <hr class="aspect-ratio--1x1 bn">
+                    <div class="absolute absolute--fill">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 white"
+                                src="Pics/joe.jpeg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Joe McAllister</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">CTO</p>
+                        </div>
+                    </div>
+                    <div class="child absolute absolute--fill bg-white">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 blue"
+                                src="Pics/dogwhisperer.jpg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Joe McAllister</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Dog Whisperer</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="pa5 flex-none ma2 ma3-ns ma4-l mw5 relative hide-child overflow-hidden">
+                    <hr class="aspect-ratio--1x1 bn">
+                    <div class="absolute absolute--fill">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 white"
+                                src="https://pbs.twimg.com/profile_images/921053650880839680/MxHCQiO0_400x400.jpg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Jack Peterson</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Product Designer</p>
+                        </div>
+                    </div>
+                    <div class="child absolute absolute--fill bg-white">
+                        <div class="absolute absolute--fill img-child">
+                            <img
+                                class="br-100 pa1 ba bw2 blue"
+                                src="Pics/chickenjack.jpg"
+                                alt=""
+                            ></div>
+                        <div class="absolute lh-title bottom-0 flex flex-column items-start">
+                            <h3 class="fw7 ba b--black-10 bg-blue white pa1 nb1 dib">Jack Peterson</h3>
+                            <p class="fw7 ba b--black-10 bg-white blue ph1 dib f-2 tracked-1">Chick Magnet</p>
                         </div>
                     </div>
                 </li>
             </ul>
+        </article>
+        <section class="relative">
+            <article
+                class="sticky top-0 shadow-5 flex items-start vh-100 w-100-l mr-auto-l"
+                style="background-image:url('https://source.unsplash.com/random?misson')"
+            >
+                <div class="sticky top-0-l bottom-0-l measure bg-white mr-auto-ns pa4 w-third-l">
+                    <h2 class="f4 blue">
+                        Our misson
+                    </h2>
+                    <p class="mv2 lh-copy">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt eum quisquam suscipit vero,
+                        laudantium voluptate neque placeat omnis illum?
+                    </p>
+                    <button
+                        type="button"
+                        class="db ba blue hover-bg-blue hover-white ml-auto"
+                    >Learn More</button>
+                </div>
+            </article>
+            <article
+                class="sticky top-0 shadow-5 flex items-center vh-100 w-two-thirds-l ml-auto-l"
+                style="background-image:url('https://source.unsplash.com/random?values')"
+            >
+                <div class="sticky top-0-l bottom-0-l measure bg-white center-ns ml0-l pa4 w-50-l">
+                    <h2 class="f4 blue">
+                        Our values
+                    </h2>
+                    <p class="mv2 lh-copy">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt eum quisquam suscipit vero,
+                        laudantium voluptate neque placeat omnis illum?
+                    </p>
+                    <button
+                        type="button"
+                        class="db ba blue hover-bg-blue hover-white ml-auto"
+                    >Learn More</button>
+                </div>
+            </article>
+            <article
+                class="sticky top-0 shadow-5 flex items-end vh-100 w-third-l ml-auto-l"
+                style="background-image:url('https://source.unsplash.com/random?vision')"
+            >
+                <div class="sticky top-0-l bottom-0-l measure bg-white ml-auto-ns ml0-l pa4">
+                    <h2 class="f4 blue">
+                        Our vison
+                    </h2>
+                    <p class="mv2 lh-copy">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt eum quisquam suscipit vero,
+                        laudantium voluptate neque placeat omnis illum?
+                    </p>
+                    <button
+                        type="button"
+                        class="db ba blue hover-bg-blue hover-white ml-auto"
+                    >Learn More</button>
+                </div>
+            </article>
         </section>
-        <section class="pv3">
-            <h2 class="f4 tc">Our misson</h2>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt eum quisquam suscipit vero,
-                laboriosam dolorum sequi quidem eligendi voluptate aut laborum? Sapiente, minima consequuntur laudantium
-                voluptate neque placeat omnis illum?
-            </p>
-        </section>
-        <section class="pv3">
-            <h2 class="f4 navy tc"><span class="relative z-1">Our</span>
+        <article class="pt5 ph5-l relative z-1">
+            <h2 class="f5 relative z-1 tc pv4 blue mv3"><span class="relative z-2">Our</span>
                 <span class="dib relative">
                     <div class="absolute absolute--fill flex items-center justify-center">
                         <div
-                            class="ba bw2 o-60 b--blue br-100"
-                            style="min-width: 2em;min-height: 2em; transform: translateY(0.1em) scale(1.05)"
+                            class="ba bw3 b--blue br-100 o-30"
+                            style="min-width: 2em;min-height: 2em; transform: translateY(0.05em) scale(1.05)"
                         ></div>
                     </div><span class="relative">roo</span>
-                </span><span class="relative bg-white-90">ts</span></h2>
-        </section>
-        <section class="pv3">
-            <h2 class="f4 tc">Our buzz</h2>
-            <article class="pa2">
-                <h3 class="f2 tc">
-                    What our renters say
-                </h3>
-            </article>
-            <article class="pa2">
-                <h3 class="f2 tc">
-                    What our hosts say
-                </h3>
-            </article>
-            <article class="pa2">
-                <h3 class="f2 tc">
-                    Press
-                </h3>
-            </article>
-        </section>
-        <section class="pv3">
+                </span><span class="relative">ts</span>
+            </h2>
+            <dl class="relative flex flex-wrap justify-center items-center">
+                <dt
+                    style="transform:rotate(-5deg);"
+                    class="static w-40-l w-60 mw5-ns mw-100-l top--2-ns bottom-unset-ns bottom--12 z-0-ns z-5 sticky pt5-l pt4-ns ph4-l ph3-ns"
+                >
+                    <h3 class="grow lh-copy bg-white pa2 shadow-4 br2">
+                        <img
+                            src="https://source.unsplash.com/random/1000x1000?Friendship"
+                            alt=""
+                        >
+                        <span
+                            style="transform:rotate(6deg)"
+                            class="ph3 f3 handwritten navy o-90 dib"
+                        > Friendship</span>
+                    </h3>
+                </dt>
+                <dd class="w-60-l ph4 pb5 pb4-ns pt2 pt4-l">
+                    <div class="measure-narrow-ns measure-l center lh-copy">
+                        <h4 class="f3 blue mv2">Title of section</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quae aperiam est nam
+                            exercitationem esse ab asperiores dolore magni obcaecati deleniti, ratione voluptatibus?
+                            Perspiciatis tenetur architecto amet minima aliquam voluptate!
+                        </p>
+                    </div>
+                </dd>
+                <dt
+                    style="transform:rotate(3deg);"
+                    class="static w-40-l w-60 mw5-ns mw-100-l top--2-ns bottom-unset-ns bottom--12 z-0-ns z-4 sticky pt5-l pt4-ns ph4-l ph3-ns"
+                >
+                    <h3 class="grow lh-copy bg-white pa2 shadow-4 br2">
+                        <img
+                            src="https://source.unsplash.com/random/1000x1000?Idea"
+                            alt=""
+                        >
+                        <span
+                            style="transform:rotate(-3deg)"
+                            class="ph3 f3 handwritten navy o-90 dib"
+                        > The Idea</span>
+                    </h3>
+                </dt>
+                <dd class="w-60-l ph4 pb5 pb4-ns pt2 pt4-l">
+                    <div class="measure-narrow-ns measure-l center lh-copy">
+                        <h4 class="f3 blue mv2">Title of section</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quae aperiam est nam
+                            exercitationem esse ab asperiores dolore magni obcaecati deleniti, ratione voluptatibus?
+                            Perspiciatis tenetur architecto amet minima aliquam voluptate!
+                        </p>
+                    </div>
+                </dd>
+                <dt
+                    style="transform:rotate(-10deg);"
+                    class="static w-40-l w-60 mw5-ns mw-100-l top--2-ns bottom-unset-ns bottom--12 z-0-ns z-3 sticky pt5-l pt4-ns ph4-l ph3-ns"
+                >
+                    <h3 class="grow lh-copy bg-white pa2 shadow-4 br2">
+                        <img
+                            src="https://source.unsplash.com/random/1000x1000?Team"
+                            alt=""
+                        >
+                        <span
+                            style="transform:rotate(2deg)"
+                            class="ph3 f3 handwritten navy o-90 dib"
+                        > Team</span>
+                    </h3>
+                </dt>
+                <dd class="w-60-l ph4 pb5 pb4-ns pt2 pt4-l">
+                    <div class="measure-narrow-ns measure-l center lh-copy">
+                        <h4 class="f3 blue mv2">Title of section</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quae aperiam est nam
+                            exercitationem esse ab asperiores dolore magni obcaecati deleniti, ratione voluptatibus?
+                            Perspiciatis tenetur architecto amet minima aliquam voluptate!
+                        </p>
+                    </div>
+                </dd>
+                <dt
+                    style="transform:rotate(-7deg);"
+                    class="static w-40-l w-60 mw5-ns mw-100-l top--2-ns bottom-unset-ns bottom--12 z-0-ns z-2 sticky pt5-l pt4-ns ph4-l ph3-ns"
+                >
+                    <h3 class="grow lh-copy bg-white pa2 shadow-4 br2">
+                        <img
+                            src="https://source.unsplash.com/random/1000x1000?moving"
+                            alt=""
+                        >
+                        <span
+                            style="transform:rotate(2deg)"
+                            class="ph3 f3 handwritten navy o-90 dib"
+                        > Moving</span>
+                    </h3>
+                </dt>
+                <dd class="w-60-l ph4 pb5 pb4-ns pt2 pt4-l">
+                    <div class="measure-narrow-ns measure-l center lh-copy">
+                        <h4 class="f3 blue mv2">Title of section</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quae aperiam est nam
+                            exercitationem esse ab asperiores dolore magni obcaecati deleniti, ratione voluptatibus?
+                            Perspiciatis tenetur architecto amet minima aliquam voluptate!
+                        </p>
+                    </div>
+                </dd>
+                <dt
+                    style="transform:rotate(1deg);"
+                    class="static w-40-l w-60 mw5-ns mw-100-l top--2-ns bottom-unset-ns bottom--12 z-0-ns z-1 sticky pt5-l pt4-ns ph4-l ph3-ns"
+                >
+                    <h3 class="grow lh-copy bg-white pa2 shadow-4 br2">
+                        <img
+                            src="https://source.unsplash.com/random/1000x1000?Growing"
+                            alt=""
+                        >
+                        <span
+                            style="transform:rotate(-4deg)"
+                            class="ph3 f3 handwritten navy o-90 dib"
+                        > Growing</span>
+                    </h3>
+                </dt>
+                <dd class="w-60-l ph4 pb5 pb4-ns pt2 pt4-l">
+                    <div class="measure-narrow-ns measure-l center lh-copy">
+                        <h4 class="f3 blue mv2">Title of section</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quae aperiam est nam
+                            exercitationem esse ab asperiores dolore magni obcaecati deleniti, ratione voluptatibus?
+                            Perspiciatis tenetur architecto amet minima aliquam voluptate!
+                        </p>
+                    </div>
+                </dd>
+                <dt
+                    style="transform:rotate(-7deg);"
+                    class="static w-40-l w-60 mw5-ns mw-100-l top--2-ns bottom-unset-ns bottom--12 z-0-ns z-0 sticky pt5-l pt4-ns ph4-l ph3-ns"
+                >
+                    <h3 class="grow lh-copy bg-white pa2 shadow-4 br2">
+                        <img
+                            src="https://source.unsplash.com/random/1000x1000?Community"
+                            alt=""
+                        >
+                        <span
+                            style="transform:rotate(-2deg)"
+                            class="ph3 f3 handwritten navy o-90 dib"
+                        > Community</span>
+                    </h3>
+                </dt>
+                <dd class="w-60-l ph4 pb5 pb4-ns pt2 pt4-l">
+                    <div class="measure-narrow-ns measure-l center lh-copy">
+                        <h4 class="f3 blue mv2">Title of section</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas quae aperiam est nam
+                            exercitationem esse ab asperiores dolore magni obcaecati deleniti, ratione voluptatibus?
+                            Perspiciatis tenetur architecto amet minima aliquam voluptate!
+                        </p>
+                    </div>
+                </dd>
+            </dl>
+        </article>
+        <article class="bg-blue white pa4 pv5 relative">
+            <div
+                class="absolute absolute--fill ptrn-box-white parallax o-50"
+                style="
+                background-repeat:repeat;
+                background-size: auto;"
+            ></div>
+            <h2 class="f5 tc fw3 mv3">Our process</h2>
+            <p class="lh-copy measure center tc-ns mv3 pb2 fw5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, adipisci esse exercitationem explicabo
+                numquam quia iste ipsa porro delectus ducimus est ipsam facere qui nisi sit velit, vero unde assumenda.
+            </p>
+            <button
+                type="button"
+                class="db ba white hover-bg-white hover-blue ml-auto mr-auto-ns"
+            >Learn More</button>
+        </article>
+        <article class="pv5 relative">
+            <h2 class="f5 tc blue fw3 mv4">Our results</h2>
+            <section class="mv4-l flex-l items-center-l flex-row-l">
+                <header class="flex-auto-l tl-l ma4 lh-copy measure w-50-l">
+                    <h2 class="f4 mv3 blue">Hosts</h2>
+                    <p class="mv3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero suscipit sed
+                        eveniet nesciunt nam vitae modi magni non!
+                    </p>
+                </header>
+                <ul
+                    class="pv2 pv0-l flex overflow-auto overflow-hidden-l br5 br--left relative flex-grow-1-l flex-shrink-0-l">
+                    <hr
+                        class="dn db-l"
+                        style="padding-bottom:50vmin;"
+                    >
+                    <!-- MODEL -->
+                    <input
+                        class="dn"
+                        type="radio"
+                        name="r2"
+                        id="r2a"
+                        checked
+                    >
+                    <input
+                        class="dn"
+                        type="radio"
+                        name="r2"
+                        id="r2b"
+                    >
+                    <input
+                        class="dn"
+                        type="radio"
+                        name="r2"
+                        id="r2c"
+                    >
+                    <!-- MSGS -->
+                    <label
+                        class="r2 r2a dn flex-l ph4 glow o-50 bg-animate absolute top-0 bottom-0 z-2"
+                        for="r2a"
+                    >
+                        <div
+                            class="arrow self-center pa3 flex-auto bg-center"
+                            style="background-image:url('https://icongr.am/clarity/angle.svg?color=ffffff')"
+                        ></div>
+                    </label>
+                    <label
+                        class="r2 r2b dn flex-l ph4 glow o-50 bg-animate absolute top-0 bottom-0 z-2"
+                        for="r2b"
+                    >
+                        <div
+                            class="arrow self-center pa3 flex-auto bg-center"
+                            style="background-image:url('https://icongr.am/clarity/angle.svg?color=ffffff')"
+                        ></div>
+                    </label>
+                    <label
+                        class="r2 r2c dn flex-l ph4 glow o-50 bg-animate absolute top-0 bottom-0 z-2"
+                        for="r2c"
+                    >
+                        <div
+                            class="arrow self-center pa3 flex-auto bg-center"
+                            style="background-image:url('https://icongr.am/clarity/angle.svg?color=ffffff')"
+                        ></div>
+                    </label>
+                    <li
+                        class="r2 r2a flex-none w-auto-l w-90 mh2 mh3-ns mh0-l flex items-stretch br5 overflow-hidden br0-l shadow-3 absolute-l absolute--fill-l"
+                        style="background-image:url('https://source.unsplash.com/random?friends');"
+                    >
+                        <article
+                            class="pa3 pa4-ns lg-black-fade-up white flex-auto absolute-l absolute--fill-l flex flex-column"
+                        >
+                            <div class="f1 tracked-5 tr">⭐⭐⭐⭐⭐</div>
+                            <hr class="flex-auto pv5 pv0-l">
+                            <blockquote class="measure-narrow f1 fw5 i lh-copy">
+                                "Lorem ipsum dolor sit amet consectetur tam et culpa."
+                            </blockquote>
+                            <h3 class="fw7 i f2 handwritten pl3"> - Namey Name</h3>
+                        </article>
+                    </li>
+                    <li
+                        class="r2 r2b flex-none w-auto-l w-90 mh2 mh3-ns mh0-l flex items-stretch br5 overflow-hidden br0-l shadow-3 absolute-l absolute--fill-l"
+                        style="background-image:url('https://source.unsplash.com/random?couple');"
+                    >
+                        <article
+                            class="pa3 pa4-ns lg-black-fade-up white flex-auto absolute-l absolute--fill-l flex flex-column"
+                        >
+                            <div class="f1 tracked-5 tr">⭐⭐⭐⭐⭐</div>
+                            <hr class="flex-auto pv5 pv0-l">
+                            <blockquote class="measure-narrow f1 fw5 i lh-copy">
+                                "Lorem ipsum dolor sit amet consectetur tam et culpa."
+                            </blockquote>
+                            <h3 class="fw7 i f2 handwritten pl3"> - Namey Name</h3>
+                        </article>
+                    </li>
+                    <li
+                        class="r2 r2c flex-none w-auto-l w-90 mh2 mh3-ns mh0-l flex items-stretch br5 overflow-hidden br0-l shadow-3 absolute-l absolute--fill-l"
+                        style="background-image:url('https://source.unsplash.com/random?buddies');"
+                    >
+                        <article
+                            class="pa3 pa4-ns lg-black-fade-up white flex-auto absolute-l absolute--fill-l flex flex-column"
+                        >
+                            <div class="f1 tracked-5 tr">⭐⭐⭐⭐⭐</div>
+                            <hr class="flex-auto pv5 pv0-l">
+                            <blockquote class="measure-narrow f1 fw5 i lh-copy">
+                                "Lorem ipsum dolor sit amet consectetur tam et culpa."
+                            </blockquote>
+                            <h3 class="fw7 i f2 handwritten pl3"> - Namey Name</h3>
+                        </article>
+                    </li>
+                    <div class="flex-none w1"></div>
+                </ul>
+            </section>
+            <section class="mv4-l flex-l items-center-l flex-row-reverse-l">
+                <header class="flex-auto-l tl-l ma4 lh-copy measure w-50-l">
+                    <h2 class="f4 mv3 blue">Renters</h2>
+                    <p class="mv3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero suscipit sed
+                        eveniet nesciunt nam vitae modi magni non!
+                    </p>
+                </header>
+                <ul
+                    class="pv2 pv0-l flex overflow-auto overflow-hidden-l br5 br--right relative flex-grow-1-l flex-shrink-0-l">
+                    <hr
+                        class="dn db-l"
+                        style="padding-bottom:50vmin;"
+                    >
+                    <!-- MODEL -->
+                    <input
+                        class="dn"
+                        type="radio"
+                        name="r1"
+                        id="r1a"
+                        checked
+                    >
+                    <input
+                        class="dn"
+                        type="radio"
+                        name="r1"
+                        id="r1b"
+                    >
+                    <input
+                        class="dn"
+                        type="radio"
+                        name="r1"
+                        id="r1c"
+                    >
+                    <!-- MSGS -->
+                    <label
+                        class="r1 r1a dn flex-l ph4 glow o-50 bg-animate absolute top-0 bottom-0 z-2"
+                        for="r1a"
+                    >
+                        <div
+                            class="arrow self-center pa3 flex-auto bg-center"
+                            style="background-image:url('https://icongr.am/clarity/angle.svg?color=ffffff')"
+                        ></div>
+                    </label>
+                    <label
+                        class="r1 r1b dn flex-l ph4 glow o-50 bg-animate absolute top-0 bottom-0 z-2"
+                        for="r1b"
+                    >
+                        <div
+                            class="arrow self-center pa3 flex-auto bg-center"
+                            style="background-image:url('https://icongr.am/clarity/angle.svg?color=ffffff')"
+                        ></div>
+                    </label>
+                    <label
+                        class="r1 r1c dn flex-l ph4 glow o-50 bg-animate absolute top-0 bottom-0 z-2"
+                        for="r1c"
+                    >
+                        <div
+                            class="arrow self-center pa3 flex-auto bg-center"
+                            style="background-image:url('https://icongr.am/clarity/angle.svg?color=ffffff')"
+                        ></div>
+                    </label>
+                    <li
+                        class="r1 r1a flex-none w-auto-l w-90 mh2 mh3-ns mh0-l flex items-stretch br5 overflow-hidden br0-l shadow-3 absolute-l absolute--fill-l"
+                        style="background-image:url('https://source.unsplash.com/random?friends');"
+                    >
+                        <article
+                            class="pa3 pa4-ns lg-black-fade-up white flex-auto absolute-l absolute--fill-l flex flex-column"
+                        >
+                            <div class="f1 tracked-5 tr">⭐⭐⭐⭐⭐</div>
+                            <hr class="flex-auto pv5 pv0-l">
+                            <blockquote class="measure-narrow f1 fw5 i lh-copy">
+                                "Lorem ipsum dolor sit amet consectetur tam et culpa."
+                            </blockquote>
+                            <h3 class="fw7 i f2 handwritten pl3"> - Namey Name</h3>
+                        </article>
+                    </li>
+                    <li
+                        class="r1 r1b flex-none w-auto-l w-90 mh2 mh3-ns mh0-l flex items-stretch br5 overflow-hidden br0-l shadow-3 absolute-l absolute--fill-l"
+                        style="background-image:url('https://source.unsplash.com/random?couple');"
+                    >
+                        <article
+                            class="pa3 pa4-ns lg-black-fade-up white flex-auto absolute-l absolute--fill-l flex flex-column"
+                        >
+                            <div class="f1 tracked-5 tr">⭐⭐⭐⭐⭐</div>
+                            <hr class="flex-auto pv5 pv0-l">
+                            <blockquote class="measure-narrow f1 fw5 i lh-copy">
+                                "Lorem ipsum dolor sit amet consectetur tam et culpa."
+                            </blockquote>
+                            <h3 class="fw7 i f2 handwritten pl3"> - Namey Name</h3>
+                        </article>
+                    </li>
+                    <li
+                        class="r1 r1c flex-none w-auto-l w-90 mh2 mh3-ns mh0-l flex items-stretch br5 overflow-hidden br0-l shadow-3 absolute-l absolute--fill-l"
+                        style="background-image:url('https://source.unsplash.com/random?buddies');"
+                    >
+                        <article
+                            class="pa3 pa4-ns lg-black-fade-up white flex-auto absolute-l absolute--fill-l flex flex-column"
+                        >
+                            <div class="f1 tracked-5 tr">⭐⭐⭐⭐⭐</div>
+                            <hr class="flex-auto pv5 pv0-l">
+                            <blockquote class="measure-narrow f1 fw5 i lh-copy">
+                                "Lorem ipsum dolor sit amet consectetur tam et culpa."
+                            </blockquote>
+                            <h3 class="fw7 i f2 handwritten pl3"> - Namey Name</h3>
+                        </article>
+                    </li>
+                    <div class="flex-none w1"></div>
+                </ul>
+            </section>
+        </article>
+        <aside class="bg-blue white pa3 tc">Section below is filler footer content.</aside>
+        <footer class="pv3 bg-navy white">
             <h2 class="f4 tc">
                 Resources
             </h2>
@@ -360,7 +983,7 @@
                     <h4>Join Our Team</h4>
                 </div>
             </article>
-        </section>
+        </footer>
     </body>
 
 </html>
