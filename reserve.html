@@ -77,14 +77,25 @@
     - use emoji in message 
 -->
 
-    <body class="flex-ns items-stretch justify-center ma3 ma4-ns ma5-l">
-        <section class="measure flex-auto">
+    <body class="flex-ns items-stretch justify-center ma3-ns ma4-l">
+        <section class="measure-wide center flex-auto">
             <div class="sticky top-0">
                 <h2
                     id="1"
-                    class="z-2 sticky top-0 bg-white ph3 pv2 pv3-ns f3"
-                >Compose Request</h2>
-                <p class="ma1 ph3 lh-copy">
+                    class="z-2 sticky top-0 bg-white ph3 pt2 pt3-ns f3-ns f2"
+                ><span class="flex justify-between">
+                        <span>Compose Request</span>
+                        <span class="blue"><sup class="f-1 fw7 tracked-3">$</sup>63</span>
+                    </span>
+                    <progress
+                        style="height:0.25rem"
+                        class="mt1 mv2-ns"
+                        value="2"
+                        min="0"
+                        max="5"
+                    ></progress>
+                </h2>
+                <p class="measure mt3 ma1 ph3 lh-copy">
                     Hosts get to approve or deny reservation requests. Let's build your reservation request and send
                     it to Ned!
                 </p>
@@ -94,60 +105,60 @@
                             <summary class="f1 relative pointer z-1">
                                 <div class="flex items-center justify-between">
                                     📇 Confirm Contact Info
-                                    <input
-                                        type="checkbox"
-                                        class="f0"
-                                        checked
-                                    >
+                                    <output class="o-40 glow ba br3 bg-white green dib pa1"><span
+                                            class="db bt bw2 b--transparent lh-solid fw9 f-3 ttu tracked-1"
+                                        >done</span></output>
                             </summary>
                             <div class="pa1 ma1 bt b--black-05">
-                                <p class="mv2 lh-copy">
+                                <p class="measure mv2 lh-copy">
                                     This section is so you can confirm our information is up to date. When we
                                     contact Ned, we need to make sure he can contact you to let you know if he
                                     approved or denied the request.
                                 </p>
-                                <div class="mv3">
-                                    <label
-                                        class="f-1 mh2 mv1 db navy hover-blue anchor-mid"
-                                        for="name"
-                                    >
-                                        <span class="anchor-child"> Name </span>
-                                    </label>
-                                    <input
-                                        id="name"
-                                        autocomplete="name"
-                                        type="text"
-                                        value="Jack Peterson"
-                                    >
-                                </div>
-                                <div class="mv3">
-                                    <label
-                                        class="f-1 mh2 mv1 db navy hover-blue anchor-mid"
-                                        for="phone"
-                                    >
-                                        <span class="anchor-child"> Phone </span>
-                                    </label>
-                                    <input
-                                        id="phone"
-                                        pattern="\d{3}[\-]\d{3}[\-]\d{4}"
-                                        autocomplete="tel-national"
-                                        type="text"
-                                        value="573-268-0047"
-                                    >
-                                </div>
-                                <div class="mv3">
-                                    <label
-                                        class="f-1 mh2 mv1 db navy hover-blue anchor-mid"
-                                        for="email"
-                                    >
-                                        <span class="anchor-child"> Email </span>
-                                    </label>
-                                    <input
-                                        id="email"
-                                        type="email"
-                                        autocomplete="email"
-                                        value="jack@roostorage.com"
-                                    >
+                                <div class="flex-ns flex-wrap-ns">
+                                    <div class="ma2-ns mv3 mw5">
+                                        <label
+                                            class="f-1 mh2 mv1 db navy hover-blue anchor-mid"
+                                            for="name"
+                                        >
+                                            <span class="anchor-child"> Name </span>
+                                        </label>
+                                        <input
+                                            id="name"
+                                            autocomplete="name"
+                                            type="text"
+                                            value="Jack Peterson"
+                                        >
+                                    </div>
+                                    <div class="ma2-ns mv3 mw5">
+                                        <label
+                                            class="f-1 mh2 mv1 db navy hover-blue anchor-mid"
+                                            for="phone"
+                                        >
+                                            <span class="anchor-child"> Phone </span>
+                                        </label>
+                                        <input
+                                            id="phone"
+                                            pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+                                            autocomplete="tel-national"
+                                            type="text"
+                                            value="573-268-0047"
+                                        >
+                                    </div>
+                                    <div class="ma2-ns mv3 mw5">
+                                        <label
+                                            class="f-1 mh2 mv1 db navy hover-blue anchor-mid"
+                                            for="email"
+                                        >
+                                            <span class="anchor-child"> Email </span>
+                                        </label>
+                                        <input
+                                            id="email"
+                                            type="email"
+                                            autocomplete="email"
+                                            value="jack@roostorage.com"
+                                        >
+                                    </div>
                                 </div>
                                 <menu class="lg-white-fade-up pv3 sticky bottom-0">
                                     <button
@@ -163,18 +174,16 @@
                             <summary class="f1 relative pointer z-1">
                                 <div class="flex items-center justify-between">
                                     📝 Listing Summary
-                                    <input
-                                        type="checkbox"
-                                        class="f0"
-                                        checked
-                                    >
+                                    <output class="o-40 glow ba br3 bg-white orange dib pa1"><span
+                                            class="db bt bw2 b--transparent lh-solid fw9 f-3 ttu tracked-1"
+                                        >invalid</span></output>
                             </summary>
                             <div
                                 id="summary"
                                 class="anchor-top"
                             >
                                 <div class="anchor-child pa1 ma1 bt b--black-05">
-                                    <p class="mv2 lh-copy">
+                                    <p class="measure mv2 lh-copy">
                                         This should look familiar! It's just the summary of the listing you're
                                         requesting.
                                         We'll email you all of these details if the host confirms your request.
@@ -204,26 +213,26 @@
                                             <h1 class="mv2 mh3 fw3 f3 lh-solid">
                                                 Ned's Shed
                                             </h1>
-                                            <p class="mh3 mv2 lh-copy">
+                                            <p class="measure mh3 mv2 lh-copy">
                                                 Description Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                             </p>
                                             <ul class="flex flex-wrap items-center">
                                                 <li class="flex-auto mv2 mh3">
                                                     <h2 class="f-1 tracked-1 hover-blue db mv1">Space</h2>
-                                                    <p class="">15
+                                                    <p class="measure ">15
                                                         <sup>sqft</sup>
                                                     </p>
                                                 </li>
                                                 <li class="flex-auto mv2 mh3">
                                                     <h2 class="f-1 tracked-1 hover-blue db mv1">Dimensions</h2>
-                                                    <p class="">5
+                                                    <p class="measure ">5
                                                         <sup>ft</sup> x 3
                                                         <sup>ft</sup>
                                                     </p>
                                                 </li>
                                                 <li class="flex-auto mv2 mh3">
                                                     <h2 class="f-1 tracked-1 hover-blue db mv1">Location</h2>
-                                                    <p class="">East Campus</p>
+                                                    <p class="measure ">East Campus</p>
                                                 </li>
                                             </ul>
                                             <ol class="flex">
@@ -267,10 +276,9 @@
                             <summary class="f1 relative pointer z-1">
                                 <div class="flex items-center justify-between">
                                     📦 What I'm storing.
-                                    <input
-                                        type="checkbox"
-                                        class="f0"
-                                    >
+                                    <output class="o-40 glow ba br3 bg-white blue dib pa1"><span
+                                            class="db bt bw2 b--transparent lh-solid fw9 f-3 ttu tracked-1"
+                                        >active</span></output>
                                 </div>
                             </summary>
                             <div class="pa1 ma1 bt b--black-05">
@@ -286,7 +294,7 @@
                                     name=""
                                     id=""
                                     id="storing"
-                                    class="mt3 w-100"
+                                    class="mt3 w-100 lh-phi"
                                 >I need to store my furniture between leases.</textarea>
                                 <menu class="lg-white-fade-up pv3 sticky bottom-0">
                                     <button
@@ -302,18 +310,17 @@
                             <summary class="f1 relative pointer z-1">
                                 <div class="flex items-center justify-between">
                                     💳 Set Up Payment
-                                    <input
-                                        type="checkbox"
-                                        class="f0"
-                                    >
+                                    <output class="o-40 glow ba br3 bg-white blue dib pa1"><span
+                                            class="db bt bw2 b--transparent lh-solid fw9 f-3 ttu tracked-1"
+                                        >todo</span></output>
                                 </div>
                             </summary>
                             <div
                                 id="payment"
-                                class="anchor-top pa1 ma1 bt b--black-05"
+                                class="anchor-top"
                             >
-                                <div class="anchor-child">
-                                    <p class="mv2 lh-copy">
+                                <div class="anchor-child pa1 ma1 bt b--black-05">
+                                    <p class="measure mv2 lh-copy">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi velit
                                         rerum
                                         magnam distinctio dicta dolorum, ducimus facilis voluptate voluptatem
@@ -346,10 +353,9 @@
                             <summary class="f1 relative pointer z-1">
                                 <div class="flex items-center justify-between">
                                     🤝 Terms and Conditions
-                                    <input
-                                        type="checkbox"
-                                        class="f0"
-                                    >
+                                    <output class="o-40 glow ba br3 bg-white blue dib pa1"><span
+                                            class="db bt bw2 b--transparent lh-solid fw9 f-3 ttu tracked-1"
+                                        >todo</span></output>
                                 </div>
                             </summary>
                             <div
@@ -357,7 +363,7 @@
                                 class="anchor-top"
                             >
                                 <div class="pa1 ma1 bt b--black-05 anchor-child">
-                                    <p class="mv2 lh-copy">
+                                    <p class="measure mv2 lh-copy">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
                                         dignissimos
                                         fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
@@ -365,7 +371,7 @@
                                         exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
                                         excepturi.
                                     </p>
-                                    <p class="mv2 lh-copy">
+                                    <p class="measure mv2 lh-copy">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
                                         dignissimos
                                         fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
@@ -373,7 +379,7 @@
                                         exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
                                         excepturi.
                                     </p>
-                                    <p class="mv2 lh-copy">
+                                    <p class="measure mv2 lh-copy">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
                                         dignissimos
                                         fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
@@ -381,7 +387,7 @@
                                         exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
                                         excepturi.
                                     </p>
-                                    <p class="mv2 lh-copy">
+                                    <p class="measure mv2 lh-copy">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
                                         dignissimos
                                         fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
@@ -389,7 +395,7 @@
                                         exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
                                         excepturi.
                                     </p>
-                                    <p class="mv2 lh-copy">
+                                    <p class="measure mv2 lh-copy">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
                                         dignissimos
                                         fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
@@ -397,7 +403,7 @@
                                         exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
                                         excepturi.
                                     </p>
-                                    <p class="mv2 lh-copy">
+                                    <p class="measure mv2 lh-copy">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
                                         dignissimos
                                         fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
@@ -422,7 +428,7 @@
             <div class="sticky top-0">
                 <h2
                     id="1"
-                    class="z-2 sticky top-0 bg-white ph3 pv2 pv3-ns f3 bn"
+                    class="z-2 sticky top-0 bg-white ph3 pv2 pv3-ns f3-ns f2 bn"
                 >Request Message</h2>
                 <div class="mh3 mv1 relative">
                     <article
@@ -437,19 +443,19 @@
                             action=""
                             class="relative lh-copy"
                         >
-                            <p class="ma2 tracked-1">
+                            <p class="measure ma2 tracked-1">
                                 Hey <a
                                     href="#summary"
                                     class="underline"
                                 >Ned</a>,
                             </p>
-                            <p class="mv1 mh2">
+                            <p class="measure mv1 mh2">
                                 My name is Jack. <a
                                     href="#storing"
                                     class="underline bg-black-20"
                                 > I need to store my funiture between leases. </a>
                             </p>
-                            <p class="mv1 mh2">
+                            <p class="measure mv1 mh2">
                                 I'd like to rent your <a
                                     href="#summary"
                                     class="underline"
@@ -468,7 +474,7 @@
                                     July
                                     5th</a>.
                             </p>
-                            <p class="mv1 mh2">
+                            <p class="measure mv1 mh2">
                                 I still need to set up <a
                                     href="#payment"
                                     class="underline"
@@ -482,13 +488,13 @@
                                     class="underline"
                                 >$63 bucks total</a>.
                             </p>
-                            <p class="mv1 mh2">
+                            <p class="measure mv1 mh2">
                                 I've still need to read, understand, and agree to the <a
                                     href="#terms"
                                     class="underline"
                                 >terms of service</a>.
                             </p>
-                            <p class="mv1 mh2">
+                            <p class="measure mv1 mh2">
                                 📇 My contact info
                                 <br>
                                 <a
@@ -501,7 +507,7 @@
                                     href="#to-email"
                                 >📧email : jack@roostorage.com</a>
                             </p>
-                            <p class="mv1 mh2">Thanks Ned!</p>
+                            <p class="measure mv1 mh2">Thanks Ned!</p>
                         </form>
                     </article>
                     <div
