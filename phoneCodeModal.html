@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1"
+        >
+        <title>Roo Storage</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet"
+        >
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="style.css"
+        />
+    </head>
+    <!-- body is just a placeholder, the contents of body shouldn't matter, nor does it need to be a body tag. It really just signifies top level of app. -->
+
+    <body class="bg-orange vh-100 w-100">
+        <!-- This is where the "modal" really begins, this is where everything for the modal is contained -->
+        <aside class="fixed vh-100 w-100 bg-black-30 z-max flex items-center justify-center">
+            <!-- This is the body of the modal, all modals will be contained within this -->
+            <form
+                class="flex flex-wrap-ns flex-column flex-row-ns ma3-ns shadow-hover br5-ns bg-white overflow-hidden-ns overflow-auto self-stretch self-center-ns"
+            >
+                <div class="img-child pa5 self-stretch flex-auto">
+                    <img
+                        src="https://source.unsplash.com/random?phone"
+                        alt=""
+                    >
+                </div>
+                <main class="center flex-none measure z-1 relative">
+                        <nav class="flex sticky top-0 bg-white justify-between items-center">
+                                <!-- This href strikes me as code/design smell. -->
+                        <!-- I think the link is useful, but needing navigation within a modal feels wrong.
+                        Perhaps we should work on making the "Become A Host" process more explicit.
+                        - How long does the process take? 
+                        - How much does it cost? 
+                        - How far into the process am I at any certain point in time?
+                        
+                        Maybe we could maximize the users time by not having blocking  -->
+
+                        <a
+                            href="/phoneVerificationModal.html"
+                            class="link ma2"
+                        >⬅️ Go back</a>
+                        <button
+                            type="button"
+                            class="ma2 o-40 pa2 pt3 pl3 bg-center contain grow"
+                            style="background-image: url('https://icongr.am/clarity/close.svg')"
+                        ></button>
+                    </nav>
+                    <section class="mh4 mv2">
+                        <h1 class="f3 blue mv2">
+                            Phone Verification
+                        </h1>
+                        <p class="i mv2 lh-copy">
+                            We're just checking the number you gave us when you signed up works!
+                        </p>
+
+                    </section>
+                    <section class="center mw5 mv4 db tc">
+                        <label
+                            id="verificationCode"
+                            class="blue fw6"
+                        >Enter Code</label>
+                        <input
+                            id="verificationCode"
+                            type="text"
+                            autofocus
+                            placeholder="Verification Code"
+                        >
+                    </section>
+                    <menu class="flex flex-wrap justify-end items-center ma3">
+                        <button class="ph3 fw6 blue">
+                            📲 Resend Code
+                        </button>
+                        <button
+                            type="button"
+                            class="bg-blue hover-bg-navy white"
+                        >Submit Code</button>
+                    </menu>
+                </main>
+            </form>
+        </aside>
+    </body>
+
+</html>
