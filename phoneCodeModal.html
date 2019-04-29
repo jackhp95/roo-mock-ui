@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta
             name="viewport"
-            content="width=device-width,initial-scale=1"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
         >
         <title>Roo Storage</title>
         <link
@@ -20,17 +20,30 @@
             rel="stylesheet"
             href="style.css"
         />
+        <style>
+            html body {
+                padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+            }
+
+            .vh-100 {
+                height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+            }
+
+        </style>
     </head>
     <!-- body is just a placeholder, the contents of body shouldn't matter, nor does it need to be a body tag. It really just signifies top level of app. -->
 
-    <body class="bg-orange vh-100 w-100">
+    <body
+        class="vh-100 w-100"
+        style="background-image:url('https://source.unsplash.com/random?phone')"
+    >
         <!-- This is where the "modal" really begins, this is where everything for the modal is contained -->
-        <aside class="fixed vh-100 w-100 bg-black-70 z-max flex items-center justify-center">
+        <aside class="fixed  absolute--fill bg-black-70 z-max flex items-center justify-center">
             <!-- This is the body of the modal, all modals will be contained within this -->
             <form
                 class="flex flex-wrap-ns flex-column flex-row-ns ma3-ns shadow-5 br5-ns bg-white-ns overflow-hidden-ns overflow-auto self-stretch self-center-ns"
             >
-                <div class="img-child pa5 self-stretch flex-auto">
+                <div class="img-child pa3 self-stretch flex-auto">
                     <div
                         class="dn db-ns bg-blue ptrn-box-white absolute absolute--fill"
                         style="background-size: 10vmin; background-repeat: repeat"
@@ -83,7 +96,10 @@
                         >
                     </section>
                     <menu class="flex flex-wrap justify-end items-center ma3">
-                        <button class="ph3 fw6 blue">
+                        <button
+                            type="button"
+                            class="ph3 fw6 blue"
+                        >
                             📲 Resend Code
                         </button>
                         <button
@@ -91,6 +107,22 @@
                             class="bg-blue hover-bg-navy white"
                         >Submit Code</button>
                     </menu>
+                    <!-- <style>
+                        /* Targets iOS */
+                        @supports (-webkit-overflow-scrolling: touch) {
+
+                            /* Targets iOS only when there is a bottom tabbar */
+                            @media (display-mode: browser) and (orientation: portrait) {
+                                @supports (margin-bottom: env(safe-area-inset-bottom)) {
+                                    .ios-pb {
+                                        padding-bottom: calc(75px + env(safe-area-inset-bottom));
+                                    }
+                                }
+                            }
+                        }
+
+                    </style> -->
+                    <!-- <div class="ios-pb"></div> -->
                 </main>
             </form>
         </aside>
