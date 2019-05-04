@@ -31,39 +31,47 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-js/1.2.0/sticky.min.js"></script>
 
         <style>
-            .green {
-                color: #00894b;
+            /* CARD ANIMATION */
+
+            details[open] {
+                /* shadow-5 */
+                -webkit-box-shadow: 0px 0px 64px 0px rgba(0, 0, 0, 0.08);
+                box-shadow: 0px 0px 64px 0px rgba(0, 0, 0, 0.08);
+                /* mv3 */
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+
+                /* pt2 */
+                padding-top: 0.5rem;
             }
 
-            .bg-green {
-                background-color: #00894b;
+            details[open] summary {
+                font-size: 1.62em;
             }
 
-            .b--green {
-                border-color: #00894b;
+            details[open] summary~* {
+                animation-direction: alternate;
+                animation-name: animate-card;
+                animation-duration: 1s;
             }
 
-            .anchor-top {
-                position: relative;
-                cursor: pointer;
-                top: -7rem;
+            @keyframes animate-card {
+                from {
+                    max-height: 0%
+                }
+
+                to {
+                    max-height: 100%;
+                }
             }
 
-            .anchor-top .anchor-child {
-                position: relative;
-                top: 7rem;
-            }
-
-            .anchor-mid {
-                position: relative;
-                cursor: pointer;
-                top: -50vh;
-            }
-
-            .anchor-mid .anchor-child {
-                position: relative;
-                top: 50vh;
-            }
+            /* details summary~* {
+                overflow: hidden;
+                transition-duration: 5s;
+                transition-property: max-height opacity;
+                opacity: 0;
+                max-height: 0;
+            } */
 
         </style>
     </head>
@@ -77,7 +85,7 @@
     - use emoji in message 
 -->
 
-    <body class="flex-ns items-stretch justify-center ma3-ns ma4-l">
+    <body class="flex-l items-stretch justify-center ma3-ns ma4-l">
         <section class="measure-wide center flex-auto">
             <div class="sticky top-0">
                 <h2
@@ -100,17 +108,13 @@
                     it to Ned!
                 </p>
                 <ul class="pv2">
-                    <li class="ma3">
-                        <details>
-                            <summary class="f1 relative pointer z-1">
-                                <div class="flex items-center justify-between">
-                                    📇 Confirm Contact Info
-                                    <output class="o-40 glow ba br3 bg-white green dib pa1"><span
-                                            class="db bt bw2 b--transparent lh-solid fw9 f-3 ttu tracked-1"
-                                        >done</span></output>
+                    <li>
+                        <details class="br5-ns">
+                            <summary class="f1 relative pointer z-1 pa3 ma2 blue lh-solid">
+                                <span class="mr3 ml2">📇</span>Confirm Contact Info
                             </summary>
-                            <div class="pa1 ma1 bt b--black-05">
-                                <p class="measure mv2 lh-copy">
+                            <div class="pa2 nt3 mh3">
+                                <p class="measure ma2 lh-copy">
                                     This section is so you can confirm our information is up to date. When we
                                     contact Ned, we need to make sure he can contact you to let you know if he
                                     approved or denied the request.
@@ -118,10 +122,10 @@
                                 <div class="flex-ns flex-wrap-ns">
                                     <div class="ma2-ns mv3 mw5">
                                         <label
-                                            class="f-1 mh2 mv1 db navy hover-blue anchor-mid"
+                                            class="f-1 mh2 mv1 db navy hover-blue"
                                             for="name"
                                         >
-                                            <span class="anchor-child"> Name </span>
+                                            <span class=""> Name </span>
                                         </label>
                                         <input
                                             id="name"
@@ -132,10 +136,10 @@
                                     </div>
                                     <div class="ma2-ns mv3 mw5">
                                         <label
-                                            class="f-1 mh2 mv1 db navy hover-blue anchor-mid"
+                                            class="f-1 mh2 mv1 db navy hover-blue"
                                             for="phone"
                                         >
-                                            <span class="anchor-child"> Phone </span>
+                                            <span class=""> Phone </span>
                                         </label>
                                         <input
                                             id="phone"
@@ -147,10 +151,10 @@
                                     </div>
                                     <div class="ma2-ns mv3 mw5">
                                         <label
-                                            class="f-1 mh2 mv1 db navy hover-blue anchor-mid"
+                                            class="f-1 mh2 mv1 db navy hover-blue"
                                             for="email"
                                         >
-                                            <span class="anchor-child"> Email </span>
+                                            <span class=""> Email </span>
                                         </label>
                                         <input
                                             id="email"
@@ -163,138 +167,127 @@
                                 <menu class="lg-white-fade-up pv3 sticky bottom-0">
                                     <button
                                         type="button"
-                                        class="ba bg-white green db w-100"
+                                        class="ba bg-white blue db w-100"
                                     >Contact info Confirmed</button>
                                 </menu>
                             </div>
                         </details>
                     </li>
-                    <li class="ma3">
-                        <details>
-                            <summary class="f1 relative pointer z-1">
-                                <div class="flex items-center justify-between">
-                                    📝 Listing Summary
-                                    <output class="o-40 glow ba br3 bg-white orange dib pa1"><span
-                                            class="db bt bw2 b--transparent lh-solid fw9 f-3 ttu tracked-1"
-                                        >invalid</span></output>
+                    <li>
+                        <details class="br5-ns">
+                            <summary class="f1 relative pointer z-1 pa3 ma2 blue lh-solid">
+                                <span class="mr3 ml2">📝</span>Listing Summary
                             </summary>
-                            <div
-                                id="summary"
-                                class="anchor-top"
-                            >
-                                <div class="anchor-child pa1 ma1 bt b--black-05">
-                                    <p class="measure mv2 lh-copy">
-                                        This should look familiar! It's just the summary of the listing you're
-                                        requesting.
-                                        We'll email you all of these details if the host confirms your request.
-                                    </p>
-                                    <article class="shadow-3 flex-auto mt3 flex flex-column br4 overflow-hidden">
-                                        <header
-                                            class="z-1 flex-auto flex items-start justify-between bg-center cover mb2"
-                                            style="background-image:url('https://images.unsplash.com/photo-1480074568708-e7b720bb3f09');"
-                                        >
-                                            <div class="flex lh-solid items-center fw6 pa2 br3 ma1 bg-white blue">
-                                                <img
-                                                    src="https://icongr.am/clarity/shield-check.svg?color=027bc2"
-                                                    alt="Verification Icon"
-                                                    class="contain mr1"
-                                                    style="width:1em; height:1em;"
-                                                >
-                                                <span class="i mr1 f7">Roo Verified</span>
-                                            </div>
+                            <div class="pa2 nt3 mh3">
+                                <p class="measure ma2 lh-copy">
+                                    This should look familiar! It's just the summary of the listing you're
+                                    requesting.
+                                    We'll email you all of these details if the host confirms your request.
+                                </p>
+                                <article class="shadow-3 flex-auto mt3 flex flex-column br4 overflow-hidden">
+                                    <header class="z-1 flex-auto flex items-start justify-between mb2 relative">
+                                        <div class="absolute absolute--fill img-child">
                                             <img
-                                                src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91"
-                                                alt="Ned's Avatar"
-                                                class="br-pill ba bw2-ns bw1 white bg-center cover f3 nb4 ma4"
-                                                style="width:4em; height:4em;"
+                                                src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09"
+                                                alt="Ned's Header Image"
                                             >
-                                        </header>
-                                        <main class="flex-none flex flex-column bg-white ma2">
-                                            <h1 class="mv2 mh3 fw3 f3 lh-solid">
-                                                Ned's Shed
-                                            </h1>
-                                            <p class="measure mh3 mv2 lh-copy">
-                                                Description Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                            </p>
-                                            <ul class="flex flex-wrap items-center">
-                                                <li class="flex-auto mv2 mh3">
-                                                    <h2 class="f-1 tracked-1 hover-blue db mv1">Space</h2>
-                                                    <p class="measure ">15
-                                                        <sup>sqft</sup>
-                                                    </p>
-                                                </li>
-                                                <li class="flex-auto mv2 mh3">
-                                                    <h2 class="f-1 tracked-1 hover-blue db mv1">Dimensions</h2>
-                                                    <p class="measure ">5
-                                                        <sup>ft</sup> x 3
-                                                        <sup>ft</sup>
-                                                    </p>
-                                                </li>
-                                                <li class="flex-auto mv2 mh3">
-                                                    <h2 class="f-1 tracked-1 hover-blue db mv1">Location</h2>
-                                                    <p class="measure ">East Campus</p>
-                                                </li>
-                                            </ul>
-                                            <ol class="flex">
-                                                <li class="flex-auto ma2">
-                                                    <label
-                                                        class="f-1 tracked-1 hover-blue db mv1 mh2"
-                                                        for="listingsFilterStartDate"
-                                                    >Start Date</label>
-                                                    <input
-                                                        class="w-100"
-                                                        type="datetime"
-                                                        value="2019-04-09"
-                                                    >
-                                                </li>
-                                                <li class="flex-auto ma2">
-                                                    <label
-                                                        class="f-1 tracked-1 hover-blue db mv1 mh2"
-                                                        for="listingsFilterEndDate"
-                                                    >End Date</label>
-                                                    <input
-                                                        class="w-100"
-                                                        type="datetime"
-                                                        value="2019-04-09"
-                                                    >
-                                                </li>
-                                            </ol>
-                                        </main>
-                                    </article>
-                                    <menu class="lg-white-fade-up pv3 sticky bottom-0">
-                                        <button
-                                            type="button"
-                                            class="ba bg-white green db w-100"
-                                        >Listing Summary Approved</button>
-                                    </menu>
-                                </div>
+                                        </div>
+                                        <div class="relative flex lh-solid items-center fw6 pa2 br3 ma1 bg-white blue">
+                                            <img
+                                                src="https://icongr.am/clarity/shield-check.svg?color=027bc2"
+                                                alt="Verification Icon"
+                                                class="contain mr1"
+                                                style="width:1em; height:1em;"
+                                            >
+                                            <span class="i mr1 f7">Roo Verified</span>
+                                        </div>
+                                        <img
+                                            src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91"
+                                            alt="Ned's Avatar"
+                                            class="relative br-pill ba bw2-ns bw1 white f3 nb4 ma4"
+                                            style="width:4em; height:4em;"
+                                        >
+                                    </header>
+                                    <main class="flex-none flex flex-column bg-white ma2">
+                                        <h1 class="mv2 mh3 fw3 f3 lh-solid">
+                                            Ned's Shed
+                                        </h1>
+                                        <p class="measure mh3 mv2 lh-copy">
+                                            Description Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </p>
+                                        <ul class="flex flex-wrap items-center">
+                                            <li class="flex-auto mv2 mh3">
+                                                <h2 class="f-1 tracked-1 hover-blue db mv1">Space</h2>
+                                                <p class="measure ">15
+                                                    <sup>sqft</sup>
+                                                </p>
+                                            </li>
+                                            <li class="flex-auto mv2 mh3">
+                                                <h2 class="f-1 tracked-1 hover-blue db mv1">Dimensions</h2>
+                                                <p class="measure ">5
+                                                    <sup>ft</sup> x 3
+                                                    <sup>ft</sup>
+                                                </p>
+                                            </li>
+                                            <li class="flex-auto mv2 mh3">
+                                                <h2 class="f-1 tracked-1 hover-blue db mv1">Location</h2>
+                                                <p class="measure ">East Campus</p>
+                                            </li>
+                                        </ul>
+                                        <ol class="flex">
+                                            <li class="flex-auto ma2">
+                                                <label
+                                                    class="f-1 tracked-1 hover-blue db mv1 mh2"
+                                                    for="listingsFilterStartDate"
+                                                >Start Date</label>
+                                                <input
+                                                    class="w-100"
+                                                    type="datetime"
+                                                    value="2019-04-09"
+                                                >
+                                            </li>
+                                            <li class="flex-auto ma2">
+                                                <label
+                                                    class="f-1 tracked-1 hover-blue db mv1 mh2"
+                                                    for="listingsFilterEndDate"
+                                                >End Date</label>
+                                                <input
+                                                    class="w-100"
+                                                    type="datetime"
+                                                    value="2019-04-09"
+                                                >
+                                            </li>
+                                        </ol>
+                                    </main>
+                                </article>
+                                <menu class="lg-white-fade-up pv3 sticky bottom-0">
+                                    <button
+                                        type="button"
+                                        class="ba bg-white blue db w-100"
+                                    >Listing Summary Approved</button>
+                                </menu>
                             </div>
                         </details>
                     </li>
-                    <li class="ma3">
-                        <details open>
-                            <summary class="f1 relative pointer z-1">
-                                <div class="flex items-center justify-between">
-                                    📦 What I'm storing.
-                                    <output class="o-40 glow ba br3 bg-white blue dib pa1"><span
-                                            class="db bt bw2 b--transparent lh-solid fw9 f-3 ttu tracked-1"
-                                        >active</span></output>
-                                </div>
+                    <li>
+                        <details
+                            open
+                            class="br5-ns"
+                        >
+                            <summary class="f1 relative pointer z-1 pa3 ma2 blue lh-solid">
+                                <span class="mr3 ml2">📦</span>What I'm storing.
                             </summary>
-                            <div class="pa1 ma1 bt b--black-05">
-                                <label
-                                    for="storing"
-                                    class="mv2 db lh-copy anchor-mid"
-                                >
-                                    <span class="anchor-child">
-                                        Just give a general description of what you're storing.
-                                    </span>
-                                </label>
+                            <div class="pa2 nt3 mh3">
+                                <p class="measure ma2 lh-copy">
+                                    This should look familiar! It's just the summary of the listing you're
+                                    requesting.
+                                    We'll email you all of these details if the host confirms your request.
+                                </p>
                                 <textarea
                                     name=""
                                     id=""
                                     id="storing"
-                                    class="mt3 w-100 lh-phi"
+                                    class="mt2 w-100 lh-phi"
                                 >I need to store my furniture between leases.</textarea>
                                 <menu class="lg-white-fade-up pv3 sticky bottom-0">
                                     <button
@@ -305,119 +298,99 @@
                             </div>
                         </details>
                     </li>
-                    <li class="ma3">
-                        <details>
-                            <summary class="f1 relative pointer z-1">
-                                <div class="flex items-center justify-between">
-                                    💳 Set Up Payment
-                                    <output class="o-40 glow ba br3 bg-white blue dib pa1"><span
-                                            class="db bt bw2 b--transparent lh-solid fw9 f-3 ttu tracked-1"
-                                        >todo</span></output>
-                                </div>
+                    <li>
+                        <details class="br5-ns">
+                            <summary class="f1 relative pointer z-1 pa3 ma2 blue lh-solid">
+                                <span class="mr3 ml2">💳</span>Set Up Payment
                             </summary>
-                            <div
-                                id="payment"
-                                class="anchor-top"
-                            >
-                                <div class="anchor-child pa1 ma1 bt b--black-05">
-                                    <p class="measure mv2 lh-copy">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi velit
-                                        rerum
-                                        magnam distinctio dicta dolorum, ducimus facilis voluptate voluptatem
-                                        cum
-                                        vitae
-                                        error totam, iste voluptatibus neque consequuntur iure ab quo!
-                                    </p>
-                                    <output class="flex tc pa2">
-                                        <div class="pa2 flex-auto flex flex-column-reverse">
-                                            <div class="i f-1">Monthly</div>
-                                            <div class="f2">$60</div>
-                                        </div>
-                                        <div class="pa2 flex-auto flex flex-column-reverse">
-                                            <div class="i f-1">Total</div>
-                                            <div class="f2">$63</div>
-                                        </div>
-                                    </output>
-                                    <menu class="lg-white-fade-up pv3 sticky bottom-0">
-                                        <button
-                                            type="button"
-                                            class="bg-blue white db w-100"
-                                        >Proceed to Stripe</button>
-                                    </menu>
-                                </div>
+                            <div class="pa2 nt3 mh3">
+                                <p class="measure ma2 lh-copy">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi velit
+                                    rerum
+                                    magnam distinctio dicta dolorum, ducimus facilis voluptate voluptatem
+                                    cum
+                                    vitae
+                                    error totam, iste voluptatibus neque consequuntur iure ab quo!
+                                </p>
+                                <output class="flex tc pa2">
+                                    <div class="pa2 flex-auto flex flex-column-reverse">
+                                        <div class="i f-1">Monthly</div>
+                                        <div class="f2">$60</div>
+                                    </div>
+                                    <div class="pa2 flex-auto flex flex-column-reverse">
+                                        <div class="i f-1">Total</div>
+                                        <div class="f2">$63</div>
+                                    </div>
+                                </output>
+                                <menu class="lg-white-fade-up pv3 sticky bottom-0">
+                                    <button
+                                        type="button"
+                                        class="bg-blue white db w-100"
+                                    >Proceed to Stripe</button>
+                                </menu>
                             </div>
                         </details>
                     </li>
-                    <li class="ma3">
-                        <details>
-                            <summary class="f1 relative pointer z-1">
-                                <div class="flex items-center justify-between">
-                                    🤝 Terms and Conditions
-                                    <output class="o-40 glow ba br3 bg-white blue dib pa1"><span
-                                            class="db bt bw2 b--transparent lh-solid fw9 f-3 ttu tracked-1"
-                                        >todo</span></output>
-                                </div>
+                    <li>
+                        <details class="br5-ns">
+                            <summary class="f1 relative pointer z-1 pa3 ma2 blue lh-solid">
+                                <span class="mr3 ml2">🤝</span>Terms and Conditions
                             </summary>
-                            <div
-                                id="terms"
-                                class="anchor-top"
-                            >
-                                <div class="pa1 ma1 bt b--black-05 anchor-child">
-                                    <p class="measure mv2 lh-copy">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                                        dignissimos
-                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
-                                        sapiente
-                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
-                                        excepturi.
-                                    </p>
-                                    <p class="measure mv2 lh-copy">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                                        dignissimos
-                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
-                                        sapiente
-                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
-                                        excepturi.
-                                    </p>
-                                    <p class="measure mv2 lh-copy">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                                        dignissimos
-                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
-                                        sapiente
-                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
-                                        excepturi.
-                                    </p>
-                                    <p class="measure mv2 lh-copy">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                                        dignissimos
-                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
-                                        sapiente
-                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
-                                        excepturi.
-                                    </p>
-                                    <p class="measure mv2 lh-copy">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                                        dignissimos
-                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
-                                        sapiente
-                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
-                                        excepturi.
-                                    </p>
-                                    <p class="measure mv2 lh-copy">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-                                        dignissimos
-                                        fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
-                                        sapiente
-                                        exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
-                                        excepturi.
-                                    </p>
-                                    <menu class="lg-white-fade-up pv3 sticky bottom-0">
-                                        <button
-                                            type="button"
-                                            class="bg-blue white db w-100"
-                                        >Yep, I Agree</button>
-                                    </menu>
-                                </div>
+                            <div class="pa2 nt3 mh3">
+                                <p class="measure ma2 lh-copy">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                    dignissimos
+                                    fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                    sapiente
+                                    exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                    excepturi.
+                                </p>
+                                <p class="measure ma2 lh-copy">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                    dignissimos
+                                    fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                    sapiente
+                                    exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                    excepturi.
+                                </p>
+                                <p class="measure ma2 lh-copy">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                    dignissimos
+                                    fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                    sapiente
+                                    exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                    excepturi.
+                                </p>
+                                <p class="measure ma2 lh-copy">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                    dignissimos
+                                    fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                    sapiente
+                                    exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                    excepturi.
+                                </p>
+                                <p class="measure ma2 lh-copy">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                    dignissimos
+                                    fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                    sapiente
+                                    exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                    excepturi.
+                                </p>
+                                <p class="measure ma2 lh-copy">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+                                    dignissimos
+                                    fugit nostrum soluta, magni ut, ratione voluptatum, iure veniam debitis
+                                    sapiente
+                                    exercitationem necessitatibus harum in minus minima. Aliquid, eveniet
+                                    excepturi.
+                                </p>
+                                <menu class="lg-white-fade-up pv3 sticky bottom-0">
+                                    <button
+                                        type="button"
+                                        class="bg-blue white db w-100"
+                                    >Yep, I Agree</button>
+                                </menu>
                             </div>
                         </details>
                     </li>
