@@ -716,6 +716,7 @@ label,
 select,
 summary,
 textarea,
+.input-wrapper,
 [tabindex] {
     -ms-touch-action: manipulation;
     touch-action: manipulation;
@@ -890,6 +891,7 @@ textarea,
   ---------------- */
 /* Text Fields */
 [type=text],
+.input-wrapper,
 [type=password],
 [type=email],
 [type=url],
@@ -926,6 +928,7 @@ textarea {
 }
 
 [type=text]:focus,
+.input-wrapper:focus-within,
 [type=password]:focus,
 [type=email]:focus,
 [type=url]:focus,
@@ -946,6 +949,7 @@ textarea:focus {
 }
 
 [type=text][disabled],
+.input-wrapper[disabled],
 [type=password][disabled],
 [type=email][disabled],
 [type=url][disabled],
@@ -1182,6 +1186,7 @@ textarea[disabled] {
 
 /* STATE */
 input:focus:invalid,
+.input-wrapper--invalid,
 textarea:focus:invalid,
 select:focus:invalid {
     border-color: #ea1c0d;
