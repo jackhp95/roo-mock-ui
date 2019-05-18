@@ -293,9 +293,10 @@ feedbackTextarea model =
         ([ class "fadeIn animated delay-1s overflow-hidden lh-copy" ]
             ++ ifRating [ class "ph3 pb3"] [ class "dn"]
         )
-        [ label [ class "f-1 mh2 navy" ] [ text "Suggestions" ]
+        [ label [ class "f-1 mh2 navy", for "feedback-textarea" ] [ text "Suggestions" ]
         , textarea
             [ id "feedback-textarea"
+            , name "feedback-textarea"
             , E.onInput OnFeedback
             , class "self-center lh-copy"
             ]
