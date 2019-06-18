@@ -1,0 +1,1304 @@
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Roo</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        >
+        <meta
+            name="description"
+            content="Find affordable storage in your neighborhood and only pay for the days that you need it. We make storage simple. Roo is a neighborhood friendly platform that connects those with extra space to those in need of storage. Sign up now to ensure you get storage for the summer!"
+        >
+        <meta
+            name="keywords"
+            content="Storage,Roo Storage,Roo,roo,storage,college"
+        >
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet"
+        >
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+        >
+        <link
+            rel="stylesheet"
+            href="style.css"
+        >
+    </head>
+
+    <body class="navy">
+        <navbar
+            class="z-5 fixed top-0 right-0 w-100 w-auto-ns"
+            id="navbar"
+        >
+
+            <nav
+                class="mv2 mr3-ns mr4-l flex flex-row-ns flex-row-reverse w-100 w-auto-ns justify-between tracked-1 fadeInUp relative ng-star-inserted"
+                style="animation-duration: 100ms; transition-duration: 100ms; animation-delay: 0s; transition-delay: 0s;"
+            >
+                <button
+                    class="self-center mh2 fw7 white tracked-1 bg-blue f-1 grow nv3"
+                    type="button"
+                > Reserve </button>
+
+                <a
+                    class="db dn-ns self-stretch flex-auto"
+                    href="/"
+                >
+                </a>
+
+                <label
+                    class="relative z-1 dn-ns flex items-center pv2 ph3 slideInLeft animated faster br3 br--right bg-white-80"
+                    for="menu"
+                    id="menuLabel"
+                >
+                    <img
+                        class="h1 w1 mr2"
+                        src="https://icongr.am/clarity/menu.svg?color=002b64"
+                    > Menu </label>
+
+            </nav>
+        </navbar>
+        <h1
+            class="z-4 relative sticky top-0 bg-white ph4-ns ph3 f1 w-100 shadow-3 flex items-center justify-center justify-start-ns"
+            style="height:3.375rem;"
+        >
+            <img
+                class="h2 w2 mr2 ml3-l ml2-ns"
+                src="https://s3.us-east-2.amazonaws.com/roo-image-storage/static-images/logo/Tight/PNG/Orange.png"
+            >
+            <span class="clip"> Easy, Inexpensive, and Safe Storage. </span>
+        </h1>
+        <main>
+            <header
+                class="flex flex-column relative items-center justify-center"
+                style="min-height: 75vh;"
+            >
+                <style>
+                    @keyframes floaty {
+                        0% {
+                            transform: translate3d(0%, 0%, 1px);
+                        }
+
+                        25% {
+                            transform: translate3d(25%, 0%, 1px);
+                        }
+
+                        50% {
+                            transform: translate3d(0%, 30%, 1px);
+                        }
+
+                        75% {
+                            transform: translate3d(0%, -20%, 1px);
+                        }
+
+                        100% {
+                            transform: translate3d(-25%, 0%, 1px);
+                        }
+                    }
+
+                    .floaty.animated {
+                        animation-name: floaty;
+                        animation-duration: 25s;
+                        animation-iteration-count: infinite;
+                        animation-direction: alternate;
+                        animation-timing-function: ease;
+                    }
+
+                    .floaty:nth-child(2n) {
+                        animation-delay: -2s;
+                        /* animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1); */
+                    }
+
+                    .floaty:nth-child(3n) {
+                        animation-delay: -4s;
+                        /* animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955); */
+                    }
+
+                    .floaty:nth-child(4n) {
+                        animation-delay: -8s;
+                        /* animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045); */
+                    }
+
+                    .floaty:nth-child(5n) {
+                        animation-delay: -16s;
+                        /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+                    }
+
+                    .floaty:nth-child(6n) {
+                        animation-delay: -32s;
+                        /* animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+                    }
+
+                    .floaty:nth-child(7n) {
+                        animation-delay: -64s;
+                        /* animation-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035); */
+                    }
+
+                    .floaty:nth-child(8n) {
+                        animation-delay: -3s;
+                        /* animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1); */
+                    }
+
+                    .floaty:nth-child(9n) {
+                        animation-delay: -6s;
+                        /* animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); */
+                    }
+
+                    .floaty:nth-child(10n) {
+                        animation-delay: -9s;
+                        /* animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+                    }
+
+                    .floaty:nth-child(11n) {
+                        animation-delay: -12s;
+                        /* animation-timing-function: cubic-bezier(0.23, 1, 0.320, 1); */
+                    }
+
+                    .floaty:nth-child(12n) {
+                        animation-delay: -15s;
+                        /* animation-timing-function: cubic-bezier(0.68, 0.55, -0.265, 1.55); */
+                    }
+
+                    .floaty:nth-child(13n) {
+                        animation-delay: -18s;
+                        /* animation-timing-function: cubic-bezier(0.95, -0.05, 0.795, -0.035); */
+                    }
+
+
+                    .floaty:nth-child(14n) {
+                        animation-delay: -14s;
+                        /* animation-timing-function: cubic-bezier(0.175, -0.885, -0.32, 1.275); */
+                    }
+
+                    .floaty:nth-child(15n) {
+                        animation-delay: -15s;
+                        /* animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335); */
+                    }
+
+                </style>
+                <div class="absolute absolute--fill flex flex-wrap o-60 overflow-hidden">
+                    <div class="relative floaty animated flex items-center justify-center w-20-ns w-third glow o-60">
+                        <img
+                            class=""
+                            style="object-fit: none; object-position: center; width: auto; height: auto;"
+                            src="https://icongr.am/clarity/home.svg?color=f15129"
+                            alt=""
+                        >
+                    </div>
+                    <div class="relative floaty animated flex items-center justify-center w-20-ns w-third glow o-60">
+                        <img
+                            class=""
+                            style="object-fit: none; object-position: center; width: auto; height: auto;"
+                            src="https://icongr.am/clarity/cog.svg?color=002b64"
+                            alt=""
+                        >
+                    </div>
+                    <div class="relative floaty animated flex items-center justify-center w-20-ns w-third glow o-60">
+                        <img
+                            class=""
+                            style="object-fit: none; object-position: center; width: auto; height: auto;"
+                            src="https://icongr.am/clarity/check.svg?color=007ac3"
+                            alt=""
+                        >
+                    </div>
+                    <div class="relative floaty animated flex items-center justify-center w-20-ns w-third glow o-60">
+                        <img
+                            class=""
+                            style="object-fit: none; object-position: center; width: auto; height: auto;"
+                            src="https://icongr.am/clarity/shield.svg?color=f15129"
+                            alt=""
+                        >
+                    </div>
+                    <div class="relative floaty animated flex items-center justify-center w-20-ns w-third glow o-60">
+                        <img
+                            class=""
+                            style="object-fit: none; object-position: center; width: auto; height: auto;"
+                            src="https://icongr.am/clarity/bundle.svg?color=002b64"
+                            alt=""
+                        >
+                    </div>
+                    <div class="relative floaty animated flex items-center justify-center w-20-ns w-third glow o-60">
+                        <img
+                            class=""
+                            style="object-fit: none; object-position: center; width: auto; height: auto;"
+                            src="https://icongr.am/clarity/calendar.svg?color=007ac3"
+                            alt=""
+                        >
+                    </div>
+                    <div class="relative floaty animated flex items-center justify-center w-20-ns w-third glow o-60">
+                        <img
+                            class=""
+                            style="object-fit: none; object-position: center; width: auto; height: auto;"
+                            src="https://icongr.am/clarity/lock.svg?color=f15129"
+                            alt=""
+                        >
+                    </div>
+                    <div class="relative floaty animated flex items-center justify-center w-20-ns w-third glow o-60">
+                        <img
+                            class=""
+                            style="object-fit: none; object-position: center; width: auto; height: auto;"
+                            src="https://icongr.am/clarity/archive.svg?color=002b64"
+                            alt=""
+                        >
+                    </div>
+                    <div class="relative floaty animated flex items-center justify-center w-20-ns w-third glow o-60">
+                        <img
+                            class=""
+                            style="object-fit: none; object-position: center; width: auto; height: auto;"
+                            src="https://icongr.am/clarity/thumbs-up.svg?color=007ac3"
+                            alt=""
+                        >
+                    </div>
+                    <div class="relative floaty animated flex items-center justify-center w-20-ns w-third glow o-60">
+                        <img
+                            class=""
+                            style="object-fit: none; object-position: center; width: auto; height: auto;"
+                            src="https://icongr.am/clarity/trailer.svg?color=f15129"
+                            alt=""
+                        >
+                    </div>
+                    <div class="relative floaty animated flex items-center justify-center w-20-ns w-third glow o-60">
+                        <img
+                            class=""
+                            style="object-fit: none; object-position: center; width: auto; height: auto;"
+                            src="https://icongr.am/clarity/happy-face.svg?color=002b64"
+                            alt=""
+                        >
+                    </div>
+                    <div class="relative floaty animated flex items-center justify-center w-20-ns w-third glow o-60">
+                        <img
+                            class=""
+                            style="object-fit: none; object-position: center; width: auto; height: auto;"
+                            src="https://icongr.am/clarity/blocks-group.svg?color=007ac3"
+                            alt=""
+                        >
+                    </div>
+                    <div class="relative floaty animated flex items-center justify-center w-20-ns w-third glow o-60">
+                        <img
+                            class=""
+                            style="object-fit: none; object-position: center; width: auto; height: auto;"
+                            src="https://icongr.am/clarity/share.svg?color=f15129"
+                            alt=""
+                        >
+                    </div>
+                    <div class="relative floaty animated flex items-center justify-center w-20-ns w-third glow o-60">
+                        <img
+                            class=""
+                            style="object-fit: none; object-position: center; width: auto; height: auto;"
+                            src="https://icongr.am/clarity/user.svg?color=002b64"
+                            alt=""
+                        >
+                    </div>
+                    <div class="relative floaty animated flex items-center justify-center w-20-ns w-third glow o-60">
+                        <img
+                            class=""
+                            style="object-fit: none; object-position: center; width: auto; height: auto;"
+                            src="https://icongr.am/clarity/star.svg?color=007ac3"
+                            alt=""
+                        >
+                    </div>
+                </div>
+                <div class="relative measure tc lh-phi mt4">
+                    <div class="center bg-white shadow-2 br-pill w-40 img-child">
+                        <div class="aspect-ratio--1x1"></div>
+                        <img
+                            src="https://s3.us-east-2.amazonaws.com/roo-image-storage/static-images/logo/Tight/PNG/Blue.png"
+                            alt=""
+                        >
+                    </div>
+                    <p class="f2 blue fw6 pa3 br-pill bg-white-70">Storage Made Simple</p>
+                </div>
+                <style>
+                    .growIn.animated {
+                        animation-name: growIn;
+                        animation-duration: 4s;
+                        animation-timing-function: ease-out;
+                    }
+
+                    @keyframes growIn {
+                        0% {
+                            max-height: 0rem;
+                        }
+
+                        50% {
+                            max-height: 0rem;
+                        }
+
+                        100% {
+                            max-height: 40rem;
+                        }
+                    }
+
+                </style>
+                <section class="growIn animated overflow-hidden w-100">
+                    <ol class="relative flex pt4 pb3 overflow-x-auto w-100 ph5-l ph4-ns ph2 items-center">
+                        <li
+                            class="animated fadeIn delay-4s relative mw5 mw-none-ns flex-none flex flex-column flex-row-ns bg-white shadow-2 br4 mh2">
+                            <header class="img-child pv5 pl6 aspect-ratio--1x1 br4 br--left-ns overflow-hidden">
+                                <img
+                                    src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09"
+                                    alt=""
+                                >
+                            </header>
+                            <main class="measure flex flex-column">
+                                <section
+                                    class="mh3 flex-none flex flex-wrap-reverse flex-nowrap-ns items-center relative pb3"
+                                >
+                                    <div class="flex-auto mt3-ns nb3 self-start lh-title">
+                                        <div class="mh1 tracked-5 f-1 yellow">★★★★<span class="black-20">★</span>
+                                        </div>
+                                        <h2 class="blue f5 fw3">Basement</h2>
+                                    </div>
+                                    <div
+                                        class="bg-white flex-auto lh-title br4 tr ml2 mv2"
+                                        style="opacity: .97"
+                                    >
+                                        <h3 class="f1 tracked-1 fw6">
+                                            <a
+                                                href="http://"
+                                                class="link ph2"
+                                            >Cassandra</a>
+                                        </h3>
+                                        <p class="f-2">
+                                            Kind, Professional, Friendly
+                                        </p>
+                                    </div>
+                                    <div class="z-1 w-20-ns w-30 relative self-end nt4">
+                                        <div
+                                            class="flex-none aspect-ratio--1x1 w-100-l br-pill overflow-hidden shadow-3 relative img-child">
+                                            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91">
+                                        </div>
+                                        <div
+                                            class="f1-l f-2 f0-ns absolute grow-large white pa1 bottom-0 right-0 lh-solid hide-child flex items-center">
+                                            <div class="relative pa1 br-pill bg-blue">
+                                                <img
+                                                    style="height:1em;width:1em;"
+                                                    src="https://icongr.am/clarity/shield-check.svg?color=ffffff"
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="flex flex-wrap-reverse flex-nowrap-ns items-center justify-between">
+                                    <ol
+                                        class="absolute top-0 left-0 pa2 pa0-ns relative-ns flex flex-wrap items-center nl5-ns tc lh-title">
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">monthly</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                <sup class="nl1 fw6 f-3">$</sup>69 </p>
+                                        </li>
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">distance</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                3<sup class="nr1 fw6 f-3"> mi</sup></p>
+                                        </li>
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">size</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                56<sup class="nr1 fw6 f-3"> sf</sup>
+                                            </p>
+                                        </li>
+                                    </ol>
+                                    <p class="center measure measure-narrow-ns f-1 mv2 mh2-ns ph3 ph0-ns">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio atque corporis
+                                        qui
+                                        mollitia quis, blanditiis nam! Ducimus libero.
+                                    </p>
+                                </section>
+                                <ol class="f-2 pb2 flex overflow-x-auto ph3">
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🌡️
+                                        Climate Control
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚪
+                                        24/7 Access
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        ♿
+                                        Easy Entry
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚫
+                                        No Pets
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚭
+                                        Non-Smoking
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        ⌚
+                                        Time Flexibility
+                                    </li>
+                                </ol>
+                            </main>
+                        </li>
+                        <li
+                            class="animated fadeIn delay-4s relative mw5 mw-none-ns flex-none flex flex-column flex-row-ns bg-white shadow-2 br4 mh2">
+                            <header class="img-child pv5 pl6 aspect-ratio--1x1 br4 br--left-ns overflow-hidden">
+                                <img
+                                    src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09"
+                                    alt=""
+                                >
+                            </header>
+                            <main class="measure flex flex-column">
+                                <section
+                                    class="mh3 flex-none flex flex-wrap-reverse flex-nowrap-ns items-center relative pb3"
+                                >
+                                    <div class="flex-auto mt3-ns nb3 self-start lh-title">
+                                        <div class="mh1 tracked-5 f-1 yellow">★★★★<span class="black-20">★</span>
+                                        </div>
+                                        <h2 class="blue f5 fw3">Basement</h2>
+                                    </div>
+                                    <div
+                                        class="bg-white flex-auto lh-title br4 tr ml2 mv2"
+                                        style="opacity: .97"
+                                    >
+                                        <h3 class="f1 tracked-1 fw6">
+                                            <a
+                                                href="http://"
+                                                class="link ph2"
+                                            >Cassandra</a>
+                                        </h3>
+                                        <p class="f-2">
+                                            Kind, Professional, Friendly
+                                        </p>
+                                    </div>
+                                    <div class="z-1 w-20-ns w-30 relative self-end nt4">
+                                        <div
+                                            class="flex-none aspect-ratio--1x1 w-100-l br-pill overflow-hidden shadow-3 relative img-child">
+                                            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91">
+                                        </div>
+                                        <div
+                                            class="f1-l f-2 f0-ns absolute grow-large white pa1 bottom-0 right-0 lh-solid hide-child flex items-center">
+                                            <div class="relative pa1 br-pill bg-blue">
+                                                <img
+                                                    style="height:1em;width:1em;"
+                                                    src="https://icongr.am/clarity/shield-check.svg?color=ffffff"
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="flex flex-wrap-reverse flex-nowrap-ns items-center justify-between">
+                                    <ol
+                                        class="absolute top-0 left-0 pa2 pa0-ns relative-ns flex flex-wrap items-center nl5-ns tc lh-title">
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">monthly</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                <sup class="nl1 fw6 f-3">$</sup>69 </p>
+                                        </li>
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">distance</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                3<sup class="nr1 fw6 f-3"> mi</sup></p>
+                                        </li>
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">size</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                56<sup class="nr1 fw6 f-3"> sf</sup>
+                                            </p>
+                                        </li>
+                                    </ol>
+                                    <p class="center measure measure-narrow-ns f-1 mv2 mh2-ns ph3 ph0-ns">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio atque corporis
+                                        qui
+                                        mollitia quis, blanditiis nam! Ducimus libero.
+                                    </p>
+                                </section>
+                                <ol class="f-2 pb2 flex overflow-x-auto ph3">
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🌡️
+                                        Climate Control
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚪
+                                        24/7 Access
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        ♿
+                                        Easy Entry
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚫
+                                        No Pets
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚭
+                                        Non-Smoking
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        ⌚
+                                        Time Flexibility
+                                    </li>
+                                </ol>
+                            </main>
+                        </li>
+                        <li
+                            class="animated fadeIn delay-4s relative mw5 mw-none-ns flex-none flex flex-column flex-row-ns bg-white shadow-2 br4 mh2">
+                            <header class="img-child pv5 pl6 aspect-ratio--1x1 br4 br--left-ns overflow-hidden">
+                                <img
+                                    src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09"
+                                    alt=""
+                                >
+                            </header>
+                            <main class="measure flex flex-column">
+                                <section
+                                    class="mh3 flex-none flex flex-wrap-reverse flex-nowrap-ns items-center relative pb3"
+                                >
+                                    <div class="flex-auto mt3-ns nb3 self-start lh-title">
+                                        <div class="mh1 tracked-5 f-1 yellow">★★★★<span class="black-20">★</span>
+                                        </div>
+                                        <h2 class="blue f5 fw3">Basement</h2>
+                                    </div>
+                                    <div
+                                        class="bg-white flex-auto lh-title br4 tr ml2 mv2"
+                                        style="opacity: .97"
+                                    >
+                                        <h3 class="f1 tracked-1 fw6">
+                                            <a
+                                                href="http://"
+                                                class="link ph2"
+                                            >Cassandra</a>
+                                        </h3>
+                                        <p class="f-2">
+                                            Kind, Professional, Friendly
+                                        </p>
+                                    </div>
+                                    <div class="z-1 w-20-ns w-30 relative self-end nt4">
+                                        <div
+                                            class="flex-none aspect-ratio--1x1 w-100-l br-pill overflow-hidden shadow-3 relative img-child">
+                                            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91">
+                                        </div>
+                                        <div
+                                            class="f1-l f-2 f0-ns absolute grow-large white pa1 bottom-0 right-0 lh-solid hide-child flex items-center">
+                                            <div class="relative pa1 br-pill bg-blue">
+                                                <img
+                                                    style="height:1em;width:1em;"
+                                                    src="https://icongr.am/clarity/shield-check.svg?color=ffffff"
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="flex flex-wrap-reverse flex-nowrap-ns items-center justify-between">
+                                    <ol
+                                        class="absolute top-0 left-0 pa2 pa0-ns relative-ns flex flex-wrap items-center nl5-ns tc lh-title">
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">monthly</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                <sup class="nl1 fw6 f-3">$</sup>69 </p>
+                                        </li>
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">distance</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                3<sup class="nr1 fw6 f-3"> mi</sup></p>
+                                        </li>
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">size</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                56<sup class="nr1 fw6 f-3"> sf</sup>
+                                            </p>
+                                        </li>
+                                    </ol>
+                                    <p class="center measure measure-narrow-ns f-1 mv2 mh2-ns ph3 ph0-ns">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio atque corporis
+                                        qui
+                                        mollitia quis, blanditiis nam! Ducimus libero.
+                                    </p>
+                                </section>
+                                <ol class="f-2 pb2 flex overflow-x-auto ph3">
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🌡️
+                                        Climate Control
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚪
+                                        24/7 Access
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        ♿
+                                        Easy Entry
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚫
+                                        No Pets
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚭
+                                        Non-Smoking
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        ⌚
+                                        Time Flexibility
+                                    </li>
+                                </ol>
+                            </main>
+                        </li>
+                        <li
+                            class="animated fadeIn delay-4s relative mw5 mw-none-ns flex-none flex flex-column flex-row-ns bg-white shadow-2 br4 mh2">
+                            <header class="img-child pv5 pl6 aspect-ratio--1x1 br4 br--left-ns overflow-hidden">
+                                <img
+                                    src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09"
+                                    alt=""
+                                >
+                            </header>
+                            <main class="measure flex flex-column">
+                                <section
+                                    class="mh3 flex-none flex flex-wrap-reverse flex-nowrap-ns items-center relative pb3"
+                                >
+                                    <div class="flex-auto mt3-ns nb3 self-start lh-title">
+                                        <div class="mh1 tracked-5 f-1 yellow">★★★★<span class="black-20">★</span>
+                                        </div>
+                                        <h2 class="blue f5 fw3">Basement</h2>
+                                    </div>
+                                    <div
+                                        class="bg-white flex-auto lh-title br4 tr ml2 mv2"
+                                        style="opacity: .97"
+                                    >
+                                        <h3 class="f1 tracked-1 fw6">
+                                            <a
+                                                href="http://"
+                                                class="link ph2"
+                                            >Cassandra</a>
+                                        </h3>
+                                        <p class="f-2">
+                                            Kind, Professional, Friendly
+                                        </p>
+                                    </div>
+                                    <div class="z-1 w-20-ns w-30 relative self-end nt4">
+                                        <div
+                                            class="flex-none aspect-ratio--1x1 w-100-l br-pill overflow-hidden shadow-3 relative img-child">
+                                            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91">
+                                        </div>
+                                        <div
+                                            class="f1-l f-2 f0-ns absolute grow-large white pa1 bottom-0 right-0 lh-solid hide-child flex items-center">
+                                            <div class="relative pa1 br-pill bg-blue">
+                                                <img
+                                                    style="height:1em;width:1em;"
+                                                    src="https://icongr.am/clarity/shield-check.svg?color=ffffff"
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="flex flex-wrap-reverse flex-nowrap-ns items-center justify-between">
+                                    <ol
+                                        class="absolute top-0 left-0 pa2 pa0-ns relative-ns flex flex-wrap items-center nl5-ns tc lh-title">
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">monthly</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                <sup class="nl1 fw6 f-3">$</sup>69 </p>
+                                        </li>
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">distance</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                3<sup class="nr1 fw6 f-3"> mi</sup></p>
+                                        </li>
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">size</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                56<sup class="nr1 fw6 f-3"> sf</sup>
+                                            </p>
+                                        </li>
+                                    </ol>
+                                    <p class="center measure measure-narrow-ns f-1 mv2 mh2-ns ph3 ph0-ns">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio atque corporis
+                                        qui
+                                        mollitia quis, blanditiis nam! Ducimus libero.
+                                    </p>
+                                </section>
+                                <ol class="f-2 pb2 flex overflow-x-auto ph3">
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🌡️
+                                        Climate Control
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚪
+                                        24/7 Access
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        ♿
+                                        Easy Entry
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚫
+                                        No Pets
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚭
+                                        Non-Smoking
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        ⌚
+                                        Time Flexibility
+                                    </li>
+                                </ol>
+                            </main>
+                        </li>
+                        <li
+                            class="animated fadeIn delay-4s relative mw5 mw-none-ns flex-none flex flex-column flex-row-ns bg-white shadow-2 br4 mh2">
+                            <header class="img-child pv5 pl6 aspect-ratio--1x1 br4 br--left-ns overflow-hidden">
+                                <img
+                                    src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09"
+                                    alt=""
+                                >
+                            </header>
+                            <main class="measure flex flex-column">
+                                <section
+                                    class="mh3 flex-none flex flex-wrap-reverse flex-nowrap-ns items-center relative pb3"
+                                >
+                                    <div class="flex-auto mt3-ns nb3 self-start lh-title">
+                                        <div class="mh1 tracked-5 f-1 yellow">★★★★<span class="black-20">★</span>
+                                        </div>
+                                        <h2 class="blue f5 fw3">Basement</h2>
+                                    </div>
+                                    <div
+                                        class="bg-white flex-auto lh-title br4 tr ml2 mv2"
+                                        style="opacity: .97"
+                                    >
+                                        <h3 class="f1 tracked-1 fw6">
+                                            <a
+                                                href="http://"
+                                                class="link ph2"
+                                            >Cassandra</a>
+                                        </h3>
+                                        <p class="f-2">
+                                            Kind, Professional, Friendly
+                                        </p>
+                                    </div>
+                                    <div class="z-1 w-20-ns w-30 relative self-end nt4">
+                                        <div
+                                            class="flex-none aspect-ratio--1x1 w-100-l br-pill overflow-hidden shadow-3 relative img-child">
+                                            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91">
+                                        </div>
+                                        <div
+                                            class="f1-l f-2 f0-ns absolute grow-large white pa1 bottom-0 right-0 lh-solid hide-child flex items-center">
+                                            <div class="relative pa1 br-pill bg-blue">
+                                                <img
+                                                    style="height:1em;width:1em;"
+                                                    src="https://icongr.am/clarity/shield-check.svg?color=ffffff"
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="flex flex-wrap-reverse flex-nowrap-ns items-center justify-between">
+                                    <ol
+                                        class="absolute top-0 left-0 pa2 pa0-ns relative-ns flex flex-wrap items-center nl5-ns tc lh-title">
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">monthly</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                <sup class="nl1 fw6 f-3">$</sup>69 </p>
+                                        </li>
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">distance</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                3<sup class="nr1 fw6 f-3"> mi</sup></p>
+                                        </li>
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">size</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                56<sup class="nr1 fw6 f-3"> sf</sup>
+                                            </p>
+                                        </li>
+                                    </ol>
+                                    <p class="center measure measure-narrow-ns f-1 mv2 mh2-ns ph3 ph0-ns">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio atque corporis
+                                        qui
+                                        mollitia quis, blanditiis nam! Ducimus libero.
+                                    </p>
+                                </section>
+                                <ol class="f-2 pb2 flex overflow-x-auto ph3">
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🌡️
+                                        Climate Control
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚪
+                                        24/7 Access
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        ♿
+                                        Easy Entry
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚫
+                                        No Pets
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚭
+                                        Non-Smoking
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        ⌚
+                                        Time Flexibility
+                                    </li>
+                                </ol>
+                            </main>
+                        </li>
+                        <li
+                            class="animated fadeIn delay-4s relative mw5 mw-none-ns flex-none flex flex-column flex-row-ns bg-white shadow-2 br4 mh2">
+                            <header class="img-child pv5 pl6 aspect-ratio--1x1 br4 br--left-ns overflow-hidden">
+                                <img
+                                    src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09"
+                                    alt=""
+                                >
+                            </header>
+                            <main class="measure flex flex-column">
+                                <section
+                                    class="mh3 flex-none flex flex-wrap-reverse flex-nowrap-ns items-center relative pb3"
+                                >
+                                    <div class="flex-auto mt3-ns nb3 self-start lh-title">
+                                        <div class="mh1 tracked-5 f-1 yellow">★★★★<span class="black-20">★</span>
+                                        </div>
+                                        <h2 class="blue f5 fw3">Basement</h2>
+                                    </div>
+                                    <div
+                                        class="bg-white flex-auto lh-title br4 tr ml2 mv2"
+                                        style="opacity: .97"
+                                    >
+                                        <h3 class="f1 tracked-1 fw6">
+                                            <a
+                                                href="http://"
+                                                class="link ph2"
+                                            >Cassandra</a>
+                                        </h3>
+                                        <p class="f-2">
+                                            Kind, Professional, Friendly
+                                        </p>
+                                    </div>
+                                    <div class="z-1 w-20-ns w-30 relative self-end nt4">
+                                        <div
+                                            class="flex-none aspect-ratio--1x1 w-100-l br-pill overflow-hidden shadow-3 relative img-child">
+                                            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91">
+                                        </div>
+                                        <div
+                                            class="f1-l f-2 f0-ns absolute grow-large white pa1 bottom-0 right-0 lh-solid hide-child flex items-center">
+                                            <div class="relative pa1 br-pill bg-blue">
+                                                <img
+                                                    style="height:1em;width:1em;"
+                                                    src="https://icongr.am/clarity/shield-check.svg?color=ffffff"
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="flex flex-wrap-reverse flex-nowrap-ns items-center justify-between">
+                                    <ol
+                                        class="absolute top-0 left-0 pa2 pa0-ns relative-ns flex flex-wrap items-center nl5-ns tc lh-title">
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">monthly</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                <sup class="nl1 fw6 f-3">$</sup>69 </p>
+                                        </li>
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">distance</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                3<sup class="nr1 fw6 f-3"> mi</sup></p>
+                                        </li>
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">size</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                56<sup class="nr1 fw6 f-3"> sf</sup>
+                                            </p>
+                                        </li>
+                                    </ol>
+                                    <p class="center measure measure-narrow-ns f-1 mv2 mh2-ns ph3 ph0-ns">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio atque corporis
+                                        qui
+                                        mollitia quis, blanditiis nam! Ducimus libero.
+                                    </p>
+                                </section>
+                                <ol class="f-2 pb2 flex overflow-x-auto ph3">
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🌡️
+                                        Climate Control
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚪
+                                        24/7 Access
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        ♿
+                                        Easy Entry
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚫
+                                        No Pets
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚭
+                                        Non-Smoking
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        ⌚
+                                        Time Flexibility
+                                    </li>
+                                </ol>
+                            </main>
+                        </li>
+                        <li
+                            class="animated fadeIn delay-4s relative mw5 mw-none-ns flex-none flex flex-column flex-row-ns bg-white shadow-2 br4 mh2">
+                            <header class="img-child pv5 pl6 aspect-ratio--1x1 br4 br--left-ns overflow-hidden">
+                                <img
+                                    src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09"
+                                    alt=""
+                                >
+                            </header>
+                            <main class="measure flex flex-column">
+                                <section
+                                    class="mh3 flex-none flex flex-wrap-reverse flex-nowrap-ns items-center relative pb3"
+                                >
+                                    <div class="flex-auto mt3-ns nb3 self-start lh-title">
+                                        <div class="mh1 tracked-5 f-1 yellow">★★★★<span class="black-20">★</span>
+                                        </div>
+                                        <h2 class="blue f5 fw3">Basement</h2>
+                                    </div>
+                                    <div
+                                        class="bg-white flex-auto lh-title br4 tr ml2 mv2"
+                                        style="opacity: .97"
+                                    >
+                                        <h3 class="f1 tracked-1 fw6">
+                                            <a
+                                                href="http://"
+                                                class="link ph2"
+                                            >Cassandra</a>
+                                        </h3>
+                                        <p class="f-2">
+                                            Kind, Professional, Friendly
+                                        </p>
+                                    </div>
+                                    <div class="z-1 w-20-ns w-30 relative self-end nt4">
+                                        <div
+                                            class="flex-none aspect-ratio--1x1 w-100-l br-pill overflow-hidden shadow-3 relative img-child">
+                                            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91">
+                                        </div>
+                                        <div
+                                            class="f1-l f-2 f0-ns absolute grow-large white pa1 bottom-0 right-0 lh-solid hide-child flex items-center">
+                                            <div class="relative pa1 br-pill bg-blue">
+                                                <img
+                                                    style="height:1em;width:1em;"
+                                                    src="https://icongr.am/clarity/shield-check.svg?color=ffffff"
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="flex flex-wrap-reverse flex-nowrap-ns items-center justify-between">
+                                    <ol
+                                        class="absolute top-0 left-0 pa2 pa0-ns relative-ns flex flex-wrap items-center nl5-ns tc lh-title">
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">monthly</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                <sup class="nl1 fw6 f-3">$</sup>69 </p>
+                                        </li>
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">distance</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                3<sup class="nr1 fw6 f-3"> mi</sup></p>
+                                        </li>
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">size</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                56<sup class="nr1 fw6 f-3"> sf</sup>
+                                            </p>
+                                        </li>
+                                    </ol>
+                                    <p class="center measure measure-narrow-ns f-1 mv2 mh2-ns ph3 ph0-ns">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio atque corporis
+                                        qui
+                                        mollitia quis, blanditiis nam! Ducimus libero.
+                                    </p>
+                                </section>
+                                <ol class="f-2 pb2 flex overflow-x-auto ph3">
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🌡️
+                                        Climate Control
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚪
+                                        24/7 Access
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        ♿
+                                        Easy Entry
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚫
+                                        No Pets
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚭
+                                        Non-Smoking
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        ⌚
+                                        Time Flexibility
+                                    </li>
+                                </ol>
+                            </main>
+                        </li>
+                        <li
+                            class="animated fadeIn delay-4s relative mw5 mw-none-ns flex-none flex flex-column flex-row-ns bg-white shadow-2 br4 mh2">
+                            <header class="img-child pv5 pl6 aspect-ratio--1x1 br4 br--left-ns overflow-hidden">
+                                <img
+                                    src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09"
+                                    alt=""
+                                >
+                            </header>
+                            <main class="measure flex flex-column">
+                                <section
+                                    class="mh3 flex-none flex flex-wrap-reverse flex-nowrap-ns items-center relative pb3"
+                                >
+                                    <div class="flex-auto mt3-ns nb3 self-start lh-title">
+                                        <div class="mh1 tracked-5 f-1 yellow">★★★★<span class="black-20">★</span>
+                                        </div>
+                                        <h2 class="blue f5 fw3">Basement</h2>
+                                    </div>
+                                    <div
+                                        class="bg-white flex-auto lh-title br4 tr ml2 mv2"
+                                        style="opacity: .97"
+                                    >
+                                        <h3 class="f1 tracked-1 fw6">
+                                            <a
+                                                href="http://"
+                                                class="link ph2"
+                                            >Cassandra</a>
+                                        </h3>
+                                        <p class="f-2">
+                                            Kind, Professional, Friendly
+                                        </p>
+                                    </div>
+                                    <div class="z-1 w-20-ns w-30 relative self-end nt4">
+                                        <div
+                                            class="flex-none aspect-ratio--1x1 w-100-l br-pill overflow-hidden shadow-3 relative img-child">
+                                            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91">
+                                        </div>
+                                        <div
+                                            class="f1-l f-2 f0-ns absolute grow-large white pa1 bottom-0 right-0 lh-solid hide-child flex items-center">
+                                            <div class="relative pa1 br-pill bg-blue">
+                                                <img
+                                                    style="height:1em;width:1em;"
+                                                    src="https://icongr.am/clarity/shield-check.svg?color=ffffff"
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="flex flex-wrap-reverse flex-nowrap-ns items-center justify-between">
+                                    <ol
+                                        class="absolute top-0 left-0 pa2 pa0-ns relative-ns flex flex-wrap items-center nl5-ns tc lh-title">
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">monthly</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                <sup class="nl1 fw6 f-3">$</sup>69 </p>
+                                        </li>
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">distance</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                3<sup class="nr1 fw6 f-3"> mi</sup></p>
+                                        </li>
+                                        <li
+                                            class="mv1 ml2 ba b--black-10 bg-white overflow-hidden br3 flex flex-column-reverse items-stretch tc">
+                                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw7 tracked-2">size</h3>
+                                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                                56<sup class="nr1 fw6 f-3"> sf</sup>
+                                            </p>
+                                        </li>
+                                    </ol>
+                                    <p class="center measure measure-narrow-ns f-1 mv2 mh2-ns ph3 ph0-ns">
+                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio atque corporis
+                                        qui
+                                        mollitia quis, blanditiis nam! Ducimus libero.
+                                    </p>
+                                </section>
+                                <ol class="f-2 pb2 flex overflow-x-auto ph3">
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🌡️
+                                        Climate Control
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚪
+                                        24/7 Access
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        ♿
+                                        Easy Entry
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚫
+                                        No Pets
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        🚭
+                                        Non-Smoking
+                                    </li>
+                                    <li
+                                        class="flex-none flex items-center blue grow bg-white hover-white hover-bg-blue ba b--black-10 ma1 br-pill ph3 pv1 lh-phi">
+                                        ⌚
+                                        Time Flexibility
+                                    </li>
+                                </ol>
+                            </main>
+                        </li>
+                        <li>
+                            <button
+                                type="button"
+                                class="bg-blue white ma5"
+                            >Load More</button>
+                        </li>
+                    </ol>
+                </section>
+
+                <form class="bg-white-90 relative shadow-5 br5-ns br4 pa2-ns pa1 ma2-ns nb4">
+                    <div class="flex pa1">
+                        <input
+                            class="flex-auto ma1"
+                            type="text"
+                            placeholder="Your location"
+                        >
+                        <button
+                            type="button"
+                            class="bg-orange flex-none ma1 white hover-bg-navy"
+                        >Find Storage</button>
+                    </div>
+                </form>
+            </header>
+            <section class="vh-50 bg-black-025"></section>
+        </main>
+
+
+        <footer class="">
+            <nav class="flex f2 tc white">
+                <a
+                    class="flex-auto relative db pa2 bg-black-40"
+                    href="mailto:hello@roostorage.com"
+                >
+                    <img
+                        class="db center ma1"
+                        style="width:1em;height:1em;"
+                        src="https://icongr.am/clarity/email.svg?color=ffffff"
+                    />
+
+                    <span class="dn di-ns f-1">hello@roostorage.com</span>
+                </a>
+                <a
+                    style="background-color: #3C5A99"
+                    class="flex-auto relative db pa2"
+                    href="https://www.facebook.com/RooStorage"
+                >
+                    <img
+                        class="db center ma1"
+                        style="width:1em;height:1em;"
+                        src="https://icongr.am/simple/facebook.svg?color=ffffff"
+                    />
+
+                    <span class="dn di-ns f-1">fb.com/roostorage</span>
+                </a>
+                <a
+                    style="background-color: #833AB4"
+                    class="flex-auto relative db pa2"
+                    href="https://www.instagram.com/roostorage"
+                >
+                    <img
+                        class="db center ma1"
+                        style="width:1em;height:1em;"
+                        src="https://icongr.am/simple/instagram.svg?color=ffffff"
+                    />
+
+                    <span class="dn di-ns f-1">@roostorage</span>
+                </a>
+            </nav>
+            <nav class="flex flex-wrap f-2 bg-blue justify-around pa2">
+                <a
+                    class="ma1 white"
+                    href="https://s3.us-east-2.amazonaws.com/roo-image-storage/policies/terms-of-service.pdf"
+                > Terms of Service </a>
+                <a
+                    class="ma1 white"
+                    href="https://s3.us-east-2.amazonaws.com/roo-image-storage/policies/privacy-policy.pdf"
+                > Privacy Policy </a>
+                <a
+                    class="ma1 white"
+                    href="https://s3.us-east-2.amazonaws.com/roo-image-storage/policies/nondiscrimination-policy.pdf"
+                > Nondiscriminiation Policy </a>
+            </nav>
+            <p class="f-3 tracked-2 tc pa2 bg-navy white-50 ttu fw7">Copyright © Roo 2019</p>
+        </footer>
+
+</html>
