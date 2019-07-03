@@ -113,68 +113,104 @@
                             sint.
                         </p>
                     </div>
-                    <form class="ma2 relative flex br-pill f1">
-                        <button
-                            type="button"
-                            style="border-top-left-radius: 5rem; border-bottom-left-radius: 5rem; border-bottom-right-radius:1rem; border-top-right-radius:1rem;"
-                            class="flex-none overflow-hidden bg-white ba bw2 blue hover-b--transparent hover-bg-navy pa2 flex items-center justify-center lh-solid shadow-2"
-                        >
-                            <img
-                                class="db ml2"
-                                style="height:1em;width:1em;"
-                                src="https://icongr.am/material/crosshairs-gps.svg?color=007ac3"
+
+                    <!-- form -->
+                    <form class="center mv3 relative measure-narrow hide-child z-5">
+                        <label
+                            for="locationSearch"
+                            class="child absolute w-100 white mh2 mv1 tc"
+                            style="bottom:100%;"
+                        >Find a listing</label>
+                        <style>
+                            .hover-br--top:hover,
+                            .hover-br--top:focus {
+                                border-bottom-left-radius: 0;
+                                border-bottom-right-radius: 0;
+                            }
+
+                        </style>
+                        <div class="relative f1 z-1 flex shadow-2 br4 overflow-hidden hover-br--top">
+                            <input
+                                class="bg-white br0 b--white br4 br--top br--left"
+                                type="search"
+                                autocomplete="address-line1"
+                                placeholder="Enter your address..."
+                                id="locationSearch"
+                                value=""
                             >
-                        </button>
-                        <div class="relative flex-auto flex hide-child">
-                            <div class="absolute absolute--fill mh1 flex br3 lh-phi bg-white blue shadow-2">
-                                <label
-                                    class="flex-auto flex items-center justify-center br3 br--left bg-blue white"
-                                    for="COMO"
-                                >Columbia</label>
-                                <label
-                                    class="flex-auto dn flex-ns items-center justify-center br3 br--right f-1 bt bb br bw2 content-box b--blue"
-                                    for="STL"
-                                >St. Louis</label>
-                            </div>
-                            <div class="relative self-stretch flex-auto flex child">
-                                <label
-                                    for="myLocation"
-                                    class="clip"
-                                >Your Location:</label>
-                                <input
-                                    type="text"
-                                    class="br0 bn self-stretch"
-                                    list="locations"
-                                    id="myLocation"
-                                    name="myLocation"
-                                />
-                                <datalist id="locations">
-                                    <option
-                                        id="STL"
-                                        value="St. Louis, Missouri"
-                                    >
-                                    <option
-                                        id="COMO"
-                                        value="Columbia, Missouri"
-                                    >
-                                    <option
-                                        id="GPS"
-                                        value="Use My GPS"
-                                    >
-                                </datalist>
-                            </div>
+                            <button
+                                type="button"
+                                class="bg-blue hover-bg-navy white br0"
+                            ><img
+                                    class="rotate-90"
+                                    style="width: 1em; height: 1em;"
+                                    src="https://icongr.am/clarity/angle.svg?color=ffffff"
+                                    alt=""
+                                ></button>
                         </div>
-                        <button
-                            type="button"
-                            style="border-top-right-radius: 5rem; border-bottom-right-radius: 5rem; border-bottom-left-radius:1rem; border-top-left-radius:1rem;"
-                            class="flex-none overflow-hidden bg-white ba bw2 blue hover-b--transparent hover-bg-navy pa2 flex items-center justify-center lh-solid shadow-2"
+                        <div
+                            style="top:100%"
+                            class="absolute w-100 bg-white br4 br--bottom shadow-2 child"
                         >
-                            <img
-                                class="db mr2"
-                                style="height:1em;width:1em;"
-                                src="https://icongr.am/clarity/search.svg?color=007ac3"
-                            >
-                        </button>
+                            <menu class="flex tc">
+                                <a
+                                    href="#"
+                                    class="flex-auto flex justify-center items-center blue pv3 bw2 br0 bb b--transparent hover-b--blue"
+                                ><img
+                                        class="mr1"
+                                        style="width: 1em; height: 1em;"
+                                        src="https://icongr.am/clarity/blocks-group.svg?color=007ac3"
+                                        alt=""
+                                    >some boxes</a>
+                                <a
+                                    href="#"
+                                    class="flex-auto flex justify-center items-center blue pv3 bw2 br0 bb b--transparent hover-b--blue"
+                                ><img
+                                        class="mr1"
+                                        style="width: 1em; height: 1em;"
+                                        src="https://icongr.am/clarity/campervan.svg?color=007ac3"
+                                        alt=""
+                                    >a vehicle</a>
+                            </menu>
+                            <nav class="fw7">
+                                <a
+                                    href="#"
+                                    class="link glow flex items-center pa2 bt b--black-10"
+                                >
+                                    <img
+                                        class="ma2"
+                                        style="width: 1em; height: 1em;"
+                                        src="https://icongr.am/clarity/compass.svg?color=007ac3"
+                                        alt=""
+                                    >
+                                    Use Current Location
+                                </a>
+                                <a
+                                    href="#"
+                                    class="link glow flex items-center pa2 bt b--black-10"
+                                >
+                                    <img
+                                        class="ma2 o-40"
+                                        style="width: 1em; height: 1em;"
+                                        src="https://icongr.am/clarity/map-marker.svg?color=002b64"
+                                        alt=""
+                                    >
+                                    Columbia, MO, USA
+                                </a>
+                                <a
+                                    href="#"
+                                    class="link glow flex items-center pa2 bt b--black-10"
+                                >
+                                    <img
+                                        class="ma2 o-40"
+                                        style="width: 1em; height: 1em;"
+                                        src="https://icongr.am/clarity/map-marker.svg?color=002b64"
+                                        alt=""
+                                    >
+                                    St. Louis, MO, USA
+                                </a>
+                            </nav>
+                        </div>
                     </form>
                 </div>
             </header>
