@@ -1,0 +1,761 @@
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Roo</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        >
+        <meta
+            name="description"
+            content="Find affordable storage in your neighborhood and only pay for the days that you need it. We make storage simple. Roo is a neighborhood friendly platform that connects those with extra space to those in need of storage. Sign up now to ensure you get storage for the summer!"
+        >
+        <meta
+            name="keywords"
+            content="Storage,Roo Storage,Roo,roo,storage,college"
+        >
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet"
+        >
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+        >
+        <link
+            rel="stylesheet"
+            href="style.css"
+        >
+
+        <style>
+            @keyframes floating {
+                0% {
+                    transform: rotate(-15deg) scale(0.85) translateX(0%) translateY(-200vh);
+                }
+
+                50% {
+                    transform: rotate(0deg) scale(1) translateX(50%);
+                }
+
+                100% {
+                    transform: rotate(15deg) scale(0.5) translateX(100%) translateY(200vh);
+                }
+            }
+
+            .floaty.animated img {
+                animation-name: floating;
+                will-change: transform;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                /* animation-play-state: paused; */
+            }
+
+            .floaty.n2 img {
+                animation-delay: -0.75s;
+            }
+
+            .floaty.n3 img {
+                animation-delay: -1.25s;
+            }
+
+            .floaty.n4 img {
+                animation-delay: -3s;
+            }
+
+            .floaty.n5 img {
+                animation-delay: -3.75s;
+            }
+
+            .floaty.n6 img {
+                animation-delay: -4.25s;
+            }
+
+            .floaty.n7 img {
+                animation-delay: -5s;
+            }
+
+            .floaty.n8 img {
+                animation-delay: -5.75s;
+            }
+
+            .floaty.n14 img {
+                animation-delay: -6.25s;
+            }
+
+            .floaty.n12 img {
+                animation-delay: -7s;
+            }
+
+            .floaty.n11 img {
+                animation-delay: -7.75s;
+            }
+
+            .floaty.n10 img {
+                animation-delay: -8.25s;
+            }
+
+            .floaty.n13 img {
+                animation-delay: -9s;
+            }
+
+
+            .floaty.n9 img {
+                animation-delay: -9.75s;
+            }
+
+            .floaty.n15 img {
+                animation-delay: -10.25s;
+            }
+
+        </style>
+    </head>
+
+    <body class="navy">
+        <!-- NAVBAR WILL GO HERE -->
+        <header class="relative flex flex-column items-start bg-yellow min-vh-100 pb7 nb7">
+            <div class="absolute absolute--fill flex overflow-hidden">
+                <div
+                    class="absolute absolute--fill w-100"
+                    style="
+                        background-size: 100vw; 
+                        background-image: 
+                        radial-gradient(ellipse farthest-corner at 38% 38%, #da3f00aa 0%, #da3f00ff 100% );
+                        "
+                ></div>
+                <div class="ml5 measure flex-none dn db-ns w-100-l"></div>
+                <div class="flex-auto relative flex flex-wrap flex-auto pa4 f4">
+                    <div class="floaty relative animated flex items-center justify-center flex-auto w-20">
+                        <img
+                            style="object-fit: contain; object-position: center; width: 3em; height: 3em;"
+                            src="https://icongr.am/clarity/home.svg?color=ee8866"
+                            alt=""
+                        >
+                    </div>
+                    <div class="floaty n7 relative animated flex items-center justify-center flex-auto w-20">
+                        <img
+                            style="object-fit: contain; object-position: center; width: 3em; height: 3em;"
+                            src="https://icongr.am/clarity/calendar.svg?color=ee8866"
+                            alt=""
+                        >
+                    </div>
+                    <div class="floaty n6 relative animated flex items-center justify-center flex-auto w-20">
+                        <img
+                            style="object-fit: contain; object-position: center; width: 3em; height: 3em;"
+                            src="https://icongr.am/clarity/lock.svg?color=ee8866"
+                            alt=""
+                        >
+                    </div>
+                    <div class="floaty n14 relative animated flex items-center justify-center flex-auto w-20">
+                        <img
+                            style="object-fit: contain; object-position: center; width: 3em; height: 3em;"
+                            src="https://icongr.am/clarity/archive.svg?color=ee8866"
+                            alt=""
+                        >
+                    </div>
+                    <div class="floaty n10 relative animated flex items-center justify-center flex-auto w-20">
+                        <img
+                            style="object-fit: contain; object-position: center; width: 3em; height: 3em;"
+                            src="https://icongr.am/clarity/thumbs-up.svg?color=ee8866"
+                            alt=""
+                        >
+                    </div>
+                    <div class="floaty n11 relative animated flex items-center justify-center flex-auto w-20">
+                        <img
+                            style="object-fit: contain; object-position: center; width: 3em; height: 3em;"
+                            src="https://icongr.am/clarity/happy-face.svg?color=ee8866"
+                            alt=""
+                        >
+                    </div>
+                    <div class="floaty n2 relative animated flex items-center justify-center flex-auto w-20">
+                        <img
+                            style="object-fit: contain; object-position: center; width: 3em; height: 3em;"
+                            src="https://icongr.am/clarity/cog.svg?color=ee8866"
+                            alt=""
+                        >
+                    </div>
+                    <div class="floaty n3 relative animated flex items-center justify-center flex-auto w-20">
+                        <img
+                            style="object-fit: contain; object-position: center; width: 3em; height: 3em;"
+                            src="https://icongr.am/clarity/check.svg?color=ee8866"
+                            alt=""
+                        >
+                    </div>
+                    <div class="floaty n9 relative animated flex items-center justify-center flex-auto w-20">
+                        <img
+                            style="object-fit: contain; object-position: center; width: 3em; height: 3em;"
+                            src="https://icongr.am/clarity/shield.svg?color=ee8866"
+                            alt=""
+                        >
+                    </div>
+                    <div class="floaty n15 relative animated flex items-center justify-center flex-auto w-20">
+                        <img
+                            style="object-fit: contain; object-position: center; width: 3em; height: 3em;"
+                            src="https://icongr.am/clarity/bundle.svg?color=ee8866"
+                            alt=""
+                        >
+                    </div>
+                    <div class="floaty n8 relative animated flex items-center justify-center flex-auto w-20">
+                        <img
+                            style="object-fit: contain; object-position: center; width: 3em; height: 3em;"
+                            src="https://icongr.am/clarity/trailer.svg?color=ee8866"
+                            alt=""
+                        >
+                    </div>
+                    <div class="floaty n12 relative animated flex items-center justify-center flex-auto w-20">
+                        <img
+                            style="object-fit: contain; object-position: center; width: 3em; height: 3em;"
+                            src="https://icongr.am/clarity/share.svg?color=ee8866"
+                            alt=""
+                        >
+                    </div>
+                    <div class="floaty n13 relative animated flex items-center justify-center flex-auto w-20">
+                        <img
+                            style="object-fit: contain; object-position: center; width: 3em; height: 3em;"
+                            src="https://icongr.am/clarity/blocks-group.svg?color=ee8866"
+                            alt=""
+                        >
+                    </div>
+                    <div class="floaty n4 relative animated flex items-center justify-center flex-auto w-20">
+                        <img
+                            style="object-fit: contain; object-position: center; width: 3em; height: 3em;"
+                            src="https://icongr.am/clarity/user.svg?color=ee8866"
+                            alt=""
+                        >
+                    </div>
+                    <div class="floaty n5 relative animated flex items-center justify-center flex-auto w-20">
+                        <img
+                            style="object-fit: contain; object-position: center; width: 3em; height: 3em;"
+                            src="https://icongr.am/clarity/star.svg?color=ee8866"
+                            alt=""
+                        >
+                    </div>
+                </div>
+                <div
+                    class="absolute absolute--fill w-100"
+                    style="
+                    background-size: 300vw; 
+                    background-image: 
+                    radial-gradient(ellipse farthest-side at 38% 0%, #da3f0000 62%, rgba(255,255,255,0.9) 84% ),
+                    radial-gradient(ellipse farthest-side at 38% 0%, #da3f0000 38%, rgba(255,255,255,1) 100% )
+                    ;
+                    "
+                ></div>
+            </div>
+            <style>
+                @media screen and (min-width: 30em) {
+                    .sticky-ns {
+                        position: relative;
+                        position: sticky;
+                    }
+                }
+
+            </style>
+            <a
+                class="sticky-ns relative top-0 nb7 mt5-l mt3-ns mt5 nl2 pv3 ph5-l ph4-ns z-2 self-start-ns"
+                href="/"
+            ><img
+                    class="w3-ns w-30 w4 db bg-orange br-100 center"
+                    src="https://s3.us-east-2.amazonaws.com/roo-image-storage/static-images/logo/Tight/PNG/White.png"
+                >
+            </a>
+            <div class="relative mh5-l mh4-ns mh3 mt7 pt5-l pt3-ns mb3 measure br-100 white tc tl-ns">
+                <h2 class="mv3-ns mv2 f4-ns f3 lh-title">
+                    Storage Made Simple
+                </h2>
+                <p class="mv3-ns mv2 f1-ns f0 lh-copy">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed placeat nesciunt temporibus
+                    culpa quos, quas voluptate aut? Nesciunt, itaque?
+                </p>
+                <form class="relative f1 measure-narrow hide-child z-1 mv4-l mh0-ns ma3 pt3 tl flex-ns fw7 tracked-1">
+                    <label
+                        for="locationSearch"
+                        class="child f-1 tracked-1 fw7 i lh-solid absolute top--1 w-100 white ma3 tl"
+                    >Find a listing</label>
+                    <style>
+                        .hover-br--top:hover,
+                        .hover-br--top:focus {
+                            border-bottom-left-radius: 0;
+                            border-bottom-right-radius: 0;
+                        }
+
+                    </style>
+                    <div class="relative z-1 w-100 flex shadow-2 br4 overflow-hidden hover-br--top">
+                        <input
+                            class="bg-white br0 b--white br4 br--top br--left"
+                            type="search"
+                            autocomplete="address-line1"
+                            placeholder="Enter your address..."
+                            id="locationSearch"
+                            value=""
+                        >
+                        <button
+                            type="button"
+                            class="bg-blue hover-bg-navy white br0"
+                        ><img
+                                class="rotate-90"
+                                style="width: 1em; height: 1em;"
+                                src="https://icongr.am/clarity/angle.svg?color=ffffff"
+                                alt=""
+                            ></button>
+                    </div>
+                    <div
+                        style="top:100%"
+                        class="absolute w-100 bg-white br4 br--bottom shadow-2 child bb bl br b--black-10 bw2"
+                    >
+                        <menu class="flex tc">
+                            <a
+                                href="#"
+                                class="flex-auto flex justify-center items-center blue pv3 bw2 br0 bb b--transparent hover-b--blue"
+                            ><img
+                                    class="mr1"
+                                    style="width: 1em; height: 1em;"
+                                    src="https://icongr.am/clarity/blocks-group.svg?color=007ac3"
+                                    alt=""
+                                >some boxes</a>
+                            <a
+                                href="#"
+                                class="flex-auto flex justify-center items-center blue pv3 bw2 br0 bb b--transparent hover-b--blue"
+                            ><img
+                                    class="mr1"
+                                    style="width: 1em; height: 1em;"
+                                    src="https://icongr.am/clarity/campervan.svg?color=007ac3"
+                                    alt=""
+                                >a vehicle</a>
+                        </menu>
+                        <nav class="fw7">
+                            <a
+                                href="#"
+                                class="link glow flex items-center pa2 bt b--black-10"
+                            >
+                                <img
+                                    class="ma2"
+                                    style="width: 1em; height: 1em;"
+                                    src="https://icongr.am/clarity/compass.svg?color=007ac3"
+                                    alt=""
+                                >
+                                Use Current Location
+                            </a>
+                            <a
+                                href="#"
+                                class="link glow flex items-center pa2 bt b--black-10"
+                            >
+                                <img
+                                    class="ma2 o-40"
+                                    style="width: 1em; height: 1em;"
+                                    src="https://icongr.am/clarity/map-marker.svg?color=002b64"
+                                    alt=""
+                                >
+                                Columbia, MO, USA
+                            </a>
+                            <a
+                                href="#"
+                                class="link glow flex items-center pa2 bt b--black-10"
+                            >
+                                <img
+                                    class="ma2 o-40"
+                                    style="width: 1em; height: 1em;"
+                                    src="https://icongr.am/clarity/map-marker.svg?color=002b64"
+                                    alt=""
+                                >
+                                St. Louis, MO, USA
+                            </a>
+                        </nav>
+                    </div>
+                </form>
+            </div>
+
+            <ol class="relative flex pt5-ns pb4 overflow-x-auto overflow-y-visible w-100 ph5-l ph4 items-center">
+                <li
+                    class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-3 ba bw2 b--black-10 br5 mr3 pa2">
+                    <!-- Host Profile -->
+                    <section class="flex flex-row-reverse items-end pa2">
+                        <div class="ml2 z-1 center h4-ns w4-ns h3 w3 relative nt5">
+                            <div
+                                class="flex-none aspect-ratio--1x1 w-100-l br-pill overflow-hidden shadow-2 relative img-child">
+                                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91">
+                            </div>
+                            <div
+                                class="f1-l f-2 f0-ns absolute grow-large white pa1 bottom-0 right-0 lh-solid hide-child flex items-center">
+                                <div class="relative pa1 br-pill bg-blue">
+                                    <img
+                                        style="height:1em;width:1em;"
+                                        src="https://icongr.am/clarity/shield-check.svg?color=ffffff"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mr2 flex-auto blue">
+                            <div class="tracked-5 f-1 yellow lh-phi">★★★★<span class="black-20">★</span></div>
+                            <h2 class="f1 lh-title">
+                                Maddies Space
+                            </h2>
+                            <p class="f-2">
+                                Professional, Kind, Friendly
+                            </p>
+                        </div>
+                    </section>
+                    <!-- Easy Info -->
+                    <ol class="relative z-1 pv1 flex items-center mr2 tc lh-title">
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">monthly</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                <sup class="nl1 fw6 f-3">$</sup>69 </p>
+                        </li>
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">distance</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                3<sup class="nr1 fw6 f-3"> mi</sup></p>
+                        </li>
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">size</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                56<sup class="nr1 fw6 f-3"> sf</sup>
+                            </p>
+                        </li>
+                    </ol>
+                </li>
+                <li
+                    class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-3 ba bw2 b--black-10 br5 mr3 pa2">
+                    <!-- Host Profile -->
+                    <section class="flex flex-row-reverse items-end pa2">
+                        <div class="ml2 z-1 center h4-ns w4-ns h3 w3 relative nt5">
+                            <div
+                                class="flex-none aspect-ratio--1x1 w-100-l br-pill overflow-hidden shadow-2 relative img-child">
+                                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91">
+                            </div>
+                            <div
+                                class="f1-l f-2 f0-ns absolute grow-large white pa1 bottom-0 right-0 lh-solid hide-child flex items-center">
+                                <div class="relative pa1 br-pill bg-blue">
+                                    <img
+                                        style="height:1em;width:1em;"
+                                        src="https://icongr.am/clarity/shield-check.svg?color=ffffff"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mr2 flex-auto blue">
+                            <div class="tracked-5 f-1 yellow lh-phi">★★★★<span class="black-20">★</span></div>
+                            <h2 class="f1 lh-title">
+                                Maddies Space
+                            </h2>
+                            <p class="f-2">
+                                Professional, Kind, Friendly
+                            </p>
+                        </div>
+                    </section>
+                    <!-- Easy Info -->
+                    <ol class="relative z-1 pv1 flex items-center mr2 tc lh-title">
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">monthly</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                <sup class="nl1 fw6 f-3">$</sup>69 </p>
+                        </li>
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">distance</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                3<sup class="nr1 fw6 f-3"> mi</sup></p>
+                        </li>
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">size</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                56<sup class="nr1 fw6 f-3"> sf</sup>
+                            </p>
+                        </li>
+                    </ol>
+                </li>
+                <li
+                    class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-3 ba bw2 b--black-10 br5 mr3 pa2">
+                    <!-- Host Profile -->
+                    <section class="flex flex-row-reverse items-end pa2">
+                        <div class="ml2 z-1 center h4-ns w4-ns h3 w3 relative nt5">
+                            <div
+                                class="flex-none aspect-ratio--1x1 w-100-l br-pill overflow-hidden shadow-2 relative img-child">
+                                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91">
+                            </div>
+                            <div
+                                class="f1-l f-2 f0-ns absolute grow-large white pa1 bottom-0 right-0 lh-solid hide-child flex items-center">
+                                <div class="relative pa1 br-pill bg-blue">
+                                    <img
+                                        style="height:1em;width:1em;"
+                                        src="https://icongr.am/clarity/shield-check.svg?color=ffffff"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mr2 flex-auto blue">
+                            <div class="tracked-5 f-1 yellow lh-phi">★★★★<span class="black-20">★</span></div>
+                            <h2 class="f1 lh-title">
+                                Maddies Space
+                            </h2>
+                            <p class="f-2">
+                                Professional, Kind, Friendly
+                            </p>
+                        </div>
+                    </section>
+                    <!-- Easy Info -->
+                    <ol class="relative z-1 pv1 flex items-center mr2 tc lh-title">
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">monthly</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                <sup class="nl1 fw6 f-3">$</sup>69 </p>
+                        </li>
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">distance</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                3<sup class="nr1 fw6 f-3"> mi</sup></p>
+                        </li>
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">size</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                56<sup class="nr1 fw6 f-3"> sf</sup>
+                            </p>
+                        </li>
+                    </ol>
+                </li>
+                <li
+                    class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-3 ba bw2 b--black-10 br5 mr3 pa2">
+                    <!-- Host Profile -->
+                    <section class="flex flex-row-reverse items-end pa2">
+                        <div class="ml2 z-1 center h4-ns w4-ns h3 w3 relative nt5">
+                            <div
+                                class="flex-none aspect-ratio--1x1 w-100-l br-pill overflow-hidden shadow-2 relative img-child">
+                                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91">
+                            </div>
+                            <div
+                                class="f1-l f-2 f0-ns absolute grow-large white pa1 bottom-0 right-0 lh-solid hide-child flex items-center">
+                                <div class="relative pa1 br-pill bg-blue">
+                                    <img
+                                        style="height:1em;width:1em;"
+                                        src="https://icongr.am/clarity/shield-check.svg?color=ffffff"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mr2 flex-auto blue">
+                            <div class="tracked-5 f-1 yellow lh-phi">★★★★<span class="black-20">★</span></div>
+                            <h2 class="f1 lh-title">
+                                Maddies Space
+                            </h2>
+                            <p class="f-2">
+                                Professional, Kind, Friendly
+                            </p>
+                        </div>
+                    </section>
+                    <!-- Easy Info -->
+                    <ol class="relative z-1 pv1 flex items-center mr2 tc lh-title">
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">monthly</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                <sup class="nl1 fw6 f-3">$</sup>69 </p>
+                        </li>
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">distance</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                3<sup class="nr1 fw6 f-3"> mi</sup></p>
+                        </li>
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">size</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                56<sup class="nr1 fw6 f-3"> sf</sup>
+                            </p>
+                        </li>
+                    </ol>
+                </li>
+                <li
+                    class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-3 ba bw2 b--black-10 br5 mr3 pa2">
+                    <!-- Host Profile -->
+                    <section class="flex flex-row-reverse items-end pa2">
+                        <div class="ml2 z-1 center h4-ns w4-ns h3 w3 relative nt5">
+                            <div
+                                class="flex-none aspect-ratio--1x1 w-100-l br-pill overflow-hidden shadow-2 relative img-child">
+                                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91">
+                            </div>
+                            <div
+                                class="f1-l f-2 f0-ns absolute grow-large white pa1 bottom-0 right-0 lh-solid hide-child flex items-center">
+                                <div class="relative pa1 br-pill bg-blue">
+                                    <img
+                                        style="height:1em;width:1em;"
+                                        src="https://icongr.am/clarity/shield-check.svg?color=ffffff"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mr2 flex-auto blue">
+                            <div class="tracked-5 f-1 yellow lh-phi">★★★★<span class="black-20">★</span></div>
+                            <h2 class="f1 lh-title">
+                                Maddies Space
+                            </h2>
+                            <p class="f-2">
+                                Professional, Kind, Friendly
+                            </p>
+                        </div>
+                    </section>
+                    <!-- Easy Info -->
+                    <ol class="relative z-1 pv1 flex items-center mr2 tc lh-title">
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">monthly</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                <sup class="nl1 fw6 f-3">$</sup>69 </p>
+                        </li>
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">distance</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                3<sup class="nr1 fw6 f-3"> mi</sup></p>
+                        </li>
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">size</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                56<sup class="nr1 fw6 f-3"> sf</sup>
+                            </p>
+                        </li>
+                    </ol>
+                </li>
+                <li
+                    class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-3 ba bw2 b--black-10 br5 mr3 pa2">
+                    <!-- Host Profile -->
+                    <section class="flex flex-row-reverse items-end pa2">
+                        <div class="ml2 z-1 center h4-ns w4-ns h3 w3 relative nt5">
+                            <div
+                                class="flex-none aspect-ratio--1x1 w-100-l br-pill overflow-hidden shadow-2 relative img-child">
+                                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91">
+                            </div>
+                            <div
+                                class="f1-l f-2 f0-ns absolute grow-large white pa1 bottom-0 right-0 lh-solid hide-child flex items-center">
+                                <div class="relative pa1 br-pill bg-blue">
+                                    <img
+                                        style="height:1em;width:1em;"
+                                        src="https://icongr.am/clarity/shield-check.svg?color=ffffff"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mr2 flex-auto blue">
+                            <div class="tracked-5 f-1 yellow lh-phi">★★★★<span class="black-20">★</span></div>
+                            <h2 class="f1 lh-title">
+                                Maddies Space
+                            </h2>
+                            <p class="f-2">
+                                Professional, Kind, Friendly
+                            </p>
+                        </div>
+                    </section>
+                    <!-- Easy Info -->
+                    <ol class="relative z-1 pv1 flex items-center mr2 tc lh-title">
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">monthly</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                <sup class="nl1 fw6 f-3">$</sup>69 </p>
+                        </li>
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">distance</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                3<sup class="nr1 fw6 f-3"> mi</sup></p>
+                        </li>
+                        <li
+                            class="mv1 ml2 flex-grow-1 ba b--black-10 bg-white-80 overflow-hidden br4 flex flex-column-reverse items-stretch tc">
+                            <h3 class="blue bt b--black-05 ph2 lh-phi f-2 fw6 tracked-1">size</h3>
+                            <p class="fw6 ba bw3 tracked-1 b--transparent ph2 lh-title pt1">
+                                56<sup class="nr1 fw6 f-3"> sf</sup>
+                            </p>
+                        </li>
+                    </ol>
+                </li>
+
+                <li>
+                    <button
+                        type="button"
+                        class="bg-blue white ma5"
+                    >Load More</button>
+                </li>
+            </ol>
+        </header>
+        <main>
+            <section class="relative w-100 vh-100">
+                <p class="pa5-ns pa4 lh-copy measure center">
+                    This is zJust placeholder content to Illustrate what having other content on the page may look like.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ad consequuntur quas quidem
+                    labore! Nisi, atque amet saepe numquam nulla fugit rerum neque aliquid possimus, minima temporibus
+                    pariatur quia ipsa.
+                </p>
+            </section>
+        </main>
+
+
+        <footer class="">
+            <nav class="flex f2 tc white">
+                <a
+                    class="flex-auto relative db pa2 bg-black-40"
+                    href="mailto:hello@roostorage.com"
+                >
+                    <img
+                        class="db center ma1"
+                        style="width:1em;height:1em;"
+                        src="https://icongr.am/clarity/email.svg?color=ffffff"
+                    />
+
+                    <span class="dn di-ns f-1">hello@roostorage.com</span>
+                </a>
+                <a
+                    style="background-color: #3C5A99"
+                    class="flex-auto relative db pa2"
+                    href="https://www.facebook.com/RooStorage"
+                >
+                    <img
+                        class="db center ma1"
+                        style="width:1em;height:1em;"
+                        src="https://icongr.am/simple/facebook.svg?color=ffffff"
+                    />
+
+                    <span class="dn di-ns f-1">fb.com/roostorage</span>
+                </a>
+                <a
+                    style="background-color: #833AB4"
+                    class="flex-auto relative db pa2"
+                    href="https://www.instagram.com/roostorage"
+                >
+                    <img
+                        class="db center ma1"
+                        style="width:1em;height:1em;"
+                        src="https://icongr.am/simple/instagram.svg?color=ffffff"
+                    />
+
+                    <span class="dn di-ns f-1">@roostorage</span>
+                </a>
+            </nav>
+            <nav class="flex flex-wrap f-2 bg-blue justify-around pa2">
+                <a
+                    class="ma1 white w-25-ns"
+                    href="https://s3.us-east-2.amazonaws.com/roo-image-storage/policies/terms-of-service.pdf"
+                > Terms of Service </a>
+                <a
+                    class="ma1 white w-25-ns"
+                    href="https://s3.us-east-2.amazonaws.com/roo-image-storage/policies/privacy-policy.pdf"
+                > Privacy Policy </a>
+                <a
+                    class="ma1 white w-25-ns"
+                    href="https://s3.us-east-2.amazonaws.com/roo-image-storage/policies/nondiscrimination-policy.pdf"
+                > Nondiscriminiation Policy </a>
+            </nav>
+            <p class="f-3 tracked-2 tc pa2 bg-navy white-50 ttu fw7">Copyright © Roo 2019</p>
+        </footer>
+
+</html>
