@@ -54,10 +54,11 @@
             .floaty.animated img {
                 animation-name: floaty;
                 will-change: transform;
-                animation-duration: 20s;
+                animation-duration: 10s;
                 animation-iteration-count: infinite;
                 animation-direction: alternate;
                 animation-timing-function: ease;
+                /* animation-play-state: paused; */
             }
 
             .floaty.n2 img {
@@ -180,11 +181,27 @@
             <span class="clip"> Easy, Inexpensive, and Safe Storage. </span>
         </h1> -->
         <main>
-            <header class="flex flex-column relative min-vh-100 bg-orange pb7 overflow-hidden">
-                <div
-                    class="absolute top-0 bottom-0"
-                    style="left: -100vw; right: -100vw; background-image: radial-gradient(ellipse farthest-side at 50% -10%, rgba(255,255,255,0) 62%, rgba(255,255,255,1) 99% );"
-                ></div>
+            <header class="flex flex-column relative min-vh-100 bg-yellow overflow-hidden pb7 nb7">
+                <div class="absolute absolute--fill flex overflow-hidden">
+                    <div
+                        class="absolute absolute--fill w-100"
+                        style="
+                            background-size: 100vw; 
+                            background-image: 
+                            radial-gradient(ellipse farthest-corner at 38% 38%, #da3f00dd 0%, #da3f00ff 100% );
+                            "
+                    ></div>
+                    <div
+                        class="absolute absolute--fill w-100"
+                        style="
+                        background-size: 400vw; 
+                        background-image: 
+                        radial-gradient(ellipse farthest-side at 50% 0%, #da3f0000 62%, rgba(255,255,255,0.9) 84% ),
+                        radial-gradient(ellipse farthest-side at 50% 0%, #da3f0000 38%, rgba(255,255,255,1) 100% )
+                        ;
+                        "
+                    ></div>
+                </div>
 
                 <!-- top -->
                 <div class="relative flex-auto flex">
@@ -443,14 +460,11 @@
                     </div>
                 </div>
                 <!-- below -->
-
-            </header>
-
-            <section class="relative nt7 w-100">
+                <!-- Listings -->
                 <ol
-                    class="nt7 relative flex pt5 pb3 overflow-x-auto overflow-y-visible w-100 ph5-l ph4-ns ph2 items-center">
+                    class="relative flex pt5 pb4 overflow-x-auto overflow-y-visible w-100 ph5-l ph4-ns ph2 items-center">
                     <li
-                        class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-2 br5 mh2 pa2">
+                        class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-2 br5 mh3 pa2">
                         <!-- Host Profile -->
                         <section class="flex flex-row-reverse items-end pa2">
                             <div class="ml2 z-1 center h4-ns w4-ns h3 w3 relative nt5">
@@ -502,7 +516,7 @@
                         </ol>
                     </li>
                     <li
-                        class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-2 br5 mh2 pa2">
+                        class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-2 br5 mh3 pa2">
                         <!-- Host Profile -->
                         <section class="flex flex-row-reverse items-end pa2">
                             <div class="ml2 z-1 center h4-ns w4-ns h3 w3 relative nt5">
@@ -554,7 +568,7 @@
                         </ol>
                     </li>
                     <li
-                        class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-2 br5 mh2 pa2">
+                        class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-2 br5 mh3 pa2">
                         <!-- Host Profile -->
                         <section class="flex flex-row-reverse items-end pa2">
                             <div class="ml2 z-1 center h4-ns w4-ns h3 w3 relative nt5">
@@ -606,7 +620,7 @@
                         </ol>
                     </li>
                     <li
-                        class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-2 br5 mh2 pa2">
+                        class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-2 br5 mh3 pa2">
                         <!-- Host Profile -->
                         <section class="flex flex-row-reverse items-end pa2">
                             <div class="ml2 z-1 center h4-ns w4-ns h3 w3 relative nt5">
@@ -658,7 +672,7 @@
                         </ol>
                     </li>
                     <li
-                        class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-2 br5 mh2 pa2">
+                        class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-2 br5 mh3 pa2">
                         <!-- Host Profile -->
                         <section class="flex flex-row-reverse items-end pa2">
                             <div class="ml2 z-1 center h4-ns w4-ns h3 w3 relative nt5">
@@ -710,7 +724,7 @@
                         </ol>
                     </li>
                     <li
-                        class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-2 br5 mh2 pa2">
+                        class="animated fadeIn delay-2s relative mw6 flex-none flex flex-column bg-white shadow-2 br5 mh3 pa2">
                         <!-- Host Profile -->
                         <section class="flex flex-row-reverse items-end pa2">
                             <div class="ml2 z-1 center h4-ns w4-ns h3 w3 relative nt5">
@@ -769,6 +783,12 @@
                         >Load More</button>
                     </li>
                 </ol>
+                <!-- Listings -->
+
+            </header>
+
+            <section class="relative pa5 w-100">
+
                 <p class="pa3 lh-copy measure center">
                     This is Just placeholder content to Illustrate what having other content on the page may look like.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ad consequuntur quas quidem
