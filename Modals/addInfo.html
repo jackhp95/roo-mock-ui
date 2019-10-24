@@ -27,13 +27,21 @@
             <article class="shadow-3 bg-white br5 overflow-hidden ba hover-b--blue b--transparent">
 
                 <div class="ma2 pa1">
-                    <progress value="0.9"></progress>
+                    <progress value="0.7"></progress>
                 </div>
                 <form class="ma3">
-                    <h1 class="f3 fw6 blue mv2">Last Question</h1>
-                    <p class="measure-narrow">Let us know what got you interested in Roo so we can build an even
-                        stronger network of storage
-                        spaces.</p>
+                    <h1 class="f3 fw6 blue mv2">We're <i class="fw6">Almost</i> Done!</h1>
+                    <p class="mh2 measure-narrow">Here are some fast and optional questions to get you up and running on
+                        roo.</p>
+                    <hr class="mv2">
+                    <h2 class="mh2 fw6 blue">Cell</h2>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="(573) 867 - 5309"
+                        class="ba b--black-10 hover-b--blue br3 ph3 pv2"
+                    >
                     <hr class="mv2">
                     <h2 class="mh2 fw6 blue">How did you hear about us?</h2>
                     <ul class="nl1 nr1 measure-narrow flex flex-wrap no-select">
@@ -181,7 +189,46 @@
                         </li>
                     </ul>
                     <hr class="mv2">
-                    <menu class="flex na1">
+                    <h2 class="ma2 fw6 blue">Let's put a face to the name!</h2>
+                    <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+                    <script>
+                        window.addEventListener('DOMContentLoaded', function () {
+                            const apikey = 'YOUR_APIKEY';
+                            const client = filestack.init(apikey);
+                            const options = {
+                                displayMode: 'dropPane',
+                                dropPane: {
+                                    cropFiles: true,
+                                    customText: "Upload your Profile Pic",
+                                },
+                                container: '#inline',
+                                viewType: "grid",
+                                maxFiles: 20,
+                                uploadInBackground: false,
+                                onUploadDone: (res) => console.log(res),
+                            };
+                            const picker = client.picker(options);
+
+                            picker.open();
+                        });
+                    </script>
+                    <style>
+                        .fsp-drop-pane__container {
+                            background-color: rgba(0,0,0,0.038);
+                            flex-direction: column;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 0.5rem;
+                            border: 0.06125rem solid #dddddd;
+                        }
+
+                    </style>
+                    <div
+                        id="inline"
+                        class="w-100 h4 mb3"
+                    ></div>
+
+                    <menu class="flex na2">
                         <button class="black-60 hover-blue ma2 ba b--transparent hover-b--blue">I'll do it
                             later</button>
                         <button class="bg-blue white ma2 flex-auto">Submit</button>

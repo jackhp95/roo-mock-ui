@@ -2,7 +2,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Roo | Phone Modal</title>
+        <title>Roo | From Modal</title>
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1"
@@ -17,11 +17,44 @@
         >
         <link
             rel="stylesheet"
-            href="style.css"
+            href="../style.css"
         >
     </head>
 
     <body class="navy">
+        <aside class="bg-black-50 fixed absolute--fill flex flex-column items-center">
+            <hr class="h-auto flex-auto">
+            <article class="shadow-3 bg-white br5 overflow-hidden ba hover-b--blue b--transparent">
+
+                <div class="ma2 pa1">
+                    <progress value="0.8"></progress>
+                </div>
+                <form class="ma3">
+                    <h1 class="f3 fw6 blue mv2">We're <i class="fw6">Almost</i> Done!</h1>
+                    <p class="mh2 measure-narrow">Leave us your number so we can text you right when a renter reserves
+                        a space.</p>
+                    <hr class="mv2">
+                    <h2 class="mh2 fw6 blue">Cell</h2>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="(573) 867 - 5309"
+                        class="ba b--black-10 hover-b--blue br3 ph3 pv2"
+                    >
+                    <hr class="mv2">
+                    <menu class="flex na2">
+                        <button class="black-60 hover-blue ma2 ba b--transparent hover-b--blue">I'll do it
+                            later</button>
+                        <button
+                            type="button"
+                            class="bg-blue white ma2 flex-auto"
+                        >Submit</button>
+                    </menu>
+                </form>
+            </article>
+            <hr class="h-auto flex-auto">
+        </aside>
 
     </body>
 
