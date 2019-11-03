@@ -1119,21 +1119,21 @@ textarea[disabled] {
 }
 
 /* Checkbox, Radio, File */
-/* [type=checkbox] {
+.checkbox[type=checkbox] {
     border-radius: 0.125rem;
 }
 
-[type=radio] {
+.radio[type=radio] {
     border-radius: 100%;
 }
 
-[type=checkbox],
-[type=radio] {
+.checkbox[type=checkbox],
+.radio[type=radio] {
     -moz-appearance: none;
     -webkit-appearance: none;
-    appearance: none; */
+    appearance: none;
     /* in case this ever gets supported */
-    /* background: rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 1);
     border: 0.125rem solid transparent;
     -webkit-box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.125), inset 0 0 0 0 #007ac3;
     box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.125), #007ac3 inset 0 0 0 0;
@@ -1151,8 +1151,8 @@ textarea[disabled] {
     width: 1em;
 }
 
-[type=checkbox]:focus,
-[type=radio]:focus {
+.checkbox[type=checkbox]:focus,
+.radio[type=radio]:focus {
     border-color: transparent;
     -webkit-box-shadow: 0 0 0 0.125rem #007ac3, inset 0 0 0 0 #007ac3;
     box-shadow: 0 0 0 0.125rem #007ac3, #007ac3 inset 0 0 0 0;
@@ -1160,8 +1160,8 @@ textarea[disabled] {
 
 }
 
-[type=checkbox]:checked,
-[type=radio]:checked {
+.checkbox[type=checkbox]:checked,
+.radio[type=radio]:checked {
     border-color: rgba(255, 255, 255, 1);
     -webkit-box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.125), inset 0 0 0 0.5rem #007ac3;
     box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.125), #007ac3 inset 0 0 0 0.5rem;
@@ -1169,20 +1169,20 @@ textarea[disabled] {
 
 }
 
-[type=checkbox]:checked:focus,
-[type=radio]:checked:focus {
+.checkbox[type=checkbox]:checked:focus,
+.radio[type=radio]:checked:focus {
     -webkit-box-shadow: 0 0 0 0.125rem #007ac3, inset 0 0 0 0.5rem #007ac3;
     box-shadow: 0 0 0 0.125rem #007ac3, #007ac3 inset 0 0 0 0.5rem;
     box-shadow: 0 0 0 0.125rem #007ac3, inset 0 0 0 0.5rem #007ac3;
 
 }
 
-[type=checkbox][disabled],
-[type=checkbox][disabled]+span,
-[type=radio][disabled],
-[type=radio][disabled]+span {
+.checkbox[type=checkbox][disabled],
+.checkbox[type=checkbox][disabled]+span,
+.radio[type=radio][disabled],
+.radio[type=radio][disabled]+span {
     opacity: 0.4;
-} */
+}
 
 /* STATE */
 input:focus:invalid,
