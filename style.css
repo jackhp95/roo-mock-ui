@@ -1119,7 +1119,7 @@ textarea[disabled] {
 }
 
 /* Checkbox, Radio, File */
-[type=checkbox] {
+/* [type=checkbox] {
     border-radius: 0.125rem;
 }
 
@@ -1131,9 +1131,9 @@ textarea[disabled] {
 [type=radio] {
     -moz-appearance: none;
     -webkit-appearance: none;
-    appearance: none;
+    appearance: none; */
     /* in case this ever gets supported */
-    background: rgba(255, 255, 255, 1);
+    /* background: rgba(255, 255, 255, 1);
     border: 0.125rem solid transparent;
     -webkit-box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.125), inset 0 0 0 0 #007ac3;
     box-shadow: 0 0 0 0.125rem rgba(0, 0, 0, 0.125), #007ac3 inset 0 0 0 0;
@@ -1182,7 +1182,7 @@ textarea[disabled] {
 [type=radio][disabled],
 [type=radio][disabled]+span {
     opacity: 0.4;
-}
+} */
 
 /* STATE */
 input:focus:invalid,
