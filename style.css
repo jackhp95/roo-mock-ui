@@ -10963,3 +10963,13 @@ app-root> :nth-child(n+3) {
 router-outlet {
     display: none !important;
 }
+
+.icon-0 {
+    width: 1em;
+    height: 1em;
+}
+
+.icon-1 {
+    width: 1.38em;
+    height: 1.38em;
+}
